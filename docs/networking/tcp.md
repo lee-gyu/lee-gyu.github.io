@@ -1,7 +1,7 @@
 ---
 layout: default
 title: TCP/IP Basic
-parent: networking
+parent: Networking
 nav_order: 2
 ---
 
