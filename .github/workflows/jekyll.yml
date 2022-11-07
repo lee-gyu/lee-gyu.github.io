@@ -36,6 +36,8 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6.x
+          bundler: "Gemfile.lock"
+          bundler-cache: true
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
