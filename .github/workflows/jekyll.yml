@@ -35,7 +35,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
         with:
-          ruby-version: default
+          ruby-version: 3.1.2
           bundler: "Gemfile.lock"
           bundler-cache: true
       - name: Setup Pages
