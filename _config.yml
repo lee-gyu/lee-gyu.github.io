@@ -26,6 +26,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 domain: lee-gyu.github.io
 url: "https://lee-gyu.github.io"
 github_username: lee-gyu
+timezone: Asia/Seoul
 
 # Build settings
 theme: just-the-docs
@@ -54,7 +55,7 @@ plugins:
 # Footer content
 # appears at the bottom of every page's main content
 # Note: The footer_content option is deprecated and will be removed in a future major release. Please use `_includes/footer_custom.html` for more robust
-footer_content: "Copyright &copy; 2022 Lee Gyu Cheol."
+footer_content: "<a href='https://github.com/lee-gyu'><i class='fa-brands fa-github'></i> Lee Gyu Cheol</a>"
 color_scheme: dark
 
 # Footer last edited timestamp
@@ -63,7 +64,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
-gh_edit_link_text: "Edit this page on GitHub."
+gh_edit_link_text: "Github에서 코멘트 달기"
 gh_edit_repository: "https://github.com/lee-gyu/lee-gyu.github.io" # the github URL for your repo
 gh_edit_branch: "master" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
