@@ -82,6 +82,15 @@ callouts:
   warning:
     title: Warning
 
+compress_html:
+  ignore:
+    envs: all
+
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
 mermaid:
   version: "9.1.6"
 # Exclude from processing.
