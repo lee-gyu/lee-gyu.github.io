@@ -127,7 +127,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
-gh_edit_link_text: "Github에서 코멘트 달기"
+gh_edit_link_text: "Github md 열기"
 gh_edit_repository: "https://github.com/lee-gyu/lee-gyu.github.io" # the github URL for your repo
 gh_edit_branch: "master" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
