@@ -40,3 +40,4 @@ SyntaxError: Unexpected token :
 ## 참조
 
 - [Effect Typescript p.2](https://effectivetypescript.com/)
+- [타입스크립트 딥 다이브](https://radlohead.gitbook.io/typescript-deep-dive)
