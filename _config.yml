@@ -22,13 +22,13 @@ title: "Lee Gyu"
 email: rbcjf0219@gmial.com
 description: >- # this means to ignore newlines until "baseurl:"
   A personal repository
-baseurl: "/" # the subpath of your site, e.g. /blog
+# the subpath of your site, e.g. /blog
+baseurl: ""
 # the base hostname & protocol for your site, e.g. http://example.com
 domain: lee-gyu.github.io
 url: "https://lee-gyu.github.io"
 github_username: lee-gyu
 timezone: Asia/Seoul
-
 
 back_to_top: true
 back_to_top_text: "상단으로"
@@ -63,6 +63,7 @@ theme: just-the-docs
 # remote_theme: "pmarsceill/just-the-docs"
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 heading_anchors: true
 
