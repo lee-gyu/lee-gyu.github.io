@@ -3,6 +3,7 @@ layout: default
 title: Overview
 parent: Electron
 nav_order: 0
+permalink: /overview
 ---
 
 ## Electron Process Model

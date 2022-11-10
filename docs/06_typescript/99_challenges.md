@@ -3,6 +3,7 @@ layout: default
 title: Type Challenges
 parent: Typescript
 nav_order: 99
+permalink: /typescript/challenges
 ---
 
 타입첼린지 개인 풀이 모음

@@ -2,7 +2,8 @@
 layout: default
 title: TCP/IP Basic
 parent: Networking
-nav_order: 2
+nav_order: 1
+permalink: /networking/tcp
 ---
 
 ## 개요

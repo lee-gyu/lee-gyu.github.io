@@ -3,6 +3,7 @@ layout: default
 title: tsconfig.json
 parent: Typescript
 nav_order: 0
+permalink: /typescript/tsconfig
 ---
 
 ## tsconfig.json

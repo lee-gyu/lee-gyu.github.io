@@ -3,6 +3,7 @@ layout: default
 title: OSI 7 Layer
 parent: Networking
 nav_order: 0
+permalink: /networking/osi7
 ---
 
 ## OSI 7 Layer

@@ -3,6 +3,7 @@ layout: default
 title: Typescript
 nav_order: 6
 has_children: true
+permalink: /typescript
 ---
 
 ## 타입스크립트와 자바스크립트 관계
