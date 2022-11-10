@@ -2,7 +2,7 @@
 layout: default
 title: tsconfig.json
 parent: Typescript
-nav_order: 0
+nav_order: 1
 permalink: /typescript/tsconfig
 ---
 

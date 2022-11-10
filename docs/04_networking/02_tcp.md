@@ -2,7 +2,7 @@
 layout: default
 title: TCP/IP Basic
 parent: Networking
-nav_order: 1
+nav_order: 2
 permalink: /networking/tcp
 ---
 
