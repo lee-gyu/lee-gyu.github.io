@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Browser
+title: Javascript
 nav_order: 2
 has_children: true
 permalink: /javascript

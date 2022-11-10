@@ -31,7 +31,7 @@ github_username: lee-gyu
 timezone: Asia/Seoul
 
 back_to_top: true
-back_to_top_text: "상단으로"
+back_to_top_text: "back to top"
 
 search_enabled: true
 search:

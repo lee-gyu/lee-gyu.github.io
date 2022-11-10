@@ -7,4 +7,8 @@ permalink: /about/
 
 ### Lee Gyu Cheol
 
-- <a href="https://github.com/lee-gyu" target="lee-gyu-github"><i class="fa-brands fa-github"></i> Github</a>
+> "Little things make all the difference."
+
+***
+
+- [<i class="fa-brands fa-github"></i> Github](https://github.com/lee-gyu)
