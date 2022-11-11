@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Reflow
+title: Rendering
 parent: Browser
 nav_order: 1
-permalink: /browser/reflow
+permalink: /browser/render
 ---
 
 ## 브라우저 렌더링 과정
