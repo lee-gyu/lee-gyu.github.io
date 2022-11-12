@@ -2,7 +2,6 @@
 layout: default
 title: Function
 nav_order: 1
-has_children: true
 parent: Javascript
 permalink: /javascript/function
 ---
@@ -20,53 +19,71 @@ permalink: /javascript/function
 - `function object`가 가진 변수
 - `arguments` (단, `arrow function`은 이것을 가지지 않음)
 
-***
+---
 
 javascript에서 `function`을 선언하는 방법이 6가지가 있다.
 
 - `function`
 
   ```js
-  function foo() { console.log("Hello World!"); }
+  function foo() {
+    console.log('Hello World!');
+  }
   ```
 
-***
+---
 
 - `function expression`
 
   ```js
-  const foo = function() { console.log("Hello World!"); }
+  const foo = function () {
+    console.log('Hello World!');
+  };
   ```
 
 - `method`
 
   ```js
-  const foo = { foo() { console.log("Hello World!"); } }
+  const foo = {
+    foo() {
+      console.log('Hello World!');
+    },
+  };
   ```
 
 - `arrow function`
 
   ```js
-  const foo = () => { console.log("Hello World!"); }
+  const foo = () => {
+    console.log('Hello World!');
+  };
   ```
 
 - `generator function`
 
   ```js
-  function *generator() { yield 0; };
-  const foo = function*() { yield 0; }
-  const bar = { *generator() { yield 0; } }
+  function* generator() {
+    yield 0;
+  }
+  const foo = function* () {
+    yield 0;
+  };
+  const bar = {
+    *generator() {
+      yield 0;
+    },
+  };
   ```
 
 - `new function`
 
   ```js
-  const func = new Function("a", "b", "return a + b;")
+  const func = new Function('a', 'b', 'return a + b;');
 
   func(3, 5);
   ```
 
-***
+---
 
 ## 차이점
 
