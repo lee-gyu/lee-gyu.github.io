@@ -9,10 +9,11 @@ permalink: /browser/layer-model
 ## 개요
 
 `Layer Model`은 웹 표준이 아니며, 브라우저 구현에 의존적인 개념이다.\
-Layer는 크게 2가지로 나뉜다. (webkit / blink 브라우저 엔진 기준)
+Layer는 크게 2가지로 나뉜다. (`webkit` / `blink` 브라우저 엔진 기준)
 
 - `Render Layer`: 하드웨어 가속 처리를 위해 사용하는 논리적인 레이어\
   아래 특성을 가지면 Layer가 생성된다.
+
   - 페이지의 root 요소
   - 명시적인 position 특성을 가지는 경우 (relative, absolute, fixed, sticky 등)
   - opacity가 1미만인 경우 (투명도를 가짐)
@@ -21,7 +22,7 @@ Layer는 크게 2가지로 나뉜다. (webkit / blink 브라우저 엔진 기준
   - relection 속성을 가진 경우
   - video 엘리멘트
 
-- `Graphics Layer`: 하드웨어 가속 처리를 위한 레이어(GPU에게 처리를 위임)\
+- `Graphics Layer`: 하드웨어 가속 처리를 위한 레이어 (GPU에게 텍스처 처리를 위임)\
   아래 특성을 가지면 `GraphicsLayer`로 승격된다.
   - `video` 또는 `canvas` 태그
   - 하드웨어 가속 플러그인 사용
@@ -44,13 +45,13 @@ Layer는 크게 2가지로 나뉜다. (webkit / blink 브라우저 엔진 기준
 - transform
 - opacity
 
-### 강제로 레이어 만들기
+### `GraphicsLayer` 만들기
 
 ```css
-#make-layer {
-    transform: translateZ(0);
-    transform: translate3d(0, 0, 0);
-    will-change: transform;
+#make-graphics-layer {
+  transform: translateZ(0);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 ```
 
