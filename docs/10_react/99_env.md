@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Custom Hooks
+title: Environment
 nav_order: 4
 parent: React
-permalink: /react/custom-hooks
+permalink: /react/dev-env
 ---
