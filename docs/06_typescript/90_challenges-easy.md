@@ -2,7 +2,7 @@
 layout: default
 title: Type Challenges Easy
 parent: Typescript
-nav_order: 99
+nav_order: 90
 permalink: /typescript/challenges-eay
 ---
 
