@@ -83,6 +83,32 @@ type MyExclude<T, U> = T extends U ? never : T;
 ### [Awaited](https://github.com/type-challenges/type-challenges/blob/main/questions/00189-easy-awaited/README.md)
 
 - Promise로 wrapped된 타입의 Promise 반환 타입만 가져오기
+- 타입 추론(infer)을 이용하여 `Promise.then` 메소드의 타입을 추론하여 해결
+- infer 키워드 이해와 자신의 타입을 재귀적으로 처리하는 부분을 이용
+- 참고 자료
+  - [Inferring Within Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types)
 
 ```ts
+// then 메소드를 별도로 처리한 오브젝트가 있으므로, PromiseLike를 이용함
+type MyAwaited<T> = T extends PromiseLike<infer U> ? MyAwaited<U> : T;
+// 단, 이렇게 작성한 경우 하단의 @ts-expect-error를 통과할 수 없다.
+// 핵심은 infer 키워드를 이용한 Promise 내부 반환 타입 추출
+// 문제가 then 메소드를 억지로 담은 개체까지 처리해야하는 문제 때문에 혼잡이 있음.
+```
+
+### [If](https://github.com/type-challenges/type-challenges/blob/main/questions/00268-easy-if/README.md)
+
+- 조건부 타입으로 해결가능한 문제 (단순 삼항 연산자 처리 느낌)
+
+```ts
+type If<C extends boolean, T, F> = C extends true ? T : F;
+```
+
+### [Concat](https://github.com/type-challenges/type-challenges/blob/main/questions/00533-easy-concat/README.md)
+
+- 두 배열의 합친 결과 타입을 처리해야 하는 문제
+- spread operator로 주어진 배열을 합치면 된다.
+
+```ts
+type Concat<T extends readonly any[], U extends readonly any[]> = [ ...T, ...U]
 ```
