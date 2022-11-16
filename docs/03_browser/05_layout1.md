@@ -26,11 +26,12 @@ permalink: /browser/layout1
   - 초기 위치는 상대적으로 배치되어야 할 위치에서 시작한다.
   - `z-index`가 auto가 아닌 경우 새로운 Stacking Context를 생성한다.
   - 여백은 다른 여백과 겹치지 않는다.
+  - top, left, right, bottom이 있는 경우, offsetParent 기준으로 위치가 지정된다.
 
 - `position`: `fixed`
 
 - `position`: `sticky`
-  - 구형 브라우저에서는 동작이 정의되지 않을 수 있음!
+  - 구형 브라우저에서는 동작이 정의되지 않았을 수 있음!
 
 ### Stacking Context
 
