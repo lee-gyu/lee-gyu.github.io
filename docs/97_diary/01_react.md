@@ -1,6 +1,6 @@
 ---
 layout: default
-title: React
+title: 리액트에 관하여
 nav_order: 97
 parent: 회고록
 permalink: /diary/react
