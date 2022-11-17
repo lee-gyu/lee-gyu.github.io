@@ -38,6 +38,33 @@ SyntaxError: Unexpected token :
 타입스크립트를 한다는 것은, 조금 더 엄격한 환경에서 자바스크립트를 다루게 하며  
 이는 취향의 차이이며 어떤 것이 더 좋다고 말할 내용이 아니다.
 
+## 타입은 집합
+
+타입을 집합의 개념으로 생각하자.\
+해당 집합에 속하면 타입으로 지정될 수 있다.
+
+```ts
+// 공집합
+declare type NoneType = never;
+// 모든 숫자 집합
+declare type Num = number;
+// {1, 2, 3} 집합
+declare type Num2 = 1 | 2 | 3;
+// {1, 2} 집합
+declare type Num3 = 1 | 4 | 5;
+// {1, 2, 3, 4, 5} 합집합
+declare type NumUnion = Num2 | Num3;
+// {1} 교집합
+declare type NumIntersection = Num2 & Num3;
+// {2, 3} 차집합
+declare type NumSubtraction = Num2 extends infer R ? R extends Num3 ? never : R : Num2;
+// {2, 3, 4, 5} 베타적 논리합
+declare type NumXOR = (Num2 | Num3) extends infer R2 ? R2 extends (Num2 & Num3) ? never : R2 : never;
+
+// NumXOR에 집합에 속하는 것만 값으로 지정 가능
+const a: NumXOR = 2;
+```
+
 ## 참조
 
 - [Effect Typescript p.2](https://effectivetypescript.com/)

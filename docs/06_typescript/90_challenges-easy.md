@@ -112,3 +112,17 @@ type If<C extends boolean, T, F> = C extends true ? T : F;
 ```ts
 type Concat<T extends readonly any[], U extends readonly any[]> = [ ...T, ...U]
 ```
+
+### [Includes](https://github.com/type-challenges/type-challenges/blob/main/questions/00898-easy-includes/README.md)
+
+- 배열 내에 요소가 있는지 boolean을 리턴하는 문제
+- 각 배열 요소를 First와 Rest로 분리 ([infer First, ...infer Rest]
+- 타입을 재귀적 평가 후 각 요소를 순회하여 타입이 동등한지 비교하여 해결
+
+```ts
+type Includes<T extends readonly any[], U> = T extends [infer First, ...infer Rest]
+  ? Equal<First, U> extends true
+    ? true
+    : Includes<Rest, U>
+  : false;
+```
