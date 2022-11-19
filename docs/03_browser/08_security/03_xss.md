@@ -46,10 +46,45 @@ permalink: /browser/security/xss
 근본적인 제거 방법은 스크립트가 실행되지 못하도록, 검증 단계에서 무효화 시키기\
 데이터의 길이, 문자, 형식 등을 검사하여 안전하게 처리
 
-- 입력 값 제한 (데이터 형식 검사)
+- 입력 값 검증 및 제한 (데이터 형식 검사)
 - 입력 값 치환 (위험 문자 변환)
   - e.g. `<script>` -> `%ltscript%gt;`
 - XSS 필터 도구 사용
+- 사용자 입력 값을 innerHTML로 처리하지 않기
+- JQuery와 location.hash를 아무런 검증 없이 이용 (공격자의 악의적인 처리가 포함될 수 있음음
+  - e.g.
+
+  ```js
+  // 기존 DOM 코드
+  $(window).on('hashchange', () => {
+    var element = $(location.hash);
+    element[0].scrollIntoView();
+  });
+
+  // 악의적인 호출 코드
+  <iframe src="https://vulnerable-website.com#" onload="this.src+='<img src=1 onerror=alert(1)>'">
+  ```
+
+  - XSS에 취약한 JQuery 함수
+    - add()
+    - after()
+    - append()
+    - animate()
+    - insertAfter()
+    - insertBefore()
+    - before()
+    - html()
+    - prepend()
+    - replaceAll()
+    - replaceWith(0
+    - wrap()
+    - wrapInner()
+    - wrapALl()
+    - has()
+    - constructor()
+    - init()
+    - index()
+    - $.parseHTML()
 
 ## 참조
 
@@ -57,3 +92,4 @@ permalink: /browser/security/xss
 - [cheat sheet](https://github.com/EdOverflow/bugbounty-cheatsheet/blob/master/cheatsheets/xss.md)
 - [XSS - MDN](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting)
 - [XSS](http://blog.plura.io/?p=7614)
+- [DOM 기반 XSS 공격과 방어](https://junhyunny.github.io/information/security/dom-based-cross-site-scripting/)
