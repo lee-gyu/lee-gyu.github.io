@@ -1,10 +1,9 @@
 ---
 layout: default
 title: Security
-nav_order: 8
+nav_order: 12
 has_children: true
-parent: Browser
-permalink: /browser/security
+permalink: /security
 ---
 
 브라우저 보안에 관련된 내용 정리

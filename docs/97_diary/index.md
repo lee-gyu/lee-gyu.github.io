@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 회고록
-nav_order: 11
+nav_order: 97
 has_children: true
 permalink: /diary
 ---

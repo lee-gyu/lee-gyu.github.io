@@ -2,9 +2,8 @@
 layout: default
 title: XSS
 parent: Security
-grand_parent: Browser
 nav_order: 3
-permalink: /browser/security/xss
+permalink: /security/xss
 ---
 
 ## Cross Site Scripting (XSS)

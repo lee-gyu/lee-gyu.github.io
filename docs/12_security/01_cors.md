@@ -2,9 +2,8 @@
 layout: default
 title: CORS
 parent: Security
-grand_parent: Browser
 nav_order: 1
-permalink: /browser/security/cors
+permalink: /security/cors
 ---
 
 ## CORS
@@ -35,10 +34,10 @@ flowchart LR;
 
 | 출처                              | 구분 | 이유                                                     |
 | --------------------------------- | ---- | -------------------------------------------------------- |
-| https://domain-a.com/blog/1       | SOP  | 프로토콜, 호스트, 포트 모두 동일                         |
-| http://domain-a.com/blog/1        | CORS | 프로토콜이 다름                                          |
-| https://domain-b.com/blog/1       | CORS | 호스트가 다름                                            |
-| https://domain-a-.com:8088/blog/1 | CORS | 포트가 다름 (IE는 포트가 달라도 Same Origin)으로 처리함) |
+| `https://domain-a.com/blog/1`       | SOP  | 프로토콜, 호스트, 포트 모두 동일                         |
+| `http://domain-a.com/blog/1`        | CORS | 프로토콜이 다름                                          |
+| `https://domain-b.com/blog/1`       | CORS | 호스트가 다름                                            |
+| `https://domain-a-.com:8088/blog/1` | CORS | 포트가 다름 (IE는 포트가 달라도 Same Origin)으로 처리함) |
 
 ## 왜 CORS 정책이 필요한가?
 
