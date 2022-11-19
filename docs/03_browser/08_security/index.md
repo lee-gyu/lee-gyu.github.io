@@ -11,4 +11,4 @@ permalink: /browser/security
 
 ## Link
 
-- [웹 개발을 위해 꼭 알아야하는 보안 공격](https://kciter.so/posts/basic-web-hacking#csrf-attack)
+- [웹 개발을 위해 꼭 알아야하는 보안 공격](https://kciter.so/posts/basic-web-hacking)
