@@ -6,4 +6,4 @@ has_children: true
 permalink: /problem-solving
 ---
 
-알고리즘 문제 해결 관련 풀이 정리
+구종만 저자의 알고리즘 문제 해결 전략 내용 정리
