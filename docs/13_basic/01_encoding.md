@@ -94,6 +94,28 @@ UTF-8에서 가(EA B0 80) 나 (EB 82 98) 다 (EB 8B A4) 라 (EB 9D 8C)로 처리
 
 이론상 31비트까지 되어 있지만, 현재 0x10FFFF 범위까지만 사용한다고 한다.
 
+### UTF BOM (Byte Order Mark)
+
+EF BB BF라는 UTF-8이라는 문서라는 것을 보여주는 데이터가 먼저 헤더로 보여지는 문서\
+이것을 설정한 문서를 스크립트로 처리하면 문제가 될 수 있으니, 스크립트 파일은 BOM을 지정하지 않는 것이 좋다고 한다.
+
+## UTF-16
+
+각 문자 단위를 2바이트 체계로 처리하기 때문에 Little Endian, Big Endian인지를 표기를 해야하는 문제가 생긴다.\
+게다가 영문도 2바이트로 처리해야하므로 아스키 코드에 해당하는 문자가 많을 수록 바이트 손해가 생긴다.\
+한글이나 한자의 경우 2바이트로 처리하여 UTF-8에 비하면 바이트 손해가 생기지 않는다.
+
+BOM으로 가장 헤더의 데이터가 FF FE라면 Little Endian\
+FE FF라면 Big Endian으로 처리된다.
+
+Java/닷넷은 기본으로 UTF-16을 사용하며, 모두 Big Endian으로 처리한다.\
+그래서 이모지를 문자로 이용한다면 char[2]로 써야한다.
+
+UTF-16은 바이트 순서를 어떻게 처리하는지를 꼭 읽어야하는 문제가 있다.
+
+- Little Endian: 경우 0x12345678을 78 56 34 12와 같이 각 바이트 주소를 내림차순으로 처리하는 방식
+- Big Endian: 0x12345678을 12 34 56 78로 각 바이트 주소를 오름차순으로 처리하는 방식
+
 ## 참조
 
 - [문자를 다루는 인코딩 규칙에 대한 모든 것! - 널널한 개발자](https://www.youtube.com/watch?v=6hvJr0-adtg)
@@ -102,3 +124,4 @@ UTF-8에서 가(EA B0 80) 나 (EB 82 98) 다 (EB 8B A4) 라 (EB 9D 8C)로 처리
 - [unicode.org](https://unicode.org/)
 - [chart Hangul](https://unicode.org/charts/collation/chart_Hangul.html)
 - [UTF-8](https://namu.wiki/w/%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C)
+- [컴퓨터 수 표현](https://namu.wiki/w/%EC%BB%B4%ED%93%A8%ED%84%B0%EC%97%90%EC%84%9C%EC%9D%98%20%EC%88%98%20%ED%91%9C%ED%98%84#s-2.1.2)
