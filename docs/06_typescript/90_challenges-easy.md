@@ -126,3 +126,29 @@ type Includes<T extends readonly any[], U> = T extends [infer First, ...infer Re
     : Includes<Rest, U>
   : false;
 ```
+
+### [Push](https://github.com/type-challenges/type-challenges/blob/main/questions/03057-easy-push/README.md)
+
+- spread operator로 해결
+
+```ts
+type Push<T extends any[], U> = [ ...T, U ]
+```
+
+### [Unshift](https://github.com/type-challenges/type-challenges/blob/main/questions/03060-easy-unshift/README.md)
+
+- 가장 첫 요소로 삽입하는 타입
+- spread를 응용하여 해결
+
+```ts
+type Unshift<T extends any[], U> = [ U, ...T ]
+```
+
+### [Parameters](https://github.com/type-challenges/type-challenges/blob/main/questions/03312-easy-parameters/README.md)
+
+- 함수의 인자들을 배열로 처리하는 타입 선언
+- infer 키워드와 rest 연산자로 해결 (타입 추론을 통해 얻어낼 수 있음)
+
+```ts
+type MyParameters<T> = T extends ( ...args: infer R ) => any ? R : never;
+```
