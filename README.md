@@ -1,7 +1,7 @@
 # Jekyll blog for personal
 
-- Author: Lee Gyucheol
-- e-mail: rbcjf0219@gmail.com
+- Author: Lee Gyu Cheol
+- e-mail: leegyu4dev@gmail.com
 
 ## scripts
 
