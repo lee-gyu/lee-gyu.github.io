@@ -25,7 +25,7 @@ jobs:
       - name: Corepack config
         run: corepack enable
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install -P
       - name: Build
         run: pnpm build
 
