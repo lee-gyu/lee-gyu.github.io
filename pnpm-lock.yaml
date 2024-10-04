@@ -11,18 +11,33 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.1
         version: 5.1.1(astro@4.15.11(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.2))(tailwindcss@3.4.13)
+      astro:
+        specifier: ^4.15.11
+        version: 4.15.11(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.2)
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.20(postcss@8.4.47)
       css.gg:
         specifier: ^2.1.4
         version: 2.1.4
+      postcss:
+        specifier: ^8.4.47
+        version: 8.4.47
       react:
         specifier: ^18.3.1
         version: 18.3.1
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+      svgo:
+        specifier: ^3.3.2
+        version: 3.3.2
       tailwindcss:
         specifier: ^3.4.13
         version: 3.4.13
+      typescript:
+        specifier: ^5.6.2
+        version: 5.6.2
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.3
@@ -33,24 +48,6 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
-      astro:
-        specifier: ^4.15.11
-        version: 4.15.11(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.2)
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.20(postcss@8.4.47)
-      postcss:
-        specifier: ^8.4.47
-        version: 8.4.47
-      sass:
-        specifier: ^1.79.4
-        version: 1.79.4
-      svgo:
-        specifier: ^3.3.2
-        version: 3.3.2
-      typescript:
-        specifier: ^5.6.2
-        version: 5.6.2
 
 packages:
 
@@ -2806,6 +2803,7 @@ snapshots:
   chokidar@4.0.1:
     dependencies:
       readdirp: 4.0.2
+    optional: true
 
   ci-info@4.0.0: {}
 
@@ -3177,7 +3175,8 @@ snapshots:
 
   http-cache-semantics@4.1.1: {}
 
-  immutable@4.3.7: {}
+  immutable@4.3.7:
+    optional: true
 
   import-meta-resolve@4.1.0: {}
 
@@ -3813,7 +3812,8 @@ snapshots:
     dependencies:
       picomatch: 2.3.1
 
-  readdirp@4.0.2: {}
+  readdirp@4.0.2:
+    optional: true
 
   regex@4.3.3: {}
 
@@ -3952,6 +3952,7 @@ snapshots:
       chokidar: 4.0.1
       immutable: 4.3.7
       source-map-js: 1.2.1
+    optional: true
 
   scheduler@0.23.2:
     dependencies:
