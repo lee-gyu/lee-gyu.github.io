@@ -18,6 +18,8 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4
+            - name: Setup Pages
+              uses: actions/configure-pages@v5
             - name: Install Node.js
               uses: actions/setup-node@v4
               with:
@@ -29,8 +31,8 @@ jobs:
             - name: Build
               run: pnpm build
 
-            - name: Build
-              run: ls -al
+            - name: ls
+              run: ls -al ./.dist
 
             - name: Upload artifact
               uses: actions/upload-artifact@v4
