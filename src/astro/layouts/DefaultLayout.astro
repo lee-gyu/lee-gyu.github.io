@@ -1,0 +1,26 @@
+---
+import PageTop from "src/astro/components/PageTop.astro";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.css" />
+        <link rel="shortcut icon" href="/svg/favicon.svg" type="image/x-icon">
+        <title>Lee Gyu</title>
+    </head>
+    <body>
+        <div id="root">
+            <PageTop />
+            <main>
+                <slot />
+            </main>
+        </div>
+    </body>
+</html>
+
+<style>
+    @import 'src/styles/global.css';
+</style>

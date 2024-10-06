@@ -6,7 +6,7 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "start": "astro dev",
+        "dev": "astro dev",
         "build": "astro build",
         "test": "vitest"
     },
@@ -15,16 +15,20 @@
     "license": "MIT",
     "devDependencies": {
         "@biomejs/biome": "1.9.3",
+        "@testing-library/react": "^16.0.1",
         "@types/react": "^18.3.11",
         "@types/react-dom": "^18.3.0",
+        "jsdom": "^25.0.1",
         "vitest": "^2.1.2"
     },
     "dependencies": {
         "@astrojs/tailwind": "^5.1.1",
+        "@react-spring/web": "^9.7.4",
         "astro": "^4.15.11",
         "autoprefixer": "^10.4.20",
         "css.gg": "^2.1.4",
         "postcss": "^8.4.47",
+        "postcss-nesting": "^13.0.0",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "svgo": "^3.3.2",

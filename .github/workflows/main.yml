@@ -5,6 +5,8 @@ on:
         branches: ["main"]
         paths-ignore:
             - "*.md"
+            - ".github/**"
+            - ".vscode/*"
 
     workflow_dispatch:
 
