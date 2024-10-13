@@ -18,16 +18,16 @@
         "@testing-library/react": "^16.0.1",
         "@types/p5": "^1.7.6",
         "@types/react": "^18.3.11",
-        "@types/react-dom": "^18.3.0",
+        "@types/react-dom": "^18.3.1",
         "jsdom": "^25.0.1",
         "vitest": "^2.1.2"
     },
     "dependencies": {
-        "@astrojs/tailwind": "^5.1.1",
-        "@react-spring/web": "^9.7.4",
+        "@astrojs/tailwind": "^5.1.2",
+        "@react-spring/web": "^9.7.5",
         "@toss/assert": "^1.2.0",
         "@toss/utils": "^1.5.0",
-        "astro": "^4.15.11",
+        "astro": "^4.16.2",
         "autoprefixer": "^10.4.20",
         "css.gg": "^2.1.4",
         "p5": "^1.11.0",
@@ -37,7 +37,7 @@
         "react-dom": "^18.3.1",
         "svgo": "^3.3.2",
         "tailwindcss": "^3.4.13",
-        "typescript": "^5.6.2"
+        "typescript": "^5.6.3"
     },
     "packageManager": "pnpm@9.12.0+sha512.4abf725084d7bcbafbd728bfc7bee61f2f791f977fd87542b3579dcb23504d170d46337945e4c66485cd12d588a0c0e570ed9c477e7ccdd8507cf05f3f92eaca"
 }
