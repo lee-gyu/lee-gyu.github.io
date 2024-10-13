@@ -1,5 +1,6 @@
 ---
 import PageTop from "src/astro/components/PageTop.astro";
+import BackgroundArt from "src/astro/components/BackgroundArt.astro";
 ---
 
 <!doctype html>
@@ -7,7 +8,7 @@ import PageTop from "src/astro/components/PageTop.astro";
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.css" />
+        <link href="//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-subset.css" rel="stylesheet" />
         <link rel="shortcut icon" href="/svg/favicon.svg" type="image/x-icon">
         <title>Lee Gyu</title>
     </head>
@@ -18,6 +19,7 @@ import PageTop from "src/astro/components/PageTop.astro";
                 <slot />
             </main>
         </div>
+        <BackgroundArt />
     </body>
 </html>
 

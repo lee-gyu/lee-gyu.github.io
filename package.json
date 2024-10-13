@@ -16,6 +16,7 @@
     "devDependencies": {
         "@biomejs/biome": "1.9.3",
         "@testing-library/react": "^16.0.1",
+        "@types/p5": "^1.7.6",
         "@types/react": "^18.3.11",
         "@types/react-dom": "^18.3.0",
         "jsdom": "^25.0.1",
@@ -24,9 +25,12 @@
     "dependencies": {
         "@astrojs/tailwind": "^5.1.1",
         "@react-spring/web": "^9.7.4",
+        "@toss/assert": "^1.2.0",
+        "@toss/utils": "^1.5.0",
         "astro": "^4.15.11",
         "autoprefixer": "^10.4.20",
         "css.gg": "^2.1.4",
+        "p5": "^1.11.0",
         "postcss": "^8.4.47",
         "postcss-nesting": "^13.0.0",
         "react": "^18.3.1",
