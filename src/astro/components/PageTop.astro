@@ -3,30 +3,8 @@ import TerminalIconSvg from "css.gg/icons/svg/terminal.svg?raw";
 import MoreAltIconSvg from "css.gg/icons/svg/more-alt.svg?raw";
 ---
 
-<header class="header">
-    <Fragment set:html={TerminalIconSvg} />
-    <span class="name">Lee Gyu</span>
-    <div class="menu" role="menu">
-        <Fragment set:html={MoreAltIconSvg} />
-    </div>
+<header>
 </header>
 
 <style>
-.header {
-    @apply bg-slate-200 bg-opacity-30 flex items-center;
-    padding: 0.5rem 1rem;
-}
-
-.menu {
-    margin-left: auto;
-    cursor: pointer;
-    &:hover {
-        opacity: 0.75;
-    }
-}
-
-.name {
-    margin-left: 0.5rem;
-    font-size: 1.5rem;
-}
 </style>

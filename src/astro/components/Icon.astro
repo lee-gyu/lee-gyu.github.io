@@ -1,0 +1,18 @@
+---
+import MailIconSvg from "css.gg/icons/svg/mail.svg?raw";
+
+type Props = {
+    icon: "github" | "blog" | "mail"
+}
+
+const { icon } = Astro.props;
+
+const svg = (() => {
+    if (icon === "mail") return MailIconSvg;
+
+    return "(none icon)";
+})();
+
+---
+
+<Fragment set:html={ svg }/>

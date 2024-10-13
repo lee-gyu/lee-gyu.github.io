@@ -1,6 +1,77 @@
 ---
 import DefaultLayout from "src/astro/layouts/DefaultLayout.astro";
+import Icon from "src/astro/components/Icon.astro";
 ---
 
 <DefaultLayout>
+    <div class="content-wrapper h-screen">
+        <h1 class="title">안녕하세요.</h1>
+        <h4 class="sub-title my-6">소프트웨어 개발자 이규철 입니다.</h4>
+        <p>
+            현재 이노룰스라는 IT 회사에서 웹 소프트웨어를 개발하고 있습니다.
+            주 개발 업무는 여러 웹 서비스 간의 연동을 위한 인터페이스를 설계/구현하고, 공용 패키지를 만들어 전체 웹 서비스의 공통 모듈을 개발하고 웹 개발 환경을 개선하는 업무를 맡고 있습니다.
+        </p>
+        <p>
+            오픈소스 소프트웨어를 위한 개발에 관심이 많으며, 개인 시간이 날 때마다 어떤 OSS를 개발하여 사회와 나 자신에게 발전이 될 수 있을지 고민합니다.
+        </p>
+        <p>
+            <ul>
+                <li><a class="list-item" href=""><Icon icon="mail"/> Blog</a></li>
+                <li><a class="list-item" href=""><Icon icon="mail"/> Github</a></li>
+                <li><a class="list-item" href="mailto:leegyu4dev@gmail.com"><Icon icon="mail"/> leegyu4dev@gmail.com</a></li>
+            </ul>
+        </p>
+    </div>
+    <div class="content-wrapper">
+        Test
+    </div>
 </DefaultLayout>
+
+<style>
+    .content-wrapper {
+        padding: 10vh 12vw;
+    }
+
+    h1, h4 {
+        font-weight: 600;
+    }
+
+    .title {
+        font-size: theme("fontSize.3xl");
+    }
+
+    .sub-title {
+        font-size: theme("fontSize.2xl");
+    }
+
+    p {
+        font-weight: 300;
+        word-break: keep-all;
+        margin: 1rem 0;
+        max-width: 30em;
+    }
+
+    .list-item {
+        position: relative;
+        display: inline-flex;
+        column-gap: 4px;
+        padding: 2px 4px;
+        margin: 4px 0;
+
+        &::after {
+            @apply bg-gray-200 bg-opacity-20;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            bottom: 0;
+            content: "";
+            transition: width 0.15s ease-in-out;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+
+</style>

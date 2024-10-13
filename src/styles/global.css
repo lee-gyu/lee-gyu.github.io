@@ -1,11 +1,7 @@
 :root {
     font-family: "D2Coding", sans-serif;
     font-size: 16px;
-    background-color: theme("colors.gray.800");
+    background-color: theme("colors.gray.950");
     color: theme("colors.gray.100");
 }
 
-#root {
-    margin: auto;
-    width: 1280px;
-}
