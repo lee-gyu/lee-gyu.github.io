@@ -145,17 +145,18 @@ import Icon from "src/react/Icon";
         &::after {
             @apply bg-gray-200 bg-opacity-20;
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            bottom: 0;
+            top: -2px;
+            left: -4px;
+            bottom: -2px;
+            border-radius: 4px;
             content: "";
+            width: 0;
             transition: width 0.15s ease-in-out;
             pointer-events: none;
         }
 
         &:hover::after {
-            width: 100%;
+            width: calc(100% + 8px);
         }
     }
 
