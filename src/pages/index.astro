@@ -7,12 +7,12 @@ import Icon from "src/react/Icon";
     <main>
         <div class="content-wrapper">
             <h1 class="title">안녕하세요.</h1>
-            <h4 class="sub-title my-6">웹 개발자 이규철 입니다.</h4>
+            <h4 class="sub-title"><strong tabindex="0">웹 개발자</strong> 이규철 입니다.</h4>
             <section class="section">
                 <p class="paragraph">
-                    현재 IT 회사의 웹 개발 팀에서 4명의 개발자를 이끄는 시니어 개발자입니다.
-                    주 개발 업무는 다른 웹 개발자들이 편히 개발할 수 있도록 공용 패키지를 개발하고 있으며,
-                    브라우저 속 다양한 동적 기술을 활용하여 커스터마이징이 용이한 시스템 설계와 다른 웹 기반 애플리케이션 간 인터페이스를 고민합니다.
+                    현재 웹 개발 팀에서 4명의 개발자를 이끄는 <strong tabindex="0">시니어 개발자</strong>입니다.
+                    주 개발 업무는 다른 웹 개발자들이 편히 개발할 수 있도록 <strong tabindex="0">공용 패키지를 개발</strong>하고 있으며,
+                    브라우저 속 다양한 동적 기술을 활용하여 커스터마이징이 용이한 <strong tabindex="0">시스템 설계</strong>와 다른 웹 기반 <strong tabindex="0">애플리케이션 간 인터페이스</strong>를 고민합니다.
                 </p>
             </section>
             <section class="section" role="article">
@@ -24,7 +24,7 @@ import Icon from "src/react/Icon";
                     </div>
                     <div class="row">
                         <span class="tag">2015~2018</span>
-                        <span class="desc">삼성전자 VD사업부</span>
+                        <span class="desc">삼성전자 VD사업부 글로벌 운영팀</span>
                     </div>
                     <div class="row">
                         <span class="tag">2012~2015</span>
@@ -66,6 +66,33 @@ import Icon from "src/react/Icon";
     .content-wrapper {
         padding: 10vh 12vw;
     }
+
+    *:focus-visible {
+        outline-offset: 2px;
+    }
+
+    strong {
+        position: relative;
+        white-space: nowrap;
+        word-break: keep-all;
+
+        &:hover {
+            color: theme(colors.neutral.400);
+        }
+
+        &::after {
+            @apply bg-neutral-400 bg-opacity-40;
+
+            position: absolute;
+
+            width: 100%;
+            height: 4px;
+            bottom: -2px;
+            left: 0;
+
+            content: "";
+        }
+    }
     
     h1, h4 {
         font-weight: 600;
@@ -75,8 +102,11 @@ import Icon from "src/react/Icon";
     .grid-article {
         display: grid;
         grid-template-columns: auto 1fr;
-        column-gap: 0.5rem;
-        padding-left: 1rem;
+        column-gap: 1.5rem;
+    }
+
+    .tag {
+        letter-spacing: 0.1em;
     }
 
     .row {
@@ -86,6 +116,8 @@ import Icon from "src/react/Icon";
 
     .paragraph {
         margin: 0.5rem 0;
+        line-height: 1.75;
+        cursor: default;
     }
 
     .title {
