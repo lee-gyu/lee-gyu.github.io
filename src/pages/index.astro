@@ -1,18 +1,19 @@
 ---
 import DefaultLayout from "src/astro/layouts/DefaultLayout.astro";
+import Projects from "src/astro/widget/Projects.astro";
 import Icon from "src/react/Icon";
 ---
 
 <DefaultLayout>
     <main>
-        <div class="content-wrapper">
+        <div class="content-wrapper h-screen" data-pin-point="about">
             <h1 class="title">안녕하세요.</h1>
             <h4 class="sub-title"><strong tabindex="0">웹 개발자</strong> 이규철 입니다.</h4>
             <section class="section">
                 <p class="paragraph">
                     현재 웹 개발 팀에서 4명의 개발자를 이끄는 <strong tabindex="0">시니어 개발자</strong>입니다.
                     주 개발 업무는 다른 웹 개발자들이 편히 개발할 수 있도록 <strong tabindex="0">공용 패키지를 개발</strong>하고 있으며,
-                    브라우저 속 다양한 동적 기술을 활용하여 커스터마이징이 용이한 <strong tabindex="0">시스템 설계</strong>와 다른 웹 기반 <strong tabindex="0">애플리케이션 간 인터페이스</strong>를 고민합니다.
+                    브라우저의 제공 환경을 다방면으로 활용하여 커스터마이징이 용이한 <strong tabindex="0">시스템 설계</strong>와 다른 <strong tabindex="0">애플리케이션 간 인터페이스</strong>를 고민합니다.
                 </p>
             </section>
             <section class="section" role="article">
@@ -55,6 +56,9 @@ import Icon from "src/react/Icon";
                 </ul>
             </section>
         </div>
+        <div class="content-wrapper">
+            <Projects/>
+        </div>
     </main>
 </DefaultLayout>
 
@@ -77,13 +81,14 @@ import Icon from "src/react/Icon";
         word-break: keep-all;
 
         &:hover {
-            color: theme(colors.neutral.400);
+            color: theme(colors.lime.400)
         }
 
         &::after {
             @apply bg-neutral-400 bg-opacity-40;
 
             position: absolute;
+            transition: all 0.15s linear;
 
             width: 100%;
             height: 4px;
@@ -91,6 +96,10 @@ import Icon from "src/react/Icon";
             left: 0;
 
             content: "";
+        }
+
+        &:hover::after {
+            height: calc(100% + 4px);
         }
     }
     

@@ -1,6 +1,7 @@
 ---
 import PageTop from "src/astro/components/PageTop.astro";
 import BackgroundArt from "src/astro/components/BackgroundArt.astro";
+import ScrollUI from "../components/ScrollUI.astro";
 ---
 
 <!doctype html>
@@ -18,6 +19,7 @@ import BackgroundArt from "src/astro/components/BackgroundArt.astro";
                 <slot />
             </main>
         </div>
+        <ScrollUI />
         <BackgroundArt />
     </body>
 </html>

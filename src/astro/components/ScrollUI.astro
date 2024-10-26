@@ -1,0 +1,78 @@
+---
+---
+
+<lee-gyu-scoll-ui class="scroll-ui">
+</lee-gyu-scoll-ui>
+
+<script>
+    const TRACK_HEIGHT = 48 + 16;
+
+    class LeeGyuScollUI extends HTMLElement {
+
+        #scrollTrack: HTMLElement;
+        #scheduleHide = -1;
+
+        constructor() {
+            super();
+
+            this.#scrollTrack = document.createElement("div");
+            this.#scrollTrack.role = "scroll-track";
+        }
+
+        connectedCallback() {
+            window.addEventListener('scroll', () => this.windowScrollHandler());
+            this.appendChild(this.#scrollTrack);
+        }
+
+        windowScrollHandler() {
+            const scrollY = window.scrollY;
+            const scrollHeight = document.body.scrollHeight - TRACK_HEIGHT;
+            const clientHeight = document.documentElement.clientHeight - TRACK_HEIGHT;
+
+            const scrollPercent = scrollY / (scrollHeight - clientHeight);
+
+            if (this.#scrollTrack) {
+                this.#scrollTrack.style.transform = `translateY(calc(${clientHeight}px * ${scrollPercent}))`;
+            }
+
+            this.style.opacity = "1";
+            this.scheduleHide();
+        }
+
+        scheduleHide() {
+            clearTimeout(this.#scheduleHide);
+
+            this.#scheduleHide = setTimeout(() => {
+                this.style.opacity = "0";
+            }, 1500);
+        }
+    }
+
+    customElements.define('lee-gyu-scoll-ui', LeeGyuScollUI);
+</script>
+
+<style>
+    lee-gyu-scoll-ui {
+        transition: opacity 0.5s ease-in-out;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 12px;
+        padding: 8px 4px;
+
+        z-index: 9000;
+        opacity: 0;
+
+    }
+
+</style>
+
+<style is:global>
+    *[role="scroll-track"] {
+        @apply bg-slate-200 bg-opacity-60;
+        box-sizing: border-box;
+        min-height: 48px;
+        border-radius: 32px;
+    }
+</style>
