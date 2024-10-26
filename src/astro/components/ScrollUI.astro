@@ -8,33 +8,17 @@
     const TRACK_HEIGHT = 48 + 16;
 
     class LeeGyuScollUI extends HTMLElement {
-
-        #scrollTrack: HTMLElement;
         #scheduleHide = -1;
 
         constructor() {
             super();
-
-            this.#scrollTrack = document.createElement("div");
-            this.#scrollTrack.role = "scroll-track";
         }
 
         connectedCallback() {
             window.addEventListener('scroll', () => this.windowScrollHandler());
-            this.appendChild(this.#scrollTrack);
         }
 
         windowScrollHandler() {
-            const scrollY = window.scrollY;
-            const scrollHeight = document.body.scrollHeight - TRACK_HEIGHT;
-            const clientHeight = document.documentElement.clientHeight - TRACK_HEIGHT;
-
-            const scrollPercent = scrollY / (scrollHeight - clientHeight);
-
-            if (this.#scrollTrack) {
-                this.#scrollTrack.style.transform = `translateY(calc(${clientHeight}px * ${scrollPercent}))`;
-            }
-
             this.style.opacity = "1";
             this.scheduleHide();
         }
@@ -63,16 +47,28 @@
 
         z-index: 9000;
         opacity: 0;
-
     }
 
 </style>
 
 <style is:global>
-    *[role="scroll-track"] {
+    ::-webkit-scrollbar {
+        width: 18px;
+        height: 18px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
         @apply bg-slate-200 bg-opacity-60;
-        box-sizing: border-box;
-        min-height: 48px;
-        border-radius: 32px;
+        background-clip: padding-box;
+        border-radius: 100px;
+        border: 6px solid transparent;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-opacity-80;
     }
 </style>
