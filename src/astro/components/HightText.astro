@@ -1,0 +1,46 @@
+---
+
+type Props = {
+    text: string;
+};
+
+const { text } = Astro.props;
+---
+
+<strong>{text}</strong>
+
+<style>
+    strong {
+        position: relative;
+        white-space: nowrap;
+        word-break: keep-all;
+
+        &:hover {
+            color: theme(colors.lime.400)
+        }
+
+        &::after {
+            @apply bg-neutral-400 bg-opacity-40;
+
+            position: absolute;
+            transition: all 0.15s linear;
+
+            width: 100%;
+            height: 4px;
+            bottom: -2px;
+            left: 0;
+
+            content: "";
+        }
+
+        &:hover::after {
+            height: calc(100% + 4px);
+        }
+    }
+
+    @media print {
+        strong::after {
+            content: none;
+        }
+    }
+</style>

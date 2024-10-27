@@ -1,59 +1,30 @@
 ---
 import DefaultLayout from "src/astro/layouts/DefaultLayout.astro";
 import Projects from "src/astro/widget/Projects.astro";
-import Icon from "src/react/Icon";
+import Career from "src/astro/widget/Career.astro";
+import Banner from "src/astro/widget/Banner.astro";
+
+import HightText from "src/astro/components/HightText.astro";
 ---
 
 <DefaultLayout>
     <main>
-        <div class="content-wrapper h-screen" data-pin-point="about">
+        <div class="content-wrapper" data-pin-point="about" data-page="first">
             <h1 class="title">안녕하세요.</h1>
-            <h4 class="sub-title"><strong tabindex="0">웹 개발자</strong> 이규철 입니다.</h4>
+            <h4 class="sub-title"><HightText text="웹 개발자"/> 이규철 입니다.</h4>
             <section class="section">
                 <p class="paragraph">
-                    현재 웹 개발 팀에서 4명의 개발자를 이끄는 <strong tabindex="0">시니어 개발자</strong>입니다.
-                    주 개발 업무는 다른 웹 개발자들이 편히 개발할 수 있도록 <strong tabindex="0">공용 패키지를 개발</strong>하고 있으며,
-                    브라우저의 제공 환경을 다방면으로 활용하여 커스터마이징이 용이한 <strong tabindex="0">시스템 설계</strong>와 다른 <strong tabindex="0">애플리케이션 간 인터페이스</strong>를 고민합니다.
+                    현재 웹 개발 팀에서 4명의 개발자를 이끄는 <HightText text="시니어 개발자"/>입니다.
+                    주 개발 업무는 다른 웹 개발자들이 편히 개발할 수 있도록 <HightText text="공용 패키지를 개발"/>하고 있으며,
+                    브라우저의 제공 환경을 다방면으로 활용하여 커스터마이징이 용이한 <HightText text="시스템 설계"/>와 다른 <HightText text="애플리케이션 간 인터페이스"/>를 고민합니다.
                 </p>
             </section>
             <section class="section" role="article">
                 <h4>경력</h4>
-                <article class="grid-article">
-                    <div class="row">
-                        <span class="tag">2020~</span>
-                        <span class="desc">이노룰스 기술연구소</span>
-                    </div>
-                    <div class="row">
-                        <span class="tag">2015~2018</span>
-                        <span class="desc">삼성전자 VD사업부 글로벌 운영팀</span>
-                    </div>
-                    <div class="row">
-                        <span class="tag">2012~2015</span>
-                        <span class="desc">삼성전자 GTC 인사그룹</span>
-                    </div>
-                </article>
+                <Career />
             </section>
             <section role="banner">
-                <ul>
-                    <li>
-                        <a class="list-item" href="https://medium.com/@gyuc219" target="_blank" title="blog">
-                            <Icon icon="blog"/>
-                            <span>Blog</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="list-item" href="https://github.com/lee-gyu" target="_blank" title="github">
-                            <Icon icon="github"/>
-                            <span>Github</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="list-item" href="mailto:leegyu4dev@gmail.com" target="_blank" title="e-mail">
-                            <Icon icon="mail"/>
-                            <span>leegyu4dev@gmail.com</span>
-                        </a>
-                    </li>
-                </ul>
+                <Banner/>
             </section>
         </div>
         <div class="content-wrapper">
@@ -63,6 +34,11 @@ import Icon from "src/react/Icon";
 </DefaultLayout>
 
 <style>
+
+    [data-page="first"] {
+        height: 100vh;
+    }
+
     .content-wrapper {
         padding: 10vh 12vw;
     }
@@ -70,53 +46,10 @@ import Icon from "src/react/Icon";
     *:focus-visible {
         outline-offset: 2px;
     }
-
-    strong {
-        position: relative;
-        white-space: nowrap;
-        word-break: keep-all;
-
-        &:hover {
-            color: theme(colors.lime.400)
-        }
-
-        &::after {
-            @apply bg-neutral-400 bg-opacity-40;
-
-            position: absolute;
-            transition: all 0.15s linear;
-
-            width: 100%;
-            height: 4px;
-            bottom: -2px;
-            left: 0;
-
-            content: "";
-        }
-
-        &:hover::after {
-            height: calc(100% + 4px);
-        }
-    }
     
     h1, h4 {
         font-weight: 600;
         letter-spacing: -0.08em;
-    }
-
-    .grid-article {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        column-gap: 1.5rem;
-    }
-
-    .tag {
-        letter-spacing: 0.1em;
-    }
-
-    .row {
-        display: contents;
-
     }
 
     .paragraph {
@@ -140,34 +73,18 @@ import Icon from "src/react/Icon";
         max-width: 30em;
     }
 
-    .list-item {
-        position: relative;
-        display: inline-flex;
-        column-gap: 0.5rem;
-        padding: 0.125rem;
-        margin: 0.125rem 0;
-
-        &::after {
-            @apply bg-gray-200 bg-opacity-20;
-            position: absolute;
-            top: -2px;
-            left: -4px;
-            bottom: -2px;
-            border-radius: 4px;
-            content: "";
-            width: 0;
-            transition: width 0.15s ease-in-out;
-            pointer-events: none;
-        }
-
-        &:hover::after {
-            width: calc(100% + 8px);
-        }
-    }
-
     @media print {
-        strong::after {
-            content: none;
+
+        [data-page="first"] {
+            height: auto;
+        }
+
+        .content-wrapper {
+            padding: 0;
+        }
+
+        @page {
+            margin: 2cm 2.5cm;
         }
     }
 

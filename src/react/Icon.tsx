@@ -4,8 +4,10 @@ import { VscGithubAlt } from "react-icons/vsc";
 import { VscMail } from "react-icons/vsc";
 import { VscBook } from "react-icons/vsc";
 
+export type IconClass = "github" | "blog" | "mail";
+
 type IconProps = {
-    icon: "github" | "blog" | "mail";
+    icon: IconClass;
 };
 
 const ICON_MAP: Record<string, IconType> = {

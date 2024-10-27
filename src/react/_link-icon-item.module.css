@@ -1,0 +1,24 @@
+.list-item {
+    position: relative;
+    display: inline-flex;
+    column-gap: 0.5rem;
+    padding: 0.125rem;
+    margin: 0.125rem 0;
+
+    &::after {
+        @apply bg-gray-200 bg-opacity-20;
+        position: absolute;
+        top: -2px;
+        left: -4px;
+        bottom: -2px;
+        border-radius: 4px;
+        content: "";
+        width: 0;
+        transition: width 0.15s ease-in-out;
+        pointer-events: none;
+    }
+
+    &:hover::after {
+        width: calc(100% + 8px);
+    }
+}

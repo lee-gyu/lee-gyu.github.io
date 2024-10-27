@@ -9,7 +9,9 @@
 
 @media print {
     :root {
-        color: black;
+        color: theme("colors.black");
+        background-color: transparent;
+        font-size: 12pt;
     }
 }
 

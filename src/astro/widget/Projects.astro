@@ -2,16 +2,119 @@
 ---
 
 <section data-pin-point="projects">
-    <h4 class="title">Projects</h4>
-    <article>
-        작성 중. . .
+    <h4 class="title" data-status="not-complete">Projects</h4>
+    <article class="project-article">
+        <h4 class="article-title">Vite 빌드 Plugin</h4>
+    </article>
+    <article class="project-article">
+        <h4 class="article-title">엑셀 Exporting 모듈</h4>
+        <ul class="tag-wrapper">
+            <li class="tag">Web Worker</li>
+            <li class="tag">exceljs</li>
+        </ul>
+    </article>
+    <article class="project-article">
+        <h4 class="article-title">Flowchart UI 컴포넌트</h4>
+        <ul class="tag-wrapper">
+            <li class="tag">d3.js</li>
+        </ul>
+    </article>
+    <article class="project-article">
+        <h4 class="article-title">Grid UI 컴포넌트</h4>
+    </article>
+    <article class="project-article">
+        <h4 class="article-title">Tree UI 컴포넌트</h4>
+    </article>
+    <article class="project-article">
+        <h4 class="article-title">공용 패키지 단위 테스트 기반 적용</h4>
+        <ul class="tag-wrapper">
+            <li class="tag">Vitest</li>
+            <li class="tag">Testing Library</li>
+        </ul>
+    </article>
+    <article class="project-article">
+        <h4 class="article-title">공용 패키지 End 테스트 기반 적용</h4>
+        <ul class="tag-wrapper">
+            <li class="tag">Playwright</li>
+        </ul>
+    </article>
+    <article class="project-article">
+        <h4 class="article-title">엑셀 클립보드 파싱 알고리즘</h4>
+    </article>
+    <article class="project-article">
+        <h4 class="article-title">사내 CSS 체계 통합</h4>
+        <ul class="tag-wrapper">
+            <li class="tag">vanilla-extract/css</li>
+        </ul>
+    </article>
+    <article class="project-article">
+        <h4 class="article-title">업무 일정 관리 Calendar WebApp</h4>
+        <ul class="tag-wrapper">
+            <li class="tag">Next.js</li>
+        </ul>
+    </article>
+    <article class="project-article">
+        <h4 class="article-title">업무 시스템 리뉴얼 (php → React)</h4>
+    </article>
+    <article class="project-article">
+        <h4 class="article-title">실시간 HTML/JS LiveEditor 컴포넌트</h4>
+        <ul class="tag-wrapper">
+            <li class="tag">CodeMirror</li>
+        </ul>
+    </article>
+    <article class="project-article">
+        <h4 class="article-title">공용 컴포넌트 스토리북 구축</h4>
+        <ul class="tag-wrapper">
+            <li class="tag">StoryBook</li>
+        </ul>
+    </article>
+    <article class="project-article">
+        <h4 class="article-title">공용 패키지 API Docs 구축</h4>
+        <ul class="tag-wrapper">
+            <li class="tag">VitePress</li>
+        </ul>
     </article>
 </section>
 
 <style>
     .title {
         text-transform: uppercase;
-        font-weight: 600;
+        font-size: 1.25rem;
+        font-weight: 700;
         letter-spacing: 0.15em;
     }
+
+    .project-article {
+        margin: 12px 0;
+    }
+
+    .article-title {
+        font-weight: 600;
+
+        &::before {
+            background-color: theme(colors.neutral.400);
+            width: 0.5rem;
+            height: 1.25rem;
+            margin-right: 4px;
+            display: inline-block;
+            content: "";
+            vertical-align: text-bottom;
+        }
+    }
+
+    .tag-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 8px;
+        margin: 8px 0;
+    }
+
+    .tag {
+        border-radius: 4px;
+        background-color: theme("colors.neutral.400");
+        padding: 2px 8px;
+        color: theme("colors.black");
+        font-weight: 600;
+    }
+
 </style>

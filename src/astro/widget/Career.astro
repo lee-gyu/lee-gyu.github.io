@@ -1,0 +1,43 @@
+---
+
+const careerData = [
+    {
+        tag: "2020~",
+        desc: "이노룰스 기술연구소",
+    },
+    {
+        tag: "2015~2018",
+        desc: "삼성전자 VD사업부 글로벌 운영팀",
+    },
+    {
+        tag: "2012~2015",
+        desc: "삼성전자 GTC 인사그룹",
+    },
+];
+---
+
+<article class="grid-article">
+    {careerData.map(({ tag, desc }) => (
+        <div class="row">
+            <span class="tag">{tag}</span>
+            <span class="desc">{desc}</span>
+        </div>
+    ))}
+</article>
+
+<style>
+    .grid-article {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 1.5rem;
+    }
+
+    .tag {
+        letter-spacing: 0.1em;
+    }
+
+    .row {
+        display: contents;
+
+    }
+</style>

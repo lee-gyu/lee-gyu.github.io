@@ -1,12 +1,9 @@
 ---
 ---
 
-<lee-gyu-scoll-ui class="scroll-ui">
-</lee-gyu-scoll-ui>
+<lee-gyu-scoll-ui></lee-gyu-scoll-ui>
 
 <script>
-    const TRACK_HEIGHT = 48 + 16;
-
     class LeeGyuScollUI extends HTMLElement {
         #scheduleHide = -1;
 
@@ -19,17 +16,9 @@
         }
 
         windowScrollHandler() {
-            this.style.opacity = "1";
-            this.scheduleHide();
+            
         }
 
-        scheduleHide() {
-            clearTimeout(this.#scheduleHide);
-
-            this.#scheduleHide = setTimeout(() => {
-                this.style.opacity = "0";
-            }, 1500);
-        }
     }
 
     customElements.define('lee-gyu-scoll-ui', LeeGyuScollUI);
