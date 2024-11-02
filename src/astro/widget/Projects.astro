@@ -2,7 +2,7 @@
 ---
 
 <section data-pin-point="projects">
-    <h4 class="title" data-status="not-complete">Projects (2020~)</h4>
+    <h4 class="title" data-status="not-complete">Projects <sup>(2020~)</sup></h4>
     <article class="project-article">
         <h4 class="article-title">Vite 빌드 Plugin</h4>
     </article>
@@ -79,25 +79,25 @@
 <style>
     .title {
         text-transform: uppercase;
-        font-size: 1.25rem;
-        font-weight: 700;
-        letter-spacing: 0.15em;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+
     }
 
     .project-article {
         margin: 12px 0;
+        letter-spacing: 0.05em;
     }
 
     .article-title {
-        font-weight: 600;
+        font-weight: 400;
+        margin-top: 16px;
 
         &::before {
-            background-color: theme(colors.neutral.400);
-            width: 0.5rem;
-            height: 1.25rem;
             margin-right: 4px;
             display: inline-block;
-            content: "";
+            content: "ㆍ";
             vertical-align: text-bottom;
         }
     }
@@ -106,15 +106,17 @@
         display: flex;
         flex-wrap: wrap;
         column-gap: 8px;
-        margin: 8px 0;
+        margin: 4px 0;
+        margin-left: 16px;
     }
 
     .tag {
         border-radius: 4px;
-        background-color: theme("colors.neutral.400");
-        padding: 2px 8px;
-        color: theme("colors.black");
-        font-weight: 600;
+        background-color: theme("colors.neutral.700");
+        padding: 2px 6px;
+        color: theme("colors.white");
+        font-weight: 300;
+        font-size: 0.75rem;
     }
 
 </style>
