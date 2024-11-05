@@ -16,25 +16,29 @@ const { text } = Astro.props;
         word-break: keep-all;
 
         &:hover {
-            color: theme(colors.lime.400)
+            color: theme(colors.teal.400)
         }
 
-        &::after {
-            @apply bg-neutral-400 bg-opacity-40;
+        &::before {
+            @apply bg-neutral-50 bg-opacity-30;
 
             position: absolute;
             transition: all 0.1s linear;
 
-            width: 100%;
             height: 4px;
             bottom: -2px;
+            right: 0;
             left: 0;
 
             content: "";
+            z-index: -1;
         }
 
-        &:hover::after {
+        &:hover::before {
             height: calc(100% + 4px);
+            right: -2px;
+            left: -2px;
+            border-radius: 4px;
         }
     }
 
