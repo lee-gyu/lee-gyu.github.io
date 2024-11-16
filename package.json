@@ -20,14 +20,14 @@
         "@types/react": "^18.3.12",
         "@types/react-dom": "^18.3.1",
         "jsdom": "^25.0.1",
-        "vitest": "^2.1.4"
+        "vitest": "^2.1.5"
     },
     "dependencies": {
         "@astrojs/react": "^3.6.2",
         "@astrojs/tailwind": "^5.1.2",
         "@react-spring/web": "^9.7.5",
         "@toss/assert": "^1.2.2",
-        "astro": "^4.16.10",
+        "astro": "^4.16.13",
         "autoprefixer": "^10.4.20",
         "p5": "^1.11.1",
         "postcss": "^8.4.49",
@@ -35,8 +35,8 @@
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-icons": "^5.3.0",
-        "tailwindcss": "^3.4.14",
+        "tailwindcss": "^3.4.15",
         "typescript": "^5.6.3"
     },
-    "packageManager": "pnpm@9.12.2"
+    "packageManager": "pnpm@9.13.2"
 }
