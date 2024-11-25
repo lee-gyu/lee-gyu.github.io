@@ -10,12 +10,16 @@
         "build": "astro build",
         "test": "vitest"
     },
+    "engines": {
+        "node": "^22.11.0"
+    },
     "keywords": [],
     "author": "Lee Gyu <leegyu4dev@gmail.com>",
     "license": "MIT",
     "devDependencies": {
         "@biomejs/biome": "^1.9.4",
         "@testing-library/react": "^16.0.1",
+        "@types/node": "^22.9.3",
         "@types/p5": "^1.7.6",
         "@types/react": "^18.3.12",
         "@types/react-dom": "^18.3.1",
@@ -23,11 +27,12 @@
         "vitest": "^2.1.5"
     },
     "dependencies": {
-        "@astrojs/react": "^3.6.2",
+        "@astrojs/mdx": "^3.1.9",
+        "@astrojs/react": "^3.6.3",
         "@astrojs/tailwind": "^5.1.2",
         "@react-spring/web": "^9.7.5",
         "@toss/assert": "^1.2.2",
-        "astro": "^4.16.13",
+        "astro": "^4.16.14",
         "autoprefixer": "^10.4.20",
         "p5": "^1.11.1",
         "postcss": "^8.4.49",
@@ -36,7 +41,7 @@
         "react-dom": "^18.3.1",
         "react-icons": "^5.3.0",
         "tailwindcss": "^3.4.15",
-        "typescript": "^5.6.3"
+        "typescript": "^5.7.2"
     },
     "packageManager": "pnpm@9.13.2"
 }
