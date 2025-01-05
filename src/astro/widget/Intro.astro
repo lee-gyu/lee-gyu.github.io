@@ -1,19 +1,28 @@
 ---
 import HightText from "../components/HightText.astro";
 
+const listItems = [
+    "사내 웹 개발자 교육 및 양성",
+    "웹 애플리케이션 구조 설계/개발",
+    "웹 서비스 개발용 공용 패키지 개발",
+    "다른 웹 시스템 통합용 API 설계/개발",
+];
 ---
 
-<p class="paragraph">
-    현재 주 개발 업무는 웹 개발자들을 위한 <HightText text="공용 패키지"/>개발과,
-    <HightText text="사내 웹 애플리케이션의 구조를"/> 설계/개발하고,<HightText text="다른 웹 시스템과의 좋은 인터페이스를"/> 고민합니다.
-</p>
+<ul class="list-items">
+    {listItems.map((item) => (
+        <li><HightText text={item}/></li>
+    ))}
+</ul>
 
 <style>
 
-.paragraph {
+.list-items {
     margin: 0.5rem 0;
     line-height: 1.75;
     cursor: default;
+    list-style: circle;
+    padding: 0 1rem;
 }
 
 </style>
