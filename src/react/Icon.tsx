@@ -1,16 +1,15 @@
 import React from "react";
-import type { IconType } from "react-icons/lib";
 import { VscGithubAlt } from "react-icons/vsc";
 import { VscMail } from "react-icons/vsc";
 import { VscBook } from "react-icons/vsc";
 
-export type IconClass = "github" | "blog" | "mail";
+export type IconClass = keyof typeof ICON_MAP;
 
 type IconProps = {
     icon: IconClass;
 };
 
-const ICON_MAP: Record<string, IconType> = {
+const ICON_MAP = {
     blog: VscBook,
     mail: VscMail,
     github: VscGithubAlt,
