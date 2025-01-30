@@ -2,8 +2,6 @@ import React from "react";
 import css from "./_link-icon-item.module.css";
 import Icon, { type IconClass } from "./Icon";
 
-import { clsx } from "clsx";
-
 type LinkIconItemProps = {
     icon: IconClass;
     href: string;
