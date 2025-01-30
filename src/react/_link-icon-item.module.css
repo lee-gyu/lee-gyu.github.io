@@ -1,4 +1,4 @@
-.list-item {
+.link-icon-item {
     position: relative;
     display: inline-flex;
     column-gap: 0.5rem;
@@ -6,7 +6,6 @@
     margin: 0.125rem 0;
 
     &::after {
-        @apply bg-gray-200 bg-opacity-20;
         position: absolute;
         top: -2px;
         left: -4px;
