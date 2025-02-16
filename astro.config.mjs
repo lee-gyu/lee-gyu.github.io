@@ -13,5 +13,10 @@ export default defineConfig({
         plugins: [
             tailwindcss()
         ],
+        css: {
+            modules: {
+                generateScopedName: "__[local]",
+            }
+        }
     },
 });
