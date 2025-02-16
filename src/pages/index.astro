@@ -6,8 +6,11 @@ import Intro from "src/astro/widget/Intro.astro";
 ---
 
 <DefaultLayout>
-    <main class="main-page">
+    <main id="mainPage">
         <section class="page">
+            <div class="relative">
+                <header class="page-header">소개</header>
+            </div>
             <h1 class="title">웹 개발자</h1>
             <h4 class="sub-title">이규철</h4>
             <section class="section">
@@ -18,7 +21,7 @@ import Intro from "src/astro/widget/Intro.astro";
                 <h4>경력</h4>
                 <Career />
             </section>
-            <section role="banner">
+            <section class="section" role="banner">
                 <Banner/>
             </section>
         </section>
@@ -26,27 +29,35 @@ import Intro from "src/astro/widget/Intro.astro";
 </DefaultLayout>
 
 <style>
+    @import "../styles/tailwind.css";
 
-    html, body {
+    .page-header {
+        @apply text-neutral-400/80;
+
+        position: absolute;
+        transform: translate(-100%, -100%);
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    #mainPage {
+        position: relative;
+        height: 100vh;
+        display: grid;
+        grid-auto-columns: 100vw;
+        grid-auto-flow: column;
+        overflow: auto;
+        
         scrollbar-width: none;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-
         &::-webkit-scrollbar {
             display: none;
         }
-    }
 
-    .main-page {
-        width: 100%;
-        display: flex;
-        flex-wrap: nowrap;
     }
 
     .page {
+        box-sizing: border-box;
         padding: 10vh 12vw;
-        min-width: 100vw;
-        scroll-snap-align: start;
     }
 
     *:focus-visible {
@@ -55,6 +66,10 @@ import Intro from "src/astro/widget/Intro.astro";
     
     h1, h4 {
         font-weight: 500;
+    }
+
+    h1, h4, .section {
+        max-width: 30rem;
     }
 
     .title {
@@ -69,7 +84,6 @@ import Intro from "src/astro/widget/Intro.astro";
         font-weight: 300;
         word-break: keep-all;
         margin: 1rem 0;
-        max-width: 30em;
     }
 
     @media print {

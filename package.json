@@ -11,7 +11,7 @@
         "test": "vitest"
     },
     "engines": {
-        "node": "^22.11.0"
+        "node": ">=22.14.0"
     },
     "keywords": [],
     "author": "Lee Gyu <leegyu4dev@gmail.com>",
@@ -19,31 +19,30 @@
     "devDependencies": {
         "@biomejs/biome": "^1.9.4",
         "@testing-library/react": "^16.2.0",
-        "@types/node": "^22.12.0",
+        "@types/node": "^22.13.4",
         "@types/p5": "^1.7.6",
         "@types/react": "^19.0.8",
         "@types/react-dom": "^19.0.3",
         "jsdom": "^26.0.0",
-        "vitest": "^3.0.4"
+        "vitest": "^3.0.5"
     },
     "dependencies": {
         "@astrojs/mdx": "^4.0.8",
         "@astrojs/react": "^4.2.0",
         "@astrojs/svelte": "^7.0.4",
-        "@astrojs/tailwind": "^6.0.0",
-        "@tailwindcss/vite": "^4.0.1",
+        "@tailwindcss/vite": "^4.0.6",
         "@toss/assert": "^1.2.2",
-        "astro": "^5.2.0",
+        "astro": "^5.3.0",
         "clsx": "^2.1.1",
         "cssnano": "^7.0.6",
         "p5": "^1.11.3",
-        "postcss": "^8.5.1",
+        "postcss": "^8.5.2",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
         "react-icons": "^5.4.0",
-        "svelte": "^5.19.5",
-        "tailwindcss": "^3.4.17",
+        "svelte": "^5.20.1",
+        "tailwindcss": "^4.0.6",
         "typescript": "^5.7.3"
     },
-    "packageManager": "pnpm@9.15.4"
+    "packageManager": "pnpm@10.4.0"
 }
