@@ -8,7 +8,8 @@
     "scripts": {
         "dev": "astro dev --host",
         "build": "astro build",
-        "test": "vitest"
+        "test": "vitest",
+        "start": "astro preview"
     },
     "engines": {
         "node": ">=22.14.0"
