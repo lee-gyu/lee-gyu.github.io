@@ -4,24 +4,26 @@ import HightText from "../components/HightText.astro";
 const listItems = [
     "웹 풀스택 개발",
     "웹 프런트엔드 SDK 개발",
-    "웹 시스템 아키텍쳐 설계/개발",
+    "웹 시스템 아키텍처 설계/개발",
 ];
 ---
 
 <ul class="list-items">
-    {listItems.map((item) => (
-        <li><HightText text={item}/></li>
-    ))}
+    {
+        listItems.map((item) => (
+            <li>
+                <HightText text={item} />
+            </li>
+        ))
+    }
 </ul>
 
 <style>
-
-.list-items {
-    margin: 0.5rem 0;
-    line-height: 1.75;
-    cursor: default;
-    list-style: circle;
-    padding: 0 1rem;
-}
-
+    .list-items {
+        margin: 0.5rem 0;
+        line-height: 1.75;
+        cursor: default;
+        list-style: circle;
+        padding: 0 1rem;
+    }
 </style>
