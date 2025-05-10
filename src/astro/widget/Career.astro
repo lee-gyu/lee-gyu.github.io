@@ -1,5 +1,4 @@
 ---
-
 const careerData = [
     {
         tag: "2020~",
@@ -7,22 +6,24 @@ const careerData = [
     },
     {
         tag: "2015~2018",
-        desc: "삼성전자 VD사업부 공정 S/W 개발",
+        desc: "삼성전자 VD사업부",
     },
     {
         tag: "2012~2015",
-        desc: "삼성전자 GTC 인사그룹 IT 교육",
+        desc: "삼성전자 GTC 인사그룹",
     },
 ];
 ---
 
 <article class="grid-article">
-    {careerData.map(({ tag, desc }) => (
-        <div class="row">
-            <span class="tag">{tag}</span>
-            <span class="desc">{desc}</span>
-        </div>
-    ))}
+    {
+        careerData.map(({ tag, desc }) => (
+            <div class="row">
+                <span class="tag">{tag}</span>
+                <span class="desc">{desc}</span>
+            </div>
+        ))
+    }
 </article>
 
 <style>
@@ -38,6 +39,5 @@ const careerData = [
 
     .row {
         display: contents;
-
     }
 </style>
