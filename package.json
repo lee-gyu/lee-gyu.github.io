@@ -6,7 +6,7 @@
 	"scripts": {
 		"prepare": "panda codegen",
 		"dev": "vinxi dev --host",
-		"build": "vinxi build",
+		"build": "pnpm prepare && vinxi build",
 		"start": "vinxi start",
 		"version": "vinxi version"
 	},
@@ -14,6 +14,7 @@
 		"@solidjs/meta": "^0.29.4",
 		"@solidjs/router": "^0.15.3",
 		"@solidjs/start": "^1.1.7",
+		"simple-icons": "^15.7.0",
 		"solid-js": "^1.9.7",
 		"vinxi": "^0.5.8"
 	},
