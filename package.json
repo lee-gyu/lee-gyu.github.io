@@ -1,49 +1,41 @@
 {
-    "name": "@lee-gyu/github.io",
-    "private": true,
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "type": "module",
-    "scripts": {
-        "dev": "astro dev --host",
-        "build": "astro build",
-        "test": "vitest",
-        "start": "astro preview"
-    },
-    "engines": {
-        "node": ">=22.14.0"
-    },
-    "keywords": [],
-    "author": "Lee Gyu <leegyu4dev@gmail.com>",
-    "license": "MIT",
-    "devDependencies": {
-        "@biomejs/biome": "^1.9.4",
-        "@testing-library/react": "^16.3.0",
-        "@types/node": "^22.15.17",
-        "@types/p5": "^1.7.6",
-        "@types/react": "^19.1.3",
-        "@types/react-dom": "^19.1.3",
-        "jsdom": "^26.1.0",
-        "vitest": "^3.1.3"
-    },
-    "dependencies": {
-        "@astrojs/mdx": "^4.2.6",
-        "@astrojs/react": "^4.2.7",
-        "@astrojs/svelte": "^7.0.13",
-        "@tailwindcss/vite": "^4.1.6",
-        "@toss/assert": "^1.2.2",
-        "astro": "^5.7.12",
-        "clsx": "^2.1.1",
-        "cssnano": "^7.0.7",
-        "p5": "^2.0.1",
-        "postcss": "^8.5.3",
-        "react": "^19.1.0",
-        "react-dom": "^19.1.0",
-        "react-icons": "^5.5.0",
-        "svelte": "^5.28.2",
-        "tailwindcss": "^4.1.6",
-        "typescript": "^5.8.3"
-    },
-    "packageManager": "pnpm@10.8.0"
+	"name": "@lee-gyu/github.io",
+	"private": true,
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"prepare": "panda codegen",
+		"dev": "astro dev --host",
+		"build": "astro build",
+		"test": "vitest",
+		"start": "astro preview"
+	},
+	"engines": {
+		"node": ">=22.14.0"
+	},
+	"keywords": [],
+	"author": "Lee Gyu <leegyu4dev@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"@biomejs/biome": "^2.1.2",
+		"@pandacss/dev": "^0.54.0",
+		"@types/node": "^22.16.5",
+		"jsdom": "^26.1.0",
+		"vitest": "^3.2.4"
+	},
+	"dependencies": {
+		"@astrojs/mdx": "^4.3.1",
+		"@astrojs/solid-js": "^5.1.0",
+		"@toss/assert": "^1.2.2",
+		"astro": "^5.12.3",
+		"clsx": "^2.1.1",
+		"cssnano": "^7.0.7",
+		"p5": "^2.0.3",
+		"postcss": "^8.5.3",
+		"solid-js": "^1.9.7",
+		"typescript": "^5.8.3"
+	},
+	"packageManager": "pnpm@10.8.0"
 }

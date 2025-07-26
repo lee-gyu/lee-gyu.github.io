@@ -1,8 +1,16 @@
 ---
 import DefaultLayout from "src/astro/layouts/DefaultLayout.astro";
-import Career from "src/astro/widget/Career.astro";
 import Banner from "src/astro/widget/Banner.astro";
+import Career from "src/astro/widget/Career.astro";
 import Intro from "src/astro/widget/Intro.astro";
+
+import { css } from "src/styled-system/css";
+
+const cls = css({
+    padding: "12vh",
+});
+
+console.log(cls);
 ---
 
 <DefaultLayout>
@@ -15,90 +23,17 @@ import Intro from "src/astro/widget/Intro.astro";
             <h4 class="sub-title">이규철</h4>
             <section class="section">
                 <h4>주 업무</h4>
-                <Intro/>
+                <Intro />
             </section>
             <section class="section" role="article">
                 <h4>경력</h4>
                 <Career />
             </section>
             <section class="section" role="banner">
-                <Banner/>
+                <Banner />
             </section>
         </section>
     </main>
 </DefaultLayout>
 
-<style>
-    @import "../styles/tailwind.css";
-
-    .page-header {
-        @apply text-neutral-400/80;
-
-        position: absolute;
-        transform: translate(-100%, -100%);
-        font-weight: 600;
-        font-size: 1rem;
-    }
-
-    #mainPage {
-        position: relative;
-        height: 100vh;
-        display: grid;
-        grid-auto-columns: 100vw;
-        grid-auto-flow: column;
-        overflow: auto;
-        
-        scrollbar-width: none;
-        &::-webkit-scrollbar {
-            display: none;
-        }
-
-    }
-
-    .page {
-        box-sizing: border-box;
-        padding: 10vh 12vw;
-    }
-
-    *:focus-visible {
-        outline-offset: 2px;
-    }
-    
-    h1, h4 {
-        font-weight: 500;
-    }
-
-    h1, h4, .section {
-        max-width: 30rem;
-    }
-
-    .title {
-        font-size: theme("fontSize.3xl");
-    }
-
-    .sub-title {
-        font-size: theme("fontSize.2xl");
-    }
-
-    .section {
-        font-weight: 300;
-        word-break: keep-all;
-        margin: 1rem 0;
-    }
-
-    @media print {
-
-        [data-page="first"] {
-            height: auto;
-        }
-
-        .content-wrapper {
-            padding: 0;
-        }
-
-        @page {
-            margin: 2cm 2.5cm;
-        }
-    }
-
-</style>
+<style></style>

@@ -4,3 +4,7 @@ node_modules
 dist/
 
 .vscode/settings.json
+
+## Panda
+styled-system
+styled-system-studio
