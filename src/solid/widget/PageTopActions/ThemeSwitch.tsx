@@ -2,7 +2,7 @@ import { createSignal, Show } from "solid-js";
 
 import { css } from "src/styled-system/css";
 import { getTheme, setTheme } from "src/utils/theme";
-import Icon from "../Icon";
+import Icon from "../../components/Icon";
 
 import switchCss from "./_switch.module.css";
 
@@ -15,7 +15,7 @@ export default function ThemeSwitch() {
     const [themeState, setThemeState] = createSignal("");
 
     return (
-        <label class={switchCss["switch-wrapper"]}>
+        <label class={switchCss["button-wrapper"]}>
             <Show when={themeState() !== ""}>
                 <Icon
                     icon={
@@ -26,6 +26,7 @@ export default function ThemeSwitch() {
                 />
             </Show>
             <input
+                tabindex={-1}
                 ref={onReady}
                 type="checkbox"
                 name="theme-switch"

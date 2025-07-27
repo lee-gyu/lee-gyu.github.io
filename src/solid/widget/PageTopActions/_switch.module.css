@@ -1,4 +1,4 @@
-.switch-wrapper {
+.button-wrapper {
     position: relative;
     cursor: pointer;
     display: inline-flex;
@@ -14,7 +14,11 @@
         }
     }
 
-    &:has(input:active) {
+    input:active ~ i {
+        transform: scale(0.9);
+    }
+
+    &:active {
         i {
             transform: scale(0.9);
         }
