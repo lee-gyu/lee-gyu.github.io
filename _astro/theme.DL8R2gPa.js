@@ -1,0 +1,1 @@
+function t(e){localStorage.setItem("theme",e),document.documentElement.setAttribute("data-theme",e)}function a(){return localStorage.getItem("theme")??(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}export{a as g,t as s};
