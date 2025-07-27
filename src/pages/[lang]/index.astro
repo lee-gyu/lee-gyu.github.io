@@ -1,0 +1,52 @@
+---
+import DefaultLayout from "src/astro/layouts/DefaultLayout.astro";
+import Banner from "src/astro/widget/Banner.astro";
+import Career from "src/astro/widget/Career.astro";
+import Intro from "src/astro/widget/Intro.astro";
+import Title from "src/astro/components/Title.astro";
+import { css } from "src/styled-system/css";
+import { useTranslations } from "src/i18n/utils";
+
+type Props = {};
+
+export function getStaticPaths() {
+    return [{ params: { lang: "ko" } }, { params: { lang: "en" } }];
+}
+
+const mainCss = css({
+    padding: "10vh 12vw",
+});
+
+const { lang = "ko" } = Astro.params;
+const t = useTranslations(lang as Lang);
+
+const pageHeaderCss = css({
+    position: "absolute",
+    transform: "translateY(-100%) translateX(-100%)",
+    opacity: 0.8,
+    fontWeight: 600,
+});
+
+const sectionCss = css({
+    margin: "1rem 0",
+});
+---
+
+<DefaultLayout>
+    <main class={mainCss}>
+        <span class={pageHeaderCss}>{t("intro")}</span>
+        <Title size="h1">{t("title")}</Title>
+        <Title size="h2">{t("name")}</Title>
+        <section class={sectionCss}>
+            <Title size="h3">{t("mainJob")}</Title>
+            <Intro />
+        </section>
+        <section class={sectionCss} role="article">
+            <Title size="h3">{t("career")}</Title>
+            <Career />
+        </section>
+        <section class={sectionCss} role="banner">
+            <Banner />
+        </section>
+    </main>
+</DefaultLayout>

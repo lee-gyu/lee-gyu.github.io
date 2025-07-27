@@ -1,4 +1,5 @@
 ---
+import { listItemsCss } from "src/styles/component-css";
 import HightText from "../components/HightText.astro";
 
 const listItems = [
@@ -8,7 +9,7 @@ const listItems = [
 ];
 ---
 
-<ul class="list-items">
+<ul class={listItemsCss}>
     {
         listItems.map((item) => (
             <li>
@@ -17,13 +18,3 @@ const listItems = [
         ))
     }
 </ul>
-
-<style>
-    .list-items {
-        margin: 0.5rem 0;
-        line-height: 1.75;
-        cursor: default;
-        list-style: circle;
-        padding: 0 1rem;
-    }
-</style>

@@ -1,0 +1,32 @@
+---
+import { cva } from "src/styled-system/css";
+
+type Props = {
+    size?: "h1" | "h2" | "h3";
+};
+
+const title = cva({
+    base: {
+        fontWeight: 500,
+    },
+    variants: {
+        size: {
+            h1: {
+                fontSize: "1.875rem",
+                fontWeight: 700,
+            },
+            h2: {
+                fontSize: "1.5rem",
+            },
+            h3: {
+                fontSize: "1.25rem",
+            },
+        },
+    },
+});
+
+const props = Astro.props;
+const Element = props.size ?? "h1";
+---
+
+<Element class={title(props)}><slot /></Element>

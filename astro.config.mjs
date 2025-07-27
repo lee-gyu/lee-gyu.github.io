@@ -7,6 +7,10 @@ export default defineConfig({
     outDir: "./dist",
     base: "/",
     integrations: [mdx(), solidJs()],
+    i18n: {
+        locales: ["ko", "en"],
+        defaultLocale: "ko",
+    },
     vite: {
         plugins: [],
         css: {

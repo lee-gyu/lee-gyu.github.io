@@ -1,5 +1,4 @@
 ---
-
 type Props = {
     text: string;
 };
@@ -7,17 +6,18 @@ type Props = {
 const { text } = Astro.props;
 ---
 
-<strong class="hover:text-teal-400 before:bg-neutral-50/30">{text}</strong>
+<span class="hight-text">{text}</span>
 
 <style>
-    strong {
+    .hight-text {
         position: relative;
         white-space: nowrap;
         word-break: keep-all;
 
         &::before {
+            background-color: var(--colors-accent);
             position: absolute;
-            transition: all 0.1s linear;
+            transition: all 0.1s ease-in-out;
 
             height: 4px;
             bottom: -2px;

@@ -1,7 +1,10 @@
 ---
+import { css } from "src/styled-system/css";
+import { listItemsCss } from "src/styles/component-css";
+
 const careerData = [
     {
-        tag: "2020~",
+        tag: "2020~    ",
         desc: "이노룰스 기술연구소 웹 개발",
     },
     {
@@ -15,29 +18,22 @@ const careerData = [
 ];
 ---
 
-<article class="grid-article">
+<ul class={listItemsCss}>
     {
         careerData.map(({ tag, desc }) => (
-            <div class="row">
-                <span class="tag">{tag}</span>
-                <span class="desc">{desc}</span>
-            </div>
+            <li>
+                <span
+                    class={css({
+                        display: "inline-block",
+                        letterSpacing: "0.05em",
+                        fontFeatureSettings: "'tnum'",
+                        width: "6.5em",
+                    })}
+                >
+                    {tag}
+                </span>
+                <span>{desc}</span>
+            </li>
         ))
     }
-</article>
-
-<style>
-    .grid-article {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        column-gap: 1rem;
-    }
-
-    .tag {
-        letter-spacing: 0.05em;
-    }
-
-    .row {
-        display: contents;
-    }
-</style>
+</ul>

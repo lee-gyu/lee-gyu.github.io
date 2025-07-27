@@ -29,5 +29,31 @@
             "quoteStyle": "double",
             "semicolons": "always"
         }
-    }
+    },
+    "overrides": [
+        {
+            "includes": ["./src/**/*.astro"],
+            "linter": {
+                "rules": {
+                    "correctness": {
+                        "noUnusedVariables": "off",
+                        "noUnusedImports": "off"
+                    },
+                    "complexity": {
+                        "noBannedTypes": "off"
+                    }
+                }
+            },
+            "assist": {
+                "actions": {
+                    "source": {
+                        "organizeImports": "off"
+                    }
+                }
+            },
+            "formatter": {
+                "enabled": false
+            }
+        }
+    ]
 }

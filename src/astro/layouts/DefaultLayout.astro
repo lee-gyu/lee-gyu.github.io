@@ -1,9 +1,12 @@
 ---
+import PageTop from "src/astro/components/PageTop.astro";
+import pageLoaderJS from "./page-loader.js?raw";
+
 import "src/styles/index.css";
+import "src/styles/transition.css";
 ---
 
-<!doctype html>
-<html lang="ko">
+<html>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,10 +18,23 @@ import "src/styles/index.css";
         />
         <link rel="shortcut icon" href="/svg/favicon.svg" type="image/x-icon" />
         <title>Lee Gyu</title>
+        <script is:raw set:html={pageLoaderJS} />
     </head>
     <body>
         <div id="root">
+            <PageTop />
             <slot />
         </div>
     </body>
 </html>
+
+<script>
+    // global func init
+    import { setTheme } from "src/utils/theme";
+    import { setLang } from "src/i18n/utils";
+
+    Object.assign(globalThis, {
+        __setTheme: setTheme,
+        __setLang: setLang,
+    });
+</script>
