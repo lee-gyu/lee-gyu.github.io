@@ -27,9 +27,9 @@ jobs:
               with:
                   node-version: 22
             - name: pnpm install
-              run: npm install -g pnpm@10.4.0
+              run: npm install -g pnpm@10.13.1
             - name: Install dependencies
-              run: pnpm install -P
+              run: pnpm i -P
             - name: Build
               run: pnpm build
             - name: Upload artifact
