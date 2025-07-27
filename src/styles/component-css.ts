@@ -5,5 +5,5 @@ export const listItemsCss = css({
     lineHeight: "1.75",
     cursor: "default",
     listStyle: "circle",
-    padding: "0 1rem",
+    paddingLeft: "1.25rem",
 });

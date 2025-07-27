@@ -25,7 +25,8 @@ const { text } = Astro.props;
             left: 0;
 
             content: "";
-            z-index: -1;
+            z-index: 0;
+            opacity: 0.2;
         }
 
         &:hover::before {
@@ -33,12 +34,6 @@ const { text } = Astro.props;
             right: -2px;
             left: -2px;
             border-radius: 4px;
-        }
-    }
-
-    @media print {
-        strong::after {
-            content: none;
         }
     }
 </style>

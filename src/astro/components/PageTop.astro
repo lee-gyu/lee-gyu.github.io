@@ -1,43 +1,25 @@
 ---
 import { css } from "src/styled-system/css";
+import ThemeSwitch from "src/solid/components/ThemeSwitch";
 
 const headerCss = css({
-    position: "fixed",
+    position: "absolute",
     top: 0,
     left: 0,
     width: "100%",
     display: "flex",
     alignItems: "center",
-    padding: "12px 16px",
+    padding: "0.75rem 0.5rem",
 });
 
 const actionWrapperCss = css({
     marginLeft: "auto",
+    display: "inline-flex",
 });
-
-const isProd = import.meta.env.PROD;
 ---
 
 <header class={headerCss}>
     <div class={actionWrapperCss}>
-        {
-            !isProd && (
-                <label>
-                    <span aria-hidden="true">Dark Mode Switch</span>
-                    <input
-                        name="theme-switch"
-                        class="theme-switch"
-                        checked="true"
-                        onchange="__setTheme(event.target.checked ? 'dark' : 'light')"
-                        type="checkbox"
-                    />
-                </label>
-            )
-        }
+        <ThemeSwitch client:only />
     </div>
 </header>
-
-<style>
-    .theme-switch {
-    }
-</style>

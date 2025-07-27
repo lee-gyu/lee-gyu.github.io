@@ -1,5 +1,4 @@
 ---
-import PageTop from "src/astro/components/PageTop.astro";
 import pageLoaderJS from "./page-loader.js?raw";
 import googleAnalyticsJS from "./google-head.js?raw";
 
@@ -26,7 +25,6 @@ const isProduction = import.meta.env.PROD;
     </head>
     <body>
         <div id="root">
-            <PageTop />
             <slot />
         </div>
         {
