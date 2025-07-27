@@ -1,9 +1,12 @@
 ---
 import PageTop from "src/astro/components/PageTop.astro";
 import pageLoaderJS from "./page-loader.js?raw";
+import googleAnalyticsJS from "./google-head.js?raw";
 
 import "src/styles/index.css";
 import "src/styles/transition.css";
+
+const isProduction = import.meta.env.PROD;
 ---
 
 <html>
@@ -19,17 +22,27 @@ import "src/styles/transition.css";
         <link rel="shortcut icon" href="/svg/favicon.svg" type="image/x-icon" />
         <title>Lee Gyu</title>
         <script is:raw set:html={pageLoaderJS} />
+        {isProduction && <script is:raw set:html={googleAnalyticsJS} />}
     </head>
     <body>
         <div id="root">
             <PageTop />
             <slot />
         </div>
+        {
+            isProduction && (
+                <iframe
+                    src="https://www.googletagmanager.com/ns.html?id=GTM-TGFXQ4KJ"
+                    height="0"
+                    width="0"
+                    style="display:none;visibility:hidden"
+                />
+            )
+        }
     </body>
 </html>
 
 <script>
-    // global func init
     import { setTheme } from "src/utils/theme";
     import { setLang } from "src/i18n/utils";
 
