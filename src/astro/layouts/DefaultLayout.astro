@@ -31,12 +31,14 @@ const isProduction = import.meta.env.PROD;
         </div>
         {
             isProduction && (
-                <iframe
-                    src="https://www.googletagmanager.com/ns.html?id=GTM-TGFXQ4KJ"
-                    height="0"
-                    width="0"
-                    style="display:none;visibility:hidden"
-                />
+                <noscript>
+                    <iframe
+                        src="https://www.googletagmanager.com/ns.html?id=GTM-TGFXQ4KJ"
+                        height="0"
+                        width="0"
+                        style="display:none;visibility:hidden"
+                    />
+                </noscript>
             )
         }
     </body>
