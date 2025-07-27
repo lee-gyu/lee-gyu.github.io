@@ -15,7 +15,7 @@ export default function PageTopActions(props: PageTopActionsProps) {
                     display: "inline-flex",
                     alignItems: "center",
                     marginLeft: "auto",
-                    gap: "0.25rem",
+                    gap: "0.5rem",
                 })}
             >
                 <LangToggle />

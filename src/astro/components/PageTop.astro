@@ -8,38 +8,47 @@ if (!import.meta.env.PROD)
 
 const lang = Astro.currentLocale as Lang;
 const langPrefix = lang === "ko" ? "" : `/${lang}`;
+const isProd = import.meta.env.PROD;
 ---
 
 <header class="header">
-    <nav>
-        <ul class="nav-list">
-            {
-                navListItems.map(({ href, label }) => (
-                    <li>
-                        <a href={`${langPrefix}${href}`}>{label}</a>
-                    </li>
-                ))
-            }
-        </ul>
-    </nav>
+    {
+        !isProd && (
+            <nav>
+                <ul class="nav-list">
+                    {navListItems.map(({ href, label }) => (
+                        <li>
+                            <a href={`${langPrefix}${href}`}>{label}</a>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
+        )
+    }
     <PageTopActions lang={lang} client:only />
 </header>
 
 <style>
+    nav {
+        display: contents;
+    }
+
     .header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
         display: flex;
+        position: sticky;
         align-items: center;
+        top: 0;
         padding: 0.75rem 1rem 0.75rem 2.5rem;
+        backdrop-filter: blur(2px);
+        z-index: 1;
+        height: 3.5rem;
     }
 
     .nav-list {
         display: flex;
         gap: 0.875rem;
         height: 28px;
+        line-height: 32px;
 
         a {
             text-transform: uppercase;

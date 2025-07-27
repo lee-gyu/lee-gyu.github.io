@@ -6,7 +6,6 @@ import MainJob from "src/astro/widget/MainJob.astro";
 import Title from "src/astro/components/Title.astro";
 import { css } from "src/styled-system/css";
 import { useTranslations } from "src/i18n/utils";
-import PageTop from "src/astro/components/PageTop.astro";
 
 type Props = {};
 
@@ -16,15 +15,8 @@ export function getStaticPaths() {
 
 const mainCss = css({
     position: "relative",
-    margin: "0",
-    padding: "4rem 1rem 4rem 2.5rem",
-    minHeight: "100vh",
-    maxWidth: "1024px",
-    background: "{backgroundLight}",
-    lg: {
-        margin: "0 auto",
-        padding: "6rem 1rem 4rem 2.5rem",
-    },
+    padding: "0rem 1rem 4rem 2.5rem",
+    marginTop: "4rem",
 });
 
 const lang = Astro.currentLocale as Lang;
@@ -42,7 +34,6 @@ const sectionCss = css({
 
 <DefaultLayout lang={lang}>
     <main class={mainCss}>
-        <PageTop />
         <span class={pageHeaderCss}>{t("intro")}</span>
         <Title size="h1">{t("title")}</Title>
         <Title size="h2">{t("name")}</Title>
