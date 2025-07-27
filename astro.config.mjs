@@ -1,7 +1,6 @@
-import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
-
 import solidJs from "@astrojs/solid-js";
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,7 +12,7 @@ export default defineConfig({
         css: {
             modules: {
                 generateScopedName: "__[local]",
-            }
-        }
+            },
+        },
     },
 });
