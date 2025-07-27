@@ -10,7 +10,7 @@
         "dev": "astro dev --host",
         "build": "astro build",
         "test": "vitest",
-        "start": "astro preview"
+        "start": "astro preview --host"
     },
     "engines": {
         "node": ">=22.14.0"
@@ -25,9 +25,9 @@
         "vitest": "^3.2.4"
     },
     "dependencies": {
-        "@pandacss/dev": "^0.54.0",
         "@astrojs/mdx": "^4.3.1",
         "@astrojs/solid-js": "^5.1.0",
+        "@pandacss/dev": "^0.54.0",
         "@toss/assert": "^1.2.2",
         "astro": "^5.12.3",
         "clsx": "^2.1.1",
@@ -35,7 +35,6 @@
         "es-toolkit": "^1.39.8",
         "p5": "^2.0.3",
         "postcss": "^8.5.6",
-        "simple-icons": "^15.8.0",
         "solid-js": "^1.9.7",
         "typescript": "^5.8.3"
     },
