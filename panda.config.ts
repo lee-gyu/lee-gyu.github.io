@@ -4,12 +4,14 @@ const globalCss = defineGlobalStyles({
     ":root": {
         fontFamily: "{fonts.body}",
         fontSize: {
-            base: "14px",
-            sm: "16px",
-            lg: "18px",
+            base: "16px",
         },
         background: "{colors.background}",
         color: "{colors.text}",
+        minWidth: "360px",
+    },
+    "*": {
+        wordBreak: "keep-all",
     },
 });
 
@@ -43,6 +45,18 @@ export default defineConfig({
                             _dark: "{colors.neutral.950}",
                         },
                     },
+                    backgroundLight: {
+                        value: {
+                            base: "{colors.neutral.200}",
+                            _dark: "{colors.neutral.800}",
+                        },
+                    },
+                    border: {
+                        value: {
+                            base: "{colors.neutral.600}",
+                            _dark: "{colors.neutral.300}",
+                        },
+                    },
                     text: {
                         value: {
                             base: "{colors.neutral.900}",
@@ -51,8 +65,8 @@ export default defineConfig({
                     },
                     accent: {
                         value: {
-                            base: "{colors.neutral.300}",
-                            _dark: "{colors.neutral.600}",
+                            base: "{colors.slate.600}",
+                            _dark: "{colors.white}",
                         },
                     },
                 },
