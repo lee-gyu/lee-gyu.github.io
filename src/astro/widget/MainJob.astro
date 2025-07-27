@@ -1,12 +1,13 @@
 ---
 import { listItemsCss } from "src/styles/component-css";
 import HightText from "../components/HightText.astro";
+import { useTranslations } from "src/i18n/utils";
 
-const listItems = [
-    "서버/클라이언트 개발",
-    "웹 프로젝트 SDK 개발",
-    "시스템 아키텍처 설계/개발",
-];
+const t = useTranslations(Astro.currentLocale as Lang);
+
+const listItems = [t("mainJob.0"), t("mainJob.1"), t("mainJob.2")];
+
+console.log(Astro.currentLocale);
 ---
 
 <ul class={listItemsCss}>

@@ -2,7 +2,7 @@
 import DefaultLayout from "src/astro/layouts/DefaultLayout.astro";
 import Banner from "src/astro/widget/Banner.astro";
 import Career from "src/astro/widget/Career.astro";
-import Intro from "src/astro/widget/Intro.astro";
+import MainJob from "src/astro/widget/MainJob.astro";
 import Title from "src/astro/components/Title.astro";
 import { css } from "src/styled-system/css";
 import { useTranslations } from "src/i18n/utils";
@@ -27,8 +27,8 @@ const mainCss = css({
     },
 });
 
-const { lang = "ko" } = Astro.params;
-const t = useTranslations(lang as Lang);
+const lang = Astro.currentLocale as Lang;
+const t = useTranslations(lang);
 
 const pageHeaderCss = css({
     opacity: 0.8,
@@ -48,7 +48,7 @@ const sectionCss = css({
         <Title size="h2">{t("name")}</Title>
         <section class={sectionCss}>
             <Title size="h3">{t("mainJob")}</Title>
-            <Intro />
+            <MainJob />
         </section>
         <section class={sectionCss} role="article">
             <Title size="h3">{t("career")}</Title>

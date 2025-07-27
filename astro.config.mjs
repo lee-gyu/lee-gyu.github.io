@@ -6,6 +6,10 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
     outDir: "./dist",
     base: "/",
+    i18n: {
+        locales: ["en", "ko"],
+        defaultLocale: "ko",
+    },
     integrations: [mdx(), solidJs()],
     vite: {
         plugins: [],
