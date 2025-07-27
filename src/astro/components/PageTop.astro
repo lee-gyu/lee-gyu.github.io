@@ -14,24 +14,30 @@ const headerCss = css({
 const actionWrapperCss = css({
     marginLeft: "auto",
 });
+
+const isProd = import.meta.env.PROD;
 ---
 
 <header class={headerCss}>
     <div class={actionWrapperCss}>
-        <label>
-            <span aria-hidden="true">Dark Mode Switch</span>
-            <input
-                name="theme-switch"
-                class="theme-switch"
-                checked="true"
-                onchange="__setTheme(event.target.checked ? 'dark' : 'light')"
-                type="checkbox" />
-        </label>
+        {
+            !isProd && (
+                <label>
+                    <span aria-hidden="true">Dark Mode Switch</span>
+                    <input
+                        name="theme-switch"
+                        class="theme-switch"
+                        checked="true"
+                        onchange="__setTheme(event.target.checked ? 'dark' : 'light')"
+                        type="checkbox"
+                    />
+                </label>
+            )
+        }
     </div>
 </header>
 
 <style>
     .theme-switch {
-        
     }
 </style>
