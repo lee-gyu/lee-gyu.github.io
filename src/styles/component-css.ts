@@ -14,5 +14,5 @@ export const iconCss = css({
     height: "1em",
     backgroundColor: "currentColor",
     maskImage: "var(--icon-mask)",
-    transition: "all 0.15s ease-in-out",
+    transition: "transform 0.15s ease-in-out",
 });

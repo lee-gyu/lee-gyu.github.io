@@ -1,4 +1,5 @@
 @layer reset, base, tokens, recipes, utilities;
+@import "./_icon.css";
 
 @layer base {
     [aria-hidden="true"] {

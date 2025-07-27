@@ -21,7 +21,7 @@ export default function ThemeSwitch() {
                     icon={
                         themeState() === "dark"
                             ? "md-dark-fill"
-                            : "md-light-fill"
+                            : "md-light-outline"
                     }
                 />
             </Show>

@@ -1,6 +1,5 @@
 import type { JSX } from "solid-js/jsx-runtime";
 import { iconCss } from "src/styles/component-css";
-import "./_icon.css";
 
 const ICON_LIST = [
     "md-dark-fill",

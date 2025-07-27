@@ -11,7 +11,7 @@ const globalCss = defineGlobalStyles({
         minWidth: "360px",
     },
     "*": {
-        wordBreak: "keep-all",
+        transition: "background-color 0.2s ease-in-out",
     },
 });
 
