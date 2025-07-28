@@ -6,3 +6,7 @@ dist/
 ## Panda
 styled-system
 styled-system-studio
+
+.env
+.env.d*
+.env.p*
