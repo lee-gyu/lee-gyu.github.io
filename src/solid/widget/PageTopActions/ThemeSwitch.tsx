@@ -20,8 +20,8 @@ export default function ThemeSwitch() {
                 <Icon
                     icon={
                         themeState() === "dark"
-                            ? "md-dark-fill"
-                            : "md-light-outline"
+                            ? "md-light-fill"
+                            : "md-dark-fill"
                     }
                 />
             </Show>

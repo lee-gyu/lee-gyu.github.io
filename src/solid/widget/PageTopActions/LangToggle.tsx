@@ -6,7 +6,6 @@ import { PageTopActionsContext } from "./context";
 
 export default function LangToggle() {
     const { lang } = useContext(PageTopActionsContext);
-    const icon = lang === "ko" ? "tb-alphabet-en" : "tb-alphabet-ko";
 
     const clickHandler = () => {
         navigate(lang === "ko" ? "/en" : "/");
@@ -18,7 +17,7 @@ export default function LangToggle() {
             onClick={clickHandler}
             type="button"
         >
-            <Icon icon={icon} />
+            <Icon icon="io5-lang" />
         </button>
     );
 }

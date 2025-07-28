@@ -9,8 +9,7 @@ const ICON_LIST = [
     "vsc-mail",
     "vsc-github",
     "vsc-book",
-    "tb-alphabet-ko",
-    "tb-alphabet-en",
+    "io5-lang",
 ] as const;
 
 type IconProps = {
