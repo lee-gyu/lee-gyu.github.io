@@ -4,8 +4,6 @@ import { css } from "src/styled-system/css";
 import { getTheme, setTheme } from "src/utils/theme";
 import Icon from "../../components/Icon";
 
-import switchCss from "./_switch.module.css";
-
 const themeSwitchInputCss = css({
     appearance: "none",
     display: "none",
@@ -15,7 +13,7 @@ export default function ThemeSwitch() {
     const [themeState, setThemeState] = createSignal("");
 
     return (
-        <label class={switchCss["button-wrapper"]}>
+        <label class="button-wrapper" title="switch theme">
             <Show when={themeState() !== ""}>
                 <Icon
                     icon={

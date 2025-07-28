@@ -4,8 +4,12 @@
     display: inline-flex;
     align-items: center;
     padding: 4px;
-    font-size: 1.5rem;
+    gap: 0.25rem;
     opacity: 0.8;
+
+    i {
+        font-size: 1.5rem;
+    }
 
     &:hover {
         opacity: 1;

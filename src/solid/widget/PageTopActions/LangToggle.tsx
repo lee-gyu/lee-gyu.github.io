@@ -1,7 +1,6 @@
 import { navigate } from "astro:transitions/client";
 import { useContext } from "solid-js";
 import Icon from "../../components/Icon";
-import switchCss from "./_switch.module.css";
 import { PageTopActionsContext } from "./context";
 
 export default function LangToggle() {
@@ -13,9 +12,10 @@ export default function LangToggle() {
 
     return (
         <button
-            class={switchCss["button-wrapper"]}
+            class="button-wrapper"
             onClick={clickHandler}
             type="button"
+            title="switch language"
         >
             <Icon icon="io5-lang" />
         </button>
