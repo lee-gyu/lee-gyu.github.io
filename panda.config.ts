@@ -41,13 +41,13 @@ export default defineConfig({
                 colors: {
                     background: {
                         value: {
-                            base: "{colors.neutral.100}",
+                            base: "{colors.neutral.200}",
                             _dark: "{colors.neutral.950}",
                         },
                     },
                     backgroundLight: {
                         value: {
-                            base: "{colors.neutral.200}",
+                            base: "{colors.neutral.50}",
                             _dark: "{colors.neutral.800}",
                         },
                     },
