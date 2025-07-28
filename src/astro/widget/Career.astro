@@ -7,36 +7,30 @@ const t = useTranslations(Astro.currentLocale as Lang);
 
 const careerData = [
     {
-        tag: "2020~    ",
-        desc: t("career.0"),
+        title: t("career.0.header"),
+        content: t("career.0.content"),
     },
     {
-        tag: "2015~2018",
-        desc: t("career.1"),
-    },
-    {
-        tag: "2012~2015",
-        desc: t("career.2"),
+        title: t("career.1.header"),
+        content: t("career.1.content"),
     },
 ];
 ---
 
 <ul class={listItemsCss}>
     {
-        careerData.map(({ tag, desc }) => (
-            <li>
-                <span
-                    class={css({
-                        display: "inline-block",
-                        letterSpacing: "-0.025em",
-                        fontFeatureSettings: "'tnum'",
-                        width: "6em",
-                    })}
-                >
-                    {tag}
-                </span>
-                <span>{desc}</span>
+        careerData.map(({ title, content }) => (
+            <li class="career-item">
+                <h6 class="career-title">{title}</h6>
+                <span class="career-content">{content}</span>
             </li>
         ))
     }
 </ul>
+
+<style>
+    .career-title {
+        font-weight: 600;
+        margin-top: 0.5rem;
+    }
+</style>

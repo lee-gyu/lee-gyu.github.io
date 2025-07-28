@@ -12,27 +12,10 @@ const isProd = import.meta.env.PROD;
 ---
 
 <header class="header">
-    {
-        !isProd && (
-            <nav>
-                <ul class="nav-list">
-                    {navListItems.map(({ href, label }) => (
-                        <li>
-                            <a href={`${langPrefix}${href}`}>{label}</a>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-        )
-    }
     <PageTopActions lang={lang} client:only />
 </header>
 
 <style>
-    nav {
-        display: contents;
-    }
-
     .header {
         display: flex;
         position: sticky;
@@ -42,22 +25,5 @@ const isProd = import.meta.env.PROD;
         backdrop-filter: blur(2px);
         z-index: 1;
         height: 3.5rem;
-    }
-
-    .nav-list {
-        display: flex;
-        gap: 0.875rem;
-        height: 28px;
-        line-height: 32px;
-
-        a {
-            text-transform: uppercase;
-            font-weight: 600;
-            opacity: 0.8;
-
-            &:hover {
-                opacity: 1;
-            }
-        }
     }
 </style>
