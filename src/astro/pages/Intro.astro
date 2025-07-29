@@ -6,6 +6,7 @@ import MainJob from "src/astro/widget/MainJob.astro";
 import Title from "src/astro/components/Title.astro";
 import { css } from "src/styled-system/css";
 import { useTranslations } from "src/i18n/utils";
+import Projects from "../widget/Projects.astro";
 
 type Props = {};
 
@@ -37,6 +38,11 @@ const sectionCss = css({
         <span class={pageHeaderCss}>{t("intro")}</span>
         <Title size="h1">{t("title")}</Title>
         <Title size="h2">{t("name")}</Title>
+        <a class="email-link" href="mailto:leegyu4dev@gmail.com"
+            >leegyu4dev@gmail.com</a
+        >
+        <Banner />
+
         <section class={sectionCss}>
             <Title size="h3">{t("mainJob")}</Title>
             <MainJob />
@@ -45,8 +51,19 @@ const sectionCss = css({
             <Title size="h3">{t("career")}</Title>
             <Career />
         </section>
-        <section class={sectionCss} role="banner">
-            <Banner />
-        </section>
+        {
+            !import.meta.env.PROD && (
+                <section class={sectionCss} role="article">
+                    <Title size="h3">{t("projects")}</Title>
+                    <Projects />
+                </section>
+            )
+        }
     </main>
 </DefaultLayout>
+
+<style>
+    .email-link {
+        opacity: 0.8;
+    }
+</style>

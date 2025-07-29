@@ -1,28 +1,16 @@
 ---
-import { iconCss } from "src/styles/component-css";
-
 const bannerList = [
     ["https://medium.com/@gyuc219", "vsc-book", "Blog", "blog link"],
     ["https://github.com/lee-gyu", "vsc-github", "GitHub", "github link"],
-    [
-        "mailto:leegyu4dev@gmail.com",
-        "vsc-mail",
-        "leegyu4dev@gmail.com",
-        "e-mail address",
-    ],
 ];
 ---
 
 <ul class="banner-wrapper">
     {
         bannerList.map(([url, icon, text, title]) => (
-            <li class="banner-item">
-                <a href={url} title={title} target="_blank">
-                    <i
-                        class={iconCss}
-                        style={`--icon-mask: var(--icon-${icon})`}
-                    />
-                    <span>{text}</span>
+            <li>
+                <a class="banner-item" href={url} title={title} target="_blank">
+                    {text}
                 </a>
             </li>
         ))
@@ -36,35 +24,13 @@ const bannerList = [
         }
     }
 
+    .banner-wrapper {
+        display: flex;
+        column-gap: 0.75rem;
+        margin-top: 0.25rem;
+    }
+
     .banner-item {
-        i {
-            font-size: 1.25rem;
-        }
-
-        a {
-            position: relative;
-            margin: 0.25rem 0;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-
-            &::before {
-                transition: width 0.15s ease-in-out;
-                content: "";
-                position: absolute;
-                top: -2px;
-                bottom: -2px;
-                left: -8px;
-                border-radius: 4px;
-                width: 0;
-                background-color: var(--colors-accent);
-                z-index: 1;
-                opacity: 0.1;
-            }
-
-            &:hover::before {
-                width: calc(100% + 16px);
-            }
-        }
+        text-decoration: underline;
     }
 </style>

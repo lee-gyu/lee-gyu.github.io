@@ -1,94 +1,38 @@
 ---
-const projects = [
+const projectData = [
     {
-        title: "Vite 제품 빌드 플러그인 개발",
-        tags: ["Vite"],
+        year: "2025",
     },
     {
-        title: "엑셀 처리 워커 모듈 개발",
-        tags: ["Web Worker", "exceljs"],
+        year: "2024",
     },
     {
-        title: "웹 F/E 테스팅 프레임워크 적용",
-        tags: ["Vitest", "Playwright"],
+        year: "2023",
     },
     {
-        title: "웹 제품 CSS 체계 설계/구현",
-        tags: ["vanilla-extract/css", "TailwindCSS"],
+        year: "2022",
     },
     {
-        title: "공용 UI 컴포넌트 라이브러리 개발",
-        tags: ["D3", "Grid", "Tree", "Flowchart"],
-    },
-    {
-        title: "UI 컴포넌트 엑셀 클립보드 호환 모듈 개발",
-        tags: [],
-    },
-    {
-        title: "실시간 HTML/JS 라이브 편집기",
-        tags: ["CodeMirror"],
-    },
-    {
-        title: "공용 컴포넌트 스토리북/API Docs 구축",
-        tags: ["StoryBook", "VitePress"],
+        year: "2021",
     },
 ];
 ---
 
-<section data-pin-point="projects">
-    <h4 class="title" data-status="not-complete">Projects <sup>(2020~)</sup></h4>
-
-    {projects.map(( { title, tags } ) => (
-        <article class="project-article">
-            <h4 class="article-title">{title}</h4>
-            <ul class="tag-wrapper">
-                {tags.map( (tag) => <li class="tag">{tag}</li> )}
-            </ul>
-        </article>
-    ))}
-</section>
+<ol>
+    {
+        projectData.map((project) => (
+            <li>
+                <h4 class="project-title">{project.year}</h4>
+            </li>
+        ))
+    }
+</ol>
 
 <style>
-    .title {
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        font-weight: 600;
-        letter-spacing: 0.05em;
-
+    .project-title {
+        font-weight: 900;
+        opacity: 0.9;
+        font-feature-settings: "tnum";
+        letter-spacing: -0.05em;
     }
-
-    .project-article {
-        margin: 12px 0;
-        letter-spacing: 0.05em;
-    }
-
-    .article-title {
-        font-weight: 400;
-        margin-top: 16px;
-
-        &::before {
-            margin-right: 4px;
-            display: inline-block;
-            content: "ㆍ";
-            vertical-align: text-bottom;
-        }
-    }
-
-    .tag-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 8px;
-        margin: 4px 0;
-        margin-left: 16px;
-    }
-
-    .tag {
-        border-radius: 4px;
-        background-color: theme("colors.neutral.700");
-        padding: 2px 6px;
-        color: theme("colors.white");
-        font-weight: 300;
-        font-size: 0.75rem;
-    }
-
 </style>
