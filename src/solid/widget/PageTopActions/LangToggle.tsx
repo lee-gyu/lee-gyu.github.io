@@ -1,10 +1,9 @@
 import { navigate } from "astro:transitions/client";
-import { useContext } from "solid-js";
+import { getDocLang } from "src/i18n/utils";
 import Icon from "../../components/Icon";
-import { PageTopActionsContext } from "./context";
 
 export default function LangToggle() {
-    const { lang } = useContext(PageTopActionsContext);
+    const lang = getDocLang();
 
     const clickHandler = () => {
         navigate(lang === "ko" ? "/en" : "/");

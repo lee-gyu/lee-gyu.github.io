@@ -1,8 +1,9 @@
 ---
 import DefaultLayout from "src/astro/layouts/DefaultLayout.astro";
-import Banner from "src/astro/widget/Banner.astro";
+import Links from "src/astro/widget/Links.astro";
 import Career from "src/astro/widget/Career.astro";
 import MainJob from "src/astro/widget/MainJob.astro";
+import Banner from "src/astro/widget/Banner.astro";
 import Title from "src/astro/components/Title.astro";
 import { css } from "src/styled-system/css";
 import { useTranslations } from "src/i18n/utils";
@@ -39,29 +40,34 @@ const sectionCss = css({
 <DefaultLayout lang={lang}>
     <main class={mainCss}>
         <span class={pageHeaderCss}>{t("intro")}</span>
-        <Title size="h1">{t("title")}</Title>
-        <Title size="h2">{t("name")}</Title>
+        <Title id="title" size="h1">{t("title")}</Title>
+        <Title id="name" size="h2">{t("name")}</Title>
         <a class="email-link" href="mailto:leegyu4dev@gmail.com"
             >leegyu4dev@gmail.com</a
         >
-        <Banner />
+        <Links />
 
         <section class={sectionCss}>
-            <Title size="h3">{t("mainJob")}</Title>
+            <Title id="mainJob" size="h3">{t("mainJob")}</Title>
             <MainJob />
         </section>
         <section class={sectionCss} role="article">
-            <Title size="h3">{t("career")}</Title>
+            <Title id="career" size="h3">{`${t("career")}`}</Title>
             <Career />
         </section>
         {
             !import.meta.env.PROD && (
                 <section class={sectionCss} role="article">
-                    <Title size="h3">{t("projects")}</Title>
+                    <Title id="projects" size="h3">
+                        {t("projects")}
+                    </Title>
                     <Projects />
                 </section>
             )
         }
+        <section role="banner">
+            <Banner />
+        </section>
     </main>
 </DefaultLayout>
 

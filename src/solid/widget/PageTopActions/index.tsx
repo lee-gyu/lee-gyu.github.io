@@ -3,13 +3,9 @@ import { PageTopActionsContext } from "./context";
 import LangToggle from "./LangToggle";
 import ThemeSwitch from "./ThemeSwitch";
 
-type PageTopActionsProps = {
-    lang: Lang;
-};
-
-export default function PageTopActions(props: PageTopActionsProps) {
+export default function PageTopActions() {
     return (
-        <PageTopActionsContext.Provider value={{ lang: props.lang }}>
+        <PageTopActionsContext.Provider value={{}}>
             <div
                 class={css({
                     display: "inline-flex",

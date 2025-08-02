@@ -5,14 +5,10 @@ const navListItems = [{ href: "/", label: "Home" }];
 
 if (!import.meta.env.PROD)
     navListItems.push({ href: "/projects", label: "Projects" });
-
-const lang = Astro.currentLocale as Lang;
-const langPrefix = lang === "ko" ? "" : `/${lang}`;
-const isProd = import.meta.env.PROD;
 ---
 
 <header class="header">
-    <PageTopActions lang={lang} client:only />
+    <PageTopActions client:only />
 </header>
 
 <style>

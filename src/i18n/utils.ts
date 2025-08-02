@@ -8,10 +8,12 @@ export function getLangFromUrl(url: URL) {
     return "ko";
 }
 
+export function getDocLang() {
+    return document.documentElement.lang as keyof typeof ui;
+}
+
 export function useTranslations(lang: keyof typeof ui) {
     return function t(key: keyof (typeof ui)[typeof defaultLang]) {
         return ui[lang][key] || ui[defaultLang][key];
     };
 }
-
-export function setLang(lang: keyof typeof ui) {}

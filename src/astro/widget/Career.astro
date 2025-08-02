@@ -1,6 +1,5 @@
 ---
 import { useTranslations } from "src/i18n/utils";
-import { css } from "src/styled-system/css";
 import { listItemsCss } from "src/styles/component-css";
 
 const t = useTranslations(Astro.currentLocale as Lang);
@@ -13,6 +12,10 @@ const careerData = [
     {
         title: t("career.1.header"),
         content: t("career.1.content"),
+    },
+    {
+        title: t("career.2.header"),
+        content: t("career.2.content"),
     },
 ];
 ---

@@ -61,10 +61,8 @@ const { lang = "ko" } = Astro.props;
 
 <script>
     import { setTheme } from "src/utils/theme";
-    import { setLang } from "src/i18n/utils";
 
     Object.assign(globalThis, {
         __setTheme: setTheme,
-        __setLang: setLang,
     });
 </script>

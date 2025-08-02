@@ -18,10 +18,10 @@ const projectData = [
 ];
 ---
 
-<ol>
+<ol class="projects-list-wrapper">
     {
         projectData.map((project) => (
-            <li>
+            <li class="project-desc">
                 <h4 class="project-title">{project.year}</h4>
             </li>
         ))
@@ -29,8 +29,16 @@ const projectData = [
 </ol>
 
 <style>
+    .projects-list-wrapper {
+        margin: 0.5rem 0;
+    }
+
+    .project-desc {
+        margin: 0.5rem 0;
+    }
+
     .project-title {
-        font-weight: 900;
+        font-weight: 700;
         opacity: 0.9;
         font-feature-settings: "tnum";
         letter-spacing: -0.05em;

@@ -1,36 +1,19 @@
 ---
-const bannerList = [
-    ["https://medium.com/@gyuc219", "vsc-book", "Blog", "blog link"],
-    ["https://github.com/lee-gyu", "vsc-github", "GitHub", "github link"],
-];
+import { useTranslations } from "src/i18n/utils";
+import { fromNow } from "src/utils/date";
+import dayjs from "dayjs";
+
+const lang = Astro.currentLocale as Lang;
+const t = useTranslations(lang);
+const lastUpdated = fromNow(dayjs(LAST_UPDATED), lang);
 ---
 
-<ul class="banner-wrapper">
-    {
-        bannerList.map(([url, icon, text, title]) => (
-            <li>
-                <a class="banner-item" href={url} title={title} target="_blank">
-                    {text}
-                </a>
-            </li>
-        ))
-    }
-</ul>
+<span class="last-updated">{`${t("lastUpdated")} ${lastUpdated}`}</span>
 
 <style>
-    @media print {
-        .banner-wrapper {
-            display: none;
-        }
-    }
-
-    .banner-wrapper {
-        display: flex;
-        column-gap: 0.75rem;
-        margin-top: 0.25rem;
-    }
-
-    .banner-item {
-        text-decoration: underline;
+    .last-updated {
+        font-size: 0.875rem;
+        opacity: 0.8;
+        font-weight: 300;
     }
 </style>
