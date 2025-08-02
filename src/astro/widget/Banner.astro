@@ -1,19 +1,5 @@
 ---
-import { useTranslations } from "src/i18n/utils";
-import { fromNow } from "src/utils/date";
-import dayjs from "dayjs";
-
-const lang = Astro.currentLocale as Lang;
-const t = useTranslations(lang);
-const lastUpdated = fromNow(dayjs(LAST_UPDATED), lang);
+import { LastUpdated } from "src/solid/components/LastUpdated";
 ---
 
-<span class="last-updated">{`${t("lastUpdated")} ${lastUpdated}`}</span>
-
-<style>
-    .last-updated {
-        font-size: 0.875rem;
-        opacity: 0.8;
-        font-weight: 300;
-    }
-</style>
+<LastUpdated client:only />
