@@ -1,9 +1,8 @@
 import mdx from "@astrojs/mdx";
 import solidJs from "@astrojs/solid-js";
 import { defineConfig } from "astro/config";
-import { loadEnv } from "vite";
 
-const env = loadEnv(process.env.NODE_ENV, process.cwd(), "");
+const LAST_UPDATED = new Date().toUTCString();
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,7 +21,10 @@ export default defineConfig({
             },
         },
         server: {
-            allowedHosts: [env.ALLOWED_HOST_LIST],
+            allowedHosts: [process.env.ALLOWED_HOST_LIST],
+        },
+        define: {
+            LAST_UPDATED: `"${LAST_UPDATED}"`,
         },
     },
 });
