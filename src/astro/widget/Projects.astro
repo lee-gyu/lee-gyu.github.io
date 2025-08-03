@@ -1,4 +1,7 @@
 ---
+import { css } from "src/styled-system/css";
+import Title from "../components/Title.astro";
+
 const projectData = [
     {
         year: "2025",
@@ -15,14 +18,38 @@ const projectData = [
     {
         year: "2021",
     },
+    {
+        year: "2018",
+    },
+    {
+        year: "2017",
+    },
+    {
+        year: "2016",
+    },
+    {
+        year: "2015",
+    },
+    {
+        year: "2013",
+    },
 ];
+
+const titleCss = css({
+    fontWeight: 600,
+    opacity: 0.8,
+    fontFeatureSettings: "'tnum'",
+    letterSpacing: "-0.04em",
+});
 ---
 
 <ol class="projects-list-wrapper">
     {
         projectData.map((project) => (
             <li class="project-desc">
-                <h4 class="project-title">{project.year}</h4>
+                <Title id={`p${project.year}`} class={titleCss}>
+                    {project.year}
+                </Title>
             </li>
         ))
     }
@@ -35,12 +62,5 @@ const projectData = [
 
     .project-desc {
         margin: 0.5rem 0;
-    }
-
-    .project-title {
-        font-weight: 700;
-        opacity: 0.9;
-        font-feature-settings: "tnum";
-        letter-spacing: -0.05em;
     }
 </style>

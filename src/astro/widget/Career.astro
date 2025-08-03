@@ -1,5 +1,6 @@
 ---
 import { useTranslations } from "src/i18n/utils";
+import { css } from "src/styled-system/css";
 import { listItemsCss } from "src/styles/component-css";
 
 const t = useTranslations(Astro.currentLocale as Lang);
@@ -8,24 +9,44 @@ const careerData = [
     {
         title: t("career.0.header"),
         content: t("career.0.content"),
+        keywords: t("career.0.content.keywords")
+            .split(",")
+            .map((keyword) => keyword.trim()),
     },
     {
         title: t("career.1.header"),
         content: t("career.1.content"),
+        keywords: t("career.1.content.keywords")
+            .split(",")
+            .map((keyword) => keyword.trim()),
     },
     {
         title: t("career.2.header"),
         content: t("career.2.content"),
+        keywords: t("career.2.content.keywords")
+            .split(",")
+            .map((keyword) => keyword.trim()),
     },
 ];
+
+const keywordColorCss = css({
+    bg: "accent/10",
+});
 ---
 
 <ul class={listItemsCss}>
     {
-        careerData.map(({ title, content }) => (
+        careerData.map(({ title, content, keywords }) => (
             <li class="career-item">
                 <h6 class="career-title">{title}</h6>
                 <span class="career-content">{content}</span>
+                <ul class="career-keywords">
+                    {keywords.map((keyword) => (
+                        <li class={`career-keyword ${keywordColorCss}`}>
+                            {keyword}
+                        </li>
+                    ))}
+                </ul>
             </li>
         ))
     }
@@ -35,5 +56,23 @@ const careerData = [
     .career-title {
         font-weight: 600;
         margin-top: 0.5rem;
+    }
+
+    .career-keywords {
+        display: flex;
+        column-gap: 0.5rem;
+        margin: 0.25rem 0;
+    }
+
+    .career-keyword {
+        display: inline-block;
+        line-height: 1.25;
+        font-size: 0.875rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 6px;
+    }
+
+    .career-item {
+        margin: 0.5rem 0;
     }
 </style>

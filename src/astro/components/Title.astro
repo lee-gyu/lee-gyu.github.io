@@ -2,6 +2,7 @@
 import { cva } from "src/styled-system/css";
 
 type Props = {
+    class?: string;
     size?: "h1" | "h2" | "h3";
     id?: string;
 };
@@ -28,14 +29,17 @@ const title = cva({
     },
 });
 
-const props = Astro.props;
-const Element = props.size ?? "h1";
+const { class: className, ...restProps } = Astro.props;
+const Element = restProps.size ?? "h1";
 ---
 
-<Element id={props.id} class:list={[title(props), props.id && "has-title"]}>
+<Element
+    id={restProps.id}
+    class:list={[title(restProps), className, restProps.id && "has-title"]}
+>
     {
-        props.id ? (
-            <a href={`#${props.id}`}>
+        restProps.id ? (
+            <a href={`#${restProps.id}`}>
                 <slot />
             </a>
         ) : (

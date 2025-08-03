@@ -70,8 +70,14 @@ export default defineConfig({
                     },
                     accent: {
                         value: {
-                            base: "{colors.slate.600}",
-                            _dark: "{colors.white}",
+                            base: "{colors.neutral.700}",
+                            _dark: "{colors.neutral.100}",
+                        },
+                    },
+                    accentContent: {
+                        value: {
+                            base: "{colors.neutral.100}",
+                            _dark: "{colors.neutral.700}",
                         },
                     },
                     primary: {

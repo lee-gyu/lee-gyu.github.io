@@ -12,7 +12,7 @@ type Props = {
     lang: string;
 };
 
-const { lang = "ko" } = Astro.props;
+const lang = Astro.currentLocale;
 ---
 
 <html lang={lang}>

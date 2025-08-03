@@ -19,10 +19,15 @@ export const ui = {
         years: "Years",
         "career.0.header": "2020.10 - Present",
         "career.0.content": "InnoRules R&D Center",
-        "career.1.header": "2012.10 - 2018.07",
+        "career.0.content.keywords":
+            "Web S/W Development, Team Project Management",
+        "career.1.header": "2015.09 - 2018.07",
         "career.1.content": "Samsung Electronics VD Division Manufacturing S/W",
+        "career.1.content.keywords":
+            "Web S/W Development, Back Office Development",
         "career.2.header": "2015.09 - 2018.07",
         "career.2.content": "Samsung Electronics GTC HR Group",
+        "career.2.content.keywords": "Recruitment, Training, Event Staff",
         projects: "Projects",
     },
     ko: {
@@ -38,10 +43,13 @@ export const ui = {
         years: "년",
         "career.0.header": "2020.10 - 현재",
         "career.0.content": "이노룰스 기술연구소",
+        "career.0.content.keywords": "웹 개발, 팀 개발 과제 관리",
         "career.1.header": "2015.09 - 2018.07",
         "career.1.content": "삼성전자 VD사업부 공정 S/W",
+        "career.1.content.keywords": "웹 개발, 업무 시스템 개발",
         "career.2.header": "2012.10 - 2015.09",
         "career.2.content": "삼성전자 GTC 인사그룹",
+        "career.2.content.keywords": "채용, 교육, 행사",
         projects: "프로젝트",
     },
 } as const;
