@@ -59,9 +59,9 @@ const keywordColorCss = css({
     }
 
     .career-keywords {
-        display: flex;
-        column-gap: 0.5rem;
+        display: block;
         margin: 0.25rem 0;
+        margin-left: -0.5rem;
     }
 
     .career-keyword {
@@ -70,6 +70,10 @@ const keywordColorCss = css({
         font-size: 0.875rem;
         padding: 0.25rem 0.5rem;
         border-radius: 6px;
+
+        &:not(:last-child) {
+            margin-right: 0.5rem;
+        }
     }
 
     .career-item {

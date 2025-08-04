@@ -51,5 +51,15 @@ export const ui = {
         "career.2.content": "삼성전자 GTC 인사그룹",
         "career.2.content.keywords": "채용, 교육, 행사",
         projects: "프로젝트",
+        // 2015
+        "project.2015.0.header": "국제기능올림픽 정보기술 직종 코치",
+        "project.2015.0.role": "삼성전자 소속 IT 직종 선수 코치",
+        "project.2015.0.goal": "선수 훈련 계획/",
+        "project.2015.0.period": "2013.09 ~ 2015.09",
+        "project.2015.0.content":
+            "한국 선수 2위 은메달 입상, 베트남 선수 3위 동메달 입상",
+        "project.2015.0.result": "",
+        "project.2015.0.urls":
+            "https://www.yna.co.kr/view/AKR20150818116700003",
     },
 } as const;

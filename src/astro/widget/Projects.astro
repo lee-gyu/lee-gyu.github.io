@@ -1,37 +1,65 @@
 ---
 import { css } from "src/styled-system/css";
 import Title from "../components/Title.astro";
+import { useTranslations, type ProjectKeyPrefix } from "src/i18n/utils";
+import { splitWithCommas } from "src/utils/string";
 
-const projectData = [
+type Props = {};
+
+type ProjectYearInfo = {
+    year: number;
+    projects: ProjectInfo[];
+};
+
+type ProjectInfo = {
+    header: string;
+    role: string;
+    goal: string;
+    period: string;
+    content: string;
+    result: string;
+    urls: string[];
+};
+
+const lang = Astro.currentLocale as Lang;
+const t = useTranslations(lang);
+
+const projectData: ProjectYearInfo[] = [
     {
-        year: "2025",
+        year: 2025,
+        projects: [],
     },
     {
-        year: "2024",
+        year: 2024,
+        projects: [],
     },
     {
-        year: "2023",
+        year: 2023,
+        projects: [],
     },
     {
-        year: "2022",
+        year: 2022,
+        projects: [],
     },
     {
-        year: "2021",
+        year: 2021,
+        projects: [],
     },
     {
-        year: "2018",
+        year: 2018,
+        projects: [],
     },
     {
-        year: "2017",
+        year: 2017,
+        projects: [],
     },
     {
-        year: "2016",
+        year: 2016,
+        projects: [],
     },
     {
-        year: "2015",
-    },
-    {
-        year: "2013",
+        year: 2015,
+        projects: [getProjectData("2015.0")],
     },
 ];
 
@@ -41,15 +69,32 @@ const titleCss = css({
     fontFeatureSettings: "'tnum'",
     letterSpacing: "-0.04em",
 });
+
+function getProjectData(key: ProjectKeyPrefix): ProjectInfo {
+    return {
+        header: t(`project.${key}.header`),
+        role: t(`project.${key}.role`),
+        goal: t(`project.${key}.goal`),
+        period: t(`project.${key}.period`),
+        content: t(`project.${key}.content`),
+        result: t(`project.${key}.result`),
+        urls: splitWithCommas(t(`project.${key}.urls`)),
+    };
+}
 ---
 
 <ol class="projects-list-wrapper">
     {
         projectData.map((project) => (
-            <li class="project-desc">
+            <li class="project-year-group">
                 <Title id={`p${project.year}`} class={titleCss}>
                     {project.year}
                 </Title>
+                <ol>
+                    {project.projects.map((p) => (
+                        <li class="project-item">{p.header}</li>
+                    ))}
+                </ol>
             </li>
         ))
     }
@@ -60,7 +105,14 @@ const titleCss = css({
         margin: 0.5rem 0;
     }
 
-    .project-desc {
+    .project-year-group {
         margin: 0.5rem 0;
+    }
+
+    .project-item {
+        padding: 0.25rem 0.5rem;
+        margin: 0.5rem 0;
+        background-color: var(--colors-background);
+        border-radius: 8px;
     }
 </style>

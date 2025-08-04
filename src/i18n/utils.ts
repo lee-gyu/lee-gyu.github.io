@@ -12,8 +12,33 @@ export function getDocLang() {
     return document.documentElement.lang as keyof typeof ui;
 }
 
+export type KeyDict = keyof (typeof ui)["ko"];
+
+type ProjectProp =
+    | "header"
+    | "role"
+    | "goal"
+    | "period"
+    | "content"
+    | "result"
+    | "urls";
+
+type ProjectKeys = {
+    [key in KeyDict as key extends `project.${infer Key}`
+        ? Key
+        : never]: string;
+};
+
+export type ProjectKeyPrefix = keyof {
+    [key in keyof ProjectKeys as key extends `${infer Prefix}.${ProjectProp}`
+        ? Prefix
+        : never]: string;
+};
+
 export function useTranslations(lang: keyof typeof ui) {
-    return function t(key: keyof (typeof ui)[typeof defaultLang]) {
-        return ui[lang][key] || ui[defaultLang][key];
+    const dict = ui[lang] as Record<string, string>;
+
+    return function t(key: KeyDict): string {
+        return dict[key] || ui[defaultLang][key];
     };
 }
