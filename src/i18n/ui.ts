@@ -29,6 +29,9 @@ export const ui = {
         "career.2.content": "Samsung Electronics GTC HR Group",
         "career.2.content.keywords": "Recruitment, Training, Event Staff",
         projects: "Projects",
+        "project.tab.0": "InnoRules",
+        "project.tab.1": "Samsung VD",
+        "project.tab.2": "Samsung GTC",
     },
     ko: {
         lastUpdated: "최근 업데이트:",
@@ -51,6 +54,9 @@ export const ui = {
         "career.2.content": "삼성전자 GTC 인사그룹",
         "career.2.content.keywords": "채용, 교육, 행사",
         projects: "프로젝트",
+        "project.tab.0": "이노룰스",
+        "project.tab.1": "삼성전자 VD",
+        "project.tab.2": "삼성전자 GTC",
         // 2015
         "project.2015.0.header": "국제기능올림픽 정보기술 직종 코치",
         "project.2015.0.role": "삼성전자 소속 IT 직종 선수 코치",

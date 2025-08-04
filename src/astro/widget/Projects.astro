@@ -6,8 +6,9 @@ import { splitWithCommas } from "src/utils/string";
 
 type Props = {};
 
-type ProjectYearInfo = {
-    year: number;
+type ProjectTabList = {
+    id: string;
+    title: string;
     projects: ProjectInfo[];
 };
 
@@ -24,42 +25,21 @@ type ProjectInfo = {
 const lang = Astro.currentLocale as Lang;
 const t = useTranslations(lang);
 
-const projectData: ProjectYearInfo[] = [
+const projectTabs: ProjectTabList[] = [
     {
-        year: 2025,
+        id: "innorules",
+        title: t("project.tab.0"),
         projects: [],
     },
     {
-        year: 2024,
+        id: "samsung-vd",
+        title: t("project.tab.1"),
         projects: [],
     },
     {
-        year: 2023,
+        id: "samsung-gtc",
+        title: t("project.tab.2"),
         projects: [],
-    },
-    {
-        year: 2022,
-        projects: [],
-    },
-    {
-        year: 2021,
-        projects: [],
-    },
-    {
-        year: 2018,
-        projects: [],
-    },
-    {
-        year: 2017,
-        projects: [],
-    },
-    {
-        year: 2016,
-        projects: [],
-    },
-    {
-        year: 2015,
-        projects: [getProjectData("2015.0")],
     },
 ];
 
@@ -83,16 +63,19 @@ function getProjectData(key: ProjectKeyPrefix): ProjectInfo {
 }
 ---
 
-<ol class="projects-list-wrapper">
+<ol id="tab-list-items" class="projects-tab-wrapper">
     {
-        projectData.map((project) => (
-            <li class="project-year-group">
-                <Title id={`p${project.year}`} class={titleCss}>
-                    {project.year}
-                </Title>
-                <ol>
-                    {project.projects.map((p) => (
-                        <li class="project-item">{p.header}</li>
+        projectTabs.map((tab, id) => (
+            <li>
+                <button
+                    class:list={["tab-button", id === 0 && "is-active"]}
+                    data-tab-id={tab.id}
+                >
+                    {tab.title}
+                </button>
+                <ol class="tab-items">
+                    {tab.projects.map((prj) => (
+                        <li />
                     ))}
                 </ol>
             </li>
@@ -101,12 +84,59 @@ function getProjectData(key: ProjectKeyPrefix): ProjectInfo {
 </ol>
 
 <style>
-    .projects-list-wrapper {
+    .projects-tab-wrapper {
         margin: 0.5rem 0;
+        display: flex;
+        column-gap: 0.5rem;
     }
 
     .project-year-group {
         margin: 0.5rem 0;
+    }
+
+    .tab-button {
+        position: relative;
+        transition: all 0.25s ease-in-out;
+        opacity: 0.5;
+        cursor: pointer;
+        padding: 0 0.5rem;
+        border-radius: 4px;
+
+        &::before {
+            transition: all 0.25s ease-in-out;
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--colors-text);
+        }
+
+        .tab-items {
+            display: none;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &.is-active {
+            opacity: 1;
+
+            &::before {
+                width: calc(100% - 0.5rem);
+                left: 0.25rem;
+            }
+
+            .tab-items {
+                display: block;
+            }
+        }
+
+        &:first-child {
+            margin-left: -0.5rem;
+        }
     }
 
     .project-item {
@@ -116,3 +146,20 @@ function getProjectData(key: ProjectKeyPrefix): ProjectInfo {
         border-radius: 8px;
     }
 </style>
+
+<script>
+    document
+        .getElementById("tab-list-items")
+        ?.addEventListener("click", (ev) => {
+            const target = ev.target as HTMLElement;
+            const button = target.closest(".tab-button");
+
+            if (!button) return;
+
+            document
+                .querySelectorAll(".tab-button.is-active")
+                .forEach((btn) => btn.classList.remove("is-active"));
+
+            button.classList.add("is-active");
+        });
+</script>
