@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import { createSignal, onCleanup, onMount } from "solid-js";
 import { getDocLang, useTranslations } from "src/i18n/utils";
 import { css } from "src/styled-system/css";
 import { fromNow } from "src/utils/date";
@@ -12,13 +13,24 @@ const lastUpdatedCss = css({
 
 export function LastUpdated() {
     const lang = getDocLang();
-    const lastUpdated = fromNow(dayjs(LAST_UPDATED), lang);
+    const [text, setText] = createSignal("");
     const t = useTranslations(lang);
 
+    const updateText = () => {
+        setText(`${t("lastUpdated")} ${fromNow(dayjs(LAST_UPDATED), lang)}`);
+    };
+
+    onMount(() => {
+        // 10초 주기로 업데이트
+        const interval = setInterval(updateText, 10000);
+        updateText();
+
+        onCleanup(() => clearInterval(interval));
+    });
+
     return (
-        <span
-            data-scrolled-hidden
-            class={lastUpdatedCss}
-        >{`${t("lastUpdated")} ${lastUpdated}`}</span>
+        <span data-scrolled-hidden class={lastUpdatedCss}>
+            {text()}
+        </span>
     );
 }
