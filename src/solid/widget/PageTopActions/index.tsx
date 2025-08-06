@@ -1,6 +1,6 @@
 import { css } from "src/styled-system/css";
+import { LangToggle } from "./Buttons";
 import { PageTopActionsContext } from "./context";
-import LangToggle from "./LangToggle";
 import ThemeSwitch from "./ThemeSwitch";
 
 export default function PageTopActions() {

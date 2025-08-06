@@ -10,6 +10,8 @@ const ICON_LIST = [
     "vsc-github",
     "vsc-book",
     "io5-lang",
+    "ri-speak-ai-fill",
+    "ri-speak-line-outline",
 ] as const;
 
 type IconProps = {

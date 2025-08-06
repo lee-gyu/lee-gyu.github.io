@@ -12,16 +12,6 @@ type ProjectTabList = {
     projects: ProjectInfo[];
 };
 
-type ProjectInfo = {
-    header: string;
-    role: string;
-    goal: string;
-    period: string;
-    content: string;
-    result: string;
-    urls: string[];
-};
-
 const lang = Astro.currentLocale as Lang;
 const t = useTranslations(lang);
 
@@ -39,6 +29,11 @@ const projectTabs: ProjectTabList[] = [
     {
         id: "samsung-gtc",
         title: t("project.tab.2"),
+        projects: [],
+    },
+    {
+        id: "personal",
+        title: t("project.tab.3"),
         projects: [],
     },
 ];
@@ -63,89 +58,31 @@ function getProjectData(key: ProjectKeyPrefix): ProjectInfo {
 }
 ---
 
-<ol id="tab-list-items" class="projects-tab-wrapper">
-    {
-        projectTabs.map((tab, id) => (
-            <li>
-                <button
-                    class:list={["tab-button", id === 0 && "is-active"]}
-                    data-tab-id={tab.id}
-                >
-                    {tab.title}
-                </button>
-                <ol class="tab-items">
-                    {tab.projects.map((prj) => (
-                        <li />
-                    ))}
-                </ol>
-            </li>
-        ))
-    }
-</ol>
-
-<style>
-    .projects-tab-wrapper {
-        margin: 0.5rem 0;
-        display: flex;
-        column-gap: 0.5rem;
-    }
-
-    .project-year-group {
-        margin: 0.5rem 0;
-    }
-
-    .tab-button {
-        position: relative;
-        transition: all 0.25s ease-in-out;
-        opacity: 0.5;
-        cursor: pointer;
-        padding: 0 0.5rem;
-        border-radius: 4px;
-
-        &::before {
-            transition: all 0.25s ease-in-out;
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 50%;
-            background-color: var(--colors-text);
+<div class="project-contents-wrapper">
+    <ol id="tab-list-items" class="projects-tab-wrapper" role="tablist">
+        {
+            projectTabs.map((tab, id) => (
+                <li>
+                    <button
+                        class:list={["tab-button", id === 0 && "is-active"]}
+                        data-tab-id={tab.id}
+                    >
+                        {tab.title}
+                    </button>
+                </li>
+            ))
         }
-
-        .tab-items {
-            display: none;
+    </ol>
+    <div class="tab-contents">
+        {
+            projectTabs.map((tab) => (
+                <div class="project-tab-contents">
+                    <header>{tab.title}</header>
+                </div>
+            ))
         }
-
-        &:hover {
-            opacity: 0.8;
-        }
-
-        &.is-active {
-            opacity: 1;
-
-            &::before {
-                width: calc(100% - 0.5rem);
-                left: 0.25rem;
-            }
-
-            .tab-items {
-                display: block;
-            }
-        }
-
-        &:first-child {
-            margin-left: -0.5rem;
-        }
-    }
-
-    .project-item {
-        padding: 0.25rem 0.5rem;
-        margin: 0.5rem 0;
-        background-color: var(--colors-background);
-        border-radius: 8px;
-    }
-</style>
+    </div>
+</div>
 
 <script>
     document
@@ -163,3 +100,71 @@ function getProjectData(key: ProjectKeyPrefix): ProjectInfo {
             button.classList.add("is-active");
         });
 </script>
+
+<style>
+    .projects-tab-wrapper {
+        position: sticky;
+        top: 0;
+        left: 0;
+        margin: 0.5rem 0;
+        display: flex;
+        column-gap: 0.5rem;
+        align-items: end;
+    }
+
+    .project-year-group {
+        margin: 0.5rem 0;
+    }
+
+    .project-tab-contents {
+        min-width: 100%;
+        scroll-snap-align: start;
+        padding: 0 1.5rem 0 2.5rem;
+    }
+
+    .tab-contents {
+        width: calc(100% + 3.5rem);
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        margin-left: -2.5rem;
+        scrollbar-width: none;
+    }
+
+    .tab-button {
+        position: relative;
+        transition: all 0.15s ease-in-out;
+        opacity: 0.5;
+        cursor: pointer;
+        padding: 0 0.25rem;
+        border-radius: 4px;
+
+        &::before {
+            transition: all 0.15s ease-in-out;
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--colors-text);
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &.is-active {
+            opacity: 1;
+
+            &::before {
+                width: 100%;
+                left: 0;
+            }
+        }
+
+        &:first-child {
+            margin-left: -0.25rem;
+        }
+    }
+</style>

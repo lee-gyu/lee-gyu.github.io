@@ -7,6 +7,7 @@ const lastUpdatedCss = css({
     fontSize: "0.875rem",
     opacity: 0.8,
     fontWeight: 300,
+    transition: "opacity 0.2s ease-in-out",
 });
 
 export function LastUpdated() {
@@ -16,6 +17,7 @@ export function LastUpdated() {
 
     return (
         <span
+            data-scrolled-hidden
             class={lastUpdatedCss}
         >{`${t("lastUpdated")} ${lastUpdated}`}</span>
     );

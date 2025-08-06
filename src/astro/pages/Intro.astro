@@ -8,6 +8,7 @@ import Title from "src/astro/components/Title.astro";
 import { css } from "src/styled-system/css";
 import { useTranslations } from "src/i18n/utils";
 import Projects from "../widget/Projects.astro";
+import Awards from "../widget/Awards.astro";
 
 type Props = {};
 
@@ -55,6 +56,10 @@ const sectionCss = css({
             <Title id="career" size="h3">{`${t("career")}`}</Title>
             <Career />
         </section>
+        <section class={sectionCss} role="article">
+            <Title id="awards" size="h3">{`${t("awards")}`}</Title>
+            <Awards />
+        </section>
         {
             !import.meta.env.PROD && (
                 <section class={sectionCss} role="article">
@@ -65,9 +70,6 @@ const sectionCss = css({
                 </section>
             )
         }
-        <section role="banner">
-            <Banner />
-        </section>
     </main>
 </DefaultLayout>
 

@@ -12,6 +12,11 @@ const themeSwitchInputCss = css({
 export default function ThemeSwitch() {
     const [themeState, setThemeState] = createSignal("");
 
+    const onReady = (el: HTMLInputElement) => {
+        el.checked = getTheme() === "dark";
+        setThemeState(getTheme());
+    };
+
     return (
         <label class="button-wrapper" title="switch theme">
             <Show when={themeState() !== ""}>
@@ -39,9 +44,4 @@ export default function ThemeSwitch() {
             />
         </label>
     );
-
-    function onReady(el: HTMLInputElement) {
-        el.checked = getTheme() === "dark";
-        setThemeState(getTheme());
-    }
 }

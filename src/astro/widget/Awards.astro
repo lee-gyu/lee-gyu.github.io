@@ -1,0 +1,49 @@
+---
+import { useTranslations } from "src/i18n/utils";
+import { listItemsCss } from "src/styles/component-css";
+
+type Props = {};
+
+const lang = Astro.currentLocale as Lang;
+const t = useTranslations(lang);
+const awardsData = [
+    {
+        header: t("awards.0.header"),
+        tags: t("awards.0.tags"),
+    },
+    {
+        header: t("awards.1.header"),
+        tags: t("awards.1.tags"),
+    },
+    {
+        header: t("awards.2.header"),
+        tags: t("awards.2.tags"),
+    },
+    {
+        header: t("awards.3.header"),
+        tags: t("awards.3.tags"),
+    },
+];
+---
+
+<ol class={listItemsCss}>
+    {
+        awardsData.map(({ header, tags }) => (
+            <li>
+                <span class="awards-header">{header}</span>
+                <span class="awards-tag">({tags})</span>
+            </li>
+        ))
+    }
+</ol>
+
+<style>
+    .awards-header {
+        word-break: keep-all;
+    }
+
+    .awards-tag {
+        white-space: nowrap;
+        word-break: keep-all;
+    }
+</style>
