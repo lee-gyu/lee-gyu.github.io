@@ -17,8 +17,7 @@ export const ui = {
         "mainJob.2": "Web System Architecture Design",
         career: "Career",
         awards: "Awards",
-        "awards.0.header":
-            "Excellence in Talent Development and National Prestige",
+        "awards.0.header": "Outstanding Talent Development",
         "awards.0.tags": "Ministry of Employment and Labor, 2015.12",
         "awards.1.header": "Prime Minister's Commendation of Vietnam",
         "awards.1.tags": "Government of Vietnam, 2015.12",
@@ -55,7 +54,7 @@ export const ui = {
         "mainJob.2": "웹 시스템 아키텍처 설계",
         career: "경력",
         awards: "수상",
-        "awards.0.header": "우수 인재 육성/국위선양 공로 표창",
+        "awards.0.header": "국가 인재 육성 노동부 장관 표창",
         "awards.0.tags": "고용노동부, 2015.12",
         "awards.1.header": "베트남 국가 총리 표창",
         "awards.1.tags": "베트남 정부, 2015.12",
