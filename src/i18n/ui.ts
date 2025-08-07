@@ -82,7 +82,6 @@ export const ui = {
         "career.2.content.keywords": "채용, 교육, 행사",
         experience: "경험",
         "exp.label.role": "역할",
-        "exp.label.goal": "목표",
         "exp.label.period": "기간",
         "exp.label.content": "상세 내용",
         "exp.label.result": "성과",
@@ -94,29 +93,36 @@ export const ui = {
         "exp.tab.2018": "2018 ~",
 
         "exp.7.header": "제조 생산 예측 시뮬레이터",
+        "exp.7.period": "2016.12 ~ 2017.03",
 
         "exp.6.header": "공정 모니터링 IoT 애플리케이션",
+        "exp.6.period": "2016.06 ~ 2016.10",
         // Python, Node.js, TypeScript
 
         "exp.5.header": "웹 기반 사내 업무 시스템 포털",
+        "exp.5.period": "2015.11 ~ 2016.03",
         // Asp.Net MVC, JavaScript, Web Editor
 
         "exp.tab.2015": "2015 ~",
 
         "exp.4.header": "국가대표 선수 코치",
+        "exp.4.period": "2013.09 ~ 2015.08",
 
-        "exp.3.header": "사내 경진대회 행사 지원",
+        "exp.3.header": "사내 경진대회 프로젝트 업무",
+        "exp.3.period": "2013.05, 2014.05",
 
         "exp.2.header": "조직문화 담당 (Change Agent)",
+        "exp.2.period": "2013 ~ 2015",
 
-        "exp.1.header": "기능 우수인력 채용 업무",
+        "exp.1.header": "채용 업무 진행",
+        "exp.1.period": "2013.09, 2014.09",
 
-        "exp.0.header": "삼성전자 국가대표 훈련 센터",
-        "exp.0.role": "국가대표 훈련 선수",
-        "exp.0.goal": "",
+        "exp.0.header": "국제기능올림픽 국가대표 훈련",
+        "exp.0.category": "훈련",
+        "exp.0.role": "대한민국 국가대표",
         "exp.0.period": "2012.10 ~ 2013.07",
         "exp.0.details": "",
-        "exp.0.result": "",
+        "exp.0.result": "금메달(1위)",
         "exp.0.urls": "",
     },
 } as const;

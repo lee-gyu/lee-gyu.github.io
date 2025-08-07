@@ -2,7 +2,6 @@
 import { useTranslations, type ExpKeyPrefix } from "src/i18n/utils";
 import { numAdjCss } from "src/styles/component-css";
 import ExpCard from "src/astro/components/ExpCard.astro";
-import { listItemsCss } from "src/styles/component-css";
 
 type Props = {};
 
@@ -24,7 +23,7 @@ const projectTabs: ExpTabList[] = [
         expList: [],
     },
     {
-        id: "exp2019",
+        id: "exp2020",
         tabCaption: t("exp.tab.2020"),
         header: t("exp.tab.2020.header"),
         expList: [],
@@ -73,16 +72,14 @@ const projectTabs: ExpTabList[] = [
     <div id="tabContents" class="tab-contents">
         {
             projectTabs.map((tab) => (
-                <>
-                    <ol id={tab.id} class:list={["tab-content", listItemsCss]}>
-                        <header class="tab-contents-header">
-                            {tab.header}
-                        </header>
+                <div id={tab.id} class="tab-content">
+                    <header class="tab-contents-header">{tab.header}</header>
+                    <ol>
                         {tab.expList.map((expId) => (
                             <ExpCard expId={expId} />
                         ))}
                     </ol>
-                </>
+                </div>
             ))
         }
     </div>
@@ -91,7 +88,9 @@ const projectTabs: ExpTabList[] = [
 <script>
     const tabButtonWrapper = document.getElementById("tabButtonWrapper")!;
     const tabContentsWrapper = document.getElementById("tabContents")!;
-    const contentsRange: Array<[number, number]> = [];
+    const tabContents = [
+        ...tabContentsWrapper.querySelectorAll(".tab-content"),
+    ] as HTMLElement[];
 
     tabButtonWrapper.addEventListener("click", (ev) => {
         const target = ev.target as HTMLElement;
@@ -115,22 +114,12 @@ const projectTabs: ExpTabList[] = [
     activeTabButton(defaultTabId);
     if (defaultTabId > 0) setTimeout(() => scrollTabContent(defaultTabId), 0);
 
-    new ResizeObserver(() => {
-        contentsRange.length = 0;
+    tabContents.forEach((element) => {
+        const header = element.querySelector("header")!;
 
-        [
-            ...(tabContentsWrapper.querySelectorAll(
-                ".tab-content",
-            ) as NodeListOf<HTMLElement>),
-        ].reduce((left, el) => {
-            contentsRange.push([left, left + el.offsetWidth]);
-
-            return left + el.offsetWidth;
-        }, 0);
-    }).observe(tabContentsWrapper);
-
-    tabContentsWrapper.addEventListener("scrollend", () => {
-        activeTabButton(getCurTabIdByScroll());
+        new IntersectionObserver(([entry]) => {
+            console.log(element.id, entry, entry.isIntersecting);
+        }).observe(header);
     });
 
     function activeTabButton(tabId: number) {
@@ -150,18 +139,10 @@ const projectTabs: ExpTabList[] = [
     }
 
     function scrollTabContent(tabId: number) {
-        tabContentsWrapper.children[tabId].scrollIntoView({
+        tabContentsWrapper.scrollTo({
             behavior: "smooth",
+            left: tabContents[tabId].offsetLeft,
         });
-    }
-
-    function getCurTabIdByScroll() {
-        const scrollLeft = tabContentsWrapper.scrollLeft;
-        const findIndex = contentsRange.findIndex(
-            (range) => scrollLeft >= range[0] && scrollLeft < range[1],
-        );
-
-        return findIndex < 0 ? 0 : findIndex;
     }
 
     function getDefaultTabId() {
@@ -197,7 +178,7 @@ const projectTabs: ExpTabList[] = [
         column-gap: var(--tab-button-gap);
         align-items: end;
         z-index: 1000;
-        margin-left: -0.5rem;
+        margin-left: -0.75rem;
 
         & > li {
             display: contents;
@@ -226,25 +207,25 @@ const projectTabs: ExpTabList[] = [
     .tab-contents-header {
         position: sticky;
         top: 0;
-        margin-top: -0.5rem;
-        margin-left: -1.25rem;
+        margin-left: var(--spacing-doc-pad-left);
         font-weight: 500;
+        opacity: 0.75;
     }
 
     .tab-content {
         min-width: 100%;
         scroll-snap-align: start;
         scroll-behavior: smooth;
-        padding: 0 1.5rem 0 3.75rem;
-        margin: 0.5rem 0 2rem 0;
     }
 
     .tab-contents {
-        width: calc(100% + 3.5rem);
+        width: calc(
+            100% + var(--spacing-doc-pad-left) + var(--spacing-doc-pad-right)
+        );
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        margin-left: -2.5rem;
+        margin-left: calc(var(--spacing-doc-pad-left) * -1);
         scrollbar-width: none;
     }
 

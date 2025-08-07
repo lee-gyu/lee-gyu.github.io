@@ -1,0 +1,31 @@
+---
+type Props = {
+    keywords: string[];
+};
+
+const { keywords } = Astro.props;
+---
+
+<ul class="keywords">
+    {keywords.map((keyword) => <li class={"keyword"}>{keyword}</li>)}
+</ul>
+
+<style>
+    .keywords {
+        display: block;
+        margin: 0.25rem 0;
+    }
+
+    .keyword {
+        display: inline-block;
+        line-height: 1.25;
+        font-size: 0.875rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 6px;
+        background-color: var(--colors-accent-o10);
+
+        &:not(:last-child) {
+            margin-right: 0.5rem;
+        }
+    }
+</style>

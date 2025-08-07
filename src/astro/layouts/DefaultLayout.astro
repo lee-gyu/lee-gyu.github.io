@@ -18,8 +18,13 @@ const lang = Astro.currentLocale;
 
 <html lang={lang}>
     <head>
+        <title>Lee Gyu</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Lee Gyu" />
+        <meta property="og:description" content="Profile Website" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/thumbnail.png" />
         <link
             rel="stylesheet"
             as="style"
@@ -27,7 +32,6 @@ const lang = Astro.currentLocale;
             href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
         />
         <link rel="shortcut icon" href="/svg/favicon.png" type="image/x-icon" />
-        <title>Lee Gyu</title>
         <script is:raw set:html={pageLoaderJS} />
         {isProduction && <script is:raw set:html={googleAnalyticsJS} />}
     </head>

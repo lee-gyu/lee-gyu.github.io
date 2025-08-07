@@ -43,6 +43,12 @@ export default defineConfig({
     theme: {
         extend: {
             semanticTokens: {
+                spacing: {
+                    docPadLeft: { value: "2.5rem" },
+                    docPadRight: { value: "1rem" },
+                    docPadTop: { value: "0rem" },
+                    docPadBottom: { value: "2rem" },
+                },
                 colors: {
                     background: {
                         value: {

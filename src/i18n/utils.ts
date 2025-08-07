@@ -14,21 +14,18 @@ export function getDocLang() {
 
 export type KeyDict = keyof (typeof ui)["ko"];
 
-type ExpProp =
-    | "header"
-    | "role"
-    | "goal"
-    | "period"
-    | "details"
-    | "result"
-    | "urls";
-
 type ExpKeys = {
     [key in KeyDict as key extends `exp.${infer Key}` ? Key : never]: string;
 };
 
+export type ExpProps = keyof {
+    [key in keyof ExpKeys as key extends `${number}.${infer ExpProp}`
+        ? ExpProp
+        : never]: string;
+};
+
 export type ExpKeyPrefix = keyof {
-    [key in keyof ExpKeys as key extends `${infer Prefix}.${ExpProp}`
+    [key in keyof ExpKeys as key extends `${infer Prefix}.${ExpProps}`
         ? Prefix extends `${number}`
             ? Prefix
             : never

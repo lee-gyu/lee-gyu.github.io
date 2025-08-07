@@ -1,6 +1,7 @@
 ---
 import { useTranslations } from "src/i18n/utils";
 import { listItemsCss } from "src/styles/component-css";
+import Keywords from "../components/Keywords.astro";
 
 const t = useTranslations(Astro.currentLocale as Lang);
 
@@ -35,11 +36,7 @@ const careerData = [
             <li class="career-item">
                 <h6 class="career-title">{title}</h6>
                 <span class="career-content">{content}</span>
-                <ul class="career-keywords">
-                    {keywords.map((keyword) => (
-                        <li class={"career-keyword"}>{keyword}</li>
-                    ))}
-                </ul>
+                <Keywords keywords={keywords} />
             </li>
         ))
     }
@@ -49,24 +46,6 @@ const careerData = [
     .career-title {
         font-weight: 600;
         margin-top: 0.5rem;
-    }
-
-    .career-keywords {
-        display: block;
-        margin: 0.25rem 0;
-    }
-
-    .career-keyword {
-        display: inline-block;
-        line-height: 1.25;
-        font-size: 0.875rem;
-        padding: 0.25rem 0.5rem;
-        border-radius: 6px;
-        background-color: var(--colors-accent-o10);
-
-        &:not(:last-child) {
-            margin-right: 0.5rem;
-        }
     }
 
     .career-item {

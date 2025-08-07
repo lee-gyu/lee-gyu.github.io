@@ -1,5 +1,13 @@
 ---
-import { useTranslations, type ExpKeyPrefix } from "src/i18n/utils";
+import {
+    useTranslations,
+    type ExpKeyPrefix,
+    type ExpProps,
+} from "src/i18n/utils";
+import Title from "src/astro/components/Title.astro";
+import { listItemsCss } from "src/styles/component-css";
+import { splitWithCommas } from "src/utils/string";
+import Keywords from "./Keywords.astro";
 
 type Props = {
     expId: ExpKeyPrefix;
@@ -9,15 +17,27 @@ const lang = Astro.currentLocale as Lang;
 const t = useTranslations(lang);
 const { expId } = Astro.props;
 
-const expData = {
+const expData: Partial<Record<ExpProps, string>> = {
     header: t(`exp.${expId}.header`),
+    period: t(`exp.${expId}.period`),
 };
+
+const periodKeywords = splitWithCommas(expData.period ?? "");
 ---
 
-<li>
-    <section class="exp-card" role="contentinfo">
-        <header>{expData.header}</header>
-    </section>
+<li class="exp-card">
+    <Title size="h3">{expData.header}</Title>
+    <Keywords keywords={periodKeywords} />
+    <ul class={listItemsCss}>
+        <li></li>
+    </ul>
 </li>
 
-<style></style>
+<style>
+    .exp-card {
+        background-color: var(--colors-accent-o10);
+        margin-bottom: 1rem;
+        padding: 0.5rem var(--spacing-doc-pad-right) 0.5rem
+            var(--spacing-doc-pad-left);
+    }
+</style>
