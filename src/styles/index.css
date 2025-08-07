@@ -7,3 +7,13 @@
         display: none;
     }
 }
+
+@media print {
+    :root {
+        color: var(--colors-neutral-900);
+    }
+
+    [data-print-hidden] {
+        display: none !important;
+    }
+}

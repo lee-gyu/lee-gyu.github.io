@@ -8,7 +8,7 @@ if (!import.meta.env.PROD)
     navListItems.push({ href: "/projects", label: "Projects" });
 ---
 
-<header id="pageHeader" class="header">
+<header id="pageHeader" class="header" data-print-hidden>
     <Banner />
     <PageTopActions client:only />
 </header>
@@ -33,6 +33,7 @@ if (!import.meta.env.PROD)
     .header:hover {
         opacity: 1;
         backdrop-filter: blur(2px);
+        box-shadow: inset 0 0 100px 9999px var(--colors-surface-light);
 
         & [data-scrolled-hidden] {
             opacity: 1;

@@ -1,6 +1,5 @@
 ---
 import { useTranslations } from "src/i18n/utils";
-import { css } from "src/styled-system/css";
 import { listItemsCss } from "src/styles/component-css";
 
 const t = useTranslations(Astro.currentLocale as Lang);
@@ -28,10 +27,6 @@ const careerData = [
             .map((keyword) => keyword.trim()),
     },
 ];
-
-const keywordColorCss = css({
-    bg: "accent/10",
-});
 ---
 
 <ul class={listItemsCss}>
@@ -42,9 +37,7 @@ const keywordColorCss = css({
                 <span class="career-content">{content}</span>
                 <ul class="career-keywords">
                     {keywords.map((keyword) => (
-                        <li class={`career-keyword ${keywordColorCss}`}>
-                            {keyword}
-                        </li>
+                        <li class={"career-keyword"}>{keyword}</li>
                     ))}
                 </ul>
             </li>
@@ -69,6 +62,7 @@ const keywordColorCss = css({
         font-size: 0.875rem;
         padding: 0.25rem 0.5rem;
         border-radius: 6px;
+        background-color: var(--colors-accent-o10);
 
         &:not(:last-child) {
             margin-right: 0.5rem;

@@ -56,6 +56,12 @@ export default defineConfig({
                             _dark: "{colors.neutral.800}",
                         },
                     },
+                    surfaceLight: {
+                        value: {
+                            base: "{colors.neutral.50/60}",
+                            _dark: "{colors.neutral.800/60}",
+                        },
+                    },
                     border: {
                         value: {
                             base: "{colors.neutral.600}",
@@ -72,6 +78,12 @@ export default defineConfig({
                         value: {
                             base: "{colors.neutral.700}",
                             _dark: "{colors.neutral.100}",
+                        },
+                    },
+                    accentO10: {
+                        value: {
+                            base: "{colors.neutral.700/10}",
+                            _dark: "{colors.neutral.100/10}",
                         },
                     },
                     accentContent: {
