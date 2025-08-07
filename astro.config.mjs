@@ -13,6 +13,9 @@ export default defineConfig({
         defaultLocale: "ko",
     },
     integrations: [mdx(), solidJs()],
+    devToolbar: {
+        enabled: false,
+    },
     vite: {
         plugins: [],
         css: {
