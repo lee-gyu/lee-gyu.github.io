@@ -1,0 +1,228 @@
+---
+import { useTranslations, type ExpKeyPrefix } from "src/i18n/utils";
+
+type Props = {};
+
+type ExpTabList = {
+    id: string;
+    title: string;
+    exp: ExpKeyPrefix[];
+};
+
+const lang = Astro.currentLocale as Lang;
+const t = useTranslations(lang);
+
+const projectTabs: ExpTabList[] = [
+    {
+        id: "exp2025",
+        title: t("exp.tab.2025"),
+        exp: [],
+    },
+    {
+        id: "exp2024",
+        title: t("exp.tab.2024"),
+        exp: [],
+    },
+    {
+        id: "exp2018",
+        title: t("exp.tab.2018"),
+        exp: [],
+    },
+    {
+        id: "exp2015",
+        title: t("exp.tab.2015"),
+        exp: [],
+    },
+];
+---
+
+<div class="project-contents-wrapper">
+    <ol
+        id="tabButtonWrapper"
+        class="projects-tab-wrapper"
+        role="tablist"
+        data-print-hidden
+    >
+        {
+            projectTabs.map((tab, id) => (
+                <li>
+                    <a
+                        href={`#${tab.id}`}
+                        class:list={["tab-button", id === 0 && "is-active"]}
+                        data-tab-id={tab.id}
+                        data-tab-index={id}
+                    >
+                        {tab.title}
+                    </a>
+                </li>
+            ))
+        }
+    </ol>
+    <div id="tabContents" class="tab-contents">
+        {
+            projectTabs.map((tab) => (
+                <div id={tab.id} class="tab-content">
+                    <header>{tab.title}</header>
+                </div>
+            ))
+        }
+    </div>
+</div>
+
+<script>
+    const tabButtonWrapper = document.getElementById("tabButtonWrapper")!;
+    const tabContentsWrapper = document.getElementById("tabContents")!;
+    const contentsRange: Array<[number, number]> = [];
+
+    tabButtonWrapper.addEventListener("click", (ev) => {
+        const target = ev.target as HTMLElement;
+        const element = target.closest("[data-tab-index]") as HTMLElement;
+
+        if (!element) return;
+
+        const tabId = parseInt(
+            element.getAttribute("data-tab-index") || "0",
+            10,
+        );
+
+        activeTabButton(tabId);
+        scrollTabContent(tabId);
+    });
+
+    const defaultTabId = getDefaultTabId();
+
+    activeTabButton(defaultTabId);
+    if (defaultTabId > 0) scrollTabContent(defaultTabId);
+
+    new ResizeObserver(() => {
+        contentsRange.length = 0;
+
+        [
+            ...(tabContentsWrapper.querySelectorAll(
+                ".tab-content",
+            ) as NodeListOf<HTMLElement>),
+        ].reduce((left, el) => {
+            contentsRange.push([left, left + el.offsetWidth]);
+
+            return left + el.offsetWidth;
+        }, 0);
+    }).observe(tabContentsWrapper);
+
+    tabContentsWrapper.addEventListener("scrollend", () => {});
+
+    function activeTabButton(tabId: number) {
+        // reset is-active
+        const buttons = [
+            ...tabButtonWrapper.querySelectorAll(".tab-button"),
+        ] as HTMLElement[];
+
+        buttons.forEach((button) => {
+            button.classList.remove("is-active");
+        });
+
+        const activeButton = buttons[tabId];
+
+        activeButton.classList.add("is-active");
+
+        // set active tab styles
+        tabButtonWrapper.style.setProperty(
+            "--active-tab-left",
+            `calc(${activeButton.offsetLeft}px - 0.25rem)`,
+        );
+
+        tabButtonWrapper.style.setProperty(
+            "--active-tab-width",
+            `calc(${activeButton.offsetWidth}px + 0.5rem)`,
+        );
+    }
+
+    function scrollTabContent(tabId: number) {
+        tabContentsWrapper.children[tabId].scrollIntoView({
+            behavior: "smooth",
+        });
+    }
+
+    function getDefaultTabId() {
+        const hash = window.location.hash;
+        const projectTabs = [
+            ...tabButtonWrapper.querySelectorAll("[data-tab-id]"),
+        ] as HTMLElement[];
+
+        if (hash) {
+            const tabId = projectTabs.findIndex(
+                (tab) => `#${tab.dataset.tabId}` === hash,
+            );
+
+            if (tabId >= 0) return tabId;
+        }
+
+        return 0;
+    }
+</script>
+
+<style>
+    .projects-tab-wrapper {
+        position: sticky;
+        top: 0;
+        left: 0;
+        margin: 0.5rem 0;
+        display: flex;
+        column-gap: 0.5rem;
+        align-items: end;
+        z-index: 1000;
+
+        &::before {
+            transition: all 0.5s ease-in-out;
+            content: "";
+            position: absolute;
+            top: -0.25rem;
+            left: var(--active-tab-left);
+            width: var(--active-tab-width);
+            bottom: -0.25rem;
+            background-color: var(--colors-accent-o10);
+            border-radius: 0.5rem;
+        }
+    }
+
+    .project-year-group {
+        margin: 0.5rem 0;
+    }
+
+    .tab-content {
+        min-width: 100%;
+        scroll-snap-align: start;
+        scroll-behavior: smooth;
+        padding: 0.5rem 1.5rem 6rem 2.5rem;
+    }
+
+    .tab-contents {
+        width: calc(100% + 3.5rem);
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        margin-left: -2.5rem;
+        scrollbar-width: none;
+    }
+
+    .tab-button {
+        position: relative;
+        transition: all 0.15s ease-in-out;
+        opacity: 0.5;
+        cursor: pointer;
+        padding: 0 0.25rem;
+        border-radius: 4px;
+        z-index: 1000;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &.is-active {
+            opacity: 1;
+        }
+
+        &:first-child {
+            margin-left: -0.25rem;
+        }
+    }
+</style>

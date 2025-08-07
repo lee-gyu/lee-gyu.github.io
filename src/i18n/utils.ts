@@ -14,7 +14,7 @@ export function getDocLang() {
 
 export type KeyDict = keyof (typeof ui)["ko"];
 
-type ProjectProp =
+type ExpProp =
     | "header"
     | "role"
     | "goal"
@@ -23,14 +23,12 @@ type ProjectProp =
     | "result"
     | "urls";
 
-type ProjectKeys = {
-    [key in KeyDict as key extends `project.${infer Key}`
-        ? Key
-        : never]: string;
+type ExpKeys = {
+    [key in KeyDict as key extends `exp.${infer Key}` ? Key : never]: string;
 };
 
-export type ProjectKeyPrefix = keyof {
-    [key in keyof ProjectKeys as key extends `${infer Prefix}.${ProjectProp}`
+export type ExpKeyPrefix = keyof {
+    [key in keyof ExpKeys as key extends `${infer Prefix}.${ExpProp}`
         ? Prefix
         : never]: string;
 };

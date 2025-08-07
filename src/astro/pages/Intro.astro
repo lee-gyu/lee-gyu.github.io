@@ -3,11 +3,11 @@ import DefaultLayout from "src/astro/layouts/DefaultLayout.astro";
 import Links from "src/astro/widget/Links.astro";
 import Career from "src/astro/widget/Career.astro";
 import MainJob from "src/astro/widget/MainJob.astro";
-import Banner from "src/astro/widget/Banner.astro";
+
 import Title from "src/astro/components/Title.astro";
 import { css } from "src/styled-system/css";
 import { useTranslations } from "src/i18n/utils";
-import Projects from "../widget/Projects.astro";
+import Experiences from "../widget/Experiences.astro";
 import Awards from "../widget/Awards.astro";
 
 type Props = {};
@@ -40,7 +40,7 @@ const sectionCss = css({
 
 <DefaultLayout lang={lang}>
     <main class={mainCss}>
-        <span class={pageHeaderCss}>{t("intro")}</span>
+        <span class={pageHeaderCss} data-print-hidden>{t("intro")}</span>
         <Title size="h1">{t("title")}</Title>
         <Title size="h2">{t("name")}</Title>
         <a class="email-link" href="mailto:leegyu4dev@gmail.com"
@@ -63,10 +63,10 @@ const sectionCss = css({
         {
             !import.meta.env.PROD && (
                 <section class={sectionCss} role="article">
-                    <Title id="projects" size="h3">
-                        {t("projects")}
+                    <Title id="experiences" size="h3">
+                        {t("experience")}
                     </Title>
-                    <Projects />
+                    <Experiences />
                 </section>
             )
         }
