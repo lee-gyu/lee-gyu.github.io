@@ -1,12 +1,16 @@
 ---
 import { useTranslations, type ExpKeyPrefix } from "src/i18n/utils";
+import { numAdjCss } from "src/styles/component-css";
+import ExpCard from "src/astro/components/ExpCard.astro";
+import { listItemsCss } from "src/styles/component-css";
 
 type Props = {};
 
 type ExpTabList = {
     id: string;
-    title: string;
-    exp: ExpKeyPrefix[];
+    tabCaption: string;
+    header: string;
+    expList: ExpKeyPrefix[];
 };
 
 const lang = Astro.currentLocale as Lang;
@@ -15,23 +19,27 @@ const t = useTranslations(lang);
 const projectTabs: ExpTabList[] = [
     {
         id: "exp2025",
-        title: t("exp.tab.2025"),
-        exp: [],
+        tabCaption: t("exp.tab.2025"),
+        header: t("career.0.content"),
+        expList: [],
     },
     {
-        id: "exp2024",
-        title: t("exp.tab.2024"),
-        exp: [],
+        id: "exp2019",
+        tabCaption: t("exp.tab.2020"),
+        header: t("exp.tab.2020.header"),
+        expList: [],
     },
     {
         id: "exp2018",
-        title: t("exp.tab.2018"),
-        exp: [],
+        tabCaption: t("exp.tab.2018"),
+        header: t("career.1.content"),
+        expList: ["7", "6", "5"],
     },
     {
         id: "exp2015",
-        title: t("exp.tab.2015"),
-        exp: [],
+        tabCaption: t("exp.tab.2015"),
+        header: t("career.2.content"),
+        expList: ["4", "3", "2", "1", "0"],
     },
 ];
 ---
@@ -48,11 +56,15 @@ const projectTabs: ExpTabList[] = [
                 <li>
                     <a
                         href={`#${tab.id}`}
-                        class:list={["tab-button", id === 0 && "is-active"]}
+                        class:list={[
+                            "tab-button",
+                            numAdjCss,
+                            id === 0 && "is-active",
+                        ]}
                         data-tab-id={tab.id}
                         data-tab-index={id}
                     >
-                        {tab.title}
+                        {tab.tabCaption}
                     </a>
                 </li>
             ))
@@ -61,9 +73,16 @@ const projectTabs: ExpTabList[] = [
     <div id="tabContents" class="tab-contents">
         {
             projectTabs.map((tab) => (
-                <div id={tab.id} class="tab-content">
-                    <header>{tab.title}</header>
-                </div>
+                <>
+                    <ol id={tab.id} class:list={["tab-content", listItemsCss]}>
+                        <header class="tab-contents-header">
+                            {tab.header}
+                        </header>
+                        {tab.expList.map((expId) => (
+                            <ExpCard expId={expId} />
+                        ))}
+                    </ol>
+                </>
             ))
         }
     </div>
@@ -76,7 +95,7 @@ const projectTabs: ExpTabList[] = [
 
     tabButtonWrapper.addEventListener("click", (ev) => {
         const target = ev.target as HTMLElement;
-        const element = target.closest("[data-tab-index]") as HTMLElement;
+        const element = target.closest("[data-tab-id]") as HTMLElement;
 
         if (!element) return;
 
@@ -87,12 +106,14 @@ const projectTabs: ExpTabList[] = [
 
         activeTabButton(tabId);
         scrollTabContent(tabId);
+        history.pushState({}, "", `#${element.getAttribute("data-tab-id")}`);
+        ev.preventDefault();
     });
 
     const defaultTabId = getDefaultTabId();
 
     activeTabButton(defaultTabId);
-    if (defaultTabId > 0) scrollTabContent(defaultTabId);
+    if (defaultTabId > 0) setTimeout(() => scrollTabContent(defaultTabId), 0);
 
     new ResizeObserver(() => {
         contentsRange.length = 0;
@@ -108,7 +129,9 @@ const projectTabs: ExpTabList[] = [
         }, 0);
     }).observe(tabContentsWrapper);
 
-    tabContentsWrapper.addEventListener("scrollend", () => {});
+    tabContentsWrapper.addEventListener("scrollend", () => {
+        activeTabButton(getCurTabIdByScroll());
+    });
 
     function activeTabButton(tabId: number) {
         // reset is-active
@@ -123,23 +146,22 @@ const projectTabs: ExpTabList[] = [
         const activeButton = buttons[tabId];
 
         activeButton.classList.add("is-active");
-
-        // set active tab styles
-        tabButtonWrapper.style.setProperty(
-            "--active-tab-left",
-            `calc(${activeButton.offsetLeft}px - 0.25rem)`,
-        );
-
-        tabButtonWrapper.style.setProperty(
-            "--active-tab-width",
-            `calc(${activeButton.offsetWidth}px + 0.5rem)`,
-        );
+        tabButtonWrapper.style.setProperty("--active-tab-index", `${tabId}`);
     }
 
     function scrollTabContent(tabId: number) {
         tabContentsWrapper.children[tabId].scrollIntoView({
             behavior: "smooth",
         });
+    }
+
+    function getCurTabIdByScroll() {
+        const scrollLeft = tabContentsWrapper.scrollLeft;
+        const findIndex = contentsRange.findIndex(
+            (range) => scrollLeft >= range[0] && scrollLeft < range[1],
+        );
+
+        return findIndex < 0 ? 0 : findIndex;
     }
 
     function getDefaultTabId() {
@@ -161,23 +183,36 @@ const projectTabs: ExpTabList[] = [
 </script>
 
 <style>
+    :root {
+        --tab-button-width: 72px;
+        --tab-button-gap: 4px;
+    }
+
     .projects-tab-wrapper {
         position: sticky;
         top: 0;
         left: 0;
         margin: 0.5rem 0;
         display: flex;
-        column-gap: 0.5rem;
+        column-gap: var(--tab-button-gap);
         align-items: end;
         z-index: 1000;
+        margin-left: -0.5rem;
+
+        & > li {
+            display: contents;
+        }
 
         &::before {
             transition: all 0.5s ease-in-out;
             content: "";
             position: absolute;
             top: -0.25rem;
-            left: var(--active-tab-left);
-            width: var(--active-tab-width);
+            left: calc(
+                var(--active-tab-index) *
+                    (var(--tab-button-width) + var(--tab-button-gap))
+            );
+            width: calc(var(--tab-button-width));
             bottom: -0.25rem;
             background-color: var(--colors-accent-o10);
             border-radius: 0.5rem;
@@ -188,11 +223,20 @@ const projectTabs: ExpTabList[] = [
         margin: 0.5rem 0;
     }
 
+    .tab-contents-header {
+        position: sticky;
+        top: 0;
+        margin-top: -0.5rem;
+        margin-left: -1.25rem;
+        font-weight: 500;
+    }
+
     .tab-content {
         min-width: 100%;
         scroll-snap-align: start;
         scroll-behavior: smooth;
-        padding: 0.5rem 1.5rem 6rem 2.5rem;
+        padding: 0 1.5rem 0 3.75rem;
+        margin: 0.5rem 0 2rem 0;
     }
 
     .tab-contents {
@@ -204,14 +248,24 @@ const projectTabs: ExpTabList[] = [
         scrollbar-width: none;
     }
 
+    @media print {
+        .tab-contents {
+            flex-direction: column;
+        }
+    }
+
     .tab-button {
-        position: relative;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: inline-block;
         transition: all 0.15s ease-in-out;
         opacity: 0.5;
         cursor: pointer;
-        padding: 0 0.25rem;
+        text-align: center;
         border-radius: 4px;
         z-index: 1000;
+        width: var(--tab-button-width);
 
         &:hover {
             opacity: 0.8;
@@ -219,10 +273,6 @@ const projectTabs: ExpTabList[] = [
 
         &.is-active {
             opacity: 1;
-        }
-
-        &:first-child {
-            margin-left: -0.25rem;
         }
     }
 </style>

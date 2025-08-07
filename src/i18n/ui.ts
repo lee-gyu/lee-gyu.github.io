@@ -7,8 +7,9 @@ export const defaultLang = "ko";
 
 export const ui = {
     en: {
+        toTop: "To Top",
         lastUpdated: "Last Updated:",
-        title: "S/W Developer",
+        jobTitle: "S/W Developer",
         name: "Lee Gyu Cheol",
         intro: "Introduction",
         mainJob: "Main Job",
@@ -36,8 +37,7 @@ export const ui = {
         years: "Years",
         "career.0.header": "2020.10 - Present",
         "career.0.content": "InnoRules R&D Center",
-        "career.0.content.keywords":
-            "Web S/W Development, Team Project Management",
+        "career.0.content.keywords": "Web S/W, Team Project Management",
         "career.1.header": "2015.09 - 2018.07",
         "career.1.content": "Samsung Electronics VD Division Manufacturing S/W",
         "career.1.content.keywords": "Manufacturing S/W, Back Office System",
@@ -47,8 +47,9 @@ export const ui = {
         experience: "Experience",
     },
     ko: {
+        toTop: "맨 위로",
         lastUpdated: "최근 업데이트:",
-        title: "S/W 개발자",
+        jobTitle: "S/W 개발자",
         name: "이규철",
         intro: "소개",
         mainJob: "주 업무",
@@ -72,7 +73,7 @@ export const ui = {
         years: "년",
         "career.0.header": "2020.10 - 현재",
         "career.0.content": "이노룰스 기술연구소",
-        "career.0.content.keywords": "웹 개발, 팀 개발 과제 관리",
+        "career.0.content.keywords": "웹 S/W 개발, 팀 과제 관리",
         "career.1.header": "2015.09 - 2018.07",
         "career.1.content": "삼성전자 VD사업부 공정 S/W",
         "career.1.content.keywords": "공정 S/W 개발, 업무 시스템 개발",
@@ -80,20 +81,42 @@ export const ui = {
         "career.2.content": "삼성전자 GTC 인사그룹",
         "career.2.content.keywords": "채용, 교육, 행사",
         experience: "경험",
+        "exp.label.role": "역할",
+        "exp.label.goal": "목표",
+        "exp.label.period": "기간",
+        "exp.label.content": "상세 내용",
+        "exp.label.result": "성과",
+        "exp.label.urls": "관련 링크",
         // Experience details
-        "exp.tab.2025": "2025",
+        "exp.tab.2025": "2025 ~",
+        "exp.tab.2020": "2020 ~",
+        "exp.tab.2020.header": "프리랜서",
+        "exp.tab.2018": "2018 ~",
 
-        "exp.tab.2024": "2024",
+        "exp.7.header": "제조 생산 예측 시뮬레이터",
 
-        "exp.tab.2018": "2018",
+        "exp.6.header": "공정 모니터링 IoT 애플리케이션",
+        // Python, Node.js, TypeScript
 
-        "exp.tab.2015": "2015",
-        "exp.2015.0.header": "삼성전자 입사 / 국가대표 훈련센터 입소",
-        "exp.2015.0.role": "국가대표 훈련 선수",
-        "exp.2015.0.goal": "",
-        "exp.2015.0.period": "2012.10 ~ 2012.12",
-        "exp.2015.0.content": "",
-        "exp.2015.0.result": "",
-        "exp.2015.0.urls": "",
+        "exp.5.header": "웹 기반 사내 업무 시스템 포털",
+        // Asp.Net MVC, JavaScript, Web Editor
+
+        "exp.tab.2015": "2015 ~",
+
+        "exp.4.header": "국가대표 선수 코치",
+
+        "exp.3.header": "사내 경진대회 행사 지원",
+
+        "exp.2.header": "조직문화 담당 (Change Agent)",
+
+        "exp.1.header": "기능 우수인력 채용 업무",
+
+        "exp.0.header": "삼성전자 국가대표 훈련 센터",
+        "exp.0.role": "국가대표 훈련 선수",
+        "exp.0.goal": "",
+        "exp.0.period": "2012.10 ~ 2013.07",
+        "exp.0.details": "",
+        "exp.0.result": "",
+        "exp.0.urls": "",
     },
 } as const;

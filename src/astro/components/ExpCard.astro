@@ -1,7 +1,23 @@
 ---
+import { useTranslations, type ExpKeyPrefix } from "src/i18n/utils";
 
+type Props = {
+    expId: ExpKeyPrefix;
+};
+
+const lang = Astro.currentLocale as Lang;
+const t = useTranslations(lang);
+const { expId } = Astro.props;
+
+const expData = {
+    header: t(`exp.${expId}.header`),
+};
 ---
 
-<div class="project-card"></div>
+<li>
+    <section class="exp-card" role="contentinfo">
+        <header>{expData.header}</header>
+    </section>
+</li>
 
 <style></style>

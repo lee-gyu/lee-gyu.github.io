@@ -74,6 +74,12 @@ export default defineConfig({
                             _dark: "{colors.neutral.100}",
                         },
                     },
+                    textLink: {
+                        value: {
+                            base: "{colors.neutral.900}",
+                            _dark: "{colors.neutral.100}",
+                        },
+                    },
                     accent: {
                         value: {
                             base: "{colors.neutral.700}",

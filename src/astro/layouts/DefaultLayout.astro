@@ -2,6 +2,7 @@
 import pageLoaderJS from "./page-loader.js?raw";
 import googleAnalyticsJS from "./google-head.js?raw";
 import PageTop from "src/astro/components/PageTop.astro";
+import BottomBanner from "../widget/BottomBanner.astro";
 
 import "src/styles/index.css";
 import "src/styles/transition.css";
@@ -47,6 +48,9 @@ const lang = Astro.currentLocale;
                 </noscript>
             )
         }
+        <footer>
+            <BottomBanner />
+        </footer>
     </body>
 </html>
 
@@ -56,6 +60,14 @@ const lang = Astro.currentLocale;
         background-color: var(--colors-background-light);
         max-width: 1024px;
         height: auto;
+    }
+
+    footer {
+        text-align: center;
+        background-color: var(--colors-background);
+        padding-top: 2.5rem;
+        padding-bottom: 4rem;
+        line-height: 1.75;
     }
 
     #main {
@@ -71,7 +83,8 @@ const lang = Astro.currentLocale;
     });
 
     window.addEventListener("scroll", () => {
-        const scrolled = window.scrollY > 0;
+        const scrolled = window.scrollY > 40;
+
         window.dispatchEvent(
             new CustomEvent("change:scrolled", { detail: scrolled }),
         );

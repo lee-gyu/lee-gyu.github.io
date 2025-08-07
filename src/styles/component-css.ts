@@ -16,3 +16,9 @@ export const iconCss = css({
     maskImage: "var(--icon-mask)",
     transition: "transform 0.15s ease-in-out",
 });
+
+export const numAdjCss = css({
+    fontFeatureSettings: '"tnum"',
+    letterSpacing: "-0.05em",
+    fontWeight: 300,
+});

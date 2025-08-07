@@ -19,7 +19,7 @@ type ExpProp =
     | "role"
     | "goal"
     | "period"
-    | "content"
+    | "details"
     | "result"
     | "urls";
 
@@ -29,7 +29,9 @@ type ExpKeys = {
 
 export type ExpKeyPrefix = keyof {
     [key in keyof ExpKeys as key extends `${infer Prefix}.${ExpProp}`
-        ? Prefix
+        ? Prefix extends `${number}`
+            ? Prefix
+            : never
         : never]: string;
 };
 

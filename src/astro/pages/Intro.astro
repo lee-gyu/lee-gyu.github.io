@@ -41,13 +41,12 @@ const sectionCss = css({
 <DefaultLayout lang={lang}>
     <main class={mainCss}>
         <span class={pageHeaderCss} data-print-hidden>{t("intro")}</span>
-        <Title size="h1">{t("title")}</Title>
+        <Title size="h1">{t("jobTitle")}</Title>
         <Title size="h2">{t("name")}</Title>
         <a class="email-link" href="mailto:leegyu4dev@gmail.com"
             >leegyu4dev@gmail.com</a
         >
         <Links />
-
         <section class={sectionCss}>
             <Title id="mainJob" size="h3">{t("mainJob")}</Title>
             <MainJob />
@@ -61,7 +60,7 @@ const sectionCss = css({
             <Awards />
         </section>
         {
-            !import.meta.env.PROD && (
+            import.meta.env.DEV && (
                 <section class={sectionCss} role="article">
                     <Title id="experiences" size="h3">
                         {t("experience")}

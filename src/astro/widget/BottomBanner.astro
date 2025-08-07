@@ -1,0 +1,31 @@
+---
+import { useTranslations } from "src/i18n/utils";
+import Links from "./Links.astro";
+
+type Props = {};
+
+const lang = Astro.currentLocale as Lang;
+const t = useTranslations(lang);
+const nameJob = `${t("name")} - ${t("jobTitle")}`;
+---
+
+<button id="btnToTop" class="to-top-link">{t("toTop")}</button>
+<p class="name-job">{nameJob}</p>
+<Links />
+
+<script>
+    document.getElementById("btnToTop")?.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+
+<style>
+    .to-top-link {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .name-job {
+        font-weight: 300;
+    }
+</style>
