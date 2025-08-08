@@ -77,6 +77,12 @@ const lang = Astro.currentLocale;
     #main {
         overflow: hidden;
     }
+
+    @media print {
+        footer {
+            display: none;
+        }
+    }
 </style>
 
 <script>

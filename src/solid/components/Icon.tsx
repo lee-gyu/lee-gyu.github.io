@@ -6,6 +6,8 @@ const ICON_LIST = [
     "md-dark-outline",
     "md-light-fill",
     "md-light-outline",
+    "md-expand-more",
+    "md-expand-less",
     "vsc-mail",
     "vsc-github",
     "vsc-book",

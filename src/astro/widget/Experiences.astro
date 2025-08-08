@@ -19,26 +19,32 @@ const projectTabs: ExpTabList[] = [
     {
         id: "exp2025",
         tabCaption: t("exp.tab.2025"),
-        header: t("career.0.content"),
-        expList: [],
+        header: t("exp.tab.2025.header"),
+        expList: ["35", "34", "33", "32", "31", "30", "29", "28", "27"],
     },
     {
-        id: "exp2020",
-        tabCaption: t("exp.tab.2020"),
-        header: t("exp.tab.2020.header"),
-        expList: [],
+        id: "exp2023",
+        tabCaption: t("exp.tab.2023"),
+        header: t("exp.tab.2023.header"),
+        expList: ["26", "25", "24", "23", "22", "21", "20", "19"],
+    },
+    {
+        id: "exp2021",
+        tabCaption: t("exp.tab.2021"),
+        header: t("exp.tab.2021.header"),
+        expList: ["18", "17", "16", "15", "14", "13", "12"],
     },
     {
         id: "exp2018",
         tabCaption: t("exp.tab.2018"),
         header: t("career.1.content"),
-        expList: ["7", "6", "5"],
+        expList: ["11", "10", "9", "8", "7", "6"],
     },
     {
         id: "exp2015",
         tabCaption: t("exp.tab.2015"),
         header: t("career.2.content"),
-        expList: ["4", "3", "2", "1", "0"],
+        expList: ["5", "4", "3", "2", "1", "0"],
     },
 ];
 ---
@@ -53,8 +59,8 @@ const projectTabs: ExpTabList[] = [
         {
             projectTabs.map((tab, id) => (
                 <li>
-                    <a
-                        href={`#${tab.id}`}
+                    <button
+                        type="button"
                         class:list={[
                             "tab-button",
                             numAdjCss,
@@ -64,7 +70,7 @@ const projectTabs: ExpTabList[] = [
                         data-tab-index={id}
                     >
                         {tab.tabCaption}
-                    </a>
+                    </button>
                 </li>
             ))
         }
@@ -91,6 +97,8 @@ const projectTabs: ExpTabList[] = [
     const tabContents = [
         ...tabContentsWrapper.querySelectorAll(".tab-content"),
     ] as HTMLElement[];
+    let clickActiveTab = false;
+    let clickTimeout = -1;
 
     tabButtonWrapper.addEventListener("click", (ev) => {
         const target = ev.target as HTMLElement;
@@ -103,24 +111,30 @@ const projectTabs: ExpTabList[] = [
             10,
         );
 
+        clickActiveTab = true;
         activeTabButton(tabId);
         scrollTabContent(tabId);
-        history.pushState({}, "", `#${element.getAttribute("data-tab-id")}`);
-        ev.preventDefault();
+        clearTimeout(clickTimeout);
+        clickTimeout = window.setTimeout(() => (clickActiveTab = false), 500);
+    });
+
+    tabContents.forEach((element, id) => {
+        const header = element.querySelector("header")!;
+
+        new IntersectionObserver(([entry]) => {
+            if (clickActiveTab) return;
+            if (entry.isIntersecting) activeTabButton(id);
+        }).observe(header);
     });
 
     const defaultTabId = getDefaultTabId();
 
-    activeTabButton(defaultTabId);
-    if (defaultTabId > 0) setTimeout(() => scrollTabContent(defaultTabId), 0);
-
-    tabContents.forEach((element) => {
-        const header = element.querySelector("header")!;
-
-        new IntersectionObserver(([entry]) => {
-            console.log(element.id, entry, entry.isIntersecting);
-        }).observe(header);
-    });
+    if (defaultTabId > 0) {
+        setTimeout(() => {
+            activeTabButton(defaultTabId);
+            scrollTabContent(defaultTabId);
+        }, 110);
+    }
 
     function activeTabButton(tabId: number) {
         // reset is-active
@@ -146,17 +160,14 @@ const projectTabs: ExpTabList[] = [
     }
 
     function getDefaultTabId() {
-        const hash = window.location.hash;
-        const projectTabs = [
-            ...tabButtonWrapper.querySelectorAll("[data-tab-id]"),
-        ] as HTMLElement[];
+        const urlHash = location.hash.slice(1);
 
-        if (hash) {
-            const tabId = projectTabs.findIndex(
-                (tab) => `#${tab.dataset.tabId}` === hash,
+        if (urlHash) {
+            const findIndex = tabContents.findIndex(
+                (element) => element.id === urlHash,
             );
 
-            if (tabId >= 0) return tabId;
+            return findIndex !== -1 ? findIndex : 0;
         }
 
         return 0;
@@ -165,36 +176,34 @@ const projectTabs: ExpTabList[] = [
 
 <style>
     :root {
-        --tab-button-width: 72px;
+        --tab-button-width: 64px;
         --tab-button-gap: 4px;
     }
 
     .projects-tab-wrapper {
-        position: sticky;
-        top: 0;
-        left: 0;
-        margin: 0.5rem 0;
+        position: relative;
+        padding: 0.5rem 0;
         display: flex;
         column-gap: var(--tab-button-gap);
         align-items: end;
-        z-index: 1000;
-        margin-left: -0.75rem;
+        margin-left: -0.5rem;
+        background-color: var(--colors-background-light);
 
         & > li {
             display: contents;
         }
 
         &::before {
-            transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-out;
             content: "";
             position: absolute;
-            top: -0.25rem;
+            top: 0.25rem;
             left: calc(
                 var(--active-tab-index) *
                     (var(--tab-button-width) + var(--tab-button-gap))
             );
             width: calc(var(--tab-button-width));
-            bottom: -0.25rem;
+            bottom: 0.25rem;
             background-color: var(--colors-accent-o10);
             border-radius: 0.5rem;
         }
@@ -206,10 +215,11 @@ const projectTabs: ExpTabList[] = [
 
     .tab-contents-header {
         position: sticky;
+        display: inline;
         top: 0;
         margin-left: var(--spacing-doc-pad-left);
         font-weight: 500;
-        opacity: 0.75;
+        opacity: 0.9;
     }
 
     .tab-content {
@@ -245,7 +255,7 @@ const projectTabs: ExpTabList[] = [
         cursor: pointer;
         text-align: center;
         border-radius: 4px;
-        z-index: 1000;
+        z-index: 10;
         width: var(--tab-button-width);
 
         &:hover {

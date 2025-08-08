@@ -17,7 +17,6 @@ export function getStaticPaths() {
 }
 
 const mainCss = css({
-    position: "relative",
     paddingLeft: "docPadLeft",
     paddingTop: "docPadTop",
     paddingRight: "docPadRight",
@@ -62,16 +61,12 @@ const sectionCss = css({
             <Title id="awards" size="h3">{`${t("awards")}`}</Title>
             <Awards />
         </section>
-        {
-            import.meta.env.DEV && (
-                <section class={sectionCss} role="article">
-                    <Title id="experiences" size="h3">
-                        {t("experience")}
-                    </Title>
-                    <Experiences />
-                </section>
-            )
-        }
+        <section class={sectionCss} role="article">
+            <Title id="experiences" size="h3">
+                {t("experience")}
+            </Title>
+            <Experiences />
+        </section>
     </main>
 </DefaultLayout>
 

@@ -44,7 +44,12 @@ export default defineConfig({
         extend: {
             semanticTokens: {
                 spacing: {
-                    docPadLeft: { value: "2.5rem" },
+                    docPadLeft: {
+                        value: {
+                            base: "1.5rem",
+                            sm: "2.5rem",
+                        },
+                    },
                     docPadRight: { value: "1rem" },
                     docPadTop: { value: "0rem" },
                     docPadBottom: { value: "2rem" },
@@ -88,20 +93,32 @@ export default defineConfig({
                     },
                     accent: {
                         value: {
-                            base: "{colors.neutral.700}",
+                            base: "{colors.neutral.400}",
                             _dark: "{colors.neutral.100}",
                         },
                     },
                     accentO10: {
                         value: {
-                            base: "{colors.neutral.700/10}",
+                            base: "{colors.neutral.400/10}",
                             _dark: "{colors.neutral.100/10}",
+                        },
+                    },
+                    accentO20: {
+                        value: {
+                            base: "{colors.neutral.400/20}",
+                            _dark: "{colors.neutral.100/20}",
+                        },
+                    },
+                    accentO30: {
+                        value: {
+                            base: "{colors.neutral.400/30}",
+                            _dark: "{colors.neutral.100/30}",
                         },
                     },
                     accentContent: {
                         value: {
                             base: "{colors.neutral.100}",
-                            _dark: "{colors.neutral.700}",
+                            _dark: "{colors.neutral.400}",
                         },
                     },
                     primary: {

@@ -1,19 +1,20 @@
 ---
 type Props = {
+    class?: string;
     keywords: string[];
 };
 
-const { keywords } = Astro.props;
+const { keywords, class: className } = Astro.props;
 ---
 
-<ul class="keywords">
-    {keywords.map((keyword) => <li class={"keyword"}>{keyword}</li>)}
-</ul>
+<div class:list={[`keywords`, className]}>
+    {keywords.map((keyword) => <span class={"keyword"}>{keyword}</span>)}
+</div>
 
 <style>
     .keywords {
         display: block;
-        margin: 0.25rem 0;
+        margin-left: -0.5rem;
     }
 
     .keyword {

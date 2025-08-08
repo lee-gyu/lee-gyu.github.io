@@ -5,9 +5,10 @@ import {
     type ExpProps,
 } from "src/i18n/utils";
 import Title from "src/astro/components/Title.astro";
-import { listItemsCss } from "src/styles/component-css";
 import { splitWithCommas } from "src/utils/string";
+import Icon from "src/solid/components/Icon";
 import Keywords from "./Keywords.astro";
+import { listItemsCss } from "src/styles/component-css";
 
 type Props = {
     expId: ExpKeyPrefix;
@@ -20,24 +21,98 @@ const { expId } = Astro.props;
 const expData: Partial<Record<ExpProps, string>> = {
     header: t(`exp.${expId}.header`),
     period: t(`exp.${expId}.period`),
+    role: t(`exp.${expId}.role`),
+    result: t(`exp.${expId}.result`),
+    story: t(`exp.${expId}.story`),
+    urls: t(`exp.${expId}.urls`),
+    urlText: t(`exp.${expId}.urlText`),
 };
 
 const periodKeywords = splitWithCommas(expData.period ?? "");
+const urls = splitWithCommas(expData.urls ?? "");
+const urlText = splitWithCommas(expData.urlText ?? "");
+
+const headerLines = ["role", "result"] as const;
+const hasContents = expData.story || expData.urls;
 ---
 
 <li class="exp-card">
-    <Title size="h3">{expData.header}</Title>
     <Keywords keywords={periodKeywords} />
+    <Title size="h3">
+        {expData.header}
+    </Title>
     <ul class={listItemsCss}>
-        <li></li>
+        {
+            headerLines
+                .filter((prop) => expData[prop])
+                .map((prop) => (
+                    <li>
+                        <span class="exp-label">{t(`exp.label.${prop}`)}</span>
+                        <span class="exp-desc">{expData[prop]}</span>
+                    </li>
+                ))
+        }
     </ul>
+    {
+        hasContents && (
+            <div class="exp-details">
+                {expData.story && <p class="exp-story">{expData.story}</p>}
+                {expData.urls && urls.length > 0 && (
+                    <ul class:list={[listItemsCss, "url-list"]}>
+                        {urls.map((url, id) => (
+                            <li>
+                                <a
+                                    href={url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {urlText[id]}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </div>
+        )
+    }
 </li>
 
 <style>
     .exp-card {
+        transition: all 0.15s ease-in-out;
         background-color: var(--colors-accent-o10);
-        margin-bottom: 1rem;
-        padding: 0.5rem var(--spacing-doc-pad-right) 0.5rem
+        margin-bottom: 1px;
+        padding: 0.5rem var(--spacing-doc-pad-right) 1rem
             var(--spacing-doc-pad-left);
+    }
+
+    .exp-desc::before {
+        content: ":";
+        margin-right: 0.25rem;
+    }
+
+    .exp-details {
+        margin: 0.25rem -0.5rem 0 -1rem;
+        padding: 0.5rem 1rem;
+        background-color: var(--colors-background-light);
+        border-radius: 4px;
+    }
+
+    .exp-story {
+        white-space: pre-wrap;
+        word-break: keep-all;
+    }
+
+    @media print {
+        .exp-card {
+            background: none !important;
+        }
+    }
+
+    .url-list a {
+        text-decoration: underline;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 </style>

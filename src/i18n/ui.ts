@@ -43,8 +43,12 @@ export const ui = {
         "career.1.content.keywords": "Manufacturing S/W, Back Office System",
         "career.2.header": "2015.09 - 2018.07",
         "career.2.content": "Samsung Electronics GTC HR Group",
-        "career.2.content.keywords": "Recruitment, Training, Event Staff",
-        experience: "Experience",
+        "career.2.content.keywords": "HR, Training Center, Event",
+        experience: "Experience (Under Construction)",
+        "exp.label.role": "Role",
+        "exp.label.period": "Period",
+        "exp.label.mainTask": "Tasks",
+        "exp.label.result": "Result",
     },
     ko: {
         toTop: "맨 위로",
@@ -79,50 +83,212 @@ export const ui = {
         "career.1.content.keywords": "공정 S/W 개발, 업무 시스템 개발",
         "career.2.header": "2012.10 - 2015.09",
         "career.2.content": "삼성전자 GTC 인사그룹",
-        "career.2.content.keywords": "채용, 교육, 행사",
-        experience: "경험",
+        "career.2.content.keywords": "인사 업무, 훈련 센터, 행사 진행",
+        experience: "경험 (작성 중...)",
         "exp.label.role": "역할",
         "exp.label.period": "기간",
-        "exp.label.content": "상세 내용",
+        "exp.label.mainTask": "주 작업",
         "exp.label.result": "성과",
-        "exp.label.urls": "관련 링크",
+        "exp.label.urls": "URL",
         // Experience details
-        "exp.tab.2025": "2025 ~",
-        "exp.tab.2020": "2020 ~",
-        "exp.tab.2020.header": "프리랜서",
-        "exp.tab.2018": "2018 ~",
+        // 2025 ~ (책임)
+        "exp.tab.2025": "2025~",
+        "exp.tab.2025.header": "이노룰스 기술연구소 (책임 연구원)",
 
-        "exp.7.header": "제조 생산 예측 시뮬레이터",
-        "exp.7.period": "2016.12 ~ 2017.03",
+        // 제품 커스터마이징 모듈 로더 구조 설계/개발
+        // 커맨드 키보드
+        "exp.35.header": "제품 커스터마이징 모듈 로더 구조 설계/개발",
+        "exp.35.period": "2025",
 
-        "exp.6.header": "공정 모니터링 IoT 애플리케이션",
-        "exp.6.period": "2016.06 ~ 2016.10",
+        // 다크모드 컬러 토큰 체계
+        "exp.34.header": "다크모드 컬러 토큰 체계",
+        "exp.34.period": "2025",
+
+        // 전자결재 기반 시스템
+        "exp.33.header": "전자결재 업무 시스템 개발",
+        "exp.33.period": "2025",
+
+        // 팀 개발자 관리
+        // 목표 관리, 일정 관리, 코드 관리, 문서화
+        "exp.32.header": "팀 개발자 관리",
+        "exp.32.period": "2025",
+
+        // 온라인 코딩 테스트
+        "exp.31.header": "입사 지원자 온라인 코딩 테스트 사이트 개발",
+        "exp.31.period": "2025",
+
+        // 신입/경력 개발자 채용
+        "exp.30.header": "고성능 계층 트리 뷰 컴포넌트 개발",
+        "exp.30.period": "2024",
+
+        // IRTreeView
+        "exp.29.header": "고성능 계층 트리 뷰 컴포넌트 개발",
+        "exp.29.period": "2024",
+
+        // PageContainer 컴포넌트
+        "exp.28.header": "여러 페이지 Window를 관리하는 UI 컴포넌트",
+        "exp.28.period": "2024",
+
+        // 스타일 리뉴얼 (패딩, 폰트, 등)
+        "exp.27.header": "스타일 리뉴얼 작업",
+        "exp.27.period": "2024",
+
+        // 2023 ~ (선임)
+        "exp.tab.2023": "2023~",
+        "exp.tab.2023.header": "이노룰스 기술연구소 (선임 연구원)",
+
+        "exp.26.header":
+            "BroadcastChannel API 기반 브라우저 Window 통신 체계 구축",
+        "exp.26.period": "2023",
+
+        "exp.25.header": "jsp 웹 페이지 → vite 기반으로 마이그레이션",
+        "exp.25.period": "2023",
+
+        "exp.24.header": "계정 인증 시스템 통합",
+        "exp.24.period": "2023",
+
+        "exp.23.header": "Grid UI 컴포넌트 라이브러리 개발",
+        "exp.23.period": "2022",
+        // TypeScript 기반, Undo, 타 Format 클립보드 지원
+        // 플러그인 기반 코어 아키텍처
+
+        "exp.22.header": "기술연구소 워크샵 기획/진행",
+        "exp.22.period": "2022",
+
+        "exp.21.header": "임직원 일정 관리 App 개발",
+        "exp.21.period": "2022",
+        // 기존 구글 캘린더 ics 마이그
+
+        "exp.20.header": "mask 기반 아이콘 CSS 체계",
+        "exp.20.period": "2022",
+
+        "exp.19.header": "레거시 UI 스타일 리뉴얼",
+        "exp.19.period": "2021, 2022",
+        // 피그마, 레거시, 협업 방법, 등등.. 프리랜서 디자이너
+
+        // 2021 ~
+        "exp.tab.2021": "2021~",
+        "exp.tab.2021.header": "프리랜서 / 이노룰스 입사",
+
+        "exp.18.header": "사내 웹 SDK 배포 환경 구축",
+        "exp.18.period": "2021",
+        // 스토리북,,, 도커화 npm 레지스트리, Storybook
+
+        "exp.17.header": "Flowchart UI 컴포넌트 라이브러리 개발",
+        "exp.17.period": "2021",
+
+        "exp.16.header": "정부 과제 연구개발 참여",
+        "exp.16.period": "2020, 2021",
+
+        "exp.15.header": "기능올림픽 국가대표 선발전 심사위원",
+        "exp.15.period": "2020.11 ~ 2020.12",
+
+        "exp.14.header": "이노룰스 기술연구소 입사",
+        "exp.14.period": "2020.10",
+
+        "exp.13.header": "캐나다 어학연수",
+        "exp.13.period": "2020.01 ~ 2020.06",
+
+        "exp.12.header": "기능경기대회 정보기술 훈련 멘토링",
+        "exp.12.period": "2018, 2019, 2020, 2021",
+
+        // 2018 ~
+        "exp.tab.2018": "2018~",
+
+        "exp.11.header": "삼성전자 S/W Certification Pro 등급 취득",
+        "exp.11.period": "2017",
+
+        "exp.10.header": "제조 생산 예측 시뮬레이터",
+        "exp.10.period": "2017",
+
+        "exp.9.header": "공정 모니터링 IoT 애플리케이션",
+        "exp.9.period": "2017",
         // Python, Node.js, TypeScript
 
-        "exp.5.header": "웹 기반 사내 업무 시스템 포털",
-        "exp.5.period": "2015.11 ~ 2016.03",
+        "exp.8.header": "제조 KPI 산출 자동화 App 개발",
+        "exp.8.period": "2016",
+        // Python, Node.js, TypeScript
+
+        "exp.7.header": "해외법인 종합 관제실 모니터링 시스템",
+        "exp.7.period": "2016",
+        // Python, Node.js, TypeScript
+
+        "exp.6.header": "웹 기반 사내 업무 시스템 포털",
+        "exp.6.period": "2016",
+        "exp.6.role": "풀스택 개발자",
         // Asp.Net MVC, JavaScript, Web Editor
 
-        "exp.tab.2015": "2015 ~",
+        // 2015 ~
+        "exp.tab.2015": "2015~",
+        "exp.5.header": "삼성전자 국제기능올림픽 훈련센터 업무",
+        "exp.5.period": "2013, 2014, 2015",
+        "exp.5.role": "국가대표 훈련 코치",
+        "exp.5.result": "한국 은메달/베트남 동메달 수상",
+        "exp.5.urlText": "국제기능올림픽 입상 보도",
+        "exp.5.urls": "https://www.yna.co.kr/view/AKR20150818116700003",
+        "exp.5.story": `
+2015년 브라질 국제기능올림픽 대회의 정보기술 직종 훈련 코치로 활동했습니다.
+매월 훈련 계획을 수립하고, 과제 평가와 피드백으로 선수의 훈련을 관리하는 업무를 수행했습니다.
+한국 국가대표 선수와 기업 사회 활동의 일환으로 베트남 국가대표 선수도 함께 코칭했습니다.
+한국 선수는 최종 2위(은메달)을 입상하여 고용노동부 장관의 표창을 받았으며,
+베트남은 역사상 최초 메달 입상으로 국가 주석의 표창을 수여받았습니다.
 
-        "exp.4.header": "국가대표 선수 코치",
-        "exp.4.period": "2013.09 ~ 2015.08",
+코치 활동을 마무리하고, 실제 S/W 개발 업무를 희망하여 VD사업부로 부서를 이동했습니다.
+`.trim(),
 
-        "exp.3.header": "사내 경진대회 프로젝트 업무",
-        "exp.3.period": "2013.05, 2014.05",
+        "exp.4.header": "조직문화 개선 활동 업무",
+        "exp.4.period": "2014, 2015",
+        "exp.4.role": "CA(Change Agent)",
+        "exp.4.story": `
+Change Agent라는 직책으로 조직문화 개선을 위한 다양한 활동을 진행했습니다.
+월별 조직문화 개선 활동을 기획하고, 임직원들의 참여를 유도했습니다.
+분기별로 큰 행사를 기획하여 임원부터 일반 직원까지 모두 참여할 수 있는 문화 행사를 진행했습니다.
+`.trim(),
 
-        "exp.2.header": "조직문화 담당 (Change Agent)",
-        "exp.2.period": "2013 ~ 2015",
+        "exp.3.header": "사내 경진대회 행사 업무",
+        "exp.3.period": "2014, 2015",
+        "exp.3.role": "해외법인 참가자 관리",
+        "exp.3.urlText": "삼성전자 뉴스룸",
+        "exp.3.urls":
+            "https://news.samsung.com/kr/tag/%EC%82%BC%EC%84%B1%EA%B5%AD%EC%A0%9C%EA%B8%B0%EB%8A%A5%EA%B2%BD%EA%B8%B0%EB%8C%80%ED%9A%8C",
+        "exp.3.story": `
+전 세계 법인에서 참가하는 사내 기술 경진대회에서 해외 법인 참가자를 관리하는 업무를 담당했습니다.
+해외 법인의 참가자들의 비자 관리, 한국 문화 체험 행사 기획, 숙소 및 교통편 예약 등을 진행했습니다.
+이 과정에서 다양한 문화를 가진 사람들과 소통하는 경험을 할 수 있었습니다.
+`.trim(),
 
-        "exp.1.header": "채용 업무 진행",
-        "exp.1.period": "2013.09, 2014.09",
+        "exp.2.header": "대기업 채용 업무",
+        "exp.2.period": "2013, 2014",
+        "exp.2.role": "채용 업무 지원",
+        "exp.2.story": `
+큰 기업의 인사 시스템을 통해 채용 업무를 진행했습니다.
+지원 공고, 서류 검토, 데이터 리포팅, 채용 안내 관련 연락을 담당했습니다.
+`.trim(),
 
-        "exp.0.header": "국제기능올림픽 국가대표 훈련",
-        "exp.0.category": "훈련",
-        "exp.0.role": "대한민국 국가대표",
-        "exp.0.period": "2012.10 ~ 2013.07",
-        "exp.0.details": "",
-        "exp.0.result": "금메달(1위)",
-        "exp.0.urls": "",
+        "exp.1.header": "2013 국제기능올림픽 정보기술 직종 국가대표",
+        "exp.1.period": "2013",
+        "exp.1.role": "대한민국 국가대표",
+        "exp.1.mainTask": "",
+        "exp.1.result": "금메달(1위) 수상",
+        "exp.1.details": "",
+        "exp.1.urlText": "삼성전자 뉴스룸, WorldSkills 수상 결과, 수상자 사진",
+        "exp.1.urls":
+            "https://news.samsung.com/kr/4590,https://results.worldskills.org/results?event=9&offset=0&skill=345&base_skill=221,https://www.flickr.com/photos/worldskills/9235939100/in/album-72157634532467264/",
+        "exp.1.story": `
+삼성전자 국가대표 훈련센터에서 국제기능올림픽을 위해 체계적인 훈련을 받았습니다.
+이 훈련을 통해 국제기능올림픽에서 금메달을 획득하였고, 이후 국가대표 코치로 활동하게 되었습니다.
+훈련 과정 속에서 문제 해결 능력을 키우고, 실제 사람들이 원하는 소프트웨어에 대해 많이 생각해 볼 수 있었습니다.
+금메달 획득으로 국위선양하여 대통령 동탑산업훈장을 수여받았습니다.
+`.trim(),
+
+        "exp.0.header": "2013 국제기능올림픽 국가대표 선발전",
+        "exp.0.period": "2011, 2012",
+        "exp.0.role": "국가대표 후보선수",
+        "exp.0.result": "국가대표 선발",
+        "exp.0.story": `
+기능올림픽은 2개의 전국 대회 1,2위 수상자들끼리의 선발전으로 최종 1명을 국가대표로 선발합니다.
+지방 대회를 거쳐 전국 대회에서 2위를 수상하였고, 국가대표 선발전에서 최종 1위로 국가대표 선발이 되었습니다.
+이 과정에서 하나의 목표를 가지고 꾸준하게 훈련하는 자세를 배웠습니다.
+`.trim(),
     },
 } as const;
