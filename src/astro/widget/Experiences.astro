@@ -267,17 +267,6 @@ const projectTabs: ExpTabList[] = [
         max-height: var(--tab-max-height);
     }
 
-    @media print {
-        .tab-contents {
-            flex-direction: column;
-            max-height: fit-content;
-        }
-
-        .tab-content {
-            margin-left: 0;
-        }
-    }
-
     .tab-button {
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -303,5 +292,20 @@ const projectTabs: ExpTabList[] = [
     .tab-card-list {
         display: flex;
         flex-direction: column;
+    }
+
+    @media print {
+        .tab-contents {
+            flex-direction: column;
+            max-height: fit-content;
+        }
+
+        .tab-content {
+            margin-left: 0;
+        }
+
+        .tab-contents-header {
+            display: none;
+        }
     }
 </style>

@@ -45,12 +45,30 @@ const headerLines = ["period", "role", "result"] as const;
                     </li>
                 ))
         }
+        {
+            expData.urls && urls.length > 0 && (
+                <li>
+                    <span class="exp-label">{t(`exp.label.urls`)}</span>
+                    <div class="url-list">
+                        {urls.map((url, id) => (
+                            <a
+                                href={url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {urlText[id]}
+                            </a>
+                        ))}
+                    </div>
+                </li>
+            )
+        }
     </ul>
     {
         expData.story && (
-            <div class="exp-details">
+            <label class="exp-details">
                 <p class="exp-story">{expData.story}</p>
-            </div>
+            </label>
         )
     }
 </li>
@@ -63,12 +81,13 @@ const headerLines = ["period", "role", "result"] as const;
             var(--spacing-doc-pad-left);
     }
 
-    .exp-desc::before {
+    .exp-label::after {
         content: ":";
-        margin-right: 0.25rem;
+        margin-left: 0.25rem;
     }
 
     .exp-details {
+        display: flex;
         margin: 0.25rem -0.5rem 0 -1rem;
         padding: 0.5rem 1rem;
         background-color: var(--colors-accent-o10);
@@ -78,11 +97,33 @@ const headerLines = ["period", "role", "result"] as const;
     .exp-story {
         white-space: pre-wrap;
         word-break: keep-all;
+        overflow: hidden;
+    }
+
+    .url-list {
+        display: inline-flex;
+        column-gap: 0.5rem;
+        flex-wrap: wrap;
+
+        a {
+            transition: all 0.15s ease-in-out;
+            text-decoration: underline;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+        }
     }
 
     @media print {
         .exp-card {
             background: none !important;
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+            border-bottom: none;
         }
 
         .exp-story {
@@ -93,12 +134,5 @@ const headerLines = ["period", "role", "result"] as const;
             padding: 0;
             margin: 0;
         }
-    }
-
-    .url-list a {
-        text-decoration: underline;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
     }
 </style>
