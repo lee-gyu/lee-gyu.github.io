@@ -34,10 +34,10 @@ export const ui = {
         "career.0.header": "2020.10 - Present",
         "career.0.content": "InnoRules R&D Center",
         "career.0.content.keywords": "Web S/W, Team Project Management",
-        "career.1.header": "2015.09 - 2018.07",
+        "career.1.header": "2015.9 - 2018.7",
         "career.1.content": "Samsung Electronics VD Division Manufacturing S/W",
         "career.1.content.keywords": "Manufacturing S/W, Back Office System",
-        "career.2.header": "2015.09 - 2018.07",
+        "career.2.header": "2015.9 - 2018.7",
         "career.2.content": "Samsung Electronics GTC HR Group",
         "career.2.content.keywords": "HR, Training Center, Event",
         experience: "Experience",
@@ -45,6 +45,7 @@ export const ui = {
         "exp.label.period": "Period",
         "exp.label.mainTask": "Tasks",
         "exp.label.result": "Result",
+        "exp.label.tech": "Tech",
     },
     ko: {
         toTop: "맨 위로",
@@ -57,24 +58,24 @@ export const ui = {
         "mainJob.2": "웹 시스템 아키텍처 설계",
         career: "경력",
         awards: "수상",
-        "awards.0.header": "국가 기능발전/국위선양 장관 표창",
+        "awards.0.header": "기능발전/국위선양 장관 표창",
         "awards.0.tags": "고용노동부, 2015.12",
         "awards.1.header": "베트남 국가 총리 표창",
         "awards.1.tags": "베트남 정부, 2015.12",
         "awards.2.header": "동탑산업훈장 대통령 표창",
         "awards.2.tags": "대한민국 정부, 2013.12",
         "awards.3.header": "국제기능올림픽 정보기술 직종 1위 금메달",
-        "awards.3.tags": "WorldSkills, 2013.07",
+        "awards.3.tags": "WorldSkills, 2013.7",
         "awards.4.header": "전국기능경기대회 정보기술 직종 2위 은메달",
-        "awards.4.tags": "한국산업인력공단, 2011.09",
+        "awards.4.tags": "한국산업인력공단, 2011.9",
         years: "년",
         "career.0.header": "2020.10 - 현재",
         "career.0.content": "이노룰스 기술연구소",
         "career.0.content.keywords": "웹 S/W 개발, 팀 과제 관리",
-        "career.1.header": "2015.09 - 2018.07",
+        "career.1.header": "2015.9 - 2018.7",
         "career.1.content": "삼성전자 VD사업부 공정 S/W",
         "career.1.content.keywords": "공정 S/W 개발, 업무 시스템 개발",
-        "career.2.header": "2012.10 - 2015.09",
+        "career.2.header": "2012.10 - 2015.9",
         "career.2.content": "삼성전자 GTC 인사그룹",
         "career.2.content.keywords": "인사 업무, 훈련 센터, 행사 진행",
         experience: "경험",
@@ -82,6 +83,7 @@ export const ui = {
         "exp.label.period": "기간",
         "exp.label.mainTask": "주 작업",
         "exp.label.result": "성과",
+        "exp.label.tech": "기술",
         "exp.label.urls": "URL",
         // Experience details
         // 2025
@@ -189,37 +191,102 @@ export const ui = {
         // 2018
         "exp.tab.2018": "2018~",
 
-        "exp.2018008.header": "삼성전자 퇴사",
-        "exp.2018008.period": "2018",
+        "exp.2018009.header": "삼성전자 퇴사",
+        "exp.2018009.period": "2018.7",
 
-        "exp.2018007.header": "삼성전자 S/W Certification Pro 등급 취득",
-        "exp.2018007.period": "2017",
+        "exp.2018008.header": "삼성전자 S/W Certification Pro 등급 취득",
+        "exp.2018008.period": "2017.6",
+        "exp.2018008.story": `
+
+`.trim(),
+
+        "exp.2018007.header": "공정 모니터링 프로젝트",
+        "exp.2018007.period": "2017.7 ~ 2017.10",
+        "exp.2018007.tech": "TypeScript",
+        "exp.2018007.story": `
+
+`.trim(),
 
         "exp.2018006.header": "제조 생산 예측 시뮬레이터",
-        "exp.2018006.period": "2017",
+        "exp.2018006.period": "2017.7 ~ 2017.10",
+        "exp.2018006.tech": "Windows WPF, Excel API",
+        "exp.2018006.story": `
 
-        "exp.2018005.header": "공정 모니터링 IoT 애플리케이션",
-        "exp.2018005.period": "2017",
-        // Python, Node.js, TypeScript
+`.trim(),
+
+        "exp.2018005.header": "환경 데이터 IoT 모니터링",
+        "exp.2018005.period": "2017.3 ~ 2017.6",
+        "exp.2018005.tech": "ASP.Net MVC, MQTT, MariaDB, Raspberry Pi",
+        "exp.2018005.story": `
+먼지, 조도, 소음 등의 공정에서 발생하는 환경 데이터를 IoT 기기로 수집하고,
+이를 분석하여 공정 개선에 활용하는 애플리케이션을 개발했습니다.
+하드웨어와의 연동은 다른 엔지니어가 담당하였고,
+저는 데이터 수집 서버 개발과 웹 대쉬보드 페이지를 개발했습니다.
+
+[주요 개발 기능]
+- 
+- 이상 환경 데이터 발생 시 알람
+- 
+
+[고민 했던 것]
+- 데이터가 막대하게 쌓인 것을 고려한 DB 설계
+`.trim(),
 
         "exp.2018004.header": "제조 KPI 산출 자동화 App 개발",
-        "exp.2018004.period": "2016",
-        // Python, Node.js, TypeScript
+        "exp.2018004.period": "2016.10 ~ 2016.12",
+        "exp.2018004.tech": "Windows WPF",
+        "exp.2018004.story": `
+데이터를 매번 수작업으로 KPI 리포트를 작성하는 업무를 자동화했습니다.
+이전 프로젝트로, 각 해외 법인의 데이터를 계속 수집하고 있었기에,
+이를 이용해서 KPI 리포트를 자동으로 생성하는 App을 개발했습니다.
 
-        "exp.2018003.header": "해외법인 종합 관제실 모니터링 시스템",
-        "exp.2018003.period": "2016",
-        // Python, Node.js, TypeScript
+[주요 개발 기능]
+- Excel 형식으로 KPI 리포트 생성
 
-        "exp.2018002.header": "웹 기반 사내 업무 시스템 포털",
-        "exp.2018002.period": "2016",
-        "exp.2018002.role": "풀스택 개발자",
-        // Asp.Net MVC, JavaScript, Web Editor
+[고민 했던 것]
+- 사내 DRM 보안 프로그램 이슈
+`.trim(),
+
+        "exp.2018003.header": "해외 법인 종합 관제실 모니터링 시스템",
+        "exp.2018003.period": "2016.6 ~ 2016.9",
+        "exp.2018003.tech": "ASP.Net MVC, MariaDB, KendoUI, Windows Service",
+        "exp.2018003.story": `
+14개의 해외 법인의 실시간 생산 현황을 모니터링하는 시스템을 개발했습니다.
+대쉬보드는 KendoUI를 이용하여 웹 기반으로 작성하고,
+매 주기마다 각 제조 서버에 API를 요청하여 데이터를 동기화하는 프로그램을 작성했습니다.
+
+[주요 개발 기능]
+- KendoUI 기반 웹 대쉬보드 페이지
+- 해외 법인 데이터 수집용 Windows 서비스 개발
+
+[고민했던 것]
+- 각 해외 법인들의 타임존과 썸머 타임 이슈
+- 해외 법인 서버 보안망 이슈
+`.trim(),
+
+        "exp.2018002.header": "웹 기반 업무 시스템 구축",
+        "exp.2018002.period": "2016.1 ~ 2016.6",
+        "exp.2018002.tech": "ASP.Net MVC, MariaDB",
+        "exp.2018002.story": `
+사업부의 업무 시스템들은 대부분 SI 업체에 의존하고 있어,
+특정 본부에만 필요한 기능들은 개발 의뢰를 하기 힘든 문제가 있었습니다.
+그래서 팀에서 직접 만들기로 계획하고 프로젝트 전체를 맡아 개발을 진행했습니다.
+제가 회사에서 맡은 첫 번째 개발 과제였고,
+TinyMCE 에디터를 이용하여 컨텐츠를 사용자가 직접 작성할 수 있도록 하였고,
+약 300명의 임직원이 업무 보고와 맡은 과제를 관리하는데 사용할 수 있도록 만들었습니다.
+
+[주요 개발 기능]
+- 사내 업무 시스템 계정과 SSO 인증 연동
+- 임직원 과제 일정 관리 (메일링)
+- 업무 보고용 컨텐츠 작성/조회
+- HTML 기반 페이지 PDF 문서 내보내기 기능
+`.trim(),
 
         "exp.2018001.header": "삼성전자 VD사업부 전배",
-        "exp.2018001.period": "2015.09",
+        "exp.2018001.period": "2015.9",
         "exp.2018001.story": `
 인사그룹에서는 S/W 개발에 대한 전문성을 키우기 힘들어, 부서 전배를 요청했습니다.
-그래서 VD사업부에 발령을 받아 부서를 이동하게 되었습니다.
+그래서 VD사업부에 발령을 받고, 부서를 이동하게 되었습니다.
 `.trim(),
 
         // 2015
@@ -249,7 +316,7 @@ Change Agent라는 직책으로 조직문화 개선을 위한 다양한 활동�
 `.trim(),
 
         "exp.2015004.header": "사내 경진대회 행사 업무",
-        "exp.2015004.period": "2014, 2015",
+        "exp.2015004.period": "2014.5, 2015.5",
         "exp.2015004.role": "해외 법인 참가자 관리",
         "exp.2015004.urlText": "삼성전자 뉴스룸",
         "exp.2015004.urls":
@@ -260,8 +327,8 @@ Change Agent라는 직책으로 조직문화 개선을 위한 다양한 활동�
 이 과정에서 다양한 문화를 가진 사람들과 소통하는 경험을 할 수 있었습니다.
 `.trim(),
 
-        "exp.2015003.header": "대기업 채용 업무",
-        "exp.2015003.period": "2013, 2014",
+        "exp.2015003.header": "채용 업무",
+        "exp.2015003.period": "2013.10, 2014.10",
         "exp.2015003.role": "채용 업무 지원",
         "exp.2015003.story": `
 큰 기업의 인사 시스템을 통해 채용 업무를 진행했습니다.

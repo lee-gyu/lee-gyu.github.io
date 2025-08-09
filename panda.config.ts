@@ -91,6 +91,12 @@ export default defineConfig({
                             _dark: "{colors.neutral.100}",
                         },
                     },
+                    textLight: {
+                        value: {
+                            base: "{colors.neutral.800/80}",
+                            _dark: "{colors.neutral.150/80}",
+                        },
+                    },
                     textLink: {
                         value: {
                             base: "{colors.neutral.900}",

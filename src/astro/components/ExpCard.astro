@@ -22,6 +22,7 @@ const expData: Partial<Record<ExpProps, string>> = {
     role: t(`exp.${expId}.role`),
     result: t(`exp.${expId}.result`),
     story: t(`exp.${expId}.story`),
+    tech: t(`exp.${expId}.tech`),
     urls: t(`exp.${expId}.urls`),
     urlText: t(`exp.${expId}.urlText`),
 };
@@ -29,7 +30,7 @@ const expData: Partial<Record<ExpProps, string>> = {
 const urls = splitWithCommas(expData.urls ?? "");
 const urlText = splitWithCommas(expData.urlText ?? "");
 
-const headerLines = ["period", "role", "result"] as const;
+const headerLines = ["period", "role", "result", "tech"] as const;
 ---
 
 <li class="exp-card">
@@ -88,16 +89,15 @@ const headerLines = ["period", "role", "result"] as const;
 
     .exp-details {
         display: flex;
-        margin: 0.25rem -0.5rem 0 -1rem;
-        padding: 0.5rem 1rem;
-        background-color: var(--colors-accent-o10);
-        border-radius: 4px;
+        margin-top: 0.5rem;
     }
 
     .exp-story {
         white-space: pre-wrap;
         word-break: keep-all;
         overflow: hidden;
+        color: var(--colors-text-light);
+        line-height: 1.33;
     }
 
     .url-list {
