@@ -11,7 +11,7 @@ const M="ko",x={en:{toTop:"To Top",lastUpdated:"Last Updated:",jobTitle:"S/W Dev
 Change Agent라는 직책으로 조직문화 개선을 위한 다양한 활동을 진행했습니다.
 월별 조직문화 개선 활동을 기획하고, 임직원들의 참여를 유도했습니다.
 분기별로 큰 행사를 기획하여 임원부터 일반 직원까지 모두 참여할 수 있는 문화 행사를 진행했습니다.
-`.trim(),"exp.2015004.header":"사내 경진대회 행사 업무","exp.2015004.period":"2014, 2015","exp.2015004.role":"해외법인 참가자 관리","exp.2015004.urlText":"삼성전자 뉴스룸","exp.2015004.urls":"https://news.samsung.com/kr/tag/%EC%82%BC%EC%84%B1%EA%B5%AD%EC%A0%9C%EA%B8%B0%EB%8A%A5%EA%B2%BD%EA%B8%B0%EB%8C%80%ED%9A%8C","exp.2015004.story":`
+`.trim(),"exp.2015004.header":"사내 경진대회 행사 업무","exp.2015004.period":"2014, 2015","exp.2015004.role":"해외 법인 참가자 관리","exp.2015004.urlText":"삼성전자 뉴스룸","exp.2015004.urls":"https://news.samsung.com/kr/tag/%EC%82%BC%EC%84%B1%EA%B5%AD%EC%A0%9C%EA%B8%B0%EB%8A%A5%EA%B2%BD%EA%B8%B0%EB%8C%80%ED%9A%8C","exp.2015004.story":`
 전 세계 법인에서 참가하는 사내 기술 경진대회에서 해외 법인 참가자를 관리하는 업무를 담당했습니다.
 해외 법인의 참가자들의 비자 관리, 한국 문화 체험 행사 기획, 숙소 및 교통편 예약 등을 진행했습니다.
 이 과정에서 다양한 문화를 가진 사람들과 소통하는 경험을 할 수 있었습니다.
