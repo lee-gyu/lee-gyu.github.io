@@ -6,9 +6,10 @@
     padding: 4px;
     gap: 0.25rem;
     opacity: 0.8;
+    z-index: 3000;
 
     i {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     &:hover {

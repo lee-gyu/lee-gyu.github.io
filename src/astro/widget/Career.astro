@@ -33,22 +33,11 @@ const careerData = [
 <ul class={listItemsCss}>
     {
         careerData.map(({ title, content, keywords }) => (
-            <li class="career-item">
-                <h6 class="career-title">{title}</h6>
-                <span class="career-content">{content}</span>
+            <li>
+                <h6>{title}</h6>
+                <span>{content}</span>
                 <Keywords keywords={keywords} />
             </li>
         ))
     }
 </ul>
-
-<style>
-    .career-title {
-        font-weight: 600;
-        margin-top: 0.5rem;
-    }
-
-    .career-item {
-        margin: 0.5rem 0;
-    }
-</style>

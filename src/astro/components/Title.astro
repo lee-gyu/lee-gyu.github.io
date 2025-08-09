@@ -3,7 +3,7 @@ import { cva } from "src/styled-system/css";
 
 type Props = {
     class?: string;
-    size?: "h1" | "h2" | "h3";
+    size?: `h${1 | 2 | 3 | 4}`;
     id?: string;
 };
 
@@ -22,6 +22,10 @@ const title = cva({
                 fontWeight: 600,
             },
             h3: {
+                fontSize: "1.125rem",
+                fontWeight: 500,
+            },
+            h4: {
                 fontSize: "1rem",
                 fontWeight: 500,
             },

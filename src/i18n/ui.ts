@@ -11,7 +11,6 @@ export const ui = {
         lastUpdated: "Last Updated:",
         jobTitle: "S/W Developer",
         name: "Lee Gyu Cheol",
-        intro: "Introduction",
         mainJob: "Main Job",
         "mainJob.0": "Server/Client Development",
         "mainJob.1": "Web Project SDK Development",
@@ -31,9 +30,6 @@ export const ui = {
         "awards.4.header":
             "Silver Medal(2nd) in IT at National Skills Competition",
         "awards.4.tags": "HRDKorea, 2011.09",
-        "awards.5.header":
-            "Gold Medal(1st) in IT at Daegu Regional Skills Competition",
-        "awards.5.tags": "HRDKorea, 2011.04",
         years: "Years",
         "career.0.header": "2020.10 - Present",
         "career.0.content": "InnoRules R&D Center",
@@ -44,7 +40,7 @@ export const ui = {
         "career.2.header": "2015.09 - 2018.07",
         "career.2.content": "Samsung Electronics GTC HR Group",
         "career.2.content.keywords": "HR, Training Center, Event",
-        experience: "Experience (Under Construction)",
+        experience: "Experience",
         "exp.label.role": "Role",
         "exp.label.period": "Period",
         "exp.label.mainTask": "Tasks",
@@ -55,7 +51,6 @@ export const ui = {
         lastUpdated: "최근 업데이트:",
         jobTitle: "S/W 개발자",
         name: "이규철",
-        intro: "소개",
         mainJob: "주 업무",
         "mainJob.0": "서버/클라이언트 개발",
         "mainJob.1": "웹 프로젝트 SDK 개발",
@@ -72,8 +67,6 @@ export const ui = {
         "awards.3.tags": "WorldSkills, 2013.07",
         "awards.4.header": "전국기능경기대회 정보기술 직종 2위 은메달",
         "awards.4.tags": "한국산업인력공단, 2011.09",
-        "awards.5.header": "지방기능경기대회 정보기술 직종 1위 금메달",
-        "awards.5.tags": "한국산업인력공단, 2011.04",
         years: "년",
         "career.0.header": "2020.10 - 현재",
         "career.0.content": "이노룰스 기술연구소",
@@ -84,7 +77,7 @@ export const ui = {
         "career.2.header": "2012.10 - 2015.09",
         "career.2.content": "삼성전자 GTC 인사그룹",
         "career.2.content.keywords": "인사 업무, 훈련 센터, 행사 진행",
-        experience: "경험 (작성 중...)",
+        experience: "경험",
         "exp.label.role": "역할",
         "exp.label.period": "기간",
         "exp.label.mainTask": "주 작업",
@@ -232,14 +225,14 @@ export const ui = {
         // 2015
         "exp.tab.2015": "2015~",
 
-        "exp.2015006.header": "삼성전자 국제기능올림픽 훈련센터 업무",
-        "exp.2015006.period": "2013, 2014, 2015",
-        "exp.2015006.role": "국가대표 훈련 코치",
+        "exp.2015006.header": "삼성전자 기능올림픽 훈련센터 지도위원",
+        "exp.2015006.period": "2013.9 ~ 2015.9",
+        "exp.2015006.role": "국가대표 지도위원",
         "exp.2015006.result": "한국 은메달/베트남 동메달 수상",
         "exp.2015006.urlText": "국제기능올림픽 입상 보도",
         "exp.2015006.urls": "https://www.yna.co.kr/view/AKR20150818116700003",
         "exp.2015006.story": `
-2015년 브라질 국제기능올림픽 대회의 정보기술 직종 훈련 코치로 활동했습니다.
+2015년 브라질 국제기능올림픽 대회의 정보기술 직종 훈련 지도위원으로 활동했습니다.
 매월 훈련 계획을 수립하고, 과제 평가와 피드백으로 선수의 훈련을 관리하는 업무를 수행했습니다.
 한국 국가대표 선수와 기업 사회 활동의 일환으로 베트남 국가대표 선수도 함께 코칭했습니다.
 한국 선수는 최종 2위(은메달)을 입상하여 고용노동부 장관의 표창을 받았으며,
@@ -247,7 +240,7 @@ export const ui = {
 `.trim(),
 
         "exp.2015005.header": "조직문화 개선 활동 업무",
-        "exp.2015005.period": "2014, 2015",
+        "exp.2015005.period": "2014 ~ 2015",
         "exp.2015005.role": "CA(Change Agent)",
         "exp.2015005.story": `
 Change Agent라는 직책으로 조직문화 개선을 위한 다양한 활동을 진행했습니다.
@@ -292,8 +285,8 @@ Change Agent라는 직책으로 조직문화 개선을 위한 다양한 활동�
 금메달 획득으로 국위선양하여 대통령 동탑산업훈장을 수여받았습니다.
 `.trim(),
 
-        "exp.2015001.header": "2013 국제기능올림픽 국가대표 선발전",
-        "exp.2015001.period": "2011, 2012",
+        "exp.2015001.header": "국제기능올림픽 국가대표 선발전 준비",
+        "exp.2015001.period": "2011 ~ 2012",
         "exp.2015001.role": "국가대표 후보선수",
         "exp.2015001.result": "국가대표 선발",
         "exp.2015001.story": `

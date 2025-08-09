@@ -1,6 +1,6 @@
 ---
 import PageTopActions from "src/solid/widget/PageTopActions";
-import Banner from "../widget/TopBanner.astro";
+import { LastUpdated } from "src/solid/components/LastUpdated";
 
 const navListItems = [{ href: "/", label: "Home" }];
 
@@ -9,57 +9,17 @@ if (!import.meta.env.PROD)
 ---
 
 <header id="pageHeader" class="header" data-print-hidden>
-    <Banner />
+    <LastUpdated client:only />
     <PageTopActions client:only />
 </header>
 
 <style>
     .header {
-        position: sticky;
-        top: 0;
         display: flex;
         align-items: center;
         padding: 0.25rem var(--spacing-doc-pad-right) 0.25rem
             var(--spacing-doc-pad-left);
         backdrop-filter: blur(1px);
-        z-index: 1000;
-        transition: all 0.2s ease-in-out;
         height: 40px;
     }
-
-    .header--scrolled {
-        backdrop-filter: none;
-    }
-
-    .header:hover {
-        opacity: 1;
-        backdrop-filter: blur(2px);
-        box-shadow: inset 0 0 100px 9999px var(--colors-surface-light);
-
-        & [data-scrolled-hidden] {
-            opacity: 1;
-        }
-    }
 </style>
-
-<style is:global>
-    .header--scrolled {
-        & [data-scrolled-hidden] {
-            opacity: 0;
-        }
-        &:hover [data-scrolled-hidden] {
-            opacity: 1;
-        }
-    }
-</style>
-
-<script>
-    const header = document.getElementById("pageHeader")!;
-
-    window.addEventListener("change:scrolled", updateScroll);
-
-    function updateScroll(ev: CustomEvent<boolean>) {
-        if (ev.detail) header.classList.add("header--scrolled");
-        else header.classList.remove("header--scrolled");
-    }
-</script>

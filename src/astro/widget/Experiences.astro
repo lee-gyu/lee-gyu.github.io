@@ -118,10 +118,10 @@ const projectTabs: ExpTabList[] = [
     </div>
     <div id="tabContents" class="tab-contents">
         {
-            projectTabs.map((tab, id) => (
+            projectTabs.map((tab) => (
                 <div id={tab.id} class:list={["tab-content"]}>
                     <header class="tab-contents-header">{tab.header}</header>
-                    <ol>
+                    <ol class="tab-card-list">
                         {tab.expList.map((expId) => (
                             <ExpCard expId={expId} />
                         ))}
@@ -195,6 +195,7 @@ const projectTabs: ExpTabList[] = [
     :root {
         --tab-button-width: 64px;
         --tab-button-gap: 4px;
+        --tab-ani-duration: 0.5s;
     }
 
     .projects-tab-button-wrapper {
@@ -215,7 +216,7 @@ const projectTabs: ExpTabList[] = [
         }
 
         &::before {
-            transition: all 0.75s ease-in-out;
+            transition: all var(--tab-ani-duration) ease-in-out;
             content: "";
             position: absolute;
             top: 0.25rem;
@@ -235,15 +236,15 @@ const projectTabs: ExpTabList[] = [
     }
 
     .tab-contents-header {
-        display: inline;
-        margin-top: 0.5rem;
-        margin-left: var(--spacing-doc-pad-left);
+        margin-bottom: 0.5rem;
+        padding-left: var(--spacing-doc-pad-left);
         font-weight: 500;
+        font-size: 1.125rem;
         opacity: 0.9;
     }
 
     .tab-content {
-        transition: all 0.75s ease-in-out;
+        transition: margin-left var(--tab-ani-duration) ease-in-out;
         min-width: 100%;
 
         &:first-child {
@@ -252,7 +253,7 @@ const projectTabs: ExpTabList[] = [
     }
 
     .tab-contents {
-        transition: max-height 0.75s ease-in-out;
+        transition: max-height var(--tab-ani-duration) ease-in-out;
         display: flex;
         overflow: hidden;
         scrollbar-width: none;
@@ -296,5 +297,11 @@ const projectTabs: ExpTabList[] = [
         &.is-active {
             opacity: 1;
         }
+    }
+
+    .tab-card-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
     }
 </style>

@@ -6,7 +6,6 @@ import {
 } from "src/i18n/utils";
 import Title from "src/astro/components/Title.astro";
 import { splitWithCommas } from "src/utils/string";
-import Keywords from "./Keywords.astro";
 import { listItemsCss } from "src/styles/component-css";
 
 type Props = {
@@ -27,19 +26,15 @@ const expData: Partial<Record<ExpProps, string>> = {
     urlText: t(`exp.${expId}.urlText`),
 };
 
-const periodKeywords = splitWithCommas(expData.period ?? "");
 const urls = splitWithCommas(expData.urls ?? "");
 const urlText = splitWithCommas(expData.urlText ?? "");
 
-const headerLines = ["role", "result"] as const;
+const headerLines = ["period", "role", "result"] as const;
 const hasContents = expData.story || expData.urls;
 ---
 
 <li class="exp-card">
-    <Keywords keywords={periodKeywords} />
-    <Title size="h3">
-        {expData.header}
-    </Title>
+    <Title size="h4">{expData.header}</Title>
     <ul class={listItemsCss}>
         {
             headerLines
@@ -80,7 +75,6 @@ const hasContents = expData.story || expData.urls;
     .exp-card {
         transition: all 0.15s ease-in-out;
         background-color: var(--colors-accent-o10);
-        margin-bottom: 2px;
         padding: 0.5rem var(--spacing-doc-pad-right) 1rem
             var(--spacing-doc-pad-left);
     }
