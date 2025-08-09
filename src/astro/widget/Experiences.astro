@@ -160,7 +160,9 @@ const projectTabs: ExpTabList[] = [
         activeTabButton(tabId);
     });
 
-    activeTabButton(getDefaultTabId());
+    const defaultTabId = getDefaultTabId();
+
+    if (defaultTabId > 0) activeTabButton(defaultTabId);
 
     function activeTabButton(tabId: number) {
         // reset is-active
