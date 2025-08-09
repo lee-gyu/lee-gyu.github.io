@@ -30,7 +30,6 @@ const urls = splitWithCommas(expData.urls ?? "");
 const urlText = splitWithCommas(expData.urlText ?? "");
 
 const headerLines = ["period", "role", "result"] as const;
-const hasContents = expData.story || expData.urls;
 ---
 
 <li class="exp-card">
@@ -48,24 +47,9 @@ const hasContents = expData.story || expData.urls;
         }
     </ul>
     {
-        hasContents && (
+        expData.story && (
             <div class="exp-details">
-                {expData.story && <p class="exp-story">{expData.story}</p>}
-                {expData.urls && urls.length > 0 && (
-                    <ul class:list={[listItemsCss, "url-list"]}>
-                        {urls.map((url, id) => (
-                            <li>
-                                <a
-                                    href={url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    {urlText[id]}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                )}
+                <p class="exp-story">{expData.story}</p>
             </div>
         )
     }
@@ -74,8 +58,8 @@ const hasContents = expData.story || expData.urls;
 <style>
     .exp-card {
         transition: all 0.15s ease-in-out;
-        background-color: var(--colors-accent-o10);
-        padding: 0.5rem var(--spacing-doc-pad-right) 1rem
+        border-bottom: 2px solid var(--colors-background);
+        padding: 1rem var(--spacing-doc-pad-right) 1rem
             var(--spacing-doc-pad-left);
     }
 
@@ -87,7 +71,7 @@ const hasContents = expData.story || expData.urls;
     .exp-details {
         margin: 0.25rem -0.5rem 0 -1rem;
         padding: 0.5rem 1rem;
-        background-color: var(--colors-background-light);
+        background-color: var(--colors-accent-o10);
         border-radius: 4px;
     }
 

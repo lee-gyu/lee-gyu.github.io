@@ -67,6 +67,12 @@ export default defineConfig({
                             _dark: "{colors.neutral.800}",
                         },
                     },
+                    borderColor: {
+                        value: {
+                            base: "{colors.neutral.400/80}",
+                            _dark: "{colors.neutral.100/80}",
+                        },
+                    },
                     surfaceLight: {
                         value: {
                             base: "{colors.neutral.50/60}",
