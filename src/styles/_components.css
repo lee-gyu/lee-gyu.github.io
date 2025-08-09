@@ -30,3 +30,10 @@
         }
     }
 }
+
+.list-items {
+    line-height: 1.75;
+    list-style: disc;
+    padding-left: 1.25rem;
+    max-width: 72ch;
+}

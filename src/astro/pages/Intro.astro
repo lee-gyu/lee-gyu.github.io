@@ -59,11 +59,15 @@ const sectionCss = css({
             <Title id="awards" size="h3">{`${t("awards")}`}</Title>
             <Awards />
         </section>
-        <section class={sectionCss} role="article">
-            <Title id="experiences" size="h3">
-                {t("experience")}
-            </Title>
-            <Experiences />
-        </section>
+        {
+            lang !== "en" && (
+                <section class={sectionCss} role="article">
+                    <Title id="experiences" size="h3">
+                        {t("experience")}
+                    </Title>
+                    <Experiences />
+                </section>
+            )
+        }
     </main>
 </DefaultLayout>

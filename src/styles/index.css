@@ -6,10 +6,6 @@
     [aria-hidden="true"] {
         display: none;
     }
-
-    [data-print-visible] {
-        display: none;
-    }
 }
 
 @media print {
@@ -20,17 +16,7 @@
         --colors-background-light: white !important;
     }
 
-    [data-print-visible] {
-        display: block !important;
-    }
-
     [data-print-hidden] {
         display: none !important;
     }
-}
-
-.list-items {
-    line-height: 1.75;
-    list-style: disc;
-    padding-left: 1.25rem;
 }

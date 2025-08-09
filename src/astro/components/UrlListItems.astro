@@ -1,0 +1,55 @@
+---
+import { splitWithCommas } from "src/utils/string";
+
+type Props = {
+    label: string;
+    urls?: string;
+    urlText?: string;
+};
+
+const { urls = "", urlText = "", label } = Astro.props;
+
+const urlList = splitWithCommas(urls);
+const urlTextList = splitWithCommas(urlText);
+---
+
+{
+    urls && urlText && urlList.length > 0 && (
+        <li>
+            <span class="url-list-label">{label} : </span>
+            <div class="url-list">
+                {urlList.map((url, id) => (
+                    <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        tabindex="-1"
+                    >
+                        {urlTextList[id]}
+                    </a>
+                ))}
+            </div>
+        </li>
+    )
+}
+
+<style>
+    .url-list {
+        display: inline-flex;
+        column-gap: 0.5rem;
+        flex-wrap: wrap;
+
+        a {
+            transition: all 0.15s ease-in-out;
+            text-decoration: underline;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            opacity: 0.8;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+</style>

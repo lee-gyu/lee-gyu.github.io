@@ -3,11 +3,12 @@ import {
     useTranslations,
     type ExpKeyPrefix,
     type ExpProps,
+    type KeyDict,
 } from "src/i18n/utils";
 import Title from "src/astro/components/Title.astro";
-import { splitWithCommas } from "src/utils/string";
 import { listItemsCss } from "src/styles/component-css";
-import { split } from "postcss/lib/list";
+import ListItems from "./ListItems.astro";
+import UrlListItems from "./UrlListItems.astro";
 
 type Props = {
     expId: ExpKeyPrefix;
@@ -19,88 +20,40 @@ const { expId } = Astro.props;
 
 const expData: Partial<Record<ExpProps, string>> = {
     header: t(`exp.${expId}.header`),
-    date: t(`exp.${expId}.date`),
-    period: t(`exp.${expId}.period`),
-    role: t(`exp.${expId}.role`),
-    result: t(`exp.${expId}.result`),
-    story: t(`exp.${expId}.story`),
-    tech: t(`exp.${expId}.tech`),
-    urls: t(`exp.${expId}.urls`),
-    urlText: t(`exp.${expId}.urlText`),
-    tasks: t(`exp.${expId}.tasks`),
+    date: t(`exp.${expId}.date` as KeyDict),
+    period: t(`exp.${expId}.period` as KeyDict),
+    role: t(`exp.${expId}.role` as KeyDict),
+    result: t(`exp.${expId}.result` as KeyDict),
+    story: t(`exp.${expId}.story` as KeyDict),
+    tech: t(`exp.${expId}.tech` as KeyDict),
+    urls: t(`exp.${expId}.urls` as KeyDict),
+    urlText: t(`exp.${expId}.urlText` as KeyDict),
+    tasks: t(`exp.${expId}.tasks` as KeyDict),
+    summary: t(`exp.${expId}.summary` as KeyDict),
+    issue: t(`exp.${expId}.issue` as KeyDict),
 };
-
-const urls = splitWithCommas(expData.urls ?? "");
-const urlText = splitWithCommas(expData.urlText ?? "");
-const tasks = splitWithCommas(expData.tasks ?? "");
-const result = splitWithCommas(expData.result ?? "");
-
-const headerLines = ["date", "period", "role", "tech"] as const;
 ---
 
 <li class="exp-card">
     <Title size="h4">{expData.header}</Title>
     <ul class={listItemsCss}>
-        {
-            headerLines
-                .filter((prop) => expData[prop])
-                .map((prop) => (
-                    <li>
-                        <span class="exp-label">{t(`exp.label.${prop}`)}</span>
-                        <span class="exp-desc">{expData[prop]}</span>
-                    </li>
-                ))
-        }
-        {
-            expData.result && result.length > 0 && (
-                <li>
-                    <span class="exp-label">{t(`exp.label.result`)}</span>
-                    {result.length === 1 ? (
-                        <span class="exp-desc">{expData.result}</span>
-                    ) : (
-                        <ul class="task-list">
-                            {result.map((task) => (
-                                <li>{task}</li>
-                            ))}
-                        </ul>
-                    )}
-                </li>
-            )
-        }
-        {
-            expData.urls && urls.length > 0 && (
-                <li>
-                    <span class="exp-label">{t(`exp.label.urls`)}</span>
-                    <div class="url-list">
-                        {urls.map((url, id) => (
-                            <a
-                                href={url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {urlText[id]}
-                            </a>
-                        ))}
-                    </div>
-                </li>
-            )
-        }
-        {
-            expData.tasks && tasks.length > 0 && (
-                <li>
-                    <span class="exp-label">{t(`exp.label.tasks`)}</span>
-                    {tasks.length === 1 ? (
-                        <span class="exp-desc">{expData.tasks}</span>
-                    ) : (
-                        <ul class="task-list">
-                            {tasks.map((task) => (
-                                <li>{task}</li>
-                            ))}
-                        </ul>
-                    )}
-                </li>
-            )
-        }
+        <ListItems label={t(`exp.label.date`)} contents={expData.date} />
+        <ListItems
+            label={t(`exp.label.period`)}
+            enableSplit={false}
+            contents={expData.period}
+        />
+        <ListItems label={t(`exp.label.role`)} contents={expData.role} />
+        <ListItems label={t(`exp.label.tech`)} contents={expData.tech} />
+        <ListItems label={t(`exp.label.tasks`)} contents={expData.tasks} />
+        <ListItems label={t(`exp.label.result`)} contents={expData.result} />
+        <ListItems label={t(`exp.label.summary`)} contents={expData.summary} />
+        <ListItems label={t(`exp.label.issue`)} contents={expData.issue} />
+        <UrlListItems
+            label={t("exp.label.urls")}
+            urls={expData.urls}
+            urlText={expData.urlText}
+        />
     </ul>
     {
         expData.story && (
@@ -119,11 +72,6 @@ const headerLines = ["date", "period", "role", "tech"] as const;
             var(--spacing-doc-pad-left);
     }
 
-    .exp-label::after {
-        content: ":";
-        margin-left: 0.25rem;
-    }
-
     .exp-details {
         display: flex;
         margin-top: 0.5rem;
@@ -135,31 +83,7 @@ const headerLines = ["date", "period", "role", "tech"] as const;
         overflow: hidden;
         color: var(--colors-text-light);
         line-height: 1.33;
-        max-width: 50ch;
-    }
-
-    .url-list {
-        display: inline-flex;
-        column-gap: 0.5rem;
-        flex-wrap: wrap;
-
-        a {
-            transition: all 0.15s ease-in-out;
-            text-decoration: underline;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-            opacity: 0.8;
-
-            &:hover {
-                opacity: 1;
-            }
-        }
-    }
-
-    .task-list {
-        list-style: circle;
-        padding-left: 0.5rem;
+        max-width: 60ch;
     }
 
     @media print {

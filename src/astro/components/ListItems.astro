@@ -1,0 +1,36 @@
+---
+import { splitWithCommas } from "src/utils/string";
+
+type Props = {
+    label: string;
+    contents?: string;
+    enableSplit?: boolean;
+};
+
+const { label, contents = "", enableSplit = true } = Astro.props;
+const items = enableSplit ? splitWithCommas(contents) : [contents];
+---
+
+{
+    contents && (
+        <li>
+            <span class="list-items-label">{label} : </span>
+            {!enableSplit || items.length === 1 ? (
+                <span class="list-items-desc">{items[0]}</span>
+            ) : (
+                <ul class="sub-list">
+                    {items.map((item) => (
+                        <li>{item}</li>
+                    ))}
+                </ul>
+            )}
+        </li>
+    )
+}
+
+<style>
+    .sub-list {
+        list-style: circle;
+        padding-left: 0.5rem;
+    }
+</style>
