@@ -94,30 +94,42 @@ export default defineConfig({
                     accent: {
                         value: {
                             base: "{colors.neutral.400}",
-                            _dark: "{colors.neutral.100}",
+                            _dark: "{colors.neutral.200}",
                         },
                     },
                     accentO10: {
                         value: {
                             base: "{colors.neutral.400/10}",
-                            _dark: "{colors.neutral.100/10}",
+                            _dark: "{colors.neutral.200/10}",
                         },
                     },
                     accentO20: {
                         value: {
                             base: "{colors.neutral.400/20}",
-                            _dark: "{colors.neutral.100/20}",
+                            _dark: "{colors.neutral.200/20}",
                         },
                     },
                     accentO30: {
                         value: {
                             base: "{colors.neutral.400/30}",
-                            _dark: "{colors.neutral.100/30}",
+                            _dark: "{colors.neutral.200/30}",
+                        },
+                    },
+                    accentO50: {
+                        value: {
+                            base: "{colors.neutral.400/50}",
+                            _dark: "{colors.neutral.200/50}",
+                        },
+                    },
+                    accentO80: {
+                        value: {
+                            base: "{colors.neutral.400/80}",
+                            _dark: "{colors.neutral.200/80}",
                         },
                     },
                     accentContent: {
                         value: {
-                            base: "{colors.neutral.100}",
+                            base: "{colors.neutral.200}",
                             _dark: "{colors.neutral.400}",
                         },
                     },

@@ -20,65 +20,106 @@ const projectTabs: ExpTabList[] = [
         id: "exp2025",
         tabCaption: t("exp.tab.2025"),
         header: t("exp.tab.2025.header"),
-        expList: ["35", "34", "33", "32", "31", "30", "29", "28", "27"],
+        expList: [
+            "2025009",
+            "2025008",
+            "2025007",
+            "2025006",
+            "2025005",
+            "2025004",
+            "2025003",
+            "2025002",
+            "2025001",
+        ],
     },
     {
         id: "exp2023",
         tabCaption: t("exp.tab.2023"),
         header: t("exp.tab.2023.header"),
-        expList: ["26", "25", "24", "23", "22", "21", "20", "19"],
+        expList: [
+            "2023008",
+            "2023007",
+            "2023006",
+            "2023005",
+            "2023004",
+            "2023003",
+            "2023002",
+            "2023001",
+        ],
     },
     {
         id: "exp2021",
         tabCaption: t("exp.tab.2021"),
         header: t("exp.tab.2021.header"),
-        expList: ["18", "17", "16", "15", "14", "13", "12"],
+        expList: [
+            "2021007",
+            "2021006",
+            "2021005",
+            "2021004",
+            "2021003",
+            "2021002",
+            "2021001",
+        ],
     },
     {
         id: "exp2018",
         tabCaption: t("exp.tab.2018"),
         header: t("career.1.content"),
-        expList: ["11", "10", "9", "8", "7", "6"],
+        expList: [
+            "2018008",
+            "2018007",
+            "2018006",
+            "2018005",
+            "2018004",
+            "2018003",
+            "2018002",
+            "2018001",
+        ],
     },
     {
         id: "exp2015",
         tabCaption: t("exp.tab.2015"),
         header: t("career.2.content"),
-        expList: ["5", "4", "3", "2", "1", "0"],
+        expList: [
+            "2015006",
+            "2015005",
+            "2015004",
+            "2015003",
+            "2015002",
+            "2015001",
+        ],
     },
 ];
 ---
 
-<div class="project-contents-wrapper">
-    <ol
+<div id="expWrapper">
+    <div
         id="tabButtonWrapper"
-        class="projects-tab-wrapper"
+        class="projects-tab-button-wrapper"
         role="tablist"
         data-print-hidden
     >
         {
             projectTabs.map((tab, id) => (
-                <li>
-                    <button
-                        type="button"
-                        class:list={[
-                            "tab-button",
-                            numAdjCss,
-                            id === 0 && "is-active",
-                        ]}
-                        data-tab-id={tab.id}
-                        data-tab-index={id}
-                    >
-                        {tab.tabCaption}
-                    </button>
-                </li>
+                <button
+                    type="button"
+                    class:list={[
+                        "tab-button",
+                        numAdjCss,
+                        id === 0 && "is-active",
+                    ]}
+                    data-tab-id={tab.id}
+                    data-tab-index={id}
+                >
+                    {tab.tabCaption}
+                </button>
             ))
         }
-    </ol>
+    </div>
     <div id="tabContents" class="tab-contents">
         {
-            projectTabs.map((tab) => (
-                <div id={tab.id} class="tab-content">
+            projectTabs.map((tab, id) => (
+                <div id={tab.id} class:list={["tab-content"]}>
                     <header class="tab-contents-header">{tab.header}</header>
                     <ol>
                         {tab.expList.map((expId) => (
@@ -92,13 +133,16 @@ const projectTabs: ExpTabList[] = [
 </div>
 
 <script>
+    const expHeader = document.getElementById("experiences")!;
+    const expWrapper = document.getElementById("expWrapper")!;
     const tabButtonWrapper = document.getElementById("tabButtonWrapper")!;
     const tabContentsWrapper = document.getElementById("tabContents")!;
     const tabContents = [
         ...tabContentsWrapper.querySelectorAll(".tab-content"),
     ] as HTMLElement[];
-    let clickActiveTab = false;
-    let clickTimeout = -1;
+    const tabButtons = [
+        ...tabButtonWrapper.querySelectorAll("button"),
+    ] as HTMLElement[];
 
     tabButtonWrapper.addEventListener("click", (ev) => {
         const target = ev.target as HTMLElement;
@@ -111,52 +155,25 @@ const projectTabs: ExpTabList[] = [
             10,
         );
 
-        clickActiveTab = true;
         activeTabButton(tabId);
-        scrollTabContent(tabId);
-        clearTimeout(clickTimeout);
-        clickTimeout = window.setTimeout(() => (clickActiveTab = false), 500);
     });
 
-    tabContents.forEach((element, id) => {
-        const header = element.querySelector("header")!;
-
-        new IntersectionObserver(([entry]) => {
-            if (clickActiveTab) return;
-            if (entry.isIntersecting) activeTabButton(id);
-        }).observe(header);
-    });
-
-    const defaultTabId = getDefaultTabId();
-
-    if (defaultTabId > 0) {
-        setTimeout(() => {
-            activeTabButton(defaultTabId);
-            scrollTabContent(defaultTabId);
-        }, 110);
-    }
+    activeTabButton(getDefaultTabId());
 
     function activeTabButton(tabId: number) {
         // reset is-active
-        const buttons = [
-            ...tabButtonWrapper.querySelectorAll(".tab-button"),
-        ] as HTMLElement[];
+        tabButtons.forEach((el) => el.classList.remove("is-active"));
+        tabButtons[tabId].classList.add("is-active");
 
-        buttons.forEach((button) => {
-            button.classList.remove("is-active");
-        });
-
-        const activeButton = buttons[tabId];
-
-        activeButton.classList.add("is-active");
-        tabButtonWrapper.style.setProperty("--active-tab-index", `${tabId}`);
-    }
-
-    function scrollTabContent(tabId: number) {
-        tabContentsWrapper.scrollTo({
+        expHeader.scrollIntoView({
             behavior: "smooth",
-            left: tabContents[tabId].offsetLeft,
+            block: "nearest",
         });
+        expWrapper.style.setProperty("--active-tab-index", `${tabId}`);
+        expWrapper.style.setProperty(
+            "--tab-max-height",
+            `${tabContents[tabId].scrollHeight}px`,
+        );
     }
 
     function getDefaultTabId() {
@@ -180,13 +197,17 @@ const projectTabs: ExpTabList[] = [
         --tab-button-gap: 4px;
     }
 
-    .projects-tab-wrapper {
-        position: relative;
+    .projects-tab-button-wrapper {
+        position: sticky;
+        top: 0;
+        z-index: 2000;
         padding: 0.5rem 0;
         display: flex;
         column-gap: var(--tab-button-gap);
         align-items: end;
-        margin-left: -0.5rem;
+        margin-left: calc(var(--spacing-doc-pad-left) * -1);
+        margin-right: calc(var(--spacing-doc-pad-right) * -1);
+        padding-left: calc(var(--spacing-doc-pad-left) - 0.6rem);
         background-color: var(--colors-background-light);
 
         & > li {
@@ -194,13 +215,13 @@ const projectTabs: ExpTabList[] = [
         }
 
         &::before {
-            transition: all 0.5s ease-out;
+            transition: all 0.75s ease-in-out;
             content: "";
             position: absolute;
             top: 0.25rem;
             left: calc(
-                var(--active-tab-index) *
-                    (var(--tab-button-width) + var(--tab-button-gap))
+                -0.6rem + var(--spacing-doc-pad-left) + (var(--active-tab-index) *
+                            (var(--tab-button-width) + var(--tab-button-gap)))
             );
             width: calc(var(--tab-button-width));
             bottom: 0.25rem;
@@ -214,34 +235,44 @@ const projectTabs: ExpTabList[] = [
     }
 
     .tab-contents-header {
-        position: sticky;
         display: inline;
-        top: 0;
+        margin-top: 0.5rem;
         margin-left: var(--spacing-doc-pad-left);
         font-weight: 500;
         opacity: 0.9;
     }
 
     .tab-content {
+        transition: all 0.75s ease-in-out;
         min-width: 100%;
-        scroll-snap-align: start;
-        scroll-behavior: smooth;
+
+        &:first-child {
+            margin-left: calc(var(--active-tab-index) * -100%);
+        }
     }
 
     .tab-contents {
-        width: calc(
-            100% + var(--spacing-doc-pad-left) + var(--spacing-doc-pad-right)
-        );
+        transition: max-height 0.75s ease-in-out;
         display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        margin-left: calc(var(--spacing-doc-pad-left) * -1);
+        overflow: hidden;
         scrollbar-width: none;
+        align-items: flex-start;
+        z-index: 0;
+        width: calc(
+            100% + var(--spacing-doc-pad-right) + var(--spacing-doc-pad-left)
+        );
+        margin-left: calc(var(--spacing-doc-pad-left) * -1);
+        max-height: var(--tab-max-height);
     }
 
     @media print {
         .tab-contents {
             flex-direction: column;
+            max-height: fit-content;
+        }
+
+        .tab-content {
+            margin-left: 0;
         }
     }
 
@@ -250,7 +281,7 @@ const projectTabs: ExpTabList[] = [
         text-overflow: ellipsis;
         overflow: hidden;
         display: inline-block;
-        transition: all 0.15s ease-in-out;
+        transition: all 0.25s ease-in-out;
         opacity: 0.5;
         cursor: pointer;
         text-align: center;

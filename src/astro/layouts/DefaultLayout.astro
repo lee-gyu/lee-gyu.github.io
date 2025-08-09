@@ -92,11 +92,24 @@ const lang = Astro.currentLocale;
         __setTheme: setTheme,
     });
 
+    let scrolled = window.scrollY > 0;
+
     window.addEventListener("scroll", () => {
-        const scrolled = window.scrollY > 40;
+        const nextScrolled = window.scrollY > 0;
+
+        if (nextScrolled === scrolled) return;
+
+        scrolled = nextScrolled;
 
         window.dispatchEvent(
             new CustomEvent("change:scrolled", { detail: scrolled }),
         );
     });
+
+    if (scrolled)
+        window.addEventListener("load", () => {
+            window.dispatchEvent(
+                new CustomEvent("change:scrolled", { detail: scrolled }),
+            );
+        });
 </script>

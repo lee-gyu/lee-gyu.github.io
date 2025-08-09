@@ -19,12 +19,12 @@ if (!import.meta.env.PROD)
         top: 0;
         display: flex;
         align-items: center;
-        padding: 0.75rem var(--spacing-doc-pad-right) 0.75rem
+        padding: 0.25rem var(--spacing-doc-pad-right) 0.25rem
             var(--spacing-doc-pad-left);
         backdrop-filter: blur(1px);
-        height: 3.5rem;
         z-index: 1000;
         transition: all 0.2s ease-in-out;
+        height: 40px;
     }
 
     .header--scrolled {
@@ -62,9 +62,4 @@ if (!import.meta.env.PROD)
         if (ev.detail) header.classList.add("header--scrolled");
         else header.classList.remove("header--scrolled");
     }
-
-    if (window.scrollY)
-        window.dispatchEvent(
-            new CustomEvent("change:scrolled", { detail: window.scrollY > 0 }),
-        );
 </script>

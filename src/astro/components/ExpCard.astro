@@ -6,7 +6,6 @@ import {
 } from "src/i18n/utils";
 import Title from "src/astro/components/Title.astro";
 import { splitWithCommas } from "src/utils/string";
-import Icon from "src/solid/components/Icon";
 import Keywords from "./Keywords.astro";
 import { listItemsCss } from "src/styles/component-css";
 
@@ -81,7 +80,7 @@ const hasContents = expData.story || expData.urls;
     .exp-card {
         transition: all 0.15s ease-in-out;
         background-color: var(--colors-accent-o10);
-        margin-bottom: 1px;
+        margin-bottom: 2px;
         padding: 0.5rem var(--spacing-doc-pad-right) 1rem
             var(--spacing-doc-pad-left);
     }
@@ -106,6 +105,15 @@ const hasContents = expData.story || expData.urls;
     @media print {
         .exp-card {
             background: none !important;
+        }
+
+        .exp-story {
+            display: none !important;
+        }
+
+        .exp-details {
+            padding: 0;
+            margin: 0;
         }
     }
 
