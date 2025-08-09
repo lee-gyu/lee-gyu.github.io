@@ -1,0 +1,1 @@
+import{s as t}from"./theme.DL8R2gPa.js";Object.assign(globalThis,{__setTheme:t});let e=window.scrollY>0;window.addEventListener("scroll",()=>{const n=window.scrollY>0;n!==e&&(e=n,window.dispatchEvent(new CustomEvent("change:scrolled",{detail:e})))});e&&window.addEventListener("load",()=>{window.dispatchEvent(new CustomEvent("change:scrolled",{detail:e}))});
