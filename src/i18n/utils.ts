@@ -12,25 +12,7 @@ export function getDocLang() {
     return document.documentElement.lang as keyof typeof ui;
 }
 
-export type KeyDict = keyof (typeof ui)["ko"];
-
-type ExpKeys = {
-    [key in KeyDict as key extends `exp.${infer Key}` ? Key : never]: string;
-};
-
-export type ExpProps = keyof {
-    [key in keyof ExpKeys as key extends `${number}.${infer ExpProp}`
-        ? ExpProp
-        : never]: string;
-};
-
-export type ExpKeyPrefix = keyof {
-    [key in keyof ExpKeys as key extends `${infer Prefix}.${ExpProps}`
-        ? Prefix extends `${number}`
-            ? Prefix
-            : never
-        : never]: string;
-};
+type KeyDict = keyof (typeof ui)["ko"];
 
 export function useTranslations(lang: keyof typeof ui) {
     const dict = ui[lang] as Record<string, string>;

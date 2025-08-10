@@ -1,37 +1,20 @@
 ---
-import {
-    useTranslations,
-    type ExpKeyPrefix,
-    type ExpProps,
-    type KeyDict,
-} from "src/i18n/utils";
+import { useTranslations } from "src/i18n/utils";
+import { experiencesKo, type ExpKey } from "src/i18n/exp-string";
 import Title from "src/astro/components/Title.astro";
 import { listItemsCss } from "src/styles/component-css";
 import ListItems from "./ListItems.astro";
 import UrlListItems from "./UrlListItems.astro";
 
 type Props = {
-    expId: ExpKeyPrefix;
+    expId: ExpKey;
 };
 
 const lang = Astro.currentLocale as Lang;
 const t = useTranslations(lang);
 const { expId } = Astro.props;
 
-const expData: Partial<Record<ExpProps, string>> = {
-    header: t(`exp.${expId}.header`),
-    date: t(`exp.${expId}.date` as KeyDict),
-    period: t(`exp.${expId}.period` as KeyDict),
-    role: t(`exp.${expId}.role` as KeyDict),
-    result: t(`exp.${expId}.result` as KeyDict),
-    story: t(`exp.${expId}.story` as KeyDict),
-    tech: t(`exp.${expId}.tech` as KeyDict),
-    urls: t(`exp.${expId}.urls` as KeyDict),
-    urlText: t(`exp.${expId}.urlText` as KeyDict),
-    tasks: t(`exp.${expId}.tasks` as KeyDict),
-    summary: t(`exp.${expId}.summary` as KeyDict),
-    issue: t(`exp.${expId}.issue` as KeyDict),
-};
+const expData = experiencesKo[expId];
 ---
 
 <li class="exp-card">
