@@ -14,6 +14,8 @@ const ICON_LIST = [
     "io5-lang",
     "ri-speak-ai-fill",
     "ri-speak-line-outline",
+    "bs-sort-num-asc",
+    "bs-sort-num-desc",
 ] as const;
 
 type IconProps = {
