@@ -161,18 +161,18 @@ const projectTabs: ExpTabList[] = [
 
     const defaultTabId = getDefaultTabId();
 
-    if (defaultTabId > 0) activeTabButton(defaultTabId);
-    else expWrapper.style.setProperty("--active-tab-index", "0");
+    activeTabButton(defaultTabId, defaultTabId !== 0);
 
-    function activeTabButton(tabId: number) {
+    function activeTabButton(tabId: number, moveScroll = true) {
         // reset is-active
         tabButtons.forEach((el) => el.classList.remove("is-active"));
         tabButtons[tabId].classList.add("is-active");
 
-        expHeader.scrollIntoView({
-            behavior: "smooth",
-            block: "nearest",
-        });
+        if (moveScroll)
+            expHeader.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest",
+            });
         expWrapper.style.setProperty("--active-tab-index", `${tabId}`);
         expWrapper.style.setProperty(
             "--tab-max-height",
