@@ -162,6 +162,7 @@ const projectTabs: ExpTabList[] = [
     const defaultTabId = getDefaultTabId();
 
     if (defaultTabId > 0) activeTabButton(defaultTabId);
+    else expWrapper.style.setProperty("--active-tab-index", "0");
 
     function activeTabButton(tabId: number) {
         // reset is-active
