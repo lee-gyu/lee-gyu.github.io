@@ -36,4 +36,8 @@
     list-style: disc;
     padding-left: 1.25rem;
     max-width: 72ch;
+
+    & li {
+        margin: 0.25rem 0;
+    }
 }

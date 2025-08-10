@@ -13,20 +13,17 @@ const { keywords, class: className } = Astro.props;
 
 <style>
     .keywords {
-        display: block;
-        margin-left: -0.5rem;
+        display: flex;
+        margin: 0.25rem 0 0.25rem -0.5rem;
+        column-gap: 0.5rem;
     }
 
     .keyword {
-        display: inline-block;
+        font-weight: 300;
         line-height: 1.25;
         font-size: 0.875rem;
         padding: 0.25rem 0.5rem;
         border-radius: 6px;
         background-color: var(--colors-accent-o10);
-
-        &:not(:last-child) {
-            margin-right: 0.5rem;
-        }
     }
 </style>
