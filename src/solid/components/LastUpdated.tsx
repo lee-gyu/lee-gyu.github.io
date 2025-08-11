@@ -5,6 +5,9 @@ import { css } from "src/styled-system/css";
 import { fromNow } from "src/utils/date";
 
 const lastUpdatedCss = css({
+    display: "inline-block",
+    marginTop: "docPadTop",
+    marginLeft: "docPadLeft",
     fontSize: "0.875rem",
     opacity: 0.8,
     fontWeight: 300,

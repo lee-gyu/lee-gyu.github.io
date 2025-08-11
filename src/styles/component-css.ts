@@ -13,5 +13,6 @@ export const iconCss = css({
 
 export const numAdjCss = css({
     fontFeatureSettings: '"tnum"',
-    letterSpacing: "-0.05em",
+    fontWeight: 300,
+    letterSpacing: "-0.04em",
 });

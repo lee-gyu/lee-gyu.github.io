@@ -8,10 +8,15 @@ export default function PageTopActions() {
         <PageTopActionsContext.Provider value={{}}>
             <div
                 class={css({
-                    display: "inline-flex",
-                    alignItems: "center",
-                    marginLeft: "auto",
-                    gap: "0.5rem",
+                    position: "sticky",
+                    top: 0,
+                    marginRight: "0.25rem",
+                    padding: "0.25rem",
+                    borderRadius: "full",
+                    backdropFilter: "blur(2px)",
+                    display: "inline-block",
+                    float: "right",
+                    zIndex: 3000,
                 })}
             >
                 <LangToggle />
