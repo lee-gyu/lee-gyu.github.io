@@ -241,10 +241,10 @@ const projectTabs: ExpTabList[] = [
     .tab-contents-header {
         padding-bottom: 0.5rem;
         padding-left: var(--spacing-doc-pad-left);
+        background-color: var(--colors-background-light);
         font-weight: 500;
         font-size: 1.125rem;
-        opacity: 0.9;
-        border-bottom: 4px solid var(--colors-background);
+        color: var(--colors-text-light);
     }
 
     .tab-content {
@@ -257,6 +257,7 @@ const projectTabs: ExpTabList[] = [
     }
 
     .tab-contents {
+        background-color: var(--colors-background);
         transition: max-height var(--tab-ani-duration) ease-in-out;
         display: flex;
         overflow: hidden;
@@ -295,6 +296,8 @@ const projectTabs: ExpTabList[] = [
     .tab-card-list {
         display: flex;
         flex-direction: column;
+        row-gap: 0.5rem;
+        margin-top: 0.5rem;
     }
 
     @media print {
