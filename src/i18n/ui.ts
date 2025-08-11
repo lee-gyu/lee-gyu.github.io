@@ -92,7 +92,7 @@ export const ui = {
         ),
         "career.2.header": "2012.10 - 2015.9",
         "career.2.content": "삼성전자 기능올림픽 훈련 센터",
-        "career.2.content.keywords": joinCommas("인사 업무", "훈련 센터"),
+        "career.2.content.keywords": joinCommas("인사 업무", "훈련 지도"),
         experience: "경험",
 
         skills: "메인 기술",
