@@ -1,0 +1,79 @@
+---
+import { splitCommas } from "src/utils/string";
+import Icon from "./Icon.astro";
+
+type Props = {
+    imgUrls: string;
+    imgLabel: string;
+};
+
+const { imgUrls, imgLabel } = Astro.props;
+
+const imgUrlList = splitCommas(imgUrls);
+const imgLabelList = splitCommas(imgLabel);
+---
+
+<div class="image-viewer">
+    {
+        imgUrlList.map((url, id) => (
+            <a
+                class="img-button"
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <figure>
+                    <img src={url} alt={imgLabelList[id]} />
+                    <figcaption class="img-caption">
+                        {imgLabelList[id]}
+                    </figcaption>
+                    <Icon icon="io5-open" />
+                </figure>
+            </a>
+        ))
+    }
+</div>
+
+<style>
+    .image-viewer {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+
+        img {
+            height: 64px;
+            width: 128px;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .img-button {
+        transition:
+            transform 0.25s ease-in-out,
+            background-color 0.25s ease-in-out;
+        padding: 0.5rem;
+        cursor: pointer;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: var(--colors-bg-o60);
+            transform: scale(1.05);
+        }
+
+        i {
+            float: right;
+        }
+    }
+
+    .img-caption {
+        float: left;
+        font-weight: 300;
+        font-size: 0.875rem;
+    }
+
+    @media print {
+        .image-viewer {
+            display: none;
+        }
+    }
+</style>
