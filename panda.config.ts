@@ -61,6 +61,12 @@ export default defineConfig({
                             _dark: "{colors.neutral.950}",
                         },
                     },
+                    bgO60: {
+                        value: {
+                            base: "{colors.neutral.200/60}",
+                            _dark: "{colors.neutral.950/60}",
+                        },
+                    },
                     backgroundLight: {
                         value: {
                             base: "{colors.neutral.50}",
