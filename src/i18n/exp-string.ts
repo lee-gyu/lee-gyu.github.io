@@ -99,15 +99,15 @@ const ko = {
         ].join(" "),
     } satisfies ExpStoryObj,
 
-    // 2017 ~
-    "20170010": {
+    "20150080": {
         header: "삼성전자 VD사업부 전배",
         date: "2015.9",
-        summary: "S/W 개발 전문성을 키우기 위해 부서 이동 신청",
+        summary: "S/W 전문성을 개발하기 위해 부서 이동",
     } satisfies ExpStoryObj,
+
     "20170020": {
         header: "웹 기반 사내 업무 시스템 개발",
-        date: "2016년도",
+        period: "2016.1 ~ 2016.5",
         tech: joinCommas(
             "(DB) MariaDB",
             "(Server OS) Windows Server",
@@ -129,7 +129,7 @@ const ko = {
     } satisfies ExpStoryObj,
     "20170030": {
         header: "해외 법인 종합 관제실 시스템 구축",
-        date: "2016년도",
+        period: "2016.6 ~ 10",
         role: "웹 풀스택 개발",
         tech: joinCommas(
             "(DB) MariaDB",
@@ -153,7 +153,7 @@ const ko = {
     } satisfies ExpStoryObj,
     "20170050": {
         header: "환경 데이터 수집 IoT 프로젝트",
-        date: "2017년도",
+        period: "2017.1 ~ 2017.5",
         role: "웹 풀스택 개발",
         tech: joinCommas(
             "(DB) MariaDB",
@@ -170,9 +170,19 @@ const ko = {
             "IoT 기기와 센서 연동을 담당하는 엔지니어와 협업한 과제입니다.",
         ].join("\n"),
     } satisfies ExpStoryObj,
+
+    "20170055": {
+        header: "삼성전자 개발 직군 S/W 자격 검증 시험",
+        date: "2017.6",
+        result: "Pro 등급 취득",
+        story: [
+            "사내 S/W 코딩 테스트 자격증 시험을 응시하여 당시 상위 15% 수준의 Pro 등급을 취득하여 인센티브로 약 100만원을 받았습니다.",
+        ].join("\n"),
+    } satisfies ExpStoryObj,
+
     "20170060": {
         header: "제조 생산량 예측 시뮬레이터",
-        date: "2017년도",
+        date: "2017.6 ~ 8",
         role: "Windows App 개발",
         tech: joinCommas(
             "(C#) Windows WPF",
@@ -189,9 +199,10 @@ const ko = {
             "제조 현장의 변수와 불량 데이터 문제로 큰 성과를 내지 못하여 아쉬웠던 경험입니다.",
         ].join(" "),
     } satisfies ExpStoryObj,
+
     "20170070": {
         header: "공정 프로세스 모니터링 프로젝트",
-        date: "2017년도",
+        date: "2017.9 ~ 2018.1",
         role: "웹 풀스택 개발",
         tech: joinCommas("(Backend) C# ASP.NET MVC", "(Frontend) TypeScript"),
         feat: joinCommas(
@@ -207,24 +218,16 @@ const ko = {
             "처음으로 개발 환경에 Node.js와 타입스크립트를 도입했던 과제였습니다.",
         ].join("\n"),
     } satisfies ExpStoryObj,
-    "20170080": {
-        header: "삼성전자 개발 직군 S/W 자격 검증 시험",
-        date: "2017.6",
-        result: "Pro 등급 취득",
-        story: [
-            "사내 S/W 코딩 테스트 자격증 시험을 응시하여 당시 상위 15% 수준의 Pro 등급을 취득하여 인센티브로 약 100만원을 받았습니다.",
-        ].join("\n"),
-    } satisfies ExpStoryObj,
 
-    // 2021 ~
-    "20210010": {
+    "20170080": {
         header: "삼성전자 퇴사",
         date: "2018.7",
         story: [
-            "근무하던 부서에서 S/W 기술은 혁신성을 잠깐 보여주고 개발이 종료되는 일이 많았습니다.",
+            "근무하던 부서에서 S/W 기술은 잠깐 보여주고 개발이 종료되는 일이 많았습니다.",
             "산업군을 IT 서비스로 변경하고 싶어 퇴사를 결정했습니다.",
         ].join(" "),
     } satisfies ExpStoryObj,
+
     "20210020": {
         header: "기능경기대회 학교 지도 강사",
         period: "2019 ~ 2021",
@@ -270,7 +273,7 @@ const ko = {
             "화면 내의 UI 이미지를 식별하고 마우스/키보드를 제어하여 단순 반복 작업을 자동화하는 업무 자동화 과제였습니다.",
             "\n",
             "화면의 오브젝트 식별, 마우스/키보드 처리는 Java 라이브러리로 처리했고, 단순 반복 작업을 Python 스크립트로 작성하는 소프트웨어입니다.\n",
-            "Windows 실행 환경만 구현되어 있어서 프로젝트 마무리에 어려움이 있었는데, Linux/Mac 실행에 대한 개발 작업을 전담하여 마무리 지었습니다.",
+            "Windows 실행 환경만 구현되어 있어서 프로젝트 마무리에 어려움이 있었는데, Linux/Mac 실행에 대한 개발 작업을 전담하고 TTA 인증 시험까지 마무리 지었습니다.",
         ].join(""),
     } satisfies ExpStoryObj,
     "20210070": {
@@ -309,11 +312,12 @@ const ko = {
     } satisfies ExpStoryObj,
     "20210090": {
         header: "UI 스타일 리뉴얼 프로젝트",
-        period: "2021.7 ~ 2021.12",
+        period: "2021.7 ~ 2022.3",
         summary: "프리랜서 디자이너와 협업하여 UI 스타일 리뉴얼",
         tasks: joinCommas(
+            "리뉴얼을 위한 기존 화면 전수 조사",
             "프로젝트 협업 환경 구축",
-            "CSS 스타일 적용 체계 구축",
+            "CSS 토큰/공용 스타일 적용 체계 구축",
         ),
         tech: joinCommas("Figma"),
         imgUrls: joinCommas(
