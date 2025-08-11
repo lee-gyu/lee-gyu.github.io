@@ -1,5 +1,5 @@
 ---
-import { splitWithCommas } from "src/utils/string";
+import { splitCommas } from "src/utils/string";
 
 type Props = {
     label: string;
@@ -9,8 +9,8 @@ type Props = {
 
 const { urls = "", urlText = "", label } = Astro.props;
 
-const urlList = splitWithCommas(urls);
-const urlTextList = splitWithCommas(urlText);
+const urlList = splitCommas(urls);
+const urlTextList = splitCommas(urlText);
 ---
 
 {

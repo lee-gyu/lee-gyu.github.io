@@ -84,7 +84,7 @@ export const ui = {
         "exp.label.period": "기간",
         "exp.label.mainTask": "주 작업",
         "exp.label.result": "성과",
-        "exp.label.tech": "기술/동작 환경",
+        "exp.label.tech": "사용 기술/환경",
         "exp.label.tasks": "업무",
         "exp.label.feat": "개발 기능",
         "exp.label.urls": "URL",

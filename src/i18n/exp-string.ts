@@ -1,3 +1,5 @@
+import { joinCommas } from "src/utils/string";
+
 export type ExpProps =
     | "header"
     | "date"
@@ -9,6 +11,7 @@ export type ExpProps =
     | "result"
     | "issue"
     | "urls"
+    | "feat"
     | "urlText"
     | "story";
 
@@ -23,7 +26,7 @@ const ko = {
         period: "2011 ~ 2012",
         story: [
             "기능올림픽은 전국 대회 수상자끼리 선발전을 치뤄 국가대표를 선발합니다.",
-            "전국 대회에서 수상하여 선발전 출전 자격을 얻고, 국가대표 선발전에서 1위를 했습니다.",
+            "전국 대회에서 수상 후, 국가대표 선발전을 치뤄 1위를 했습니다.",
             "\n목표를 가지고 체계적으로 준비하는 과정을 경험했습니다.",
         ].join(" "),
     } satisfies ExpStoryObj,
@@ -32,42 +35,35 @@ const ko = {
         date: "2012.10",
     } satisfies ExpStoryObj,
     "20150030": {
-        header: "2013 국제기능올림픽 정보기술 직종 국가대표",
+        header: "2013 국제기능올림픽 정보기술 직종 국가대표 훈련",
         period: "2013.1 ~ 2013.8",
-        role: "정보기술 직종 국가대표",
-        tech: [
-            "(VBA) 업무용 S/W 개발",
-            "(MS Access) DB 설계",
+        role: "기능올림픽 정보기술 직종 국가대표",
+        tech: joinCommas(
+            "(VBA) 업무 프로그램 개발",
+            "(MS Access) Database",
             "(Word/PPT) 업무 문서 작성",
-        ].join(", "),
-        summary: [
-            "삼성전자 훈련센터 국가대표 훈련",
-            "문제 해결 능력 향상",
-            "업무용 S/W 이해 능력 향상",
-        ].join(", "),
-        result: ["금메달(1위) 수상", "동탑산업훈장 표창"].join(", "),
+        ),
+        result: joinCommas("금메달(1위) 수상 / 동탑산업훈장 표창"),
         urlText: "삼성 뉴스룸 기사, 대회 점수, 수상자 사진",
-        urls: [
+        urls: joinCommas(
             "https://news.samsung.com/kr/4590",
             "https://results.worldskills.org/results?event=9&offset=0&skill=345&base_skill=221",
             "https://www.flickr.com/photos/worldskills/9235939100/in/album-72157634532467264/",
-        ].join(", "),
+        ),
     } satisfies ExpStoryObj,
     "20150040": {
         header: "기능올림픽 특별채용 전형 업무",
-        period: "2013.10, 2014.10",
+        date: "2013.10, 2014.10",
         summary: "대기업 채용 프로세스를 인사 담당자 관점에서 경험",
     } satisfies ExpStoryObj,
     "20150050": {
         header: "글로벌 사내 경진대회 행사 업무",
-        period: "2014.5, 2015.5",
-        tasks: ["해외 법인 참가자 인솔", "한국 문화 체험 행사 기획/진행"].join(
-            ", ",
-        ),
+        date: "2014.5, 2015.5",
+        tasks: joinCommas("해외 법인 참가자 지원 업무"),
         story: [
             "국내외 법인에서 참가하는 사내 기술 경진대회에서 해외 법인 참가자를 담당했습니다. ",
             "해외 참가자들의 비자 관리, 한국 문화 체험 행사, 숙소/교통편 등의 업무를 지원했습니다.\n",
-            "이 과정에서 다양한 문화를 가진 사람들과 소통하는 경험을 했습니다.",
+            "다양한 문화를 가진 사람들과 소통하는 경험을 했습니다.",
         ].join(""),
     } satisfies ExpStoryObj,
     "20150060": {
@@ -84,19 +80,19 @@ const ko = {
         header: "삼성전자 기능올림픽 훈련센터 지도위원",
         period: "2013.9 ~ 2015.9",
         role: "국가대표 지도위원",
-        tech: ["(C#) Windows App 개발", "(SQL Server) DB 설계"].join(", "),
-        result: [
+        tech: joinCommas("(C#) Windows App 개발", "(SQL Server) DBMS"),
+        result: joinCommas(
             "한국 은메달(2위) 수상",
-            "베트남 동메달(3위) 수상",
             "고용노동부 장관 표창",
+            "베트남 동메달(3위) 수상",
             "베트남 국가 총리 표창",
-        ].join(", "),
+        ),
         urlText: "기능올림픽 입상 보도",
         urls: "https://www.yna.co.kr/view/AKR20150818116700003",
         tasks: "국가대표 선수 훈련 프로그램 개발",
         story: [
             "기능올림픽 수상 이후, 한국/베트남 국가대표 선수 지도를 담당했습니다.",
-            "지도 선수 모두 수상을 하여 A등급의 고과 평가를 받았으며,",
+            "지도 선수 모두 수상을 하여 고과 평가 A를 받았으며,",
             "베트남은 국가 최초 메달 수상으로 베트남에 초청되어 국가 총리의 표창을 받았습니다.",
         ].join(" "),
     } satisfies ExpStoryObj,
@@ -108,49 +104,48 @@ const ko = {
         summary: "S/W 개발 전문성을 키우기 위해 부서 이동 신청",
     } satisfies ExpStoryObj,
     "20170020": {
-        header: "웹 기반 사내 업무 시스템 구축",
+        header: "웹 기반 사내 업무 시스템 개발",
         period: "2016 상반기",
-        tech: [
+        role: "웹 풀스택 개발",
+        tech: joinCommas(
             "(Server OS) Windows Server",
             "(DB) MariaDB",
             "(Backend) C# ASP.Net MVC",
             "(Frontend) JQuery / Bootstrap",
-        ].join(", "),
-        tasks: [
+        ),
+        tasks: "요구사항 분석 및 주도적 기능 개발",
+        feat: joinCommas(
             "사내 표준 업무 시스템과 SSO 계정 연동",
-            "TinyMCE 에디터 기반 컨텐츠 작성 기능 개발",
-            "컨텐츠 pdf 내보내기 기능 개발",
-            "업무 보고/과제 일정 관리 기능 개발",
-            "주기적 메일링 서비스 기능 개발",
-        ].join(", "),
-        summary: "150명의 임직원용 사내 업무 시스템 개발",
+            "TinyMCE 에디터 기반 컨텐츠 작성",
+            "주기적 메일링 서비스",
+        ),
         story: [
-            "사업부의 IT 시스템은 큰 SI 업체에 의존하고 있어, 기능 개발 요청 시 큰 비용이 발생하고 있었습니다.",
+            "사업부의 IT 시스템은 큰 SI 업체에 의존하고 있어, 기능 개발 요청 시 큰 비용이 발생하고 있었습니다. ",
             "팀에서 필요한 업무 시스템을 직접 만들기로 기획하고 요구사항 전체를 개발하는 역할을 맡았습니다.",
-            "\n",
-            "\n제가 회사에서 맡은 첫 번째 S/W 개발 과제였고, 기능을 개발하며 얻는 성취가 있었습니다.",
-        ].join(" "),
+            "\n\n",
+            "지시가 없더라도 불편함이 보이면 스스로 개선하며 얻는 성취가 있었습니다.",
+        ].join(""),
     } satisfies ExpStoryObj,
     "20170030": {
         header: "해외 법인 종합 관제실 시스템 구축",
         period: "2016 하반기",
-        tech: [
+        role: "웹 풀스택 개발",
+        tech: joinCommas(
             "(Server OS) Windows Server",
             "(DB) MariaDB",
             "(Backend) C# ASP.Net MVC",
             "(Frontend) Telerik Kendo UI",
             "(Windows) WPF / Service",
-        ].join(", "),
-        tasks: [
-            "서버 사이드 개발 (DB / API)",
-            "웹 / Windows 대쉬보드 화면 개발",
-            "데이터 동기화 윈도우 서비스 개발",
-        ].join(", "),
-        issue: [
+        ),
+        feat: joinCommas(
+            "서버 DB 설계 / API 개발",
+            "웹 / Windows 대쉬보드 화면",
+            "데이터 동기화 윈도우 서비스",
+        ),
+        issue: joinCommas(
             "해외 타임존/썸머 타임 문제",
             "내부 인트라 네트워킹 보안망 문제",
-        ].join(", "),
-        summary: "해외 법인 실시간 생산 현황 모니터링 시스템 개발",
+        ),
         story: [
             "14개 해외 법인의 실시간 생산 현황을 모니터링하고 보여주는 시스템을 개발했습니다.",
             "제조 실행 시스템(MES) API를 호출하여 관제실 DB를 동기화시키고 대쉬보드 화면을 개발했습니다.",
@@ -158,37 +153,45 @@ const ko = {
     } satisfies ExpStoryObj,
     "20170050": {
         header: "환경 데이터 수집 IoT 프로젝트",
-        period: "2017",
-        tech: [
-            "(IoT) Raspberry Pi",
-            "(IoT OS) Raspbian",
-            "(Message Broker) MQTT",
+        period: "2017 상반기",
+        role: "웹 풀스택 개발자",
+        tech: joinCommas(
             "(DB) MariaDB",
             "(Backend) C# ASP.Net MVC",
-        ].join(", "),
-        tasks: ["Server 사이드 개발 (DB / API)", "웹 대쉬보드 화면 개발"].join(
-            ", ",
+            "(IoT) Raspberry Pi (Linux Raspbian)",
+            "(Message Broker) Mosquitto",
         ),
-        summary: "IoT 기기로 데이터 수집 및 웹 대쉬보드 개발",
+        tasks: joinCommas(
+            "서버 사이드 개발 (DB / API)",
+            "메시지 브로커를 이용한 데이터 수집/가공",
+            "웹 대쉬보드 화면 개발",
+        ),
         story: [
-            "먼지, 조도, 소음 등의 공정에서 발생하는 환경 데이터를 IoT 기기로 수집하고, 이를 분석하여 공정 개선에 활용하는 과제에 투입되었습니다.",
-            "IoT 기기와 센서 통신 연동은 다른 엔지니어가 담당하였고,",
-            "저는 데이터 수집 서버와 웹 화면을 개발했습니다.",
+            "먼지, 조도, 소음 등의 공정에서 발생하는 환경 데이터를 IoT 기기로 수집하고, 이를 공정 환경 분석에 활용하는 과제입니다.",
+            "IoT 기기와 센서 연동은 다른 엔지니어가 담당하였습니다.",
         ].join("\n"),
     } satisfies ExpStoryObj,
     "20170060": {
         header: "제조 생산 예측 시뮬레이터",
         period: "2017",
-        tasks: [
+        tasks: joinCommas(
             "시뮬레이터 Windows App 개발",
             "데이터 계산 로직 성능 최적화",
-        ].join(", "),
-        issue: ["문서 DRM 보안 충돌"].join(", "),
+        ),
+        tech: joinCommas(
+            "Excel Automation",
+            "(Windows) WPF",
+            "(ORM) Entity Framework",
+        ),
+        issue: joinCommas(
+            "문서 DRM 보안 충돌",
+            "수백만 데이터 처리 알고리즘 성능",
+        ),
+        feat: joinCommas(),
         story: [
-            "수십명의 공정 전문가들이 몇 개월씩 분석이 필요한 생산량 예측 작업을 자동화하는 과제였습니다.",
-            "",
-            "제조라는 것이 변수가 너무나도 많고 불량 데이터 문제와 다른 긴급 업무 지원으로 큰 성과를 내지는 못하고 종료되어 아쉬웠던 과제입니다. ",
-        ].join("\n"),
+            "수십명의 공정 전문가들이 몇 개월씩 분석이 필요한 생산량 예측 작업을 자동화하는 프로젝트입니다.",
+            "제조 현장의 변수와 불량 데이터 문제로 큰 성과를 내지 못하여 아쉬웠던 경험입니다.",
+        ].join(" "),
     } satisfies ExpStoryObj,
     "20170070": {
         header: "공정 프로세스 모니터링 프로젝트",
@@ -235,10 +238,6 @@ const ko = {
         result: "Lv6 Intermediate 등급 취득",
         urls: "https://vgc.ca/",
         urlText: "VGC",
-        story: [
-            "개발자로서 역량을 키우기 위해 영어가 중요하다고 생각했습니다.",
-            "영어권을 경험하고자 캐나다 밴쿠버에 어학연수를 다녀왔습니다.",
-        ].join("\n"),
     } satisfies ExpStoryObj,
     "20210040": {
         header: "이노룰스 기술연구소 입사",
@@ -247,18 +246,19 @@ const ko = {
     "20210060": {
         header: "정부 연구개발 과제",
         period: "2020.11 ~ 2021.3",
-        tasks: [
+        tasks: joinCommas(
             "Electron App Win/Linux/Mac 크로스 플랫폼 개발",
             "RPA 스크립트 실행 성능 최적화",
             "TTA 인증 시험 업무 지원",
-        ].join(", "),
-        tech: [
+            "Windows Sandbox 활용한 가상 테스팅 환경 구축",
+        ),
+        tech: joinCommas(
             "Java",
             "Python",
             "Electron",
             "(Backend) Koa.js",
             "(Frontend) Vue.js",
-        ].join(", "),
+        ),
         story: ``.trim(),
     } satisfies ExpStoryObj,
     "20210070": {
