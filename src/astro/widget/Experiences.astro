@@ -165,7 +165,9 @@ const projectTabs: ExpTabList[] = [
     function activeTabButton(tabId: number, moveScroll = true) {
         // reset is-active
         tabButtons.forEach((el) => el.classList.remove("is-active"));
+        tabContents.forEach((el) => el.classList.remove("is-active"));
         tabButtons[tabId].classList.add("is-active");
+        tabContents[tabId].classList.add("is-active");
 
         if (moveScroll)
             expHeader.scrollIntoView({
@@ -173,10 +175,6 @@ const projectTabs: ExpTabList[] = [
                 block: "nearest",
             });
         expWrapper.style.setProperty("--active-tab-index", `${tabId}`);
-        expWrapper.style.setProperty(
-            "--tab-max-height",
-            `${tabContents[tabId].scrollHeight}px`,
-        );
     }
 
     function getDefaultTabId() {
@@ -254,6 +252,10 @@ const projectTabs: ExpTabList[] = [
         &:first-child {
             margin-left: calc(var(--active-tab-index) * -100%);
         }
+
+        &:not(.is-active) {
+            max-height: 0;
+        }
     }
 
     .tab-contents {
@@ -268,7 +270,6 @@ const projectTabs: ExpTabList[] = [
             100% + var(--spacing-doc-pad-right) + var(--spacing-doc-pad-left)
         );
         margin-left: calc(var(--spacing-doc-pad-left) * -1);
-        max-height: var(--tab-max-height);
     }
 
     .tab-button {
