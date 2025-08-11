@@ -13,7 +13,9 @@ export type ExpProps =
     | "urls"
     | "feat"
     | "urlText"
-    | "story";
+    | "story"
+    | "imgUrls"
+    | "imgLabel";
 
 export type ExpKey = keyof typeof ko;
 
@@ -272,13 +274,23 @@ const ko = {
         ].join(""),
     } satisfies ExpStoryObj,
     "20210070": {
-        header: "플로우차트 UI 컴포넌트 라이브러리 개발",
+        header: "플로우차트 UI 컴포넌트 라이브러리",
         period: "2021.4 ~ 2021.6",
+        role: "웹 프런트엔드 라이브러리 개발",
         tasks: "",
         tech: joinCommas("D3.js", "TypeScript"),
-        feat: joinCommas(),
-        urlText: "스토리북 예제",
+        feat: joinCommas(
+            "객체 추가 / 선택 / 드래그 앤 드롭 모드",
+            "내부 작업 Undo / Redo",
+            "연결선 처리 알고리즘",
+        ),
+        urlText: "스토리북 컴포넌트 예제",
         urls: "https://lee-gyu.github.io/storybook/?path=/story/js-components-irflowchart--basic",
+        story: [
+            "데스크탑 기반의 레거시 클라이언트를 웹으로 포팅하기 위해 시작한 과제입니다.",
+            "기존 데스크탑에서 제공하는 사용성을 웹에서도 동일하게 제공하기 위해 노력했습니다.",
+            "\n당시 svg 요소를 제어하는 기술이 미흡하여 D3.js를 활용하고, 개발 편의성을 위해 TypeScript로 타입 힌트를 제공했습니다.",
+        ].join(" "),
     } satisfies ExpStoryObj,
     "20210080": {
         header: "사내 웹 SDK 배포 환경 구축",
@@ -288,16 +300,29 @@ const ko = {
             "사내 스토리북 사이트 구축",
             "Jenkins 기반 자동화 배포 파이프라인 구축",
         ),
-        tech: joinCommas("Docker", "Jenkins", "Storybook"),
+        tech: joinCommas("Docker", "Jenkins", "Storybook", "GitLab"),
         story: [
             "당시 Node.js, npm를 활용하지 못해 버전 관리나 패키지 배포에 번거로움이 있었습니다.",
             "개발 패키지 설치를 쉽게 하는 환경을 구축했습니다.",
+            "라이브러리 소스를 특정 브랜치에 커밋하면 배포되도록 자동화 흐름을 만들었습니다.",
         ].join(" "),
     } satisfies ExpStoryObj,
     "20210090": {
         header: "UI 스타일 리뉴얼 프로젝트",
-        period: "2021.7 ~ 2022.3",
-        // 피그마, 레거시, 협업 방법, 등등.. 프리랜서 디자이너
+        period: "2021.7 ~ 2021.12",
+        summary: "프리랜서 디자이너와 협업하여 UI 스타일 리뉴얼",
+        tasks: joinCommas(
+            "프로젝트 협업 환경 구축",
+            "CSS 스타일 적용 체계 구축",
+        ),
+        tech: joinCommas("Figma"),
+        imgUrls: joinCommas(
+            "/img/20210090_1.png",
+            "/img/20210090_2.png",
+            "/img/20210090_3.png",
+            "/img/20210090_4.png",
+        ),
+        imgLabel: joinCommas("#1 기존", "#1 리뉴얼", "#2 기존", "#2 리뉴얼"),
     } satisfies ExpStoryObj,
 
     // 2023 ~

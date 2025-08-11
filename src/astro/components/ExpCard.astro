@@ -5,6 +5,7 @@ import Title from "src/astro/components/Title.astro";
 import { listItemsCss } from "src/styles/component-css";
 import ListItems from "./ListItems.astro";
 import UrlListItems from "./UrlListItems.astro";
+import ImgList from "./ImgList.astro";
 
 type Props = {
     expId: ExpKey;
@@ -40,6 +41,11 @@ const expData = experiencesKo[expId];
             <label class="exp-details">
                 <p class="exp-story">{expData.story}</p>
             </label>
+        )
+    }
+    {
+        expData.imgUrls && expData.imgLabel && (
+            <ImgList imgUrls={expData.imgUrls} imgLabel={expData.imgLabel} />
         )
     }
 </li>
