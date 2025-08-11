@@ -105,8 +105,8 @@ const projectTabs: ExpTabList[] = [
                     type="button"
                     class:list={[
                         "tab-button",
-                        numAdjCss,
                         id === 0 && "is-active",
+                        id > 0 && numAdjCss,
                     ]}
                     data-tab-id={tab.id}
                     data-tab-index={id}
@@ -196,7 +196,7 @@ const projectTabs: ExpTabList[] = [
 
 <style>
     :root {
-        --tab-button-width: 64px;
+        --tab-button-width: 54px;
         --tab-button-gap: 4px;
         --tab-ani-duration: 0.5s;
     }
@@ -229,7 +229,7 @@ const projectTabs: ExpTabList[] = [
             );
             width: calc(var(--tab-button-width));
             bottom: 0.25rem;
-            background-color: var(--colors-accent-o10);
+            background-color: var(--colors-accent-o20);
             border-radius: 0.5rem;
         }
     }

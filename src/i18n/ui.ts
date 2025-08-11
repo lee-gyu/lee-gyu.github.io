@@ -91,13 +91,13 @@ export const ui = {
         "exp.label.summary": "내용",
         "exp.label.issue": "주요 이슈",
 
-        "exp.tab.2025": "2025~",
+        "exp.tab.2025": "최근",
         "exp.tab.2025.header": "이노룰스 기술연구소 (책임 연구원)",
-        "exp.tab.2023": "2023~",
+        "exp.tab.2023": "2023",
         "exp.tab.2023.header": "이노룰스 기술연구소 (선임 연구원)",
-        "exp.tab.2021": "2021~",
+        "exp.tab.2021": "2021",
         "exp.tab.2021.header": "이노룰스 기술연구소 입사",
-        "exp.tab.2017": "2017~",
-        "exp.tab.2015": "2015~",
+        "exp.tab.2017": "2017",
+        "exp.tab.2015": "2015",
     },
 } as const;
