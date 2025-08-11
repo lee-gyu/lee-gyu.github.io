@@ -12,13 +12,14 @@ const ICON_LIST = [
     "vsc-github",
     "vsc-book",
     "io5-lang",
+    "io5-open",
     "ri-speak-ai-fill",
     "ri-speak-line-outline",
     "bs-sort-num-asc",
     "bs-sort-num-desc",
 ] as const;
 
-type IconProps = {
+export type IconProps = {
     icon: (typeof ICON_LIST)[number];
 };
 

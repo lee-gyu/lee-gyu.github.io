@@ -1,0 +1,10 @@
+---
+import type { IconProps } from "src/solid/components/Icon";
+import { iconCss } from "src/styles/component-css";
+
+type Props = IconProps;
+
+const { icon } = Astro.props;
+---
+
+<i class={iconCss} style={`--icon-mask: var(--icon-${icon})`}></i>
