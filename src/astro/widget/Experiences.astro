@@ -196,6 +196,7 @@ const projectTabs: ExpTabList[] = [
     :root {
         --tab-button-width: 54px;
         --tab-button-gap: 4px;
+        --tab-button-offset: -13px;
         --tab-ani-duration: 0.5s;
     }
 
@@ -209,7 +210,9 @@ const projectTabs: ExpTabList[] = [
         align-items: end;
         margin-left: calc(var(--spacing-doc-pad-left) * -1);
         margin-right: calc(var(--spacing-doc-pad-right) * -1);
-        padding-left: calc(var(--spacing-doc-pad-left) - 0.6rem);
+        padding-left: calc(
+            var(--spacing-doc-pad-left) + var(--tab-button-offset)
+        );
         background-color: var(--colors-background-light);
 
         & > li {
@@ -222,8 +225,11 @@ const projectTabs: ExpTabList[] = [
             position: absolute;
             top: 0.25rem;
             left: calc(
-                -0.6rem + var(--spacing-doc-pad-left) + (var(--active-tab-index) *
-                            (var(--tab-button-width) + var(--tab-button-gap)))
+                var(--tab-button-offset) + var(--spacing-doc-pad-left) +
+                    (
+                        var(--active-tab-index) *
+                            (var(--tab-button-width) + var(--tab-button-gap))
+                    )
             );
             width: calc(var(--tab-button-width));
             bottom: 0.25rem;
@@ -260,7 +266,6 @@ const projectTabs: ExpTabList[] = [
 
     .tab-contents {
         background-color: var(--colors-background);
-        transition: max-height var(--tab-ani-duration) ease-in-out;
         display: flex;
         overflow: hidden;
         scrollbar-width: none;

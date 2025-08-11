@@ -9,6 +9,7 @@ import { css } from "src/styled-system/css";
 import { useTranslations } from "src/i18n/utils";
 import Experiences from "../widget/Experiences.astro";
 import Awards from "../widget/Awards.astro";
+import Skills from "../components/Skills.astro";
 
 type Props = {};
 
@@ -52,6 +53,10 @@ const sectionCss = css({
         <section class={sectionCss} role="article">
             <Title id="career" size="h3">{`${t("career")}`}</Title>
             <Career />
+        </section>
+        <section class={sectionCss} role="article">
+            <Title id="skills" size="h3">{`${t("skills")}`}</Title>
+            <Skills />
         </section>
         <section class={sectionCss} role="article">
             <Title id="awards" size="h3">{`${t("awards")}`}</Title>

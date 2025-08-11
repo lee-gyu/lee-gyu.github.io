@@ -41,9 +41,9 @@ const ko = {
         period: "2013.1 ~ 2013.8",
         role: "기능올림픽 정보기술 직종 국가대표",
         tech: joinCommas(
-            "(VBA) 업무 프로그램 개발",
-            "(MS Access) Database",
-            "(Word/PPT) 업무 문서 작성",
+            "(Docs) MS Office",
+            "(DBMS) MS Access",
+            "VBA 프로그래밍",
         ),
         result: joinCommas("금메달(1위) 수상 / 동탑산업훈장 표창"),
         urlText: "삼성 뉴스룸 기사, 대회 점수, 수상자 사진",
@@ -56,7 +56,7 @@ const ko = {
     "20150040": {
         header: "기능올림픽 특별채용 전형 업무",
         date: "2013.10, 2014.10",
-        summary: "대기업 채용 프로세스를 인사 담당자 관점에서 경험",
+        summary: "대기업 채용 프로세스를 HR 관점에서 경험",
     } satisfies ExpStoryObj,
     "20150050": {
         header: "글로벌 사내 경진대회 행사 업무",
@@ -82,7 +82,7 @@ const ko = {
         header: "삼성전자 기능올림픽 훈련센터 지도위원",
         period: "2013.9 ~ 2015.9",
         role: "국가대표 지도위원",
-        tech: joinCommas("(C#) Windows App 개발", "(SQL Server) DBMS"),
+        tech: joinCommas("(Client) C# Windows", "(DBMS) SQL Server"),
         result: joinCommas(
             "한국 은메달(2위) 수상",
             "고용노동부 장관 표창",
@@ -102,23 +102,24 @@ const ko = {
     "20150080": {
         header: "삼성전자 VD사업부 전배",
         date: "2015.9",
-        summary: "S/W 전문성을 개발하기 위해 부서 이동",
+        summary: "S/W 전문성을 키우기 위해 부서 이동",
     } satisfies ExpStoryObj,
 
     "20170020": {
         header: "웹 기반 사내 업무 시스템 개발",
         period: "2016.1 ~ 2016.5",
         tech: joinCommas(
-            "(DB) MariaDB",
+            "(DBMS) MariaDB",
             "(Server OS) Windows Server",
             "(Backend) C# ASP.NET MVC",
+            "(ORM) Entity Framework",
             "(Frontend) JQuery / Bootstrap",
         ),
         role: joinCommas("웹 풀스택 개발"),
         feat: joinCommas(
             "사내 표준 업무 시스템과 SSO 계정 연동",
             "TinyMCE 에디터 기반 컨텐츠 작성",
-            "주기적 메일링 서비스",
+            "데이터 리포트 메일링",
         ),
         story: [
             "사업부의 IT 시스템은 큰 SI 업체에 의존하고 있어, 기능 개발 요청 시 큰 비용이 발생하고 있었습니다. ",
@@ -132,15 +133,12 @@ const ko = {
         period: "2016.6 ~ 10",
         role: "웹 풀스택 개발",
         tech: joinCommas(
-            "(DB) MariaDB",
+            "(DBMS) MariaDB",
             "(Server OS) Windows Server",
             "(Backend) C# ASP.Net MVC",
-            "(Frontend) Telerik Kendo UI",
+            "(ORM) Entity Framework",
+            "(Frontend) JQuery / Telerik Kendo UI",
             "(Windows) WPF / Service",
-        ),
-        feat: joinCommas(
-            "웹 / Windows 대쉬보드 화면",
-            "데이터 동기화 윈도우 서비스",
         ),
         issue: joinCommas(
             "해외 타임존/썸머 타임 문제",
@@ -152,18 +150,15 @@ const ko = {
         ].join("\n"),
     } satisfies ExpStoryObj,
     "20170050": {
-        header: "환경 데이터 수집 IoT 프로젝트",
+        header: "IoT 환경 데이터 수집",
         period: "2017.1 ~ 2017.5",
         role: "웹 풀스택 개발",
         tech: joinCommas(
-            "(DB) MariaDB",
-            "(Backend) C# ASP.NET MVC",
-            "(Message Broker) Mosquitto",
             "(IoT) Raspberry Pi (Linux Raspbian)",
-        ),
-        feat: joinCommas(
-            "웹 대쉬보드 화면",
-            "메시지 브로커를 통하여 데이터 수집/가공",
+            "(DBMS) MariaDB",
+            "(Backend) C# ASP.NET MVC",
+            "(ORM) Entity Framework",
+            "(Message Broker) Mosquitto",
         ),
         story: [
             "먼지, 조도, 소음 등의 공정에서 발생하는 환경 데이터를 IoT 기기로 수집하고, 이를 공정 환경 분석에 활용하는 과제입니다.",
@@ -201,21 +196,21 @@ const ko = {
     } satisfies ExpStoryObj,
 
     "20170070": {
-        header: "공정 프로세스 모니터링 프로젝트",
+        header: "공정 프로세스 현황 모니터링",
         date: "2017.9 ~ 2018.1",
         role: "웹 풀스택 개발",
-        tech: joinCommas("(Backend) C# ASP.NET MVC", "(Frontend) TypeScript"),
-        feat: joinCommas(
-            "서버 API 개발",
-            "공정 레이아웃을 표현하는 화면",
-            "작업 데이터 리포팅",
+        tech: joinCommas(
+            "(DBMS) MariaDB",
+            "(Backend) C# ASP.NET MVC",
+            "(ORM) Entity Framework",
+            "(Frontend) TypeScript",
         ),
         story: [
-            "공정 프로세스는 부품 조립, 검사, 포장 등의 단계를 직렬로 거칩니다.",
+            "공정 프로세스는 조립-검사-포장 등의 단계를 순차적으로 거칩니다.",
             "평균보다 지연되는 작업이 있는 경우, 전체 생산성에 영향을 미칩니다.",
-            "공정의 PLC에서 작업 신호를 수신하여 처리 시간을 계산하고, 처리 현황을 보여주는 웹 화면을 개발했습니다.",
+            "어떤 공정에서 병목이 있는지 분석하기 위해 PLC 신호를 수신하여 작업 시간을 계산하고, 전체 공정 현황을 보여주는 웹 화면을 개발했습니다.",
             "",
-            "처음으로 개발 환경에 Node.js와 타입스크립트를 도입했던 과제였습니다.",
+            "개발 환경에 Node.js와 타입스크립트를 처음으로 도입했었습니다.",
         ].join("\n"),
     } satisfies ExpStoryObj,
 
@@ -223,14 +218,14 @@ const ko = {
         header: "삼성전자 퇴사",
         date: "2018.7",
         story: [
-            "근무하던 부서에서 S/W 기술은 잠깐 보여주고 개발이 종료되는 일이 많았습니다.",
+            "근무 부서에서 S/W 기술은 잠깐 보여주고 종료되는 일이 많았습니다.",
             "산업군을 IT 서비스로 변경하고 싶어 퇴사를 결정했습니다.",
-        ].join(" "),
+        ].join("\n"),
     } satisfies ExpStoryObj,
 
     "20210020": {
         header: "기능경기대회 학교 지도 강사",
-        period: "2019 ~ 2021",
+        period: "2019",
         summary: "지도 학생 3명 전국대회 은메달 수상",
     } satisfies ExpStoryObj,
     "20210030": {
@@ -243,11 +238,12 @@ const ko = {
     "20210040": {
         header: "이노룰스 기술연구소 입사",
         date: "2020.10",
+        story: "IT 서비스를 제공하는 B2B 솔루션 회사에 입사했습니다.",
     } satisfies ExpStoryObj,
     "20210060": {
         header: "정부 연구개발 과제",
         period: "2020.11 ~ 2021.3",
-        summary: "RPA AI 소프트웨어 개발",
+        summary: "RPA 소프트웨어 개발",
         tasks: joinCommas(
             "내부 시스템 풀스택 개발",
             "TTA 인증 시험 업무 지원",
@@ -259,10 +255,11 @@ const ko = {
             "Windows Sandbox 활용 가상 테스팅 환경 구축",
         ),
         tech: joinCommas(
-            "Java / Python",
+            "(ETC) Java / Python",
             "(Backend) Koa.js",
             "(Frontend) Vue.js / Electron",
-            "(시스템 배포) Docker",
+            "(Container) Docker",
+            "(Server OS) Linux Ubuntu",
         ),
         issue: joinCommas(
             "RPA 스크립트 실행 성능 문제",
@@ -279,12 +276,12 @@ const ko = {
     "20210070": {
         header: "플로우차트 UI 컴포넌트 라이브러리",
         period: "2021.4 ~ 2021.6",
-        role: "웹 프런트엔드 라이브러리 개발",
-        tasks: "",
-        tech: joinCommas("D3.js", "TypeScript"),
+        role: "UI 기술 개발",
+        tasks: "플로우차트 내부 시스템 설계 / 구현",
+        tech: joinCommas("(Frontend) D3.js TypeScript"),
         feat: joinCommas(
             "객체 추가 / 선택 / 드래그 앤 드롭 모드",
-            "내부 작업 Undo / Redo",
+            "사용자 액션 Undo / Redo",
             "연결선 처리 알고리즘",
         ),
         urlText: "스토리북 컴포넌트 예제",
@@ -303,7 +300,12 @@ const ko = {
             "사내 스토리북 사이트 구축",
             "Jenkins 기반 자동화 배포 파이프라인 구축",
         ),
-        tech: joinCommas("Docker", "Jenkins", "Storybook", "GitLab"),
+        tech: joinCommas(
+            "(Container) Docker",
+            "(CI/CD) Jenkins",
+            "(Docs) Storybook",
+            "(VCS) GitLab",
+        ),
         story: [
             "당시 Node.js, npm를 활용하지 못해 버전 관리나 패키지 배포에 번거로움이 있었습니다.",
             "개발 패키지 설치를 쉽게 하는 환경을 구축했습니다.",
@@ -313,11 +315,12 @@ const ko = {
     "20210090": {
         header: "UI 스타일 리뉴얼 프로젝트",
         period: "2021.7 ~ 2022.3",
-        summary: "프리랜서 디자이너와 협업하여 UI 스타일 리뉴얼",
+        summary: "프리랜서와 협업하여 제품 디자인 리뉴얼",
         tasks: joinCommas(
             "리뉴얼을 위한 기존 화면 전수 조사",
             "프로젝트 협업 환경 구축",
             "CSS 토큰/공용 스타일 적용 체계 구축",
+            "레거시 UI 화면 적용 및 개발팀 가이드",
         ),
         tech: joinCommas("Figma"),
         imgUrls: joinCommas(

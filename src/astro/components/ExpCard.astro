@@ -35,17 +35,23 @@ const expData = experiencesKo[expId];
             urls={expData.urls}
             urlText={expData.urlText}
         />
+        {
+            expData.imgUrls && expData.imgLabel && (
+                <li>
+                    <span>참고 이미지 :</span>
+                    <ImgList
+                        imgUrls={expData.imgUrls}
+                        imgLabel={expData.imgLabel}
+                    />
+                </li>
+            )
+        }
     </ul>
     {
         expData.story && (
             <label class="exp-details">
                 <p class="exp-story">{expData.story}</p>
             </label>
-        )
-    }
-    {
-        expData.imgUrls && expData.imgLabel && (
-            <ImgList imgUrls={expData.imgUrls} imgLabel={expData.imgLabel} />
         )
     }
 </li>

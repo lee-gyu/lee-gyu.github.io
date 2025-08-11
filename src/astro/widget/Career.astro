@@ -2,6 +2,7 @@
 import { useTranslations } from "src/i18n/utils";
 import { listItemsCss } from "src/styles/component-css";
 import Keywords from "../components/Keywords.astro";
+import { splitCommas } from "src/utils/string";
 
 const t = useTranslations(Astro.currentLocale as Lang);
 
@@ -9,23 +10,17 @@ const careerData = [
     {
         title: t("career.0.header"),
         content: t("career.0.content"),
-        keywords: t("career.0.content.keywords")
-            .split(",")
-            .map((keyword) => keyword.trim()),
+        keywords: splitCommas(t("career.0.content.keywords")),
     },
     {
         title: t("career.1.header"),
         content: t("career.1.content"),
-        keywords: t("career.1.content.keywords")
-            .split(",")
-            .map((keyword) => keyword.trim()),
+        keywords: splitCommas(t("career.1.content.keywords")),
     },
     {
         title: t("career.2.header"),
         content: t("career.2.content"),
-        keywords: t("career.2.content.keywords")
-            .split(",")
-            .map((keyword) => keyword.trim()),
+        keywords: splitCommas(t("career.2.content.keywords")),
     },
 ];
 ---
@@ -36,6 +31,7 @@ const careerData = [
             <li>
                 <h6>{title}</h6>
                 <span>{content}</span>
+                <br />
                 <Keywords keywords={keywords} />
             </li>
         ))
