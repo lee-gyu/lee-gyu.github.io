@@ -97,13 +97,23 @@ export const ui = {
 
         skills: "메인 기술",
         "skills.10.label": "Backend",
-        "skills.10.keywords": joinCommas("Nest.js", "J2EE"),
+        "skills.10.keywords": joinCommas("Nest.js", "TypeORM", "Drizzle"),
         "skills.20.label": "Frontend",
-        "skills.20.keywords": joinCommas("Next.js", "React", "SolidJS"),
+        "skills.20.keywords": joinCommas(
+            "Next.js",
+            "Astro",
+            "React",
+            "SolidJS",
+        ),
         "skills.40.label": "프로그래밍 언어",
-        "skills.40.keywords": joinCommas("JavaScript", "TypeScript", "Java"),
+        "skills.40.keywords": joinCommas(
+            "JavaScript",
+            "TypeScript",
+            "Java",
+            "C#",
+        ),
         "skills.50.label": "기타 S/W",
-        "skills.50.keywords": joinCommas("GitLab", "Docker", "Jenkins"),
+        "skills.50.keywords": joinCommas("GitLab", "Docker", "Jenkins", "J2EE"),
 
         "exp.label.role": "역할",
         "exp.label.date": "일자",
@@ -117,13 +127,7 @@ export const ui = {
         "exp.label.summary": "내용",
         "exp.label.issue": "주요 이슈",
 
-        "exp.tab.2025": "최근",
-        "exp.tab.2025.header": "이노룰스 기술연구소 (책임 연구원)",
-        "exp.tab.2023": "2023",
-        "exp.tab.2023.header": "이노룰스 기술연구소 (선임 연구원)",
-        "exp.tab.2021": "2021",
-        "exp.tab.2021.header": "이노룰스 기술연구소 입사",
-        "exp.tab.2017": "2017",
-        "exp.tab.2015": "2015",
+        "exp.tab.2025": "이노룰스",
+        "exp.tab.2018": "삼성전자",
     },
 } as const;

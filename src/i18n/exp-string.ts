@@ -45,10 +45,9 @@ const ko = {
             "(DBMS) MS Access",
             "VBA 프로그래밍",
         ),
-        result: joinCommas("금메달(1위) 수상 / 동탑산업훈장 표창"),
-        urlText: "삼성 뉴스룸 기사, 대회 점수, 수상자 사진",
+        result: joinCommas("금메달(1위) 수상", "동탑산업훈장 대통령 표창"),
+        urlText: joinCommas("대회 점수", "수상자 사진"),
         urls: joinCommas(
-            "https://news.samsung.com/kr/4590",
             "https://results.worldskills.org/results?event=9&offset=0&skill=345&base_skill=221",
             "https://www.flickr.com/photos/worldskills/9235939100/in/album-72157634532467264/",
         ),
@@ -105,12 +104,11 @@ const ko = {
         summary: "S/W 전문성을 키우기 위해 부서 이동",
     } satisfies ExpStoryObj,
 
-    "20170020": {
+    "20180020": {
         header: "웹 기반 사내 업무 시스템 개발",
         period: "2016.1 ~ 2016.5",
         tech: joinCommas(
             "(DBMS) MariaDB",
-            "(Server OS) Windows Server",
             "(Backend) C# ASP.NET MVC",
             "(ORM) Entity Framework",
             "(Frontend) JQuery / Bootstrap",
@@ -128,13 +126,12 @@ const ko = {
             "지시가 없더라도 불편함이 보이면 스스로 개선하며 얻는 성취가 있었습니다.",
         ].join(""),
     } satisfies ExpStoryObj,
-    "20170030": {
+    "20180030": {
         header: "해외 법인 종합 관제실 시스템 구축",
         period: "2016.6 ~ 10",
         role: "웹 풀스택 개발",
         tech: joinCommas(
             "(DBMS) MariaDB",
-            "(Server OS) Windows Server",
             "(Backend) C# ASP.Net MVC",
             "(ORM) Entity Framework",
             "(Frontend) JQuery / Telerik Kendo UI",
@@ -149,7 +146,7 @@ const ko = {
             "제조 실행 시스템(MES) API를 호출하여 관제실 DB를 동기화시키고 대쉬보드 화면을 개발했습니다.",
         ].join("\n"),
     } satisfies ExpStoryObj,
-    "20170050": {
+    "20180050": {
         header: "IoT 환경 데이터 수집",
         period: "2017.1 ~ 2017.5",
         role: "웹 풀스택 개발",
@@ -166,7 +163,7 @@ const ko = {
         ].join("\n"),
     } satisfies ExpStoryObj,
 
-    "20170055": {
+    "20180055": {
         header: "삼성전자 개발 직군 S/W 자격 검증 시험",
         date: "2017.6",
         result: "Pro 등급 취득",
@@ -175,7 +172,7 @@ const ko = {
         ].join("\n"),
     } satisfies ExpStoryObj,
 
-    "20170060": {
+    "20180060": {
         header: "제조 생산량 예측 시뮬레이터",
         date: "2017.6 ~ 8",
         role: "Windows App 개발",
@@ -195,7 +192,7 @@ const ko = {
         ].join(" "),
     } satisfies ExpStoryObj,
 
-    "20170070": {
+    "20180070": {
         header: "공정 프로세스 현황 모니터링",
         date: "2017.9 ~ 2018.1",
         role: "웹 풀스택 개발",
@@ -214,12 +211,12 @@ const ko = {
         ].join("\n"),
     } satisfies ExpStoryObj,
 
-    "20170080": {
+    "20180080": {
         header: "삼성전자 퇴사",
         date: "2018.7",
         story: [
-            "근무 부서에서 S/W 기술은 잠깐 보여주고 종료되는 일이 많았습니다.",
-            "산업군을 IT 서비스로 변경하고 싶어 퇴사를 결정했습니다.",
+            "근무 부서에서 개발 과제는 짧게 보여주고 종료되는 일이 많았습니다.",
+            "IT 서비스를 메인으로 하는 회사로 이직하고 싶어 퇴사를 결정했습니다.",
         ].join("\n"),
     } satisfies ExpStoryObj,
 
@@ -259,7 +256,6 @@ const ko = {
             "(Backend) Koa.js",
             "(Frontend) Vue.js / Electron",
             "(Container) Docker",
-            "(Server OS) Linux Ubuntu",
         ),
         issue: joinCommas(
             "RPA 스크립트 실행 성능 문제",

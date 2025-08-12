@@ -9,7 +9,6 @@ type Props = {};
 type ExpTabList = {
     id: string;
     tabCaption: string;
-    header: string;
     expKeyList: ExpKey[];
 };
 
@@ -20,8 +19,19 @@ const projectTabs: ExpTabList[] = [
     {
         id: "exp2025",
         tabCaption: t("exp.tab.2025"),
-        header: t("exp.tab.2025.header"),
         expKeyList: [
+            "20210030",
+            "20210040",
+            "20210060",
+            "20210070",
+            "20210080",
+            "20210090",
+            "20230010",
+            "20230020",
+            "20230040",
+            "20230050",
+            "20230060",
+            "20230070",
             "20250010",
             "20250020",
             "20250030",
@@ -31,62 +41,22 @@ const projectTabs: ExpTabList[] = [
             "20250070",
             "20250080",
             "20250090",
-        ],
+        ].reverse() as ExpKey[],
     },
     {
-        id: "exp2023",
-        tabCaption: t("exp.tab.2023"),
-        header: t("exp.tab.2023.header"),
+        id: "exp2018",
+        tabCaption: t("exp.tab.2018"),
         expKeyList: [
-            "20230010",
-            "20230020",
-            "20230040",
-            "20230050",
-            "20230060",
-            "20230070",
-        ],
-    },
-    {
-        id: "exp2021",
-        tabCaption: t("exp.tab.2021"),
-        header: t("exp.tab.2021.header"),
-        expKeyList: [
-            "20210020",
-            "20210030",
-            "20210040",
-            "20210060",
-            "20210070",
-            "20210080",
-            "20210090",
-        ],
-    },
-    {
-        id: "exp2017",
-        tabCaption: t("exp.tab.2017"),
-        header: t("career.1.content"),
-        expKeyList: [
-            "20170020",
-            "20170030",
-            "20170050",
-            "20170055",
-            "20170060",
-            "20170070",
-            "20170080",
-        ],
-    },
-    {
-        id: "exp2015",
-        tabCaption: t("exp.tab.2015"),
-        header: t("career.2.content"),
-        expKeyList: [
-            "20150010",
-            "20150020",
             "20150030",
-            "20150040",
-            "20150050",
-            "20150060",
             "20150070",
             "20150080",
+            "20180020",
+            "20180030",
+            "20180050",
+            "20180055",
+            "20180060",
+            "20180070",
+            "20180080",
         ],
     },
 ];
@@ -120,7 +90,6 @@ const projectTabs: ExpTabList[] = [
         {
             projectTabs.map((tab) => (
                 <div id={tab.id} class:list={["tab-content"]}>
-                    <header class="tab-contents-header">{tab.header}</header>
                     <ol class="tab-card-list">
                         {tab.expKeyList.map((expId) => (
                             <ExpCard expId={expId} />
@@ -194,9 +163,9 @@ const projectTabs: ExpTabList[] = [
 
 <style>
     :root {
-        --tab-button-width: 54px;
+        --tab-button-width: 80px;
         --tab-button-gap: 4px;
-        --tab-button-offset: -13px;
+        --tab-button-offset: -12px;
         --tab-ani-duration: 0.5s;
     }
 
@@ -214,6 +183,7 @@ const projectTabs: ExpTabList[] = [
             var(--spacing-doc-pad-left) + var(--tab-button-offset)
         );
         background-color: var(--colors-background-light);
+        border-bottom: 1px solid var(--colors-background);
 
         & > li {
             display: contents;
@@ -240,15 +210,6 @@ const projectTabs: ExpTabList[] = [
 
     .project-year-group {
         margin: 0.5rem 0;
-    }
-
-    .tab-contents-header {
-        padding-bottom: 0.5rem;
-        padding-left: var(--spacing-doc-pad-left);
-        background-color: var(--colors-background-light);
-        font-weight: 500;
-        font-size: 1.125rem;
-        color: var(--colors-text-light);
     }
 
     .tab-content {
@@ -303,7 +264,7 @@ const projectTabs: ExpTabList[] = [
         display: flex;
         flex-direction: column;
         row-gap: 0.5rem;
-        margin-top: 0.5rem;
+        margin-top: calc(0.5rem - 1px);
     }
 
     @media print {
