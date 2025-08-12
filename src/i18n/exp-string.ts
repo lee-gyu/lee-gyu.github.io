@@ -17,8 +17,6 @@ export type ExpProps =
     | "imgUrls"
     | "imgLabel";
 
-export type ExpKey = keyof typeof ko;
-
 type ExpStoryObj = Partial<Record<ExpProps, string>>;
 
 const ko = {
@@ -31,11 +29,11 @@ const ko = {
             "전국 대회에서 수상 후, 국가대표 선발전을 치뤄 1위를 했습니다.",
             "\n목표를 가지고 체계적으로 준비하는 과정을 경험했습니다.",
         ].join(" "),
-    } satisfies ExpStoryObj,
+    },
     "20150020": {
         header: "삼성전자 기능올림픽 특채 전형 입사",
         date: "2012.10",
-    } satisfies ExpStoryObj,
+    },
     "20150030": {
         header: "2013 국제기능올림픽 정보기술 직종 국가대표 훈련",
         period: "2013.1 ~ 2013.8",
@@ -51,12 +49,12 @@ const ko = {
             "https://results.worldskills.org/results?event=9&offset=0&skill=345&base_skill=221",
             "https://www.flickr.com/photos/worldskills/9235939100/in/album-72157634532467264/",
         ),
-    } satisfies ExpStoryObj,
+    },
     "20150040": {
-        header: "기능올림픽 특별채용 전형 업무",
+        header: "기능올림픽 입상자 전형 채용",
         date: "2013.10, 2014.10",
         summary: "대기업 채용 프로세스를 HR 관점에서 경험",
-    } satisfies ExpStoryObj,
+    },
     "20150050": {
         header: "글로벌 사내 경진대회 행사 업무",
         date: "2014.5, 2015.5",
@@ -66,7 +64,7 @@ const ko = {
             "해외 참가자들의 비자 관리, 한국 문화 체험 행사, 숙소/교통편 등의 업무를 지원했습니다.\n",
             "다양한 문화를 가진 사람들과 소통하는 경험을 했습니다.",
         ].join(""),
-    } satisfies ExpStoryObj,
+    },
     "20150060": {
         header: "조직문화 개선 활동 업무",
         period: "2014 ~ 2015",
@@ -76,7 +74,7 @@ const ko = {
             "Change Agent라는 직책으로 조직문화 개선을 위한 업무를 담당했습니다.",
             "조직문화 활동을 기획하여 임원부터 일반 직원 모두 참여하는 행사를 진행했습니다.",
         ].join(" "),
-    } satisfies ExpStoryObj,
+    },
     "20150070": {
         header: "삼성전자 기능올림픽 훈련센터 지도위원",
         period: "2013.9 ~ 2015.9",
@@ -98,7 +96,7 @@ const ko = {
             "\n\n",
             "이후 S/W 전문성을 키우기 위해 부서 이동을 신청하여 VD사업부로 전배되었습니다.",
         ].join(""),
-    } satisfies ExpStoryObj,
+    },
 
     "20180020": {
         header: "웹 기반 사내 업무 시스템 개발",
@@ -125,7 +123,7 @@ const ko = {
             "\n\n",
             "지시가 없더라도 불편함이 보이면 스스로 개선하며 얻는 성취가 있었습니다.",
         ].join(""),
-    } satisfies ExpStoryObj,
+    },
     "20180030": {
         header: "해외 법인 종합 관제실 시스템 구축",
         period: "2016.6 ~ 10",
@@ -146,7 +144,7 @@ const ko = {
             "14개 해외 법인의 실시간 생산 현황을 모니터링하고 보여주는 시스템을 개발했습니다.",
             "제조 실행 시스템(MES) API를 호출하여 관제실 DB를 동기화시키고 대쉬보드 화면을 개발했습니다.",
         ].join("\n"),
-    } satisfies ExpStoryObj,
+    },
     "20180050": {
         header: "IoT 환경 데이터 수집",
         period: "2017.1 ~ 2017.5",
@@ -162,7 +160,7 @@ const ko = {
             "먼지, 조도, 소음 등의 공정에서 발생하는 환경 데이터를 IoT 기기로 수집하고, 이를 공정 환경 분석에 활용하는 과제입니다.",
             "IoT 기기와 센서 연동을 담당하는 엔지니어와 협업한 과제입니다.",
         ].join("\n"),
-    } satisfies ExpStoryObj,
+    },
 
     "20180055": {
         header: "삼성전자 개발 직군 S/W 자격 검증 시험",
@@ -171,7 +169,7 @@ const ko = {
         story: [
             "사내 S/W 코딩 테스트 자격증 시험을 응시하여 당시 상위 15% 수준의 Pro 등급을 취득하여 인센티브로 약 100만원을 받았습니다.",
         ].join("\n"),
-    } satisfies ExpStoryObj,
+    },
 
     "20180060": {
         header: "제조 생산량 예측 시뮬레이터",
@@ -191,7 +189,7 @@ const ko = {
             "DB에 쌓인 제조 데이터를 이용하여 공정 전문가의 몇 개월 분석이 필요한 생산량 예측 작업을 자동화하는 프로젝트입니다.",
             "제조 현장의 변수와 불량 데이터 문제로 큰 성과를 내지 못하여 아쉬웠던 경험입니다.",
         ].join(" "),
-    } satisfies ExpStoryObj,
+    },
 
     "20180070": {
         header: "공정 프로세스 현황 모니터링",
@@ -210,7 +208,7 @@ const ko = {
             "",
             "개발 환경에 Node.js와 타입스크립트를 처음으로 도입했었습니다.",
         ].join("\n"),
-    } satisfies ExpStoryObj,
+    },
 
     "20180080": {
         header: "삼성전자 퇴사",
@@ -219,25 +217,32 @@ const ko = {
             "근무 부서에서 개발 과제는 짧게 보여주고 종료되는 일이 많았습니다.",
             "IT 서비스를 메인으로 하는 회사로 이직하고 싶어 퇴사를 결정했습니다.",
         ].join("\n"),
-    } satisfies ExpStoryObj,
+    },
 
     "20210020": {
         header: "기능경기대회 학교 지도 강사",
-        period: "2019",
-        summary: "지도 학생 3명 전국대회 은메달 수상",
-    } satisfies ExpStoryObj,
+        period: "2019 ~ 2021",
+        summary: joinCommas(
+            "2019 전국대회 은메달(2위) 수상",
+            "2021 전국대회 은메달(2,3위) 수상",
+        ),
+        story: [
+            "퇴사 후, 기능경기대회 지도 강사로 학생들을 가르쳤습니다.",
+            "이노룰스 입사 후에도 회사의 허가를 받고 서울 지역 고등학교에서 강의했습니다.",
+        ].join(" "),
+    },
     "20210030": {
         header: "캐나다 밴쿠버 어학연수",
         period: "2020.01 ~ 2020.06",
         summary: "Lv6 Intermediate 등급 취득",
         urls: "https://vgc.ca/",
         urlText: "VGC 어학원",
-    } satisfies ExpStoryObj,
+    },
     "20210040": {
         header: "이노룰스 기술연구소 입사",
         date: "2020.10",
         story: "IT 서비스를 제공하는 B2B 솔루션 회사에 입사했습니다.",
-    } satisfies ExpStoryObj,
+    },
     "20210060": {
         header: "정부 연구개발 과제",
         period: "2020.11 ~ 2021.3",
@@ -269,7 +274,7 @@ const ko = {
             "화면의 오브젝트 식별, 마우스/키보드 처리는 Java 라이브러리로 처리했고, 단순 반복 작업을 Python 스크립트로 작성하는 소프트웨어입니다.\n",
             "Windows 실행 환경만 구현되어 있어서 프로젝트 마무리에 어려움이 있었는데, Linux/Mac 실행에 대한 개발 작업을 전담하고 TTA 인증 시험까지 마무리 지었습니다.",
         ].join(""),
-    } satisfies ExpStoryObj,
+    },
     "20210070": {
         header: "플로우차트 UI 컴포넌트 라이브러리",
         period: "2021.4 ~ 2021.6",
@@ -288,7 +293,7 @@ const ko = {
             "기존 데스크탑에서 제공하는 사용성을 웹에서도 동일하게 제공하기 위해 노력했습니다.",
             "\n당시 svg 요소를 제어하는 기술이 미흡하여 D3.js를 활용하고, 개발 편의성을 위해 TypeScript로 타입 힌트를 제공했습니다.",
         ].join(" "),
-    } satisfies ExpStoryObj,
+    },
     "20210080": {
         header: "사내 웹 SDK 배포 환경 구축",
         date: "2021.7",
@@ -308,7 +313,7 @@ const ko = {
             "개발 패키지 설치를 쉽게 하는 환경을 구축했습니다.",
             "라이브러리 소스를 특정 브랜치에 커밋하면 배포되도록 자동화 흐름을 만들었습니다.",
         ].join(" "),
-    } satisfies ExpStoryObj,
+    },
     "20210090": {
         header: "UI 스타일 리뉴얼 프로젝트",
         period: "2021.7 ~ 2022.3",
@@ -327,77 +332,79 @@ const ko = {
             "/img/20210090_4.png",
         ),
         imgLabel: joinCommas("#1 기존", "#1 리뉴얼", "#2 기존", "#2 리뉴얼"),
-    } satisfies ExpStoryObj,
+    },
 
     // 2023 ~
     "20230010": {
         header: "mask 기반 아이콘 CSS 체계",
         period: "2022",
-    } satisfies ExpStoryObj,
+    },
     "20230020": {
         header: "임직원 일정 관리 App 개발",
         period: "2022",
         // 기존 구글 캘린더 ics 마이그
-    } satisfies ExpStoryObj,
+    },
 
     "20230040": {
         header: "Grid UI 컴포넌트 라이브러리 개발",
         period: "2022",
         // TypeScript 기반, Undo, 타 Format 클립보드 지원
         // 플러그인 기반 코어 아키텍처
-    } satisfies ExpStoryObj,
+    },
     "20230050": {
         header: "계정 인증 시스템 통합",
         period: "2023",
-    } satisfies ExpStoryObj,
+    },
     "20230060": {
         header: "레거시 jsp → vite 기반으로 마이그레이션",
         period: "2023",
-    } satisfies ExpStoryObj,
+    },
     "20230070": {
         header: "브라우저 Window 통신 체계 구축",
         // BroadcastChannel API 기반
         period: "2023",
-    } satisfies ExpStoryObj,
+    },
 
     // 2025 ~
     "20250010": {
         header: "한 페이지에서 여러 페이지를 관리하는 UI 컴포넌트",
         period: "2024",
-    } satisfies ExpStoryObj,
+    },
     "20250020": {
         header: "고성능 계층 트리 UI 컴포넌트 개발",
         period: "2024",
-    } satisfies ExpStoryObj,
+    },
     "20250030": {
         header: "iframe 기반 제품 임베딩 구조 설계/개발",
         period: "2024",
-    } satisfies ExpStoryObj,
+    },
     "20250040": {
         header: "신입/경력 웹 개발자 채용",
         period: "2024",
-    } satisfies ExpStoryObj,
+    },
     "20250050": {
         header: "입사 지원자 온라인 코딩 테스트 사이트 개발",
         period: "2025",
-    } satisfies ExpStoryObj,
+    },
     "20250060": {
         header: "팀 개발자 관리",
         period: "2025",
         // 목표 관리, 일정 관리, 코드 관리, 문서화
-    } satisfies ExpStoryObj,
+    },
     "20250070": {
         header: "전자결재 업무 시스템 구조 설계",
         period: "2025",
-    } satisfies ExpStoryObj,
+    },
     "20250080": {
         header: "다크모드 컬러 토큰 체계",
         period: "2025",
-    } satisfies ExpStoryObj,
+    },
     "20250090": {
         header: "제품 커스터마이징 모듈 로더 구조 설계/개발",
         period: "2025",
-    } satisfies ExpStoryObj,
-};
+    },
+} satisfies Record<string, ExpStoryObj>;
+
+export type ExpKey = keyof typeof ko;
 
 export const experiencesKo = ko as Record<ExpKey, ExpStoryObj>;

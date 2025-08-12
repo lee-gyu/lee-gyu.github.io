@@ -129,5 +129,6 @@ export const ui = {
 
         "exp.tab.2025": "이노룰스",
         "exp.tab.2018": "삼성전자",
+        "exp.tab.etc": "기타",
     },
 } as const;
