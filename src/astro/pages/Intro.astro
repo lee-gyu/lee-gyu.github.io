@@ -40,7 +40,10 @@ const sectionCss = css({
 <DefaultLayout lang={lang}>
     <main class={mainCss}>
         <Title size="h1">{t("name")}</Title>
-        <Title size="h2">{t("jobTitle")}</Title>
+        <Title size="h2"
+            >{t("jobTitle")}<span class="job-years">({t("jobYears")})</span
+            ></Title
+        >
         <a class={emailLinkCss} href="mailto:leegyu4dev@gmail.com"
             >leegyu4dev@gmail.com</a
         >
@@ -77,5 +80,11 @@ const sectionCss = css({
 <style is:global>
     #experiences {
         page-break-before: always;
+    }
+
+    .job-years {
+        white-space: nowrap;
+        margin-left: 0.25rem;
+        word-break: keep-all;
     }
 </style>

@@ -10,7 +10,10 @@ const nameJob = `${t("name")} - ${t("jobTitle")}`;
 ---
 
 <button id="btnToTop" class="to-top-link">{t("toTop")}</button>
-<p class="name-job">{nameJob}</p>
+<p class="name-job">
+    {nameJob}
+    <span class="job-years">({t("jobYears")})</span>
+</p>
 <Links mode="simple" />
 
 <script>
@@ -27,5 +30,10 @@ const nameJob = `${t("name")} - ${t("jobTitle")}`;
 
     .name-job {
         font-weight: 300;
+    }
+
+    .job-years {
+        white-space: nowrap;
+        word-break: keep-all;
     }
 </style>

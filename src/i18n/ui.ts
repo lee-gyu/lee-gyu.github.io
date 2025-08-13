@@ -11,7 +11,8 @@ export const ui = {
     en: {
         toTop: "To Top",
         lastUpdated: "Last Updated:",
-        jobTitle: "Web Full Stack Developer (10 Years+)",
+        jobTitle: "Web Full Stack Developer",
+        jobYears: "10 Years+",
         name: "Lee Gyu Cheol",
         mainJob: "Main Job",
         "mainJob.0": "Web Full Stack Development",
@@ -59,7 +60,8 @@ export const ui = {
     ko: {
         toTop: "맨 위로",
         lastUpdated: "최근 업데이트:",
-        jobTitle: "웹 풀스택 개발자 (10년+)",
+        jobTitle: "웹 풀스택 개발자",
+        jobYears: "10년+",
         name: "이규철",
         mainJob: "주 업무",
         "mainJob.0": "웹 풀스택 개발",
