@@ -20,7 +20,8 @@ export function getStaticPaths() {
 const mainCss = css({
     paddingLeft: "docPadLeft",
     paddingRight: "docPadRight",
-    paddingTop: "docPadTop",
+    paddingTop: "2rem",
+    marginTop: "docPadTop",
 });
 
 const lang = Astro.currentLocale as Lang;
@@ -28,6 +29,7 @@ const t = useTranslations(lang);
 
 const emailLinkCss = css({
     color: "text/80",
+    fontSize: "0.875rem",
 });
 
 const sectionCss = css({

@@ -8,18 +8,19 @@ if (!import.meta.env.PROD)
     navListItems.push({ href: "/projects", label: "Projects" });
 ---
 
+<PageTopActions client:only />
 <header id="pageHeader" class="header" data-print-hidden>
     <LastUpdated client:only />
 </header>
-<PageTopActions client:only />
 
 <style>
     .header {
+        top: 0;
         position: absolute;
         display: inline-flex;
         align-items: center;
         padding-left: var(--spacing-doc-pad-left);
-        height: 40px;
+        height: 2.5rem;
         width: 300px;
     }
 </style>

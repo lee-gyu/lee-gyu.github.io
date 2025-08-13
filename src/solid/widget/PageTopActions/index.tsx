@@ -12,6 +12,7 @@ export default function PageTopActions() {
                     display: "inline-block",
                     top: 0,
                     paddingTop: "0.25rem",
+                    marginTop: "-2.5rem",
                     marginRight: "0.5rem",
                     borderRadius: "full",
                     backdropFilter: "blur(2px)",

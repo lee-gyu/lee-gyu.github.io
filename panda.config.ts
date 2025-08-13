@@ -51,7 +51,7 @@ export default defineConfig({
                         },
                     },
                     docPadRight: { value: "1rem" },
-                    docPadTop: { value: "4rem" },
+                    docPadTop: { value: "2.5rem" },
                     docPadBottom: { value: "0rem" },
                 },
                 colors: {

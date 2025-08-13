@@ -1,40 +1,62 @@
 ---
+import Icon from "../components/Icon.astro";
+
+type Props = {
+    mode?: "list" | "simple";
+};
+
+const { mode = "list" } = Astro.props;
+
 const bannerList = [
-    ["https://medium.com/@gyuc219", "vsc-book", "Blog", "blog link"],
     ["https://github.com/lee-gyu", "vsc-github", "GitHub", "github link"],
-];
+    ["https://medium.com/@gyuc219", "vsc-book", "Blog", "blog link"],
+] as const;
 ---
 
-<ul class="banner-wrapper">
+<ul class={`links-${mode}`}>
     {
         bannerList.map(([url, icon, text, title]) => (
-            <li class="banner-item">
+            <li class="links-item">
+                {mode === "list"
+                    ? (
+                <Icon icon={icon} />
                 <a href={url} title={title} target="_blank">
-                    {text}
+                    {url}
                 </a>
+                    )
+                : (
+                    <a href={url} title={title} target="_blank">
+                        {text}
+                    </a>
+                )}
             </li>
         ))
     }
 </ul>
 
 <style>
-    @media print {
-        .banner-wrapper {
-            display: none;
-        }
-    }
-
-    .banner-wrapper {
-        column-gap: 0.75rem;
-        line-height: 1.5;
-    }
-
-    .banner-item {
+    .links-simple {
         display: inline-flex;
-        text-decoration: underline;
+        column-gap: 0.5rem;
+    }
 
-        &:not(:last-child) {
-            margin-right: 0.5rem;
+    .links-list {
+        margin-top: 0.25rem;
+        line-height: 1.75;
+    }
+
+    .links-item {
+        display: flex;
+        align-items: center;
+        column-gap: 0.25rem;
+        font-size: 0.875rem;
+
+        i {
+            font-size: 1.125rem;
+        }
+
+        a {
+            text-decoration: underline;
         }
     }
 </style>
