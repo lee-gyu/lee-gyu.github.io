@@ -10,11 +10,16 @@ if (!import.meta.env.PROD)
 
 <header id="pageHeader" class="header" data-print-hidden>
     <LastUpdated client:only />
-    <PageTopActions client:only />
 </header>
+<PageTopActions client:only />
 
 <style>
     .header {
-        display: contents;
+        position: absolute;
+        display: inline-flex;
+        align-items: center;
+        padding-left: var(--spacing-doc-pad-left);
+        height: 40px;
+        width: 300px;
     }
 </style>

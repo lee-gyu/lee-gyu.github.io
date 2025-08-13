@@ -9,12 +9,12 @@ export default function PageTopActions() {
             <div
                 class={css({
                     position: "sticky",
+                    display: "inline-block",
                     top: 0,
-                    marginRight: "0.25rem",
-                    padding: "0.25rem",
+                    paddingTop: "0.25rem",
+                    marginRight: "0.5rem",
                     borderRadius: "full",
                     backdropFilter: "blur(2px)",
-                    display: "inline-block",
                     float: "right",
                     zIndex: 3000,
                 })}
