@@ -51,7 +51,7 @@ const ko = {
         ),
     },
     "20150040": {
-        header: "기능올림픽 입상자 전형 채용",
+        header: "기능올림픽 입상자 채용 업무",
         date: "2013.10, 2014.10",
         summary: "삼성그룹 내 계열사 수백명 규모 채용 전형 진행",
         tasks: joinCommas("지원자 채용 프로세스 안내", "지원 데이터 리포팅"),
@@ -173,7 +173,8 @@ const ko = {
         summary: "알고리즘 코딩테스트 시험",
         story: [
             "사내 S/W 자격 시험을 응시하여 Pro 등급을 취득하고 인센티브로 약 100만원을 받았습니다.",
-        ].join("\n"),
+            "당시 Pro 등급은 상위 개발자 15~20% 정도가 취득했었습니다.",
+        ].join(" "),
     },
 
     "20180060": {
@@ -282,7 +283,6 @@ const ko = {
     "20210070": {
         header: "플로우차트 UI 컴포넌트 라이브러리",
         period: "2021.4 ~ 2021.7",
-        role: "웹 UI 컴포넌트 개발",
         tasks: "플로우차트 내부 시스템 설계 / 구현",
         tech: joinCommas("D3.js", "TypeScript"),
         feat: joinCommas(
@@ -314,10 +314,13 @@ const ko = {
             "(Docs) TypeDoc",
             "(VCS) GitLab",
         ),
+        urls: "https://lee-gyu.github.io/storybook/?path=/story/html-components-button--intent",
+        urlText: "라이브 에디터 예제",
         story: [
             "당시 Node.js, npm를 활용하지 못해 버전 관리나 패키지 배포/업그레이드에 번거로움이 있었습니다.",
             "개발자 경험을 향상시키고자 사내 npm 패키지 서버와 개발자들이 찾아볼 수 있는 문서화 사이트도 함께 구축했습니다.",
             "라이브러리 소스를 특정 브랜치에 커밋하면 문서 사이트가 배포되도록 자동화 흐름을 만들었습니다.",
+            "\n\n추가로, 디버깅을 위해 스토리북 예제를 실시간으로 수정하고 결과를 확인할 수 있도록 라이브 에디터를 개발했습니다.",
         ].join(" "),
     },
     "20210090": {
@@ -348,11 +351,8 @@ const ko = {
 
     "20230010": {
         header: "웹 제품 아이콘 CSS 체계 개발",
-        period: "2022.1 ~ 2022.3",
-        tasks: joinCommas(
-            "svg to CSS 번들러 개발",
-            "svgo를 적용하여 용량 최적화",
-        ),
+        period: "2022.1 ~ 2022.2",
+        tasks: joinCommas("svg to CSS 번들러 개발"),
         result: joinCommas(
             "아이콘 개발 프로세스 수립",
             "아이콘 처리 개발 생산성 향상",
@@ -360,33 +360,60 @@ const ko = {
         urls: "https://lee-gyu.github.io/storybook/?path=/story/html-components-icon--list",
         urlText: "아이콘 목록",
         story: [
-            "기존 아이콘 리소스는 단순 비트맵 파일로 처리되어 크기 변경 시 이미지가 손상되며, 이미 입혀진 색상 변경이 불가능했습니다.",
-            "이를 벡터 기반으로 사용할 수 있도록 mask-image라는 CSS 속성을 도입하여 이 문제를 해결했습니다.",
+            "기존 아이콘 리소스는 단순 비트맵으로 처리하여 크기 변경 시 이미지 손상과 색상 변경에 번거로움이 있었습니다.",
+            "이를 벡터 기반으로 사용할 수 있도록 mask-image CSS 속성을 도입하여 이 문제를 해결했습니다.",
             "이 기술로 아이콘 이미지 손상 없이 표현이 가능하며, 색상 커스텀이 가능한 유연한 아이콘 시스템을 구축하게 되었습니다.",
+            "이미지를 소스 코드 내 디렉터리에 넣으면 이를 css로 번들링하는 프로그램을 작성하여 독립적인 패키지로 배포하였습니다.",
         ].join(" "),
     },
-    "20230020": {
-        header: "임직원 일정 관리 App 개발",
-        period: "2022.6 ~ 2022.12",
-        // 기존 구글 캘린더 ics 마이그
-    },
 
-    "20230040": {
+    "20230015": {
         header: "Grid UI 컴포넌트 라이브러리 개발",
-        period: "2022",
+        period: "2022.3 ~",
+        tasks: joinCommas(""),
+        feat: joinCommas(""),
+        issue: joinCommas(),
+        urls: joinCommas(
+            "https://lee-gyu.github.io/storybook/?path=/story/js-components-irgrid--bulk-columns",
+            "https://lee-gyu.github.io/storybook/?path=/story/js-components-irgrid--row-filter-plugin",
+        ),
+        urlText: joinCommas("수십만개 셀 처리", "플러그인 기반 아키텍처"),
         // TypeScript 기반, Undo, 타 Format 클립보드 지원
         // 플러그인 기반 코어 아키텍처
     },
+
+    "20230020": {
+        header: "임직원 일정 관리 App 개발",
+        tasks: joinCommas(
+            "기존 구글 캘린더 ics 데이터 마이그레이션",
+            "Next.js 기반 캘린더 앱 개발",
+            "Nest.js 기반 API 서버 개발",
+        ),
+        period: "2022.6 ~ 2022.12",
+        tech: joinCommas(
+            "(DBMS) MySQL",
+            "(Backend) Nest.js",
+            "(ORM) TypeORM",
+            "(Frontend) Next.js Page Router",
+        ),
+    },
+
     "20230050": {
-        header: "계정 인증 시스템 통합",
-        period: "2023",
+        header: "솔루션 계정 인증 시스템 통합",
+        period: "2023.2 ~ 2023.5",
+        tech: joinCommas("(Frontend) vite / React"),
     },
     "20230060": {
         header: "레거시 jsp → vite 기반으로 마이그레이션",
-        period: "2023",
+        period: "2023.8 ~ 2023.10",
     },
     "20230070": {
         header: "브라우저 Window 통신 체계 구축",
+        // BroadcastChannel API 기반
+        period: "2023",
+    },
+    "20230080": {
+        header: "사내 휴가계 시스템 리뉴얼",
         // BroadcastChannel API 기반
         period: "2023",
     },
@@ -409,8 +436,13 @@ const ko = {
         period: "2024",
     },
     "20250050": {
-        header: "입사 지원자 온라인 코딩 테스트 사이트 개발",
+        header: "온라인 코딩 테스트 사이트 개발",
         period: "2025",
+        tech: joinCommas(
+            "(Frontend) Next.js App Router",
+            "(DBMS) PostgreSQL",
+            "(ORM) Drizzle",
+        ),
     },
     "20250060": {
         header: "팀 개발자 관리",

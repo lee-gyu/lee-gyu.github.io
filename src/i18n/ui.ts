@@ -38,7 +38,8 @@ export const ui = {
         "career.0.content": "InnoRules R&D Center",
         "career.0.content.keywords": joinCommas("Web Project Lead"),
         "career.1.header": "2015.9 - 2018.7",
-        "career.1.content": "Samsung Electronics VD Division Manufacturing S/W",
+        "career.1.content":
+            "Samsung Electronics VD Division Global Operations Team",
         "career.1.content.keywords": joinCommas(
             "Manufacturing S/W",
             "Back Office System",
@@ -84,7 +85,7 @@ export const ui = {
         "career.0.content": "이노룰스 기술연구소",
         "career.0.content.keywords": joinCommas("웹 개발"),
         "career.1.header": "2015.9 - 2018.7",
-        "career.1.content": "삼성전자 VD사업부 공정 S/W 개발",
+        "career.1.content": "삼성전자 VD사업부 글로벌 운영팀",
         "career.1.content.keywords": joinCommas("웹 개발", "공정 S/W 개발"),
         "career.2.header": "2012.10 - 2015.9",
         "career.2.content": "삼성전자 기능올림픽 훈련 센터",
@@ -125,7 +126,7 @@ export const ui = {
         "exp.label.period": "기간",
         "exp.label.mainTask": "주 작업",
         "exp.label.result": "성과",
-        "exp.label.tech": "사용 기술(S/W)",
+        "exp.label.tech": "사용 기술",
         "exp.label.tasks": "업무",
         "exp.label.feat": "개발 기능",
         "exp.label.urls": "URL",
