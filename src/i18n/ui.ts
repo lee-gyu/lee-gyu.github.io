@@ -66,7 +66,7 @@ export const ui = {
         mainJob: "주 업무",
         "mainJob.0": "웹 풀스택 개발",
         "mainJob.1": "웹 프런트엔드 SDK 개발",
-        "mainJob.2": "웹 프런트엔드 구조 설계",
+        "mainJob.2": "웹 애플리케이션 구조 설계",
         career: "경력",
         awards: "수상",
         "awards.0.header": "기능발전/국위선양 장관 표창",
@@ -116,7 +116,6 @@ export const ui = {
         "skills.50.keywords": joinCommas(
             "Linux",
             "GitLab",
-            "Figma",
             "Jenkins",
             "Docker",
         ),
