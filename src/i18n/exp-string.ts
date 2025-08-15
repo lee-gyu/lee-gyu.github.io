@@ -2,6 +2,7 @@ import { joinCommas } from "src/utils/string";
 
 export type ExpProps =
     | "header"
+    | "year"
     | "date"
     | "period"
     | "role"
@@ -20,39 +21,30 @@ export type ExpProps =
 type ExpStoryObj = Partial<Record<ExpProps, string>>;
 
 const ko = {
-    // 2015 ~
-    "20150010": {
-        header: "기능올림픽 국가대표 선발전 준비",
-        period: "2011.1 ~ 2012.12",
-        story: [
-            "기능올림픽은 전국 대회 수상자끼리 선발전을 치뤄 국가대표를 선발합니다.",
-            "전국 대회에서 수상 후, 국가대표 선발전을 치뤄 1위를 했습니다.",
-            "\n목표를 가지고 체계적으로 준비하는 과정을 경험했습니다.",
-        ].join(" "),
-    },
-    "20150020": {
-        header: "삼성전자 기능올림픽 특채 전형 입사",
-        date: "2012.10",
-    },
     "20150030": {
         header: "2013 국제기능올림픽 정보기술 직종 국가대표 훈련",
-        period: "2013.1 ~ 2013.8",
+        period: "2012 ~ 2013",
         role: "기능올림픽 정보기술 직종 국가대표",
         tech: joinCommas(
             "(Docs) MS Office",
             "(DBMS) MS Access",
             "VBA 프로그래밍",
         ),
-        result: joinCommas("금메달(1위) 수상", "동탑산업훈장 대통령 표창"),
+        result: joinCommas("금메달 (1위)", "동탑산업훈장 대통령 표창"),
         urlText: joinCommas("대회 점수", "수상자 사진"),
         urls: joinCommas(
             "https://results.worldskills.org/results?event=9&offset=0&skill=345&base_skill=221",
             "https://www.flickr.com/photos/worldskills/9235939100/in/album-72157634532467264/",
         ),
+        story: [
+            "전국 대회 2위 수상하고, 국가대표 선발전을 거쳐 국가대표로 선발되었습니다.",
+            "이후 삼성전자 기능올림픽 훈련센터에서 국가대표 훈련을 받고, 금메달을 수상했습니다.",
+            "국가대표 훈련 과정에서 문제 해결 능력을 키우고, 업무용 IT 소프트웨어의 구조를 파악하는데 많은 도움이 되었습니다.",
+        ].join(" "),
     },
     "20150040": {
         header: "기능올림픽 입상자 채용 업무",
-        date: "2013.10, 2014.10",
+        date: "2013, 2014",
         summary: "삼성그룹 내 계열사 수백명 규모 채용 전형 진행",
         tasks: joinCommas("지원자 채용 프로세스 안내", "지원 데이터 리포팅"),
         story: ["대기업의 채용 과정을 인사 담당자 관점에서 진행했습니다."].join(
@@ -81,7 +73,7 @@ const ko = {
     },
     "20150070": {
         header: "삼성전자 기능올림픽 훈련센터 지도위원",
-        period: "2013.9 ~ 2015.9",
+        period: "2013 ~ 2015",
         role: "국가대표 지도위원",
         tech: joinCommas("(Client) C# Windows", "(DBMS) SQL Server"),
         result: joinCommas(
@@ -104,7 +96,7 @@ const ko = {
 
     "20180020": {
         header: "웹 기반 사내 업무 시스템 개발",
-        period: "2016.1 ~ 2016.5",
+        year: "2016",
         tech: joinCommas(
             "(DBMS) MariaDB",
             "(Backend) C# ASP.NET MVC",
@@ -119,18 +111,18 @@ const ko = {
         ),
         result: joinCommas(
             "기존 보고용 문서 출력을 웹 문서로 대체",
-            "관리자가 수기로 취합하던 보고 작업 시스템화",
+            "관리자가 수기로 취합하던 업무 보고 작업 시스템화",
         ),
         story: [
             "사업부의 IT 시스템은 큰 SI 업체에 의존하고 있어, 기능 개발 요청 시 큰 비용이 발생하고 있었습니다. ",
             "팀에서 필요한 업무 시스템을 직접 만들기로 기획하고 요구사항 전체를 개발하는 역할을 맡았습니다.",
             "\n\n",
-            "지시가 없더라도 불편함이 보이면 스스로 개선하며 얻는 성취가 있었습니다.",
+            "지시가 없더라도 사용에 불편함이 보이면 스스로 개선하며 얻는 성취가 있었습니다.",
         ].join(""),
     },
     "20180030": {
         header: "해외 법인 종합 관제실 시스템 구축",
-        period: "2016.6 ~ 2016.10",
+        year: "2016",
         role: "웹 풀스택 개발",
         tech: joinCommas(
             "(DBMS) MariaDB",
@@ -139,20 +131,26 @@ const ko = {
             "(Frontend) JQuery / Telerik Kendo UI",
             "(Windows) WPF / Service",
         ),
-        result: joinCommas(""),
+        result: "기존 수십분이 소요되는 현황 파악 작업 자동화",
         issue: joinCommas(
             "해외 타임존/썸머 타임 문제",
             "내부 인트라 네트워킹 보안망 문제",
         ),
+        feat: joinCommas(
+            "해외 법인 DB 동기화 시스템",
+            "세계 지도 형태의 실시간 모니터링 화면",
+            "모니터링 대시보드 화면",
+        ),
         story: [
-            "14개 해외 법인의 실시간 생산 현황을 모니터링하고 보여주는 시스템을 개발했습니다.",
-            "제조 실행 시스템(MES) API를 호출하여 관제실 DB를 동기화시키고 대쉬보드 화면을 개발했습니다.",
-        ].join("\n"),
+            "부서에 소프트웨어 개발 인력이 보충되면서, 전체 해외 법인을 모니터링하는 과제가 주어졌습니다.",
+            "사내 제조 실행 시스템(MES)과 연계하여 API로 주기적으로 데이터를 수집하고, 이를 보여주는 화면을 개발했습니다.",
+        ].join(" "),
     },
     "20180050": {
         header: "IoT 환경 데이터 수집",
-        period: "2017.1 ~ 2017.5",
+        year: "2017",
         role: "웹 풀스택 개발",
+        result: "위험 환경 요소를 파악하는 모니터링 시스템 구축",
         tech: joinCommas(
             "(IoT) Raspberry Pi (Linux Raspbian)",
             "(DBMS) MariaDB",
@@ -177,30 +175,11 @@ const ko = {
         ].join(" "),
     },
 
-    "20180060": {
-        header: "제조 생산량 예측 시뮬레이터",
-        date: "2017.6 ~ 2017.8",
-        role: "Windows App 개발",
-        tech: joinCommas(
-            "(Windows) C# WPF",
-            "(Windows) MS Office Library",
-            "(ORM) Entity Framework",
-        ),
-        issue: joinCommas(
-            "문서 DRM 보안 충돌",
-            "수백만 데이터 처리 알고리즘 성능",
-        ),
-        feat: joinCommas(),
-        story: [
-            "DB에 쌓인 제조 데이터를 이용하여 공정 전문가의 몇 개월 분석이 필요한 생산량 예측 작업을 자동화하는 프로젝트입니다.",
-            "제조 현장의 변수와 불량 데이터 문제로 큰 성과를 내지 못하여 아쉬웠던 경험입니다.",
-        ].join(" "),
-    },
-
     "20180070": {
         header: "공정 프로세스 현황 모니터링",
-        date: "2017.9 ~ 2018.1",
+        year: "2017",
         role: "웹 풀스택 개발",
+        result: "공정 문제점을 파악하여 병목 개선에 기여",
         tech: joinCommas(
             "(DBMS) MariaDB",
             "(Backend) C# ASP.NET MVC",
@@ -208,47 +187,15 @@ const ko = {
             "(Frontend) TypeScript",
         ),
         story: [
-            "공정 프로세스는 조립-검사-포장 등의 단계를 순차적으로 거칩니다.",
-            "평균보다 지연되는 작업이 있는 경우, 전체 생산성에 영향을 미칩니다.",
-            "어떤 공정에서 병목이 있는지 분석하기 위해 PLC 신호를 수신하여 작업 시간을 계산하고, 전체 공정 현황을 보여주는 웹 화면을 개발했습니다.",
-            "",
-            "개발 환경에 Node.js와 타입스크립트를 처음으로 도입한 과제입니다.",
-        ].join("\n"),
+            "공정 프로세스는 조립-검사-포장 등의 단계를 거칩니다. ",
+            "평균보다 지연되는 작업이 있는 경우, 전체 생산성에 영향을 미칩니다. ",
+            "어떤 공정에서 병목이 있는지 분석하기 위해 PLC 신호를 수신하여 작업 시간을 계산하고, 전체 공정 현황을 보여주는 웹 화면을 개발했습니다.\n",
+            "실제 공정에 있는 PLC 메모리를 읽어 작업을 계산하는 부분은 다른 엔지니어가 담당하고, 데이터 수집 서버와 웹 화면 개발을 담당했습니다.",
+            "\n\n",
+            "개발 환경에 Node.js와 타입스크립트를 처음으로 도입해보았던 과제입니다.",
+        ].join(""),
     },
 
-    "20180080": {
-        header: "삼성전자 퇴사",
-        date: "2018.7",
-        story: [
-            "근무 부서에서 개발 과제는 짧게 보여주고 종료되는 일이 많았습니다.",
-            "IT 서비스를 메인으로 하는 회사로 이직하고 싶어 퇴사를 결정했습니다.",
-        ].join("\n"),
-    },
-
-    "20210020": {
-        header: "기능경기대회 학교 지도 강사",
-        period: "2019 ~ 2021",
-        summary: joinCommas(
-            "2019 전국대회 은메달(2위) 수상",
-            "2021 전국대회 은메달(2,3위) 수상",
-        ),
-        story: [
-            "퇴사 후, 기능경기대회 지도 강사로 학생들을 가르쳤습니다.",
-            "이노룰스 입사 후에도 회사의 허가를 받고 서울 지역 고등학교에서 강의했습니다.",
-        ].join(" "),
-    },
-    "20210030": {
-        header: "캐나다 밴쿠버 어학연수",
-        period: "2020.01 ~ 2020.06",
-        summary: "Lv6 Intermediate 등급 취득",
-        urls: "https://vgc.ca/",
-        urlText: "VGC 어학원",
-    },
-    "20210040": {
-        header: "이노룰스 기술연구소 입사",
-        date: "2020.10",
-        story: "IT 서비스를 제공하는 B2B 솔루션 회사에 입사했습니다.",
-    },
     "20210060": {
         header: "정부 연구개발 과제",
         period: "2020.11 ~ 2021.3",
@@ -258,6 +205,7 @@ const ko = {
             "TTA 인증 시험 업무 지원",
             "프로젝트 최종 보고서 작성",
         ),
+        result: "정부 연구개발 과제 최종 수행 완료",
         feat: joinCommas(
             "스크립트 실행 성능 최적화",
             "Win/Linux/Mac 크로스 플랫폼 Electron App",
@@ -284,6 +232,7 @@ const ko = {
         header: "플로우차트 UI 컴포넌트 라이브러리",
         period: "2021.4 ~ 2021.7",
         tasks: "플로우차트 내부 시스템 설계 / 구현",
+        result: "",
         tech: joinCommas("D3.js", "TypeScript"),
         feat: joinCommas(
             "객체 추가 / 선택 / 드래그 앤 드롭 모드",

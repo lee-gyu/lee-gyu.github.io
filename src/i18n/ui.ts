@@ -124,6 +124,7 @@ export const ui = {
         "exp.label.role": "역할",
         "exp.label.date": "일자",
         "exp.label.period": "기간",
+        "exp.label.year": "연도",
         "exp.label.mainTask": "주 작업",
         "exp.label.result": "성과",
         "exp.label.tech": "사용 기술",
@@ -133,8 +134,8 @@ export const ui = {
         "exp.label.summary": "내용",
         "exp.label.issue": "주요 이슈",
 
-        "exp.tab.2025": "이노룰스",
-        "exp.tab.2018": "삼성전자",
+        "exp.tab.inno": "이노룰스",
+        "exp.tab.samsung": "삼성전자",
         "exp.tab.etc": "기타",
     },
 } as const;
