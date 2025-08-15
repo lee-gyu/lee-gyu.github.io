@@ -198,7 +198,7 @@ const ko = {
 
     "20210060": {
         header: "정부 연구개발 과제",
-        period: "2020.11 ~ 2021.3",
+        period: "2020 ~ 2021",
         summary: "RPA 소프트웨어 개발",
         tasks: joinCommas(
             "내부 시스템 풀스택 개발",
@@ -230,7 +230,7 @@ const ko = {
     },
     "20210070": {
         header: "플로우차트 UI 컴포넌트 라이브러리",
-        period: "2021.4 ~ 2021.7",
+        year: "2021",
         tasks: "플로우차트 내부 시스템 설계 / 구현",
         result: "",
         tech: joinCommas("D3.js", "TypeScript"),
@@ -249,7 +249,7 @@ const ko = {
     },
     "20210080": {
         header: "사내 웹 SDK 배포 환경 구축",
-        date: "2021.8",
+        year: "2021",
         tasks: joinCommas(
             "사내 npm 레지스트리 서버 구축",
             "사내 스토리북 사이트 구축",
@@ -274,7 +274,7 @@ const ko = {
     },
     "20210090": {
         header: "UI 스타일 리뉴얼 프로젝트",
-        period: "2021.7 ~ 2022.3",
+        period: "2021 ~ 2022",
         summary: "프리랜서와 협업하여 제품 UI 스타일 리뉴얼",
         tasks: joinCommas(
             "리뉴얼을 위한 기존 화면 전수 조사",
@@ -300,7 +300,7 @@ const ko = {
 
     "20230010": {
         header: "웹 제품 아이콘 CSS 체계 개발",
-        period: "2022.1 ~ 2022.2",
+        year: "2022",
         tasks: joinCommas("svg to CSS 번들러 개발"),
         result: joinCommas(
             "아이콘 개발 프로세스 수립",
@@ -318,7 +318,7 @@ const ko = {
 
     "20230015": {
         header: "Grid UI 컴포넌트 라이브러리 개발",
-        period: "2022.3 ~",
+        year: "2022",
         tasks: joinCommas(""),
         feat: joinCommas(""),
         issue: joinCommas(),
@@ -338,7 +338,7 @@ const ko = {
             "Next.js 기반 캘린더 앱 개발",
             "Nest.js 기반 API 서버 개발",
         ),
-        period: "2022.6 ~ 2022.12",
+        year: "2022",
         tech: joinCommas(
             "(DBMS) MySQL",
             "(Backend) Nest.js",
@@ -349,67 +349,62 @@ const ko = {
 
     "20230050": {
         header: "솔루션 계정 인증 시스템 통합",
-        period: "2023.2 ~ 2023.5",
+        year: "2023",
         tech: joinCommas("(Frontend) vite / React"),
     },
     "20230060": {
         header: "레거시 jsp → vite 기반으로 마이그레이션",
-        period: "2023.8 ~ 2023.10",
+        year: "2023",
     },
     "20230070": {
         header: "브라우저 Window 통신 체계 구축",
         // BroadcastChannel API 기반
-        period: "2023",
+        year: "2023",
     },
     "20230080": {
         header: "사내 휴가계 시스템 리뉴얼",
         // BroadcastChannel API 기반
-        period: "2023",
+        year: "2023",
     },
 
     // 2025 ~
     "20250010": {
         header: "한 페이지에서 여러 페이지를 관리하는 UI 컴포넌트",
-        period: "2024",
+        year: "2024",
     },
     "20250020": {
         header: "고성능 계층 트리 UI 컴포넌트 개발",
-        period: "2024",
+        year: "2024",
     },
     "20250030": {
         header: "iframe 기반 제품 임베딩 구조 설계/개발",
-        period: "2024",
+        year: "2024",
     },
     "20250040": {
         header: "신입/경력 웹 개발자 채용",
-        period: "2024",
+        year: "2024",
     },
     "20250050": {
         header: "온라인 코딩 테스트 사이트 개발",
-        period: "2025",
+        year: "2025",
         tech: joinCommas(
             "(Frontend) Next.js App Router",
             "(DBMS) PostgreSQL",
             "(ORM) Drizzle",
         ),
     },
-    "20250060": {
-        header: "팀 개발자 관리",
-        period: "2025",
-        // 목표 관리, 일정 관리, 코드 관리, 문서화
-    },
     "20250070": {
         header: "전자결재 업무 시스템 설계",
         role: "",
-        period: "2025",
+        year: "2025",
     },
     "20250080": {
         header: "다크모드 컬러 토큰 체계",
-        period: "2025",
+        year: "2025",
     },
     "20250090": {
         header: "제품 커스터마이징 모듈 로더 구조 설계/개발",
-        period: "2025",
+        year: "2025",
     },
 } satisfies Record<string, ExpStoryObj>;
 
