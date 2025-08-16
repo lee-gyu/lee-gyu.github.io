@@ -179,7 +179,7 @@ const ko = {
         header: "공정 프로세스 현황 모니터링",
         year: "2017",
         role: "웹 풀스택 개발",
-        result: "공정 문제점을 파악하여 병목 개선에 기여",
+        result: "공정 병목 현상 파악 및 개선에 기여",
         tech: joinCommas(
             "(DBMS) MariaDB",
             "(Backend) C# ASP.NET MVC",
@@ -198,7 +198,7 @@ const ko = {
 
     "20210060": {
         header: "정부 연구개발 과제",
-        period: "2020 ~ 2021",
+        year: "2021",
         summary: "RPA 소프트웨어 개발",
         tasks: joinCommas(
             "내부 시스템 풀스택 개발",
@@ -352,6 +352,7 @@ const ko = {
         year: "2023",
         tech: joinCommas("(Frontend) vite / React"),
     },
+
     "20230060": {
         header: "레거시 jsp → vite 기반으로 마이그레이션",
         year: "2023",
@@ -365,6 +366,12 @@ const ko = {
         header: "사내 휴가계 시스템 리뉴얼",
         // BroadcastChannel API 기반
         year: "2023",
+    },
+
+    "20240010": {
+        header: "패키지 배포 릴리즈 주기 프로세스",
+        // BroadcastChannel API 기반
+        year: "2024",
     },
 
     // 2025 ~
