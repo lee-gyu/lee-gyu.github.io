@@ -19,26 +19,26 @@
     "author": "Lee Gyu <leegyu4dev@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "@biomejs/biome": "^2.1.3",
+        "@biomejs/biome": "^2.2.0",
         "@dotenvx/dotenvx": "^1.48.4",
-        "@types/node": "^22.17.1",
+        "@types/node": "^22.17.2",
         "jsdom": "^26.1.0",
         "vitest": "^3.2.4"
     },
     "dependencies": {
         "autoprefixer": "^10.4.21",
-        "@astrojs/mdx": "^4.3.3",
+        "@astrojs/mdx": "^4.3.4",
         "@astrojs/solid-js": "^5.1.0",
         "@pandacss/dev": "^1.0.1",
         "@toss/assert": "^1.2.2",
-        "astro": "^5.12.9",
+        "astro": "^5.13.2",
         "clsx": "^2.1.1",
         "cssnano": "^7.1.0",
         "dayjs": "^1.11.13",
-        "es-toolkit": "^1.39.8",
-        "p5": "^2.0.3",
+        "es-toolkit": "^1.39.10",
+        "p5": "^2.0.4",
         "postcss": "^8.5.6",
-        "solid-js": "^1.9.8",
+        "solid-js": "^1.9.9",
         "typescript": "^5.9.2"
     },
     "packageManager": "pnpm@10.13.1"
