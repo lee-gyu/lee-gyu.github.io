@@ -88,7 +88,7 @@ export const ui = {
         "career.1.content": "삼성전자 VD사업부 글로벌 운영팀",
         "career.1.content.keywords": joinCommas("웹 개발", "공정 S/W 개발"),
         "career.2.header": "2012.10 - 2015.9",
-        "career.2.content": "삼성전자 기능올림픽 훈련 센터",
+        "career.2.content": "삼성전자 기능올림픽 훈련센터",
         "career.2.content.keywords": joinCommas("인사 업무", "훈련 지도"),
         experience: "직무 경험",
 

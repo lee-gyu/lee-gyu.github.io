@@ -44,7 +44,7 @@ const ko = {
     },
     "20150040": {
         header: "기능올림픽 입상자 채용 업무",
-        date: "2013, 2014",
+        year: "2013, 2014",
         summary: "삼성그룹 내 계열사 수백명 규모 채용 전형 진행",
         tasks: joinCommas("지원자 채용 프로세스 안내", "지원 데이터 리포팅"),
         story: ["대기업의 채용 과정을 인사 담당자 관점에서 진행했습니다."].join(
@@ -53,7 +53,7 @@ const ko = {
     },
     "20150050": {
         header: "글로벌 사내 경진대회",
-        date: "2014.5, 2015.5",
+        year: "2014, 2015",
         tasks: joinCommas("해외 법인 참가자 인솔", "한국 문화 체험 행사 지원"),
         story: [
             "국내외 여러 계열사 법인에서 참가하는 사내 기술 대회에서 해외 법인 참가자를 담당했습니다. ",
@@ -189,7 +189,7 @@ const ko = {
         story: [
             "공정 프로세스는 조립-검사-포장 등의 단계를 거칩니다. ",
             "평균보다 지연되는 작업이 있는 경우, 전체 생산성에 영향을 미칩니다. ",
-            "어떤 공정에서 병목이 있는지 분석하기 위해 PLC 신호를 수신하여 작업 시간을 계산하고, 전체 공정 현황을 보여주는 웹 화면을 개발했습니다.\n",
+            "어떤 공정에서 병목이 있는지 분석하기 위해 PLC 신호를 수신하여 작업 시간을 계산하고, 전체 공정을 보여주는 웹 화면을 개발했습니다.\n",
             "실제 공정에 있는 PLC 메모리를 읽어 작업을 계산하는 부분은 다른 엔지니어가 담당하고, 데이터 수집 서버와 웹 화면 개발을 담당했습니다.",
             "\n\n",
             "개발 환경에 Node.js와 타입스크립트를 처음으로 도입해보았던 과제입니다.",
@@ -301,56 +301,80 @@ const ko = {
     "20230010": {
         header: "웹 제품 아이콘 CSS 체계 개발",
         year: "2022",
-        tasks: joinCommas("svg to CSS 번들러 개발"),
+        tasks: joinCommas(
+            "아이콘 CSS 번들러 프로그램 개발",
+            "아이콘 스토리북 페이지 작성",
+            "디자이너/개발자 아이콘 유지보수 프로세스 수립",
+        ),
         result: joinCommas(
-            "아이콘 개발 프로세스 수립",
-            "아이콘 처리 개발 생산성 향상",
+            "모든 제품에 동일한 아이콘 CSS 체계 제공",
+            "아이콘을 UI에 배치하는 개발 편의성 향상",
         ),
         urls: "https://lee-gyu.github.io/storybook/?path=/story/html-components-icon--list",
         urlText: "아이콘 목록",
         story: [
-            "기존 아이콘 리소스는 단순 비트맵으로 처리하여 크기 변경 시 이미지 손상과 색상 변경에 번거로움이 있었습니다.",
-            "이를 벡터 기반으로 사용할 수 있도록 mask-image CSS 속성을 도입하여 이 문제를 해결했습니다.",
-            "이 기술로 아이콘 이미지 손상 없이 표현이 가능하며, 색상 커스텀이 가능한 유연한 아이콘 시스템을 구축하게 되었습니다.",
-            "이미지를 소스 코드 내 디렉터리에 넣으면 이를 css로 번들링하는 프로그램을 작성하여 독립적인 패키지로 배포하였습니다.",
+            "기존 비트맵 아이콘 처리 방식을 벡터 이미지(svg)로 처리하도록 아이콘 CSS 처리 체계를 새로 구축했습니다.",
+            "mask-image CSS를 활용하여 아이콘 색상을 유연하게 처리하도록 하여 아이콘을 유연하게 활용할 수 있도록 했습니다.",
+            "svg를 소스 코드에 넣으면 이를 css로 번들링하는 프로그램을 작성하여 독립적인 패키지로 배포하여 모든 제품에 활용될 수 있도록 하였습니다.",
         ].join(" "),
     },
 
     "20230015": {
         header: "Grid UI 컴포넌트 라이브러리 개발",
         year: "2022",
-        tasks: joinCommas(""),
-        feat: joinCommas(""),
-        issue: joinCommas(),
+        result: joinCommas(""),
+        tasks: joinCommas("내부 구성 요소 구조 설계 개발"),
+        feat: joinCommas(
+            "Viewport에 보이는 DOM만 출력하도록 Windowing 적용",
+            "셀 렌더러를 이용하여 다양한 셀 UI 커스텀 기능 제공",
+            "플러그인 기반 컴포넌트 확장 기능 제공",
+            "MS-Office 기반 데이터 클립보드 복사/붙여넣기 호환",
+        ),
+        issue: joinCommas(""),
         urls: joinCommas(
             "https://lee-gyu.github.io/storybook/?path=/story/js-components-irgrid--bulk-columns",
+            "https://lee-gyu.github.io/storybook/?path=/story/js-components-irgrid--cell-renderer",
             "https://lee-gyu.github.io/storybook/?path=/story/js-components-irgrid--row-filter-plugin",
         ),
-        urlText: joinCommas("수십만개 셀 처리", "플러그인 기반 아키텍처"),
+        urlText: joinCommas(
+            "50만개 셀 처리",
+            "셀 렌더러 UI 기능 확장",
+            "플러그인 기반 기능 확장",
+        ),
         // TypeScript 기반, Undo, 타 Format 클립보드 지원
         // 플러그인 기반 코어 아키텍처
     },
 
     "20230020": {
-        header: "임직원 일정 관리 App 개발",
-        tasks: joinCommas(
-            "기존 구글 캘린더 ics 데이터 마이그레이션",
-            "Next.js 기반 캘린더 앱 개발",
-            "Nest.js 기반 API 서버 개발",
-        ),
         year: "2022",
+        header: "임직원 일정 관리 App 개발",
+        role: "웹 풀스택 개발",
+        result: joinCommas(""),
+        tasks: joinCommas(
+            "기존 구글 캘린더 ics 마이그레이션",
+            "모바일/데스크탑 대응 반응형 레이아웃 처리",
+            "다크모드 CSS 테마 기능 개발",
+        ),
         tech: joinCommas(
             "(DBMS) MySQL",
             "(Backend) Nest.js",
             "(ORM) TypeORM",
             "(Frontend) Next.js Page Router",
         ),
+        imgLabel: joinCommas("동작 화면"),
+        imgUrls: joinCommas("/gif/20230020_1.gif"),
     },
 
     "20230050": {
         header: "솔루션 계정 인증 시스템 통합",
+        tasks: joinCommas(
+            "웹 제품 계정 인증 인터페이스 개발",
+            "로그인 포털 페이지 개발",
+        ),
         year: "2023",
-        tech: joinCommas("(Frontend) vite / React"),
+        tech: joinCommas("(Frontend) Vite / React"),
+        imgLabel: joinCommas(),
+        imgUrls: joinCommas(),
     },
 
     "20230060": {
@@ -358,7 +382,7 @@ const ko = {
         year: "2023",
     },
     "20230070": {
-        header: "브라우저 Window 통신 체계 구축",
+        header: "iframe 기반 웹 페이지 모듈화",
         // BroadcastChannel API 기반
         year: "2023",
     },
