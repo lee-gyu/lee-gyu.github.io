@@ -30,8 +30,8 @@ function getUrl(url: string) {
                     <img src={getUrl(url)} alt={imgLabelList[id]} />
                     <figcaption class="img-caption">
                         {imgLabelList[id]}
+                        <Icon icon="io5-open" />
                     </figcaption>
-                    <Icon icon="io5-open" />
                 </figure>
             </a>
         ))
@@ -46,9 +46,11 @@ function getUrl(url: string) {
         margin-left: -0.5rem;
 
         img {
-            height: 64px;
-            width: 128px;
-            margin-bottom: 0.5rem;
+            height: 72px;
+            aspect-ratio: 16/9;
+            margin: 0 auto 0.25rem auto;
+            object-fit: cover;
+            object-position: top left;
         }
     }
 
@@ -71,7 +73,10 @@ function getUrl(url: string) {
     }
 
     .img-caption {
-        float: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 0.5rem;
         font-weight: 300;
         font-size: 0.875rem;
     }
