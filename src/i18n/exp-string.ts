@@ -256,7 +256,7 @@ const ko = {
             "별도의 요구사항 정의서, 사양서 없이 직접 레거시 애플리케이션을 분석하여 모든 기능이 호환되도록 구현하여 프로젝트를 완료했습니다.",
         ].join(" "),
         imgLabel: "예제",
-        imgUrls: "/video/20210070_1.webm",
+        imgUrls: "/video/20210070_1.mp4",
     },
     "20210080": {
         header: "[협업 환경] 사내 웹 프로젝트 SDK 이용 환경 구축",
@@ -296,8 +296,8 @@ const ko = {
         imgUrls: joinCommas(
             "/img/20210090_1.png",
             "/img/20210090_2.png",
-            "/video/20210090_3.webm",
-            "/video/20210090_4.webm",
+            "/video/20210090_3.mp4",
+            "/video/20210090_4.mp4",
         ),
         imgLabel: joinCommas("#1 기존", "#2 기존", "#1 리뉴얼", "#2 리뉴얼"),
         story: [
@@ -373,7 +373,7 @@ const ko = {
             "(DBMS) MySQL",
         ),
         imgLabel: joinCommas("(PC) 동작 화면", "(모바일) 동작 화면"),
-        imgUrls: joinCommas("/video/20230020_1.webm", "/video/20230020_2.webm"),
+        imgUrls: joinCommas("/video/20230020_1.mp4", "/video/20230020_2.mp4"),
     },
 
     "20230070": {
@@ -385,7 +385,7 @@ const ko = {
         header: "[BackOffice] 사내 휴가계 시스템 리뉴얼",
         year: "2023",
         "co-op": "제품 디자이너",
-        imgUrls: "/video/20230080_1.webm",
+        imgUrls: "/video/20230080_1.mp4",
         imgLabel: "(모바일) 동작 화면",
     },
 
