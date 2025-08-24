@@ -10,13 +10,22 @@ type ExpTabList = {
     id: string;
     tabCaption: string;
     expKeyList: ExpKey[];
-    hiddenWhenPrint?: boolean;
+    printHidden?: boolean;
 };
 
 const lang = Astro.currentLocale as Lang;
 const t = useTranslations(lang);
 
-const printHiddenSet = new Set([""]);
+const printHiddenSet = new Set([
+    // 2025
+    "20250040",
+    // 2023
+
+    // 2018
+    "20180070",
+    // 2015
+    "20150060",
+]);
 
 const projectTabs: ExpTabList[] = [
     {
@@ -24,7 +33,6 @@ const projectTabs: ExpTabList[] = [
         tabCaption: t("exp.tab.2025"),
         expKeyList: [
             // 최근
-            // 다국어 관리 시스템
             "20250090", // 커스터마이징 모듈
             "20250080", // Dark Mode Theme
             "20250070", // 전자결재
@@ -41,7 +49,7 @@ const projectTabs: ExpTabList[] = [
         expKeyList: [
             // 2023
             "20230080", // 휴가계 리뉴얼
-            "20230070", // iframe
+            "20230070", // 제품간 호출 프로토콜
             // "20230060", // jsp
             // "20230050", // InnoPortal
             // "20240010", // 개발 프로세스
@@ -60,13 +68,11 @@ const projectTabs: ExpTabList[] = [
     },
     {
         id: "exp_2018",
-        hiddenWhenPrint: true,
         tabCaption: t("exp.tab.2018"),
         expKeyList: ["20180070", "20180050", "20180030", "20180020"],
     },
     {
         id: "exp_2015",
-        hiddenWhenPrint: true,
         tabCaption: t("exp.tab.2015"),
         expKeyList: [
             "20150070", // 지도위원
@@ -112,11 +118,14 @@ const projectTabs: ExpTabList[] = [
                 <div
                     id={tab.id}
                     class:list={["tab-content"]}
-                    data-print-hidden={tab.hiddenWhenPrint ? true : null}
+                    data-print-hidden={tab.printHidden ? true : null}
                 >
                     <ol class="tab-card-list">
                         {tab.expKeyList.map((expId) => (
-                            <ExpCard expId={expId} />
+                            <ExpCard
+                                expId={expId}
+                                printHidden={printHiddenSet.has(expId)}
+                            />
                         ))}
                     </ol>
                 </div>

@@ -16,7 +16,8 @@ export type ExpProps =
     | "urlText"
     | "story"
     | "imgUrls"
-    | "imgLabel";
+    | "imgLabel"
+    | "co-op";
 
 type ExpStoryObj = Partial<Record<ExpProps, string>>;
 
@@ -37,9 +38,9 @@ const ko = {
             "https://www.flickr.com/photos/worldskills/9235939100/in/album-72157634532467264/",
         ),
         story: [
-            "전국 대회 2위 수상하고, 국가대표 선발전을 거쳐 국가대표로 선발되었습니다.",
+            "전국 대회 수상 후, 국가대표 선발전을 거쳐 국가대표로 선발되었습니다.",
             "이후 삼성전자 기능올림픽 훈련센터에서 국가대표 훈련을 받고, 금메달을 수상했습니다.",
-            "국가대표 훈련 과정에서 문제 해결 능력과 업무용 소프트웨어를 이해하는 능력을 키울 수 있었습니다.",
+            "훈련 과정에서 문제 해결 능력과 업무용 소프트웨어를 이해하는 능력을 키웠습니다.",
         ].join(" "),
     },
     "20150040": {
@@ -90,7 +91,7 @@ const ko = {
             "지도 선수 모두 수상을 하여 고과 평가 A를 받았으며, ",
             "베트남은 국가 최초 메달 수상으로 베트남에 초청되어 국가 총리의 표창을 받았습니다.",
             "\n\n",
-            "이후 S/W 전문성을 키우기 위해 부서 이동을 신청하여 VD사업부로 전배되었습니다.",
+            "이후 S/W 전문성을 키우기 위해 부서 이동을 신청하여 다른 사업부로 전배했습니다.",
         ].join(""),
     },
 
@@ -110,14 +111,14 @@ const ko = {
             "임직원 업무 현황 보고서 메일링",
         ),
         result: joinCommas(
-            "기존 보고용 문서 출력을 웹 문서로 대체",
-            "관리자가 수기로 취합하던 업무 보고 작업 시스템화",
+            "기존 보고용 문서 출력을 웹 기반 시스템으로 효율화",
+            "관리자가 수기로 취합하던 업무 취합 작업 시스템화",
         ),
         story: [
-            "사내 IT 시스템은 SI 업체에 의존하고 있어, 개발 요청 시 큰 비용이 발생합니다. ",
-            "팀에서 필요한 업무 시스템을 직접 만들기로 기획하고 요구사항 전체를 개발하는 역할을 맡았습니다.",
+            "사내 IT 시스템은 SI 업체에 의존하고 있어, 개발 요청 시 큰 비용이 발생했었습니다. ",
+            "사업부에 필요한 업무 시스템을 직접 만들기로 기획하고 요구사항 전체를 개발하는 역할을 맡았습니다.",
             "\n\n",
-            "지시가 없더라도 사용에 불편함이 보이면 스스로 개선하며 얻는 성취가 있었습니다.",
+            "사용에 불편함이 보이면 스스로 개선하며 얻는 성취가 있었습니다.",
         ].join(""),
     },
     "20180030": {
@@ -141,16 +142,17 @@ const ko = {
             // "해외 법인 DB 동기화 시스템",
             // "모니터링 대시보드 화면",
         ),
-        story: [
-            "부서에 소프트웨어 개발 인력이 보충되면서, 전체 해외 법인을 모니터링하는 과제가 주어졌습니다.",
-            "사내 제조 실행 시스템(MES)과 연계하여 API로 주기적으로 데이터를 수집하고, 이를 보여주는 화면을 개발했습니다.",
-        ].join(" "),
+        // story: [
+        //     "부서에 소프트웨어 개발 인력이 보충되면서, 전체 해외 법인을 모니터링하는 과제가 주어졌습니다.",
+        //     "사내 제조 실행 시스템(MES)과 연계하여 API로 주기적으로 데이터를 수집하고, 이를 보여주는 화면을 개발했습니다.",
+        // ].join(" "),
     },
     "20180050": {
         header: "IoT 환경 데이터 수집",
         year: "2017",
+        "co-op": "IoT/센서 연동 담당 엔지니어",
         role: "웹 풀스택 개발",
-        result: "위험 환경 요소를 파악하는 모니터링 시스템 구축",
+        result: "먼지/조도/소음 등 환경 데이터 수집/모니터링 시스템 개발",
         tech: joinCommas(
             "(IoT) Raspberry Pi (Linux Raspbian)",
             "(Backend) C# ASP.NET MVC",
@@ -158,10 +160,10 @@ const ko = {
             // "(DBMS) MariaDB",
             // "(ORM) Entity Framework",
         ),
-        // story: [
-        //     "먼지, 조도, 소음 등의 공정에서 발생하는 환경 데이터를 IoT 기기로 수집하고, 이를 공정 환경 분석에 활용하는 과제입니다.",
-        //     "IoT 기기와 센서 연동을 담당하는 엔지니어와 협업한 과제입니다.",
-        // ].join("\n"),
+        story: [
+            "IoT 기기에 연결된 센서들로 환경 데이터를 수집하고, 이를 공정 환경 개선에 활용될 수 있도록 하는 과제입니다.",
+            "IoT 기기와 센서 연동 등의 하드웨어를 담당하는 엔지니어와 협업한 과제입니다.",
+        ].join("\n"),
     },
 
     "20180055": {
@@ -179,6 +181,7 @@ const ko = {
         header: "공정 프로세스 현황 모니터링",
         year: "2017",
         role: "웹 풀스택 개발",
+        "co-op": "PLC 신호 처리 클라이언트 개발자",
         result: "공정 병목 현상 파악 및 개선에 기여",
         tech: joinCommas(
             "(DBMS) MariaDB",
@@ -188,8 +191,8 @@ const ko = {
         ),
         story: [
             "공정 프로세스는 조립-검사-포장 등의 단계를 거칩니다. ",
-            "평균보다 지연되는 작업이 있는 경우, 전체 생산성에 영향을 미칩니다. ",
-            "어떤 공정에서 병목이 있는지 분석하기 위해 PLC 신호를 수신하여 작업 시간을 계산하고, 전체 공정을 보여주는 웹 화면을 개발했습니다.\n",
+            "평균보다 지연되는 작업이 있는 경우, 전체 생산성에 지연이 발생합니다. ",
+            "공정 기계의 PLC 신호를 수신하여 작업 시간을 계산하고, 전체 공정을 보여주는 웹 화면을 개발했습니다.\n",
             "실제 공정에 있는 PLC 메모리를 읽어 작업을 계산하는 부분은 다른 엔지니어가 담당하고, 데이터 수집 서버와 웹 화면 개발을 담당했습니다.",
             "\n\n",
             "개발 환경에 Node.js와 타입스크립트를 처음으로 도입해보았던 과제입니다.",
@@ -197,54 +200,52 @@ const ko = {
     },
 
     "20210060": {
-        header: "정부 연구개발 과제",
-        year: "2021",
-        summary: "RPA 소프트웨어 개발",
+        header: "RPA 정부 연구개발 과제 개발",
+        period: "2020 ~ 2021",
+        role: "시스템 풀스택 개발",
+        "co-op": joinCommas("프로젝트 리더", "AI 모델 개발자"),
         tasks: joinCommas(
             "내부 시스템 풀스택 개발",
-            "TTA 인증 시험 업무 지원",
+            "TTA 인증 시험 업무",
             "프로젝트 최종 보고서 작성",
         ),
         result: "정부 연구개발 과제 최종 수행 완료",
         feat: joinCommas(
-            "스크립트 실행 성능 최적화",
+            "RPA 실행 성능 최적화 (10초 → 2초)",
             "Win/Linux/Mac 크로스 플랫폼 Electron App",
             "Windows Sandbox 활용 가상 테스팅 환경 구축",
         ),
-        tech: joinCommas(
-            "(ETC) Java / Python",
-            "(Backend) Koa.js",
-            "(Frontend) Vue.js / Electron",
-            "(Container) Docker",
-        ),
+        tech: joinCommas("(Backend) Koa.js", "(Frontend) Vue.js / Electron"),
         issue: joinCommas(
-            "RPA 스크립트 실행 성능 문제",
-            "크로스 플랫폼 실행 환경 이슈",
+            "Linux / Mac 크로스 플랫폼 실행 환경 이슈",
+            "Jython 기반의 매우 무겁고 느린 초기화 성능",
         ),
         story: [
-            "당시 프로젝트 막바지였던 AI 과제를 맡았습니다. ",
-            "PC 내 UI를 식별하고 마우스/키보드를 제어하여 단순 반복 작업을 자동화하는 업무 자동화(RPA) 연구개발 과제였습니다.",
+            "당시 프로젝트 막바지였던 정부 연구개발 과제를 맡았습니다.\n",
+            "화면 내 UI를 식별하고 마우스/키보드를 제어하여 단순 사용자의 반복 작업을 자동화하는 업무 자동화(RPA) 연구개발 과제였습니다.",
             "\n\n",
-            "Windows 실행 환경만 구현되어 있어서 프로젝트 마무리에 어려움이 있었는데, Linux/Mac 실행 환경에 대한 작업을 전담하고 TTA 인증 시험까지 마무리 지었습니다.",
+            "프로젝트 완수 조건이 모든 플랫폼에서의 실행 보장이었는데,\n",
+            "팀에 합류한 당시 몇 개월이 남지 않은 상황에서 Windows 실행 환경만 구현되어 있었습니다.\n",
+            "Linux/Mac 실행 환경에 대한 작업을 전담하고 TTA 인증 시험까지 마무리 지어 프로젝트를 마무리했습니다.",
         ].join(""),
     },
     "20210070": {
         header: "플로우차트 UI 컴포넌트 라이브러리",
         year: "2021",
-        tasks: "플로우차트 내부 시스템 설계 / 구현",
-        result: "",
-        tech: joinCommas("D3.js", "TypeScript"),
+        tasks: "플로우차트 내부 시스템 전체 설계 / 구현",
+        result: joinCommas(""),
+        tech: joinCommas("D3.js / TypeScript"),
         feat: joinCommas(
             "객체 추가 / 선택 / 드래그 앤 드롭 모드",
             "사용자 액션 Undo / Redo",
             "연결선 처리 알고리즘",
         ),
-        urlText: "스토리북 컴포넌트 예제",
+        urlText: "스토리북 예제",
         urls: "https://lee-gyu.github.io/storybook/?path=/story/js-components-irflowchart--basic",
         story: [
-            "데스크탑 클라이언트를 웹으로 포팅하기 위해 시작한 과제입니다.",
-            "기존 데스크탑의 사용성을 웹에서도 동일하게 제공하기 위해 노력했습니다.",
-            "\n당시 svg 요소를 편하게 처리하기 위해 D3.js를 채택하고, TypeScript로 타입 힌트를 제공하여 개발자 경험을 높였습니다.",
+            "당시 사내 클라이언트 프로그램은 C++ Builder 기반의 네이티브 데스크탑 애플리케이션이었습니다. ",
+            "영업본부에서는 타사와의 제품 경쟁력을 위해 웹으로의 기술 전환을 지속적으로 요구하였고, 웹 전환의 가능성을 보기 위한 첫 시작 과제였습니다.",
+            "레거시 버전 이상의 UI 컴포넌트로 개발을 완수했습니다.",
         ].join(" "),
     },
     "20210080": {
@@ -259,9 +260,7 @@ const ko = {
         tech: joinCommas(
             "(Container) Docker",
             "(CI/CD) Jenkins",
-            "(Docs) Storybook",
-            "(Docs) TypeDoc",
-            "(VCS) GitLab",
+            "(Docs) Storybook / TypeDoc",
         ),
         urls: "https://lee-gyu.github.io/storybook/?path=/story/html-components-button--intent",
         urlText: "라이브 에디터 예제",
@@ -275,7 +274,7 @@ const ko = {
     "20210090": {
         header: "UI 스타일 리뉴얼 프로젝트",
         period: "2021 ~ 2022",
-        summary: "프리랜서와 협업하여 제품 UI 스타일 리뉴얼",
+        "co-op": "프리랜서 제품 디자이너",
         tasks: joinCommas(
             "리뉴얼을 위한 기존 화면 전수 조사",
             "프로젝트 협업 환경 구축",
@@ -299,8 +298,9 @@ const ko = {
     },
 
     "20230010": {
-        header: "웹 제품 아이콘 CSS 번들러 개발",
+        header: "웹 제품 svg 아이콘 CSS 번들러 개발",
         year: "2022",
+        "co-op": "제품 디자이너",
         tasks: joinCommas(
             "아이콘 CSS 번들러 프로그램 개발",
             "아이콘 스토리북 페이지 작성",
@@ -323,7 +323,7 @@ const ko = {
         header: "Grid UI 컴포넌트 라이브러리 개발",
         year: "2022",
         result: joinCommas(""),
-        tasks: joinCommas("내부 구성 요소 구조 설계 개발"),
+        tasks: joinCommas("Row/Column/Cell/Plugin 구성 요소 설계/개발"),
         feat: joinCommas(
             "Viewport에 보이는 DOM만 출력하도록 Windowing 적용",
             "셀 렌더러를 이용하여 다양한 셀 UI 커스텀 기능 제공",
@@ -347,8 +347,9 @@ const ko = {
 
     "20230020": {
         year: "2022",
-        header: "임직원 일정 관리 App 개발",
+        header: "임직원 일정 관리/공유 캘린더 개발",
         role: "웹 풀스택 개발",
+        "co-op": joinCommas("제품 디자이너", "신입 F/E 개발자"),
         result: joinCommas(""),
         tasks: joinCommas(
             "기존 구글 캘린더 ics 마이그레이션",
@@ -356,64 +357,53 @@ const ko = {
             "다크모드 CSS 테마 기능 개발",
         ),
         tech: joinCommas(
-            "(DBMS) MySQL",
-            "(Backend) Nest.js",
-            "(ORM) TypeORM",
             "(Frontend) Next.js Page Router",
+            "(Backend) Nest.js / TypeORM",
+            "(DBMS) MySQL",
         ),
-        imgLabel: joinCommas("동작 화면"),
-        imgUrls: joinCommas("/gif/20230020_1.gif"),
+        imgLabel: joinCommas("(PC) 동작 화면", "(Mobile) 동작 화면"),
+        imgUrls: joinCommas("/gif/20230020_1.webp", "/gif/20230020_2.webp"),
     },
 
-    "20230050": {
-        header: "솔루션 계정 인증 시스템 통합",
-        tasks: joinCommas(
-            "웹 제품 계정 인증 인터페이스 개발",
-            "로그인 포털 페이지 개발",
-        ),
-        year: "2023",
-        tech: joinCommas("(Frontend) Vite / React"),
-        imgLabel: joinCommas(),
-        imgUrls: joinCommas(),
-    },
-
-    "20230060": {
-        header: "레거시 jsp → vite 기반으로 마이그레이션",
-        year: "2023",
-    },
     "20230070": {
-        header: "iframe 기반 웹 페이지 모듈화",
-        // BroadcastChannel API 기반
+        header: "웹 제품 간 호출 프로토콜 설계 / 개발",
         year: "2023",
+        result: joinCommas("iframe 기반 페이지 컴포넌트화"),
     },
     "20230080": {
         header: "사내 휴가계 시스템 리뉴얼",
-        // BroadcastChannel API 기반
         year: "2023",
+        "co-op": "제품 디자이너",
     },
 
     "20240010": {
         header: "패키지 배포 릴리즈 주기 프로세스",
-        // BroadcastChannel API 기반
         year: "2024",
     },
 
     // 2025 ~
     "20250010": {
-        header: "한 페이지에서 여러 페이지를 관리하는 UI 컴포넌트",
+        header: "iframe 기반 페이지 탭 관리 UI 컴포넌트",
         year: "2024",
+        "co-op": "제품 디자이너",
     },
     "20250020": {
-        header: "고성능 계층 트리 UI 컴포넌트 개발",
+        header: "고성능 트리 UI 컴포넌트 개발",
         year: "2024",
     },
     "20250040": {
         header: "신입/경력 웹 개발자 채용 전형 담당",
         year: "2024",
+        role: "채용 전형 담당/면접관",
+        urlText: joinCommas("채용 회고록"),
+        urls: joinCommas(
+            "https://medium.com/@gyuc219/%EC%9B%B9-f-e-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%B1%84%EC%9A%A9-%EA%B3%BC%EC%A0%95-%ED%9A%8C%EA%B3%A0-efa5ea562ab9",
+        ),
     },
     "20250050": {
         header: "온라인 코딩 테스트 사이트 개발",
         year: "2025",
+        "co-op": "제품 디자이너",
         tech: joinCommas(
             "(Frontend) Next.js App Router",
             "(DBMS) PostgreSQL",

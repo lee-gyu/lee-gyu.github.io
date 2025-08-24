@@ -25,8 +25,9 @@ const expData = experiencesKo[expId];
         <ListItems label={t(`exp.label.year`)} contents={expData.year} />
         <ListItems label={t(`exp.label.date`)} contents={expData.date} />
         <ListItems label={t(`exp.label.period`)} contents={expData.period} />
-        <ListItems label={t(`exp.label.role`)} contents={expData.role} />
         <ListItems label={t(`exp.label.summary`)} contents={expData.summary} />
+        <ListItems label={t(`exp.label.role`)} contents={expData.role} />
+        <ListItems label={t(`exp.label.co-op`)} contents={expData["co-op"]} />
         <ListItems label={t(`exp.label.result`)} contents={expData.result} />
         <ListItems label={t(`exp.label.tasks`)} contents={expData.tasks} />
         <ListItems label={t(`exp.label.tech`)} contents={expData.tech} />
@@ -77,7 +78,7 @@ const expData = experiencesKo[expId];
         overflow: hidden;
         color: var(--colors-text-light);
         line-height: 1.33;
-        max-width: 58ch;
+        max-width: 64ch;
     }
 
     @media print {

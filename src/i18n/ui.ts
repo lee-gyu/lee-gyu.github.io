@@ -105,12 +105,7 @@ export const ui = {
             "SolidJS",
         ),
         "skills.40.label": "Lang",
-        "skills.40.keywords": joinCommas(
-            "JavaScript",
-            "TypeScript",
-            "Java",
-            "C#",
-        ),
+        "skills.40.keywords": joinCommas("JavaScript", "TypeScript", "Java"),
         "skills.50.label": "ETC",
         "skills.50.keywords": joinCommas(
             "Linux",
@@ -121,6 +116,7 @@ export const ui = {
 
         "exp.label.role": "역할",
         "exp.label.date": "일자",
+        "exp.label.co-op": "협업",
         "exp.label.period": "기간",
         "exp.label.year": "연도",
         "exp.label.mainTask": "주 작업",
