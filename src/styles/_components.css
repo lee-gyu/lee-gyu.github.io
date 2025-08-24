@@ -57,8 +57,8 @@
     i {
         font-size: 1.125rem;
     }
+}
 
-    a {
-        text-decoration: underline;
-    }
+.text-link {
+    text-decoration: underline;
 }

@@ -20,12 +20,22 @@ export function Links(props: Props) {
                     {mode === "list" ? (
                         <>
                             <Icon icon={icon} />
-                            <a href={url} title={title} target="_blank">
+                            <a
+                                class="text-link"
+                                href={url}
+                                title={title}
+                                target="_blank"
+                            >
                                 {url}
                             </a>
                         </>
                     ) : (
-                        <a href={url} title={title} target="_blank">
+                        <a
+                            class="text-link"
+                            href={url}
+                            title={title}
+                            target="_blank"
+                        >
                             {text}
                         </a>
                     )}

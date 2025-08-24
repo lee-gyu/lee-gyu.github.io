@@ -10,6 +10,8 @@ import { useTranslations } from "src/i18n/utils";
 import Experiences from "../widget/Experiences.astro";
 import Awards from "../widget/Awards.astro";
 import Skills from "../components/Skills.astro";
+import { format } from "src/utils/date";
+import dayjs from "dayjs";
 
 type Props = {};
 
@@ -37,10 +39,15 @@ const emailLinkCss = css({
 const sectionCss = css({
     margin: "1rem 0",
 });
+
+const lastUpdated = format(dayjs(LAST_UPDATED), lang);
 ---
 
 <DefaultLayout lang={lang}>
     <main class={mainCss}>
+        <div class="updated-info hidden-info" data-only-print="block">
+            <span>{t("lastUpdated")} {lastUpdated}</span>
+        </div>
         <Title size="h1">{t("name")}</Title>
         <Title size="h2">{t("jobTitle")}</Title>
         <a class={emailLinkCss} href="mailto:leegyu4dev@gmail.com"
@@ -71,6 +78,15 @@ const sectionCss = css({
                     <Title id="experiences" size="h3">
                         {t("experience")}
                     </Title>
+                    <p class="hidden-info" data-only-print="block">
+                        {t("experience.print-desc")}
+                        <a
+                            class="text-link"
+                            href={import.meta.env.PUBLIC_BASE_URL}
+                        >
+                            {t("experience.print-link")}
+                        </a>
+                    </p>
                     <Experiences />
                 </section>
             )
@@ -87,5 +103,15 @@ const sectionCss = css({
         white-space: nowrap;
         margin-left: 0.25rem;
         word-break: keep-all;
+    }
+
+    .hidden-info {
+        font-size: 0.875rem;
+        opacity: 0.75;
+    }
+
+    .updated-info {
+        margin-top: -1rem;
+        text-align: right;
     }
 </style>
