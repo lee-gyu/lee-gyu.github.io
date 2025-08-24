@@ -8,6 +8,7 @@ const LAST_UPDATED = new Date().toUTCString();
 export default defineConfig({
     outDir: "./dist",
     base: "/",
+    compressHTML: true,
     i18n: {
         locales: ["en", "ko"],
         defaultLocale: "ko",
@@ -28,6 +29,7 @@ export default defineConfig({
         },
         define: {
             LAST_UPDATED: `"${LAST_UPDATED}"`,
+            DEFAULT_BASE_URL: `"https://lee-gyu.github.io"`,
         },
     },
 });
