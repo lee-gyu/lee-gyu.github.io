@@ -23,7 +23,7 @@ type ExpStoryObj = Partial<Record<ExpProps, string>>;
 
 const ko = {
     "20150030": {
-        header: "2013 국제기능올림픽 정보기술 직종 국가대표 훈련",
+        header: "[훈련] 2013 국제기능올림픽 정보기술 직종 국가대표",
         period: "2012 ~ 2013",
         role: "기능올림픽 정보기술 직종 국가대표",
         tech: joinCommas(
@@ -63,7 +63,7 @@ const ko = {
         ].join(""),
     },
     "20150060": {
-        header: "조직문화 개선 활동 업무",
+        header: "[조직문화] 팀 문화 개선 활동 업무",
         period: "2014 ~ 2015",
         tasks: "근무 문화 개선 활동 기획/진행",
         result: "조직문화 평가 지표 향상",
@@ -73,7 +73,7 @@ const ko = {
         ].join(" "),
     },
     "20150070": {
-        header: "삼성전자 기능올림픽 훈련센터 지도위원",
+        header: "[교육] 삼성전자 기능올림픽 훈련센터 지도위원",
         period: "2013 ~ 2015",
         role: "국가대표 지도위원",
         tech: joinCommas("(Client) C# Windows", "(DBMS) SQL Server"),
@@ -96,7 +96,7 @@ const ko = {
     },
 
     "20180020": {
-        header: "웹 기반 사내 업무 시스템 개발",
+        header: "[BackOffice] 웹 사내 업무 시스템 개발",
         year: "2016",
         tech: joinCommas(
             "(Backend) C# ASP.NET MVC",
@@ -122,7 +122,7 @@ const ko = {
         ].join(""),
     },
     "20180030": {
-        header: "해외 법인 종합 관제실 시스템 구축",
+        header: "[WebApp] 해외 법인 종합 관제실 시스템 구축",
         year: "2016",
         role: "웹 풀스택 개발",
         tech: joinCommas(
@@ -148,7 +148,7 @@ const ko = {
         // ].join(" "),
     },
     "20180050": {
-        header: "IoT 환경 데이터 수집",
+        header: "[WebApp] IoT 환경 데이터 수집",
         year: "2017",
         "co-op": "IoT/센서 연동 담당 엔지니어",
         role: "웹 풀스택 개발",
@@ -167,7 +167,7 @@ const ko = {
     },
 
     "20180055": {
-        header: "삼성전자 개발 직군 S/W 자격 검증 시험",
+        header: "[자격시험] 삼성전자 S/W 개발 직군 시험",
         date: "2017.6",
         result: "Pro 등급 취득",
         summary: "알고리즘 코딩테스트 시험",
@@ -178,7 +178,7 @@ const ko = {
     },
 
     "20180070": {
-        header: "공정 프로세스 현황 모니터링",
+        header: "[WebApp] 공정 프로세스 현황 모니터링",
         year: "2017",
         role: "웹 풀스택 개발",
         "co-op": "PLC 신호 처리 클라이언트 개발자",
@@ -200,10 +200,10 @@ const ko = {
     },
 
     "20210060": {
-        header: "RPA 정부 연구개발 과제 개발",
+        header: "[정부 연구개발 과제] RPA AI S/W 개발",
         period: "2020 ~ 2021",
         role: "시스템 풀스택 개발",
-        "co-op": joinCommas("프로젝트 리더", "AI 모델 개발자"),
+        "co-op": joinCommas("프로젝트 리더", "Vision 머신러닝 개발자"),
         tasks: joinCommas(
             "내부 시스템 풀스택 개발",
             "TTA 인증 시험 업무",
@@ -221,18 +221,18 @@ const ko = {
             "Jython 기반의 매우 무겁고 느린 초기화 성능",
         ),
         story: [
-            "당시 프로젝트 막바지였던 정부 연구개발 과제를 맡았습니다.\n",
+            "당시 프로젝트 막바지였던 정부 연구개발 과제에 투입되었습니다.\n",
             "화면 내 UI를 식별하고 마우스/키보드를 제어하여 단순 사용자의 반복 작업을 자동화하는 업무 자동화(RPA) 연구개발 과제였습니다.",
             "\n\n",
-            "프로젝트 완수 조건이 모든 플랫폼에서의 실행 보장이었는데,\n",
+            "프로젝트 완수 조건이 Windows/Linux/Mac 3개 플랫폼에서의 실행 보장이었는데,\n",
             "팀에 합류한 당시 몇 개월이 남지 않은 상황에서 Windows 실행 환경만 구현되어 있었습니다.\n",
             "Linux/Mac 실행 환경에 대한 작업을 전담하고 TTA 인증 시험까지 마무리 지어 프로젝트를 마무리했습니다.",
         ].join(""),
     },
     "20210070": {
-        header: "플로우차트 UI 컴포넌트 라이브러리",
+        header: "[UI 컴포넌트] 플로우차트 라이브러리",
         year: "2021",
-        tasks: "플로우차트 내부 시스템 전체 설계 / 구현",
+        tasks: "컴포넌트 내부 구조 전체 설계 / 개발",
         result: joinCommas(""),
         tech: joinCommas("D3.js / TypeScript"),
         feat: joinCommas(
@@ -244,12 +244,12 @@ const ko = {
         urls: "https://lee-gyu.github.io/storybook/?path=/story/js-components-irflowchart--basic",
         story: [
             "당시 사내 클라이언트 프로그램은 C++ Builder 기반의 네이티브 데스크탑 애플리케이션이었습니다. ",
-            "영업본부에서는 타사와의 제품 경쟁력을 위해 웹으로의 기술 전환을 지속적으로 요구하였고, 웹 전환의 가능성을 보기 위한 첫 시작 과제였습니다.",
-            "레거시 버전 이상의 UI 컴포넌트로 개발을 완수했습니다.",
+            "영업본부에서는 타사와의 제품 경쟁력을 위해 웹으로의 기술 전환을 지속적으로 요구하였고, 웹 전환의 가능성을 보기 위한 첫 시작 과제였습니다.\n\n",
+            "별도의 요구사항 정의서, 사양서 없이 직접 레거시 애플리케이션을 분석하여 모든 기능이 호환되도록 구현하여 프로젝트를 완료했습니다.",
         ].join(" "),
     },
     "20210080": {
-        header: "사내 웹 SDK 배포 환경 구축",
+        header: "[협업 환경] 사내 웹 프로젝트 SDK 이용 환경 구축",
         year: "2021",
         tasks: joinCommas(
             "사내 npm 레지스트리 서버 구축",
@@ -272,7 +272,7 @@ const ko = {
         ].join(" "),
     },
     "20210090": {
-        header: "UI 스타일 리뉴얼 프로젝트",
+        header: "[디자인 시스템] UI 스타일 리뉴얼 프로젝트",
         period: "2021 ~ 2022",
         "co-op": "프리랜서 제품 디자이너",
         tasks: joinCommas(
@@ -298,7 +298,7 @@ const ko = {
     },
 
     "20230010": {
-        header: "웹 제품 svg 아이콘 CSS 번들러 개발",
+        header: "[디자인 시스템] 웹 제품 svg 아이콘 CSS 번들러 개발",
         year: "2022",
         "co-op": "제품 디자이너",
         tasks: joinCommas(
@@ -320,7 +320,7 @@ const ko = {
     },
 
     "20230015": {
-        header: "Grid UI 컴포넌트 라이브러리 개발",
+        header: "[UI 컴포넌트] Grid UI 컴포넌트 라이브러리 개발",
         year: "2022",
         result: joinCommas(""),
         tasks: joinCommas("Row/Column/Cell/Plugin 구성 요소 설계/개발"),
@@ -347,9 +347,9 @@ const ko = {
 
     "20230020": {
         year: "2022",
-        header: "임직원 일정 관리/공유 캘린더 개발",
+        header: "[BackOffice] 임직원 일정 관리/공유 캘린더 개발",
         role: "웹 풀스택 개발",
-        "co-op": joinCommas("제품 디자이너", "신입 F/E 개발자"),
+        "co-op": joinCommas("제품 디자이너", "주니어 F/E 개발자"),
         result: joinCommas(""),
         tasks: joinCommas(
             "기존 구글 캘린더 ics 마이그레이션",
@@ -361,19 +361,21 @@ const ko = {
             "(Backend) Nest.js / TypeORM",
             "(DBMS) MySQL",
         ),
-        imgLabel: joinCommas("(PC) 동작 화면", "(Mobile) 동작 화면"),
+        imgLabel: joinCommas("(PC) 동작 화면", "(모바일) 동작 화면"),
         imgUrls: joinCommas("/gif/20230020_1.webp", "/gif/20230020_2.webp"),
     },
 
     "20230070": {
-        header: "웹 제품 간 호출 프로토콜 설계 / 개발",
+        header: "[WebApp 아키텍처] 제품 호출 프로토콜 설계 / 개발",
         year: "2023",
         result: joinCommas("iframe 기반 페이지 컴포넌트화"),
     },
     "20230080": {
-        header: "사내 휴가계 시스템 리뉴얼",
+        header: "[BackOffice] 사내 휴가계 시스템 리뉴얼",
         year: "2023",
         "co-op": "제품 디자이너",
+        imgUrls: "/gif/20230080_1.webp",
+        imgLabel: "(모바일) 동작 화면",
     },
 
     "20240010": {
@@ -383,25 +385,30 @@ const ko = {
 
     // 2025 ~
     "20250010": {
-        header: "iframe 기반 페이지 탭 관리 UI 컴포넌트",
+        header: "[UI 컴포넌트] iframe 기반 페이지 탭 관리",
         year: "2024",
         "co-op": "제품 디자이너",
     },
     "20250020": {
-        header: "고성능 트리 UI 컴포넌트 개발",
+        header: "[UI 컴포넌트] 고성능 트리 컴포넌트 개발",
         year: "2024",
     },
     "20250040": {
-        header: "신입/경력 웹 개발자 채용 전형 담당",
+        header: "[채용] 신입/경력 웹 개발자 채용",
         year: "2024",
-        role: "채용 전형 담당/면접관",
+        role: "채용 전형 담당",
+        tasks: joinCommas(
+            "지원자 서류 검토",
+            "과제 테스트 진행",
+            "기술/문화 면접 진행",
+        ),
         urlText: joinCommas("채용 회고록"),
         urls: joinCommas(
             "https://medium.com/@gyuc219/%EC%9B%B9-f-e-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%B1%84%EC%9A%A9-%EA%B3%BC%EC%A0%95-%ED%9A%8C%EA%B3%A0-efa5ea562ab9",
         ),
     },
     "20250050": {
-        header: "온라인 코딩 테스트 사이트 개발",
+        header: "[WebApp] 온라인 코딩 테스트 사이트 개발",
         year: "2025",
         "co-op": "제품 디자이너",
         tech: joinCommas(
@@ -411,16 +418,24 @@ const ko = {
         ),
     },
     "20250070": {
-        header: "전자결재 업무 시스템 설계",
+        header: "[BackOffice] 전자결재 업무 시스템 설계",
         role: "",
         year: "2025",
     },
     "20250080": {
-        header: "다크모드 컬러 토큰 체계",
+        header: "[디자인 시스템] 다크모드 컬러 토큰 체계 적용",
+        role: "CSS 토큰 체계 개발 방향성 리드",
+        "co-op": joinCommas("제품 디자이너", "주니어 F/E 개발자"),
         year: "2025",
     },
     "20250090": {
-        header: "제품 커스터마이징 모듈 로더 구조 설계/개발",
+        header: "[WebApp 아키텍처] WebApp 커스터마이징 로더 구조 설계/개발",
+        "co-op": joinCommas("주니어 F/E 개발자 (2명)"),
+        year: "2025",
+    },
+
+    "20250100": {
+        header: "[AI 클라우드] 다국어 통합 관리",
         year: "2025",
     },
 } satisfies Record<string, ExpStoryObj>;

@@ -48,11 +48,12 @@ const lastUpdated = format(dayjs(LAST_UPDATED), lang);
         <div class="updated-info hidden-info" data-only-print="block">
             <span>{t("lastUpdated")} {lastUpdated}</span>
         </div>
-        <Title size="h1">{t("name")}</Title>
+        <Title size="h1">{t("name")} </Title>
         <Title size="h2">{t("jobTitle")}</Title>
-        <a class={emailLinkCss} href="mailto:leegyu4dev@gmail.com"
-            >leegyu4dev@gmail.com</a
-        >
+        <div class={emailLinkCss}>
+            <p>{t("birthdate")}</p>
+            <a href="mailto:leegyu4dev@gmail.com">leegyu4dev@gmail.com</a>
+        </div>
         <section class={sectionCss}>
             <Links />
         </section>
@@ -61,12 +62,12 @@ const lastUpdated = format(dayjs(LAST_UPDATED), lang);
             <MainJob />
         </section>
         <section class={sectionCss} role="article">
-            <Title id="career" size="h3">{`${t("career")}`}</Title>
-            <Career />
-        </section>
-        <section class={sectionCss} role="article">
             <Title id="skills" size="h3">{`${t("skills")}`}</Title>
             <Skills />
+        </section>
+        <section class={sectionCss} role="article">
+            <Title id="career" size="h3">{`${t("career")}`}</Title>
+            <Career />
         </section>
         <section class={sectionCss} role="article">
             <Title id="awards" size="h3">{`${t("awards")}`}</Title>
