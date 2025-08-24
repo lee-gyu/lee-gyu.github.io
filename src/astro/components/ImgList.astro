@@ -27,7 +27,17 @@ function getUrl(url: string) {
                 rel="noopener noreferrer"
             >
                 <figure>
-                    <img src={getUrl(url)} alt={imgLabelList[id]} />
+                    {url.endsWith(".webm") ? (
+                        <video
+                            src={getUrl(url)}
+                            muted
+                            loop
+                            playsinline
+                            autoplay
+                        />
+                    ) : (
+                        <img src={getUrl(url)} alt={imgLabelList[id]} />
+                    )}
                     <figcaption class="img-caption">
                         {imgLabelList[id]}
                         <Icon icon="io5-open" />
@@ -45,7 +55,8 @@ function getUrl(url: string) {
         column-gap: 0.5rem;
         margin-left: -0.5rem;
 
-        img {
+        img,
+        video {
             height: 72px;
             aspect-ratio: 16/9;
             margin: 0 auto 0.25rem auto;

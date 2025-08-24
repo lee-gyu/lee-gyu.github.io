@@ -230,7 +230,7 @@ const ko = {
         ].join(""),
     },
     "20210070": {
-        header: "[UI 컴포넌트] 플로우차트 라이브러리",
+        header: "[UI] 플로우차트 컴포넌트 개발",
         year: "2021",
         tasks: "컴포넌트 내부 구조 전체 설계 / 개발",
         result: joinCommas(""),
@@ -247,6 +247,8 @@ const ko = {
             "영업본부에서는 타사와의 제품 경쟁력을 위해 웹으로의 기술 전환을 지속적으로 요구하였고, 웹 전환의 가능성을 보기 위한 첫 시작 과제였습니다.\n\n",
             "별도의 요구사항 정의서, 사양서 없이 직접 레거시 애플리케이션을 분석하여 모든 기능이 호환되도록 구현하여 프로젝트를 완료했습니다.",
         ].join(" "),
+        imgLabel: "예제",
+        imgUrls: "/video/20210070_1.webm",
     },
     "20210080": {
         header: "[협업 환경] 사내 웹 프로젝트 SDK 이용 환경 구축",
@@ -286,10 +288,10 @@ const ko = {
         imgUrls: joinCommas(
             "/img/20210090_1.png",
             "/img/20210090_2.png",
-            "/img/20210090_3.png",
-            "/img/20210090_4.png",
+            "/video/20210090_3.webm",
+            "/video/20210090_4.webm",
         ),
-        imgLabel: joinCommas("#1 기존", "#1 리뉴얼", "#2 기존", "#2 리뉴얼"),
+        imgLabel: joinCommas("#1 기존", "#2 기존", "#1 리뉴얼", "#2 리뉴얼"),
         story: [
             "기존 화면은 개발자들이 직접 만든 화면이라 UI의 스타일이 오래되어 보인다는 지적이 있었습니다.",
             "누구도 쉽게 리뉴얼 작업을 시도하지 못 했었는데, 직접 주도하여 모든 화면을 조사하고,",
@@ -320,7 +322,7 @@ const ko = {
     },
 
     "20230015": {
-        header: "[UI 컴포넌트] Grid UI 컴포넌트 라이브러리 개발",
+        header: "[UI] Grid 컴포넌트 라이브러리 개발",
         year: "2022",
         result: joinCommas(""),
         tasks: joinCommas("Row/Column/Cell/Plugin 구성 요소 설계/개발"),
@@ -362,7 +364,7 @@ const ko = {
             "(DBMS) MySQL",
         ),
         imgLabel: joinCommas("(PC) 동작 화면", "(모바일) 동작 화면"),
-        imgUrls: joinCommas("/gif/20230020_1.webp", "/gif/20230020_2.webp"),
+        imgUrls: joinCommas("/video/20230020_1.webm", "/video/20230020_2.webm"),
     },
 
     "20230070": {
@@ -374,7 +376,7 @@ const ko = {
         header: "[BackOffice] 사내 휴가계 시스템 리뉴얼",
         year: "2023",
         "co-op": "제품 디자이너",
-        imgUrls: "/gif/20230080_1.webp",
+        imgUrls: "/video/20230080_1.webm",
         imgLabel: "(모바일) 동작 화면",
     },
 
@@ -385,12 +387,12 @@ const ko = {
 
     // 2025 ~
     "20250010": {
-        header: "[UI 컴포넌트] iframe 기반 페이지 탭 관리",
+        header: "[UI] iframe 기반 페이지 탭 관리 컴포넌트 개발",
         year: "2024",
         "co-op": "제품 디자이너",
     },
     "20250020": {
-        header: "[UI 컴포넌트] 고성능 트리 컴포넌트 개발",
+        header: "[UI] 고성능 트리 컴포넌트 개발",
         year: "2024",
     },
     "20250040": {
