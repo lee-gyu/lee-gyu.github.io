@@ -99,8 +99,8 @@ const ko = {
         header: "[BackOffice] 웹 사내 업무 시스템 개발",
         year: "2016",
         tech: joinCommas(
-            "(Backend) C# ASP.NET MVC",
-            "(Frontend) JQuery / Bootstrap",
+            "(B/E) C# ASP.NET MVC",
+            "(F/E) JQuery / Bootstrap",
             // "(DBMS) MariaDB",
             // "(ORM) Entity Framework",
         ),
@@ -126,8 +126,8 @@ const ko = {
         year: "2016",
         role: "웹 풀스택 개발",
         tech: joinCommas(
-            "(Backend) C# ASP.Net MVC",
-            "(Frontend) JQuery / Telerik Kendo UI",
+            "(B/E) C# ASP.Net MVC",
+            "(F/E) JQuery / Telerik Kendo UI",
             // "(DBMS) MariaDB",
             // "(ORM) Entity Framework",
             // "(Windows) WPF / Service",
@@ -155,10 +155,8 @@ const ko = {
         result: "먼지/조도/소음 등 환경 데이터 수집/모니터링 시스템 개발",
         tech: joinCommas(
             "(IoT) Raspberry Pi (Linux Raspbian)",
-            "(Backend) C# ASP.NET MVC",
+            "(B/E) C# ASP.NET MVC",
             "(Message Broker) Mosquitto",
-            // "(DBMS) MariaDB",
-            // "(ORM) Entity Framework",
         ),
         story: [
             "IoT 기기에 연결된 센서들로 환경 데이터를 수집하고, 이를 공정 환경 개선에 활용될 수 있도록 하는 과제입니다.",
@@ -185,9 +183,9 @@ const ko = {
         result: "공정 병목 현상 파악 및 개선에 기여",
         tech: joinCommas(
             "(DBMS) MariaDB",
-            "(Backend) C# ASP.NET MVC",
+            "(B/E) C# ASP.NET MVC",
             "(ORM) Entity Framework",
-            "(Frontend) TypeScript",
+            "(F/E) TypeScript",
         ),
         story: [
             "공정 프로세스는 조립-검사-포장 등의 단계를 거칩니다. ",
@@ -198,6 +196,16 @@ const ko = {
             "개발 환경에 Node.js와 타입스크립트를 처음으로 도입해보았던 과제입니다.",
         ].join(""),
     },
+
+    "20200010": {
+        header: "[어학연수] 캐나다 밴쿠버 VGC 어학원 수료",
+        period: "2020.01 ~ 2020.06",
+        summary: "Lv6 Intermediate 등급 취득",
+        urls: "https://vgc.ca/",
+        urlText: "vgc.ca",
+        imgLabel: "수료증",
+        imgUrls: "/img/20200010.png",
+    } satisfies ExpStoryObj,
 
     "20210060": {
         header: "[정부 연구개발 과제] RPA AI S/W 개발",
@@ -215,7 +223,7 @@ const ko = {
             "Win/Linux/Mac 크로스 플랫폼 Electron App",
             "Windows Sandbox 활용 가상 테스팅 환경 구축",
         ),
-        tech: joinCommas("(Backend) Koa.js", "(Frontend) Vue.js / Electron"),
+        tech: joinCommas("(B/E) Koa.js", "(F/E) Vue.js / Electron"),
         issue: joinCommas(
             "Linux / Mac 크로스 플랫폼 실행 환경 이슈",
             "Jython 기반의 매우 무겁고 느린 초기화 성능",
@@ -359,8 +367,9 @@ const ko = {
             "다크모드 CSS 테마 기능 개발",
         ),
         tech: joinCommas(
-            "(Frontend) Next.js Page Router",
-            "(Backend) Nest.js / TypeORM",
+            "(F/E) React / Next.js Page Router",
+            "(F/E) Jotai / SWR",
+            "(B/E) Nest.js / TypeORM",
             "(DBMS) MySQL",
         ),
         imgLabel: joinCommas("(PC) 동작 화면", "(모바일) 동작 화면"),
@@ -414,10 +423,12 @@ const ko = {
         year: "2025",
         "co-op": "제품 디자이너",
         tech: joinCommas(
-            "(Frontend) Next.js App Router",
+            "(F/E) React / Next.js App Router",
+            "(F/E) zustand / react-query",
             "(DBMS) PostgreSQL",
             "(ORM) Drizzle",
         ),
+        feat: joinCommas(""),
     },
     "20250070": {
         header: "[BackOffice] 전자결재 업무 시스템 설계",
