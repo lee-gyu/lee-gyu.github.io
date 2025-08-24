@@ -1,8 +1,8 @@
 ---
 import { useTranslations } from "src/i18n/utils";
-import { numAdjCss } from "src/styles/component-css";
 import ExpCard from "src/astro/components/ExpCard.astro";
 import type { ExpKey } from "src/i18n/exp-string";
+import IconButton from "../components/IconButton.astro";
 
 type Props = {};
 
@@ -10,55 +10,79 @@ type ExpTabList = {
     id: string;
     tabCaption: string;
     expKeyList: ExpKey[];
+    hiddenWhenPrint?: boolean;
 };
 
 const lang = Astro.currentLocale as Lang;
 const t = useTranslations(lang);
 
+const printHiddenSet = new Set([""]);
+
 const projectTabs: ExpTabList[] = [
     {
-        id: "expInno",
-        tabCaption: t("exp.tab.inno"),
+        id: "exp_2025",
+        tabCaption: t("exp.tab.2025"),
         expKeyList: [
-            "20250090",
-            "20250080",
-            "20250070",
-            "20250050",
-            "20250040",
-            "20250020",
-            "20250010",
-            "20250030",
-            "20240010",
-            "20230080",
-            "20230070",
-            "20230060",
-            "20230050",
-            "20230020",
-            "20230015",
-            "20230010",
-            "20210090",
-            "20210080",
-            "20210070",
-            "20210060",
+            // 최근
+            // 다국어 관리 시스템
+            "20250090", // 커스터마이징 모듈
+            "20250080", // Dark Mode Theme
+            "20250070", // 전자결재
+            "20250050", // 온라인 코딩 테스트
+            // 2024
+            "20250040", // 채용
+            "20250020", // IRTreeView
+            "20250010", // PageContainer
         ],
     },
     {
-        id: "expSamsung",
-        tabCaption: t("exp.tab.samsung"),
+        id: "exp_2023",
+        tabCaption: t("exp.tab.2023"),
         expKeyList: [
-            "20180070",
-            "20180050",
-            "20180030",
-            "20180020",
-            "20150070",
-            "20150030",
+            // 2023
+            "20230080", // 휴가계 리뉴얼
+            "20230070", // iframe
+            // "20230060", // jsp
+            // "20230050", // InnoPortal
+            // "20240010", // 개발 프로세스
+
+            // 2022
+            "20230020", // CM Calendar
+            "20230015", // Grid
+            "20230010", // Icon CSS
+
+            // 2021
+            "20210090", // UI 스타일 리뉴얼
+            "20210080", // 웹 개발 환경
+            "20210070", // Flowchart
+            "20210060", // RPA
         ],
     },
     {
-        id: "expEtc",
-        tabCaption: t("exp.tab.etc"),
-        expKeyList: ["20180055", "20150060", "20150050", "20150040"],
+        id: "exp_2018",
+        hiddenWhenPrint: true,
+        tabCaption: t("exp.tab.2018"),
+        expKeyList: ["20180070", "20180050", "20180030", "20180020"],
     },
+    {
+        id: "exp_2015",
+        hiddenWhenPrint: true,
+        tabCaption: t("exp.tab.2015"),
+        expKeyList: [
+            "20150070", // 지도위원
+            "20150060", // 조직문화 개선
+            // "20150050", // 사내 경진 대회
+            // "20150040", // 채용 업무
+            "20150030", // 훈련
+        ],
+    },
+    // {
+    //     id: "expEtc",
+    //     tabCaption: t("exp.tab.etc"),
+    //     expKeyList: [
+    //         "20180055", // SW 써티
+    //     ],
+    // },
 ];
 ---
 
@@ -85,7 +109,11 @@ const projectTabs: ExpTabList[] = [
     <div id="tabContents" class="tab-contents">
         {
             projectTabs.map((tab) => (
-                <div id={tab.id} class:list={["tab-content"]}>
+                <div
+                    id={tab.id}
+                    class:list={["tab-content"]}
+                    data-print-hidden={tab.hiddenWhenPrint ? true : null}
+                >
                     <ol class="tab-card-list">
                         {tab.expKeyList.map((expId) => (
                             <ExpCard expId={expId} />
@@ -95,9 +123,16 @@ const projectTabs: ExpTabList[] = [
             ))
         }
     </div>
+    <nav id="tabNav">
+        <IconButton icon="gr-form-prev" name="prev" />
+        <IconButton icon="gr-form-next" name="next" />
+    </nav>
 </div>
 
 <script>
+    import { addFilteredClickEv } from "src/utils/dom";
+
+    const tabNav = document.getElementById("tabNav")!;
     const expHeader = document.getElementById("experiences")!;
     const expWrapper = document.getElementById("expWrapper")!;
     const tabButtonWrapper = document.getElementById("tabButtonWrapper")!;
@@ -109,23 +144,32 @@ const projectTabs: ExpTabList[] = [
         ...tabButtonWrapper.querySelectorAll("button"),
     ] as HTMLElement[];
 
-    tabButtonWrapper.addEventListener("click", (ev) => {
-        const target = ev.target as HTMLElement;
-        const element = target.closest("[data-tab-id]") as HTMLElement;
-
-        if (!element) return;
-
+    addFilteredClickEv(tabButtonWrapper, "[data-tab-index]", (ev) => {
         const tabId = parseInt(
-            element.getAttribute("data-tab-index") || "0",
+            ev.target.getAttribute("data-tab-index") || "0",
             10,
         );
 
         activeTabButton(tabId);
     });
 
+    addFilteredClickEv(tabNav, "[data-btn-name]", (ev) => {
+        activeTabButton(
+            getCurrentTabId() +
+                (ev.target.closest("[data-btn-name='prev']") ? -1 : 1),
+        );
+    });
+
     const defaultTabId = getDefaultTabId();
 
     activeTabButton(defaultTabId, defaultTabId !== 0);
+
+    function getCurrentTabId() {
+        return parseInt(
+            expWrapper.style.getPropertyValue("--active-tab-index") ?? "0",
+            10,
+        );
+    }
 
     function activeTabButton(tabId: number, moveScroll = true) {
         // reset is-active
@@ -140,6 +184,11 @@ const projectTabs: ExpTabList[] = [
                 block: "nearest",
             });
         expWrapper.style.setProperty("--active-tab-index", `${tabId}`);
+        tabNav.setAttribute("data-invisible-first", `${tabId === 0}`);
+        tabNav.setAttribute(
+            "data-invisible-last",
+            `${tabId === tabContents.length - 1}`,
+        );
     }
 
     function getDefaultTabId() {
@@ -159,7 +208,7 @@ const projectTabs: ExpTabList[] = [
 
 <style>
     :root {
-        --tab-button-width: 80px;
+        --tab-button-width: 64px;
         --tab-button-gap: 4px;
         --tab-button-offset: -12px;
         --tab-ani-duration: 0.5s;
@@ -224,9 +273,9 @@ const projectTabs: ExpTabList[] = [
     .tab-contents {
         background-color: var(--colors-background);
         display: flex;
-        overflow: hidden;
         scrollbar-width: none;
         align-items: flex-start;
+        overflow: hidden;
         z-index: 0;
         width: calc(
             100% + var(--spacing-doc-pad-right) + var(--spacing-doc-pad-left)
@@ -263,6 +312,22 @@ const projectTabs: ExpTabList[] = [
         margin-top: calc(0.5rem - 1px);
     }
 
+    .btn-next {
+        cursor: pointer;
+        position: absolute;
+        bottom: -0.5rem;
+        right: 1rem;
+    }
+
+    #tabNav {
+        display: flex;
+        justify-content: space-between;
+        margin-left: calc(var(--spacing-doc-pad-left) * -1);
+        margin-right: calc(var(--spacing-doc-pad-right) * -1);
+        padding: 0 1.25rem;
+        margin-bottom: -0.5rem;
+    }
+
     @media print {
         .tab-contents {
             flex-direction: column;
@@ -275,6 +340,10 @@ const projectTabs: ExpTabList[] = [
         }
 
         .tab-contents-header {
+            display: none;
+        }
+
+        #tabNav {
             display: none;
         }
     }

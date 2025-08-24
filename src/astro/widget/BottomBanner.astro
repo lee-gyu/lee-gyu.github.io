@@ -1,6 +1,6 @@
 ---
 import { useTranslations } from "src/i18n/utils";
-import Links from "./Links.astro";
+import { Links } from "src/solid/widget/Links";
 
 type Props = {};
 
@@ -10,10 +10,7 @@ const nameJob = `${t("name")} - ${t("jobTitle")}`;
 ---
 
 <button id="btnToTop" class="to-top-link">{t("toTop")}</button>
-<p class="name-job">
-    {nameJob}
-    <span class="job-years">({t("jobYears")})</span>
-</p>
+<p class="name-job">{nameJob}</p>
 <Links mode="simple" />
 
 <script>

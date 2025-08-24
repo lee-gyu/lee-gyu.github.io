@@ -9,16 +9,17 @@ import ImgList from "./ImgList.astro";
 
 type Props = {
     expId: ExpKey;
+    printHidden?: boolean;
 };
 
 const lang = Astro.currentLocale as Lang;
 const t = useTranslations(lang);
-const { expId } = Astro.props;
+const { expId, printHidden } = Astro.props;
 
 const expData = experiencesKo[expId];
 ---
 
-<li class="exp-card">
+<li class="exp-card" data-print-hidden={printHidden ? true : null}>
     <Title size="h4">{expData.header}</Title>
     <ul class={listItemsCss}>
         <ListItems label={t(`exp.label.year`)} contents={expData.year} />

@@ -11,6 +11,10 @@ const { imgUrls, imgLabel } = Astro.props;
 
 const imgUrlList = splitCommas(imgUrls);
 const imgLabelList = splitCommas(imgLabel);
+
+function getUrl(url: string) {
+    return `${import.meta.env.PUBLIC_BASE_URL ?? DEFAULT_BASE_URL}${url}`;
+}
 ---
 
 <div class="image-viewer">
@@ -18,12 +22,12 @@ const imgLabelList = splitCommas(imgLabel);
         imgUrlList.map((url, id) => (
             <a
                 class="img-button"
-                href={url}
+                href={getUrl(url)}
                 target="_blank"
                 rel="noopener noreferrer"
             >
                 <figure>
-                    <img src={url} alt={imgLabelList[id]} />
+                    <img src={getUrl(url)} alt={imgLabelList[id]} />
                     <figcaption class="img-caption">
                         {imgLabelList[id]}
                     </figcaption>
@@ -70,11 +74,5 @@ const imgLabelList = splitCommas(imgLabel);
         float: left;
         font-weight: 300;
         font-size: 0.875rem;
-    }
-
-    @media print {
-        .image-viewer {
-            display: none;
-        }
     }
 </style>

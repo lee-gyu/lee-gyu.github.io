@@ -11,12 +11,15 @@ const ICON_LIST = [
     "vsc-mail",
     "vsc-github",
     "vsc-book",
+    "vsc-info",
     "io5-lang",
     "io5-open",
     "ri-speak-ai-fill",
     "ri-speak-line-outline",
     "bs-sort-num-asc",
     "bs-sort-num-desc",
+    "gr-form-prev",
+    "gr-form-next",
 ] as const;
 
 export type IconProps = {

@@ -39,7 +39,7 @@ const ko = {
         story: [
             "전국 대회 2위 수상하고, 국가대표 선발전을 거쳐 국가대표로 선발되었습니다.",
             "이후 삼성전자 기능올림픽 훈련센터에서 국가대표 훈련을 받고, 금메달을 수상했습니다.",
-            "국가대표 훈련 과정에서 문제 해결 능력을 키우고, 업무용 IT 소프트웨어의 구조를 파악하는데 많은 도움이 되었습니다.",
+            "국가대표 훈련 과정에서 문제 해결 능력과 업무용 소프트웨어를 이해하는 능력을 키울 수 있었습니다.",
         ].join(" "),
     },
     "20150040": {
@@ -98,10 +98,10 @@ const ko = {
         header: "웹 기반 사내 업무 시스템 개발",
         year: "2016",
         tech: joinCommas(
-            "(DBMS) MariaDB",
             "(Backend) C# ASP.NET MVC",
-            "(ORM) Entity Framework",
             "(Frontend) JQuery / Bootstrap",
+            // "(DBMS) MariaDB",
+            // "(ORM) Entity Framework",
         ),
         role: joinCommas("웹 풀스택 개발"),
         feat: joinCommas(
@@ -114,7 +114,7 @@ const ko = {
             "관리자가 수기로 취합하던 업무 보고 작업 시스템화",
         ),
         story: [
-            "사업부의 IT 시스템은 큰 SI 업체에 의존하고 있어, 기능 개발 요청 시 큰 비용이 발생하고 있었습니다. ",
+            "사내 IT 시스템은 SI 업체에 의존하고 있어, 개발 요청 시 큰 비용이 발생합니다. ",
             "팀에서 필요한 업무 시스템을 직접 만들기로 기획하고 요구사항 전체를 개발하는 역할을 맡았습니다.",
             "\n\n",
             "지시가 없더라도 사용에 불편함이 보이면 스스로 개선하며 얻는 성취가 있었습니다.",
@@ -125,11 +125,11 @@ const ko = {
         year: "2016",
         role: "웹 풀스택 개발",
         tech: joinCommas(
-            "(DBMS) MariaDB",
             "(Backend) C# ASP.Net MVC",
-            "(ORM) Entity Framework",
             "(Frontend) JQuery / Telerik Kendo UI",
-            "(Windows) WPF / Service",
+            // "(DBMS) MariaDB",
+            // "(ORM) Entity Framework",
+            // "(Windows) WPF / Service",
         ),
         result: "기존 수십분이 소요되는 현황 파악 작업 자동화",
         issue: joinCommas(
@@ -137,9 +137,9 @@ const ko = {
             "내부 인트라 네트워킹 보안망 문제",
         ),
         feat: joinCommas(
-            "해외 법인 DB 동기화 시스템",
             "세계 지도 형태의 실시간 모니터링 화면",
-            "모니터링 대시보드 화면",
+            // "해외 법인 DB 동기화 시스템",
+            // "모니터링 대시보드 화면",
         ),
         story: [
             "부서에 소프트웨어 개발 인력이 보충되면서, 전체 해외 법인을 모니터링하는 과제가 주어졌습니다.",
@@ -153,15 +153,15 @@ const ko = {
         result: "위험 환경 요소를 파악하는 모니터링 시스템 구축",
         tech: joinCommas(
             "(IoT) Raspberry Pi (Linux Raspbian)",
-            "(DBMS) MariaDB",
             "(Backend) C# ASP.NET MVC",
-            "(ORM) Entity Framework",
             "(Message Broker) Mosquitto",
+            // "(DBMS) MariaDB",
+            // "(ORM) Entity Framework",
         ),
-        story: [
-            "먼지, 조도, 소음 등의 공정에서 발생하는 환경 데이터를 IoT 기기로 수집하고, 이를 공정 환경 분석에 활용하는 과제입니다.",
-            "IoT 기기와 센서 연동을 담당하는 엔지니어와 협업한 과제입니다.",
-        ].join("\n"),
+        // story: [
+        //     "먼지, 조도, 소음 등의 공정에서 발생하는 환경 데이터를 IoT 기기로 수집하고, 이를 공정 환경 분석에 활용하는 과제입니다.",
+        //     "IoT 기기와 센서 연동을 담당하는 엔지니어와 협업한 과제입니다.",
+        // ].join("\n"),
     },
 
     "20180055": {
@@ -299,7 +299,7 @@ const ko = {
     },
 
     "20230010": {
-        header: "웹 제품 아이콘 CSS 체계 개발",
+        header: "웹 제품 아이콘 CSS 번들러 개발",
         year: "2022",
         tasks: joinCommas(
             "아이콘 CSS 번들러 프로그램 개발",
@@ -407,12 +407,8 @@ const ko = {
         header: "고성능 계층 트리 UI 컴포넌트 개발",
         year: "2024",
     },
-    "20250030": {
-        header: "iframe 기반 제품 임베딩 구조 설계/개발",
-        year: "2024",
-    },
     "20250040": {
-        header: "신입/경력 웹 개발자 채용",
+        header: "신입/경력 웹 개발자 채용 전형 담당",
         year: "2024",
     },
     "20250050": {

@@ -1,0 +1,34 @@
+---
+import type { IconProps } from "src/solid/components/Icon";
+import Icon from "./Icon.astro";
+
+type Props = IconProps & {
+    name?: string;
+};
+
+const { icon, name } = Astro.props;
+---
+
+<button class="lg-icon-btn" data-btn-name={name ?? null}>
+    <Icon icon={icon} />
+</button>
+
+<style>
+    .lg-icon-btn {
+        display: inline-flex;
+        cursor: pointer;
+        font-size: 1.5rem;
+        opacity: 0.5;
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+            opacity: 0.8;
+            transform: scale(1.2);
+        }
+
+        &:active {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+    }
+</style>

@@ -1,6 +1,6 @@
 ---
 import DefaultLayout from "src/astro/layouts/DefaultLayout.astro";
-import Links from "src/astro/widget/Links.astro";
+import { Links } from "src/solid/widget/Links";
 import Career from "src/astro/widget/Career.astro";
 import MainJob from "src/astro/widget/MainJob.astro";
 
@@ -42,14 +42,13 @@ const sectionCss = css({
 <DefaultLayout lang={lang}>
     <main class={mainCss}>
         <Title size="h1">{t("name")}</Title>
-        <Title size="h2"
-            >{t("jobTitle")}<span class="job-years">({t("jobYears")})</span
-            ></Title
-        >
+        <Title size="h2">{t("jobTitle")}</Title>
         <a class={emailLinkCss} href="mailto:leegyu4dev@gmail.com"
             >leegyu4dev@gmail.com</a
         >
-        <Links />
+        <section class={sectionCss}>
+            <Links />
+        </section>
         <section class={sectionCss}>
             <Title id="mainJob" size="h3">{t("mainJob")}</Title>
             <MainJob />

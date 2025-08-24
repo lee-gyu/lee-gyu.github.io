@@ -2,9 +2,17 @@
 @import "./_icon.css";
 @import "./_components.css";
 
-@layer base {
+@layer utilities {
     [aria-hidden="true"] {
         display: none;
+    }
+
+    [data-invisible-first="true"] > :first-child {
+        visibility: hidden;
+    }
+
+    [data-invisible-last="true"] > :last-child {
+        visibility: hidden;
     }
 }
 
@@ -12,8 +20,8 @@
     :root {
         font-size: 14px;
         --colors-text: black !important;
-        --colors-background: white !important;
-        --colors-background-light: white !important;
+        --colors-background: transparent !important;
+        --colors-background-light: transparent !important;
     }
 
     [data-print-hidden] {
