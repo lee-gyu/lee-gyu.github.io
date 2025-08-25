@@ -33,7 +33,13 @@ function isVideoFile(url: string) {
             >
                 <figure>
                     {isVideoFile(url) ? (
-                        <video src={getUrl(url)} muted playsinline loop />
+                        <video
+                            src={getUrl(url)}
+                            muted
+                            playsinline
+                            loop
+                            preload="metadata"
+                        />
                     ) : (
                         <img src={getUrl(url)} alt={imgLabelList[id]} />
                     )}
