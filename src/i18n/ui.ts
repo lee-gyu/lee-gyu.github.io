@@ -90,8 +90,8 @@ export const ui = {
         "career.2.content": "삼성전자 기능올림픽 훈련센터",
         "career.2.content.keywords": joinCommas("인사 업무", "훈련 지도"),
         experience: "경험",
-        "experience.print-desc": "※ pdf에서는 최근 경험 위주로 요약하였습니다.",
-        "experience.print-link": `(${DEFAULT_BASE_URL}에서 상세 내용을 확인할 수 있습니다.)`,
+        "experience.print-desc": "※ pdf에서는 중요 경험 위주로 요약하였습니다.",
+        "experience.print-link": `(${DEFAULT_BASE_URL}에서 전체 내용을 확인할 수 있습니다.)`,
 
         skills: "기술",
         "skills.10.label": "Backend",

@@ -28,7 +28,7 @@ const ko = {
         role: "기능올림픽 정보기술 직종 국가대표",
         tech: joinCommas(
             "(Docs) MS Office",
-            "(DBMS) MS Access",
+            "(DB) MS Access",
             "VBA 프로그래밍",
         ),
         result: joinCommas("금메달 (1위)", "동탑산업훈장 대통령 표창"),
@@ -76,7 +76,7 @@ const ko = {
         header: "[교육] 삼성전자 기능올림픽 훈련센터 지도위원",
         period: "2013 ~ 2015",
         role: "국가대표 지도위원",
-        tech: joinCommas("(Client) C# Windows", "(DBMS) SQL Server"),
+        tech: joinCommas("(Client) C# Windows", "(DB) SQL Server"),
         result: joinCommas(
             "한국 은메달(2위) 수상",
             "고용노동부 장관 표창",
@@ -99,9 +99,9 @@ const ko = {
         header: "[BackOffice] 웹 사내 업무 시스템 개발",
         year: "2016",
         tech: joinCommas(
-            "(B/E) C# ASP.NET MVC",
             "(F/E) JQuery / Bootstrap",
-            // "(DBMS) MariaDB",
+            "(B/E) C# ASP.NET MVC",
+            // "(DB) MariaDB",
             // "(ORM) Entity Framework",
         ),
         role: joinCommas("웹 풀스택 개발"),
@@ -122,13 +122,13 @@ const ko = {
         ].join(""),
     },
     "20180030": {
-        header: "[WebApp] 해외 법인 종합 관제실 시스템 구축",
+        header: "[App] 해외 법인 종합 관제실 시스템 구축",
         year: "2016",
         role: "웹 풀스택 개발",
         tech: joinCommas(
+            "(F/E) JQuery / Tzelerik Kendo UI",
             "(B/E) C# ASP.Net MVC",
-            "(F/E) JQuery / Telerik Kendo UI",
-            // "(DBMS) MariaDB",
+            // "(DB) MariaDB",
             // "(ORM) Entity Framework",
             // "(Windows) WPF / Service",
         ),
@@ -148,7 +148,7 @@ const ko = {
         // ].join(" "),
     },
     "20180050": {
-        header: "[WebApp] IoT 환경 데이터 수집",
+        header: "[App] IoT 환경 데이터 수집",
         year: "2017",
         "co-op": "IoT/센서 연동 담당 엔지니어",
         role: "웹 풀스택 개발",
@@ -171,21 +171,21 @@ const ko = {
         summary: "알고리즘 코딩테스트 시험",
         story: [
             "사내 S/W 자격 시험을 응시하여 Pro 등급을 취득하고 인센티브로 약 100만원을 받았습니다.",
-            "당시 Pro 등급은 상위 개발자 15~20% 정도가 취득했었습니다.",
+            "당시 Pro 등급은 상위 개발자 20% 정도가 취득했었습니다.",
         ].join(" "),
     },
 
     "20180070": {
-        header: "[WebApp] 공정 프로세스 현황 모니터링",
+        header: "[App] 공정 프로세스 현황 모니터링",
         year: "2017",
         role: "웹 풀스택 개발",
         "co-op": "PLC 신호 처리 클라이언트 개발자",
         result: "공정 병목 현상 파악 및 개선에 기여",
         tech: joinCommas(
-            "(DBMS) MariaDB",
+            "(F/E) TypeScript",
             "(B/E) C# ASP.NET MVC",
             "(ORM) Entity Framework",
-            "(F/E) TypeScript",
+            "(DB) MariaDB",
         ),
         story: [
             "공정 프로세스는 조립-검사-포장 등의 단계를 거칩니다. ",
@@ -208,12 +208,12 @@ const ko = {
     } satisfies ExpStoryObj,
 
     "20210060": {
-        header: "[정부 연구개발 과제] RPA AI S/W 개발",
+        header: "[정부 연구개발 과제] 로봇 자동화(RPA) S/W 개발",
         period: "2020 ~ 2021",
-        role: "시스템 풀스택 개발",
+        role: "풀스택 개발 / 시스템 엔지니어링",
         "co-op": joinCommas("프로젝트 리더", "Vision 머신러닝 개발자"),
         tasks: joinCommas(
-            "내부 시스템 풀스택 개발",
+            "풀스택 개발 / 시스템 성능 최적화",
             "TTA 인증 시험 업무",
             "프로젝트 최종 보고서 작성",
         ),
@@ -259,7 +259,7 @@ const ko = {
         imgUrls: "/video/20210070_1.mp4",
     },
     "20210080": {
-        header: "[협업 환경] 사내 웹 프로젝트 SDK 이용 환경 구축",
+        header: "[Core] 사내 웹 프로젝트 SDK 개발",
         year: "2021",
         tasks: joinCommas(
             "사내 npm 레지스트리 서버 구축",
@@ -308,7 +308,7 @@ const ko = {
     },
 
     "20230010": {
-        header: "[디자인 시스템] 웹 제품 svg 아이콘 CSS 번들러 개발",
+        header: "[디자인 시스템] svg 아이콘 CSS 번들러 개발",
         year: "2022",
         "co-op": "제품 디자이너",
         tasks: joinCommas(
@@ -317,8 +317,7 @@ const ko = {
             "디자이너/개발자 아이콘 유지보수 프로세스 수립",
         ),
         result: joinCommas(
-            "모든 제품에 동일한 아이콘 CSS 체계 제공",
-            "아이콘을 UI에 배치하는 개발 편의성 향상",
+            "공용 패키지를 통하여 모든 솔루션에 동일한 아이콘 CSS 체계 적용",
         ),
         urls: "https://lee-gyu.github.io/storybook/?path=/story/html-components-icon--list",
         urlText: "아이콘 목록",
@@ -370,14 +369,14 @@ const ko = {
             "(F/E) React / Next.js Page Router",
             "(F/E) Jotai / SWR",
             "(B/E) Nest.js / TypeORM",
-            "(DBMS) MySQL",
+            "(DB) MySQL",
         ),
         imgLabel: joinCommas("(PC) 동작 화면", "(모바일) 동작 화면"),
         imgUrls: joinCommas("/video/20230020_1.mp4", "/video/20230020_2.mp4"),
     },
 
     "20230070": {
-        header: "[WebApp 아키텍처] 제품 호출 프로토콜 설계 / 개발",
+        header: "[Lib] 제품 호출 프로토콜 설계 / 개발",
         year: "2023",
         result: joinCommas("iframe 기반 페이지 컴포넌트화"),
     },
@@ -419,15 +418,17 @@ const ko = {
         ),
     },
     "20250050": {
-        header: "[WebApp] 온라인 코딩 테스트 사이트 개발",
+        header: "[App] 온라인 코딩 테스트 사이트 개발",
         year: "2025",
-        "co-op": "제품 디자이너",
+        "co-op": joinCommas("제품 디자이너", "주니어 F/E 개발자 (2명)"),
         tech: joinCommas(
             "(F/E) React / Next.js App Router",
             "(F/E) zustand / react-query",
-            "(DBMS) PostgreSQL",
+            "(DB) PostgreSQL",
             "(ORM) Drizzle",
         ),
+        urls: "https://innorules.com/online",
+        urlText: "이노룰스 온라인 코딩 테스트",
         feat: joinCommas(""),
     },
     "20250070": {
@@ -442,14 +443,33 @@ const ko = {
         year: "2025",
     },
     "20250090": {
-        header: "[WebApp 아키텍처] WebApp 커스터마이징 로더 구조 설계/개발",
-        "co-op": joinCommas("주니어 F/E 개발자 (2명)"),
+        header: "[Lib] WebApp 커스터마이징 로더 구조 설계/개발",
+        result: joinCommas(
+            "(기존) 고객사에서 추가 기능을 원할 때마다 별도의 브랜치와 릴리즈 주기마다 재배포하는 번거로움 발생",
+            "(개선) 제품 재빌드 없이 현장에서 바로 커스터마이징 기능 개발이 가능한 구조 적용",
+        ),
         year: "2025",
     },
 
     "20250100": {
-        header: "[AI 클라우드] 다국어 통합 관리",
+        header: "[AI] 다국어 통합 관리",
         year: "2025",
+    },
+
+    "20250110": {
+        header: "[AI] 솔루션 AI 기능 개발",
+        year: "2025",
+        tech: joinCommas(
+            "(F/E) SolidJS",
+            "(B/E) LangChain",
+            "(VectorDB) ChromaDB",
+        ),
+        tasks: joinCommas(
+            "솔루션 도메인 자료 임베딩",
+            "프롬프트 엔지니어링",
+            "AI 처리 API 서버 개발",
+            "챗봇 UI 개발/적용",
+        ),
     },
 } satisfies Record<string, ExpStoryObj>;
 

@@ -19,7 +19,7 @@ const { expId, printHidden } = Astro.props;
 const expData = experiencesKo[expId];
 ---
 
-<li class="exp-card" data-print-hidden={printHidden ? true : null}>
+<article class="exp-card" data-print-hidden={printHidden ? true : null}>
     <Title size="h4">{expData.header}</Title>
     <ul class={listItemsCss}>
         <ListItems label={t(`exp.label.year`)} contents={expData.year} />
@@ -57,7 +57,7 @@ const expData = experiencesKo[expId];
             </label>
         )
     }
-</li>
+</article>
 
 <style>
     .exp-card {
