@@ -200,7 +200,7 @@ const ko = {
     "20200010": {
         header: "[어학연수] 캐나다 밴쿠버 VGC 어학원 수료",
         period: "2020.01 ~ 2020.06",
-        result: "Lv6 등급 취득",
+        result: "Lv6 Upper Intermediate 등급 수료",
         urls: "https://vgc.ca/",
         urlText: "vgc.ca",
         imgLabel: joinCommas("수료증", "등급표"),
