@@ -96,7 +96,7 @@ const ko = {
     },
 
     "20180020": {
-        header: "[BackOffice] 웹 사내 업무 시스템 개발",
+        header: "[App] 웹 사내 업무 시스템 개발",
         year: "2016",
         tech: joinCommas(
             "(F/E) JQuery / Bootstrap",
@@ -200,11 +200,11 @@ const ko = {
     "20200010": {
         header: "[어학연수] 캐나다 밴쿠버 VGC 어학원 수료",
         period: "2020.01 ~ 2020.06",
-        summary: "Lv6 Intermediate 등급 취득",
+        result: "Lv6 등급 취득",
         urls: "https://vgc.ca/",
         urlText: "vgc.ca",
-        imgLabel: "수료증",
-        imgUrls: "/img/20200010.png",
+        imgLabel: joinCommas("수료증", "등급표"),
+        imgUrls: joinCommas("/img/20200010.png", "/img/20200010_2.png"),
     } satisfies ExpStoryObj,
 
     "20210060": {
@@ -356,7 +356,7 @@ const ko = {
 
     "20230020": {
         year: "2022",
-        header: "[BackOffice] 임직원 일정 관리/공유 캘린더 개발",
+        header: "[App] 임직원 일정 관리/공유 캘린더 개발",
         role: "웹 풀스택 개발",
         "co-op": joinCommas("제품 디자이너", "주니어 F/E 개발자"),
         result: joinCommas(""),
@@ -378,10 +378,16 @@ const ko = {
     "20230070": {
         header: "[Lib] 제품 호출 프로토콜 설계 / 개발",
         year: "2023",
-        result: joinCommas("iframe 기반 페이지 컴포넌트화"),
+        result: joinCommas(
+            "MPA 기반 웹 애플리케이션의 페이지 단위를 UI 컴포넌트처럼 제공",
+        ),
+        tasks: joinCommas(
+            "웹 애플리케이션 간 Window Message 기반 통신 체계 설계",
+        ),
+        feat: joinCommas("Window 간 이벤트 "),
     },
     "20230080": {
-        header: "[BackOffice] 사내 휴가계 시스템 리뉴얼",
+        header: "[App] 사내 휴가계 시스템 리뉴얼",
         year: "2023",
         "co-op": "제품 디자이너",
         imgUrls: "/video/20230080_1.mp4",
@@ -457,17 +463,19 @@ const ko = {
     },
 
     "20250110": {
-        header: "[AI] 솔루션 AI 기능 개발",
+        header: "[AI] 솔루션 AI 서비스 기능 개발",
+        role: "AI 서비스 기능 풀스택 개발",
         year: "2025",
         tech: joinCommas(
             "(F/E) SolidJS",
-            "(B/E) LangChain",
+            "(B/E) Nest.js",
+            "(Lib) LangChain",
             "(VectorDB) ChromaDB",
         ),
         tasks: joinCommas(
             "솔루션 도메인 자료 임베딩",
             "프롬프트 엔지니어링",
-            "AI 처리 API 서버 개발",
+            "AI 서비스 호출 API 서버 개발",
             "챗봇 UI 개발/적용",
         ),
     },

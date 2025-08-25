@@ -94,13 +94,13 @@ export const ui = {
         "experience.print-link": `(${DEFAULT_BASE_URL}에서 전체 내용을 확인할 수 있습니다.)`,
 
         skills: "기술",
-        "skills.10.label": "Backend",
+        "skills.10.label": "B/E",
         "skills.10.keywords": joinCommas("Nest.js", "J2EE"),
         "skills.15.label": "DBMS",
         "skills.15.keywords": joinCommas("PostgreSQL", "MySQL"),
         "skills.17.label": "Server",
         "skills.17.keywords": joinCommas("Linux"),
-        "skills.20.label": "Frontend",
+        "skills.20.label": "F/E",
         "skills.20.keywords": joinCommas(
             "Next.js",
             "Astro",
