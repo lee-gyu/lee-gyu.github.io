@@ -463,21 +463,27 @@ const ko = {
     },
 
     "20250110": {
-        header: "[AI] 솔루션 AI 서비스 기능 개발",
+        header: "[AI] WebApp AI 챗봇 프로젝트 진행",
         role: "AI 서비스 기능 풀스택 개발",
         year: "2025",
         tech: joinCommas(
-            "(F/E) SolidJS",
-            "(B/E) Nest.js",
-            "(Lib) LangChain",
+            "(F/E) React",
+            "(B/E) Hono",
             "(VectorDB) ChromaDB",
+            "(AI) Google GenAI / LangChainJS",
         ),
         tasks: joinCommas(
-            "솔루션 도메인 자료 임베딩",
+            "웹 솔루션 제품 자료 임베딩",
             "프롬프트 엔지니어링",
             "AI 서비스 호출 API 서버 개발",
-            "챗봇 UI 개발/적용",
+            "챗봇 UI 컴포넌트 개발/적용",
         ),
+        story: [
+            "AI를 이용한 제품 적용에 대한 요구가 증가하고 있어, 프로토타입으로 구축한 프로젝트입니다.\n",
+            "직접 VectorDB 구축, RAG 파이프라인과 AI를 위한 API 서버를 개발하여 데모 버전에 적용하였습니다.",
+        ].join(""),
+        imgLabel: "시연 영상",
+        imgUrls: "/video/20250110.mp4",
     },
 } satisfies Record<string, ExpStoryObj>;
 

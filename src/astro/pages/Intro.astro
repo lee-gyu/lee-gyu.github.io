@@ -54,6 +54,7 @@ const lastUpdated = format(dayjs(LAST_UPDATED), lang);
             <p>{t("birthdate")}</p>
             <a href="mailto:leegyu4dev@gmail.com">leegyu4dev@gmail.com</a>
         </div>
+        <p class="job-desc">{t("jobDesc")}</p>
         <section class={sectionCss}>
             <Links />
         </section>
@@ -133,5 +134,13 @@ const lastUpdated = format(dayjs(LAST_UPDATED), lang);
     .updated-info {
         margin-top: -1rem;
         text-align: right;
+    }
+
+    .job-desc {
+        max-width: 60ch;
+        margin-top: 0.25rem;
+        font-size: 0.875rem;
+        white-space: pre-wrap;
+        word-break: keep-all;
     }
 </style>
