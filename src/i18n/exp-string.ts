@@ -98,6 +98,7 @@ const ko = {
     "20180020": {
         header: "[App] 웹 사내 업무 시스템 개발",
         year: "2016",
+        "co-op": "프로젝트 리더",
         tech: joinCommas(
             "(F/E) JQuery / Bootstrap",
             "(B/E) C# ASP.NET MVC",
@@ -125,6 +126,7 @@ const ko = {
         header: "[App] 해외 법인 종합 관제실 시스템 구축",
         year: "2016",
         role: "웹 풀스택 개발",
+        "co-op": joinCommas("프로젝트 리더"),
         tech: joinCommas(
             "(F/E) JQuery / Tzelerik Kendo UI",
             "(B/E) C# ASP.Net MVC",
@@ -166,13 +168,13 @@ const ko = {
 
     "20180055": {
         header: "[자격시험] 삼성전자 S/W 개발 직군 시험",
-        date: "2017.6",
+        year: "2017",
         result: "Pro 등급 취득",
         summary: "알고리즘 코딩테스트 시험",
         story: [
             "사내 S/W 자격 시험을 응시하여 Pro 등급을 취득하고 인센티브로 약 100만원을 받았습니다.",
             "당시 Pro 등급은 상위 개발자 20% 정도가 취득했었습니다.",
-        ].join(" "),
+        ].join("\n"),
     },
 
     "20180070": {
@@ -198,8 +200,8 @@ const ko = {
     },
 
     "20200010": {
-        header: "[어학연수] 캐나다 밴쿠버 VGC 어학원 수료",
-        period: "2020.01 ~ 2020.06",
+        header: "[어학연수] 캐나다 밴쿠버 VGC 어학원(6개월)",
+        year: "2020",
         result: "Lv6 Upper Intermediate 등급 수료",
         urls: "https://vgc.ca/",
         urlText: "vgc.ca",
@@ -259,17 +261,23 @@ const ko = {
         imgUrls: "/video/20210070_1.mp4",
     },
     "20210080": {
-        header: "[Core SDK] 사내 웹 프로젝트 개발 환경 구축",
+        header: "[Core] 사내 웹 프로젝트 개발 환경 구축",
         year: "2021",
         tasks: joinCommas(
             "사내 npm 레지스트리 서버 구축",
             "사내 스토리북 사이트 구축",
             "스토리북 라이브에디터 컴포넌트 개발",
             "Jenkins 기반 자동화 배포 파이프라인 구축",
+            "jsp 페이지 모두 vite 기반으로 마이그레이션",
+        ),
+        result: joinCommas(
+            "웹 프로젝트 개발 표준 기술 수립",
+            "자바 서버 사이드와 완전히 분리되어 제품 보안성 향상",
         ),
         tech: joinCommas(
-            "(Container) Docker",
+            "(F/E) Vite",
             "(CI/CD) Jenkins",
+            "(Container) Docker",
             "(Docs) Storybook / TypeDoc",
         ),
         urls: "https://lee-gyu.github.io/storybook/?path=/story/html-components-button--intent",
@@ -279,7 +287,7 @@ const ko = {
             "개발자 경험을 향상시키고자 사내 npm 패키지 서버와 개발자들이 찾아볼 수 있는 문서화 사이트도 함께 구축했습니다.",
             "라이브러리 소스를 특정 브랜치에 커밋하면 문서 사이트가 배포되도록 자동화 흐름을 만들었습니다.",
             "\n\n추가로, 디버깅을 위해 스토리북 예제를 실시간으로 수정하고 결과를 확인할 수 있도록 라이브 에디터를 개발했습니다.",
-        ].join(" "),
+        ].join("\n"),
     },
     "20210090": {
         header: "[디자인 시스템] UI 스타일 리뉴얼 프로젝트",
@@ -331,6 +339,7 @@ const ko = {
     "20230015": {
         header: "[UI] Grid 컴포넌트 라이브러리 개발",
         year: "2022",
+        summary: "모든 업무 화면에 핵심이 되는 Grid 컴포넌트 개발",
         result: joinCommas(""),
         tasks: joinCommas("Row/Column/Cell/Plugin 구성 요소 설계/개발"),
         feat: joinCommas(
@@ -419,8 +428,13 @@ const ko = {
     },
 
     "20240010": {
-        header: "패키지 배포 릴리즈 주기 프로세스",
+        header: "[Testing] 공통 UI 컴포넌트 테스트 자동화",
         year: "2024",
+        "co-op": joinCommas("주니어 F/E 개발자 (3명)"),
+        tech: joinCommas("Vitest / Playwright"),
+        result: "반복적 테스팅 작업 단축",
+        imgLabel: joinCommas("단위/컴포넌트 테스트", "E2E 테스트"),
+        imgUrls: joinCommas("/img/vitest.png", "/img/playwright.png"),
     },
 
     // 2025 ~
@@ -446,11 +460,24 @@ const ko = {
         header: "[UI] 고성능 트리 컴포넌트 개발",
         year: "2024",
         "co-op": "제품 디자이너",
+        urlText: joinCommas("스토리북 예제", "체크박스 플러그인"),
+        urls: joinCommas(
+            "https://lee-gyu.github.io/storybook/?path=/story/js-components-irtreeview--bulk-data",
+            "https://lee-gyu.github.io/storybook/?path=/story/js-components-irtreeview--cascade-checking",
+        ),
+        feat: joinCommas(
+            "부모/자식 노드 계층 처리",
+            "플러그인을 활용한 기능 확장 (키보드/마우스/체크박스/툴팁)",
+            "Windowing을 통한 수십만개 노드 고성능 렌더링 처리",
+        ),
+        imgLabel: "UI",
+        imgUrls: "/img/20250020.png",
     },
     "20250040": {
         header: "[채용] 신입/경력 웹 개발자 채용",
         year: "2024",
         role: "채용 전형 담당",
+        summary: "신입 F/E 개발자 2명, 경력 F/E 개발자 2명 채용",
         tasks: joinCommas(
             "지원자 서류 검토",
             "과제 테스트 진행",
@@ -481,27 +508,42 @@ const ko = {
         year: "2025",
     },
     "20250080": {
+        year: "2025",
         header: "[디자인 시스템] 다크모드 컬러 토큰 체계 적용",
         role: "CSS 토큰 체계 개발 방향성 리드",
         "co-op": joinCommas("제품 디자이너", "주니어 F/E 개발자"),
-        year: "2025",
     },
     "20250090": {
-        header: "[Lib] WebApp 커스터마이징 로더 구조 설계/개발",
-        result: joinCommas(
-            "(기존) 고객사에서 추가 기능을 요구할 때마다 별도의 브랜치와 제품 소스를 재빌드하는 번거로움 발생",
-            "(개선) 제품 재빌드 없이 제품 메인 프로그램과 커스터마이징 스크립트를 분리하는 구조 적용",
-        ),
         year: "2025",
+        header: "[Lib] WebApp 커스터마이징 구조",
+        result: joinCommas("제품 유지보수/확장성 향상"),
+        summary: joinCommas(
+            "(기존) 고객사에서 추가 기능을 요구할 때마다 별도의 브랜치와 제품 소스를 재빌드하는 번거로움 발생",
+            "(개선) 제품 재빌드 없이 메인 프로그램과 커스터마이징 프로그램 분리 구조 적용",
+        ),
+        tasks: joinCommas(""),
     },
 
     "20250100": {
-        header: "[AI] 다국어 통합 관리",
+        header: "[AI] 다국어 번역 자동화",
         year: "2025",
+        role: "전체 시스템 설계/개발",
+        tasks: joinCommas(
+            "기존 시스템 다국어 문자열 전수 조사",
+            "다국어 번역 Dataset 자료 생성",
+            "Google 적응형 번역(LLM)을 활용한 번역 자동화 (일본어, 영어, 중국어, 스페인어)",
+        ),
+        feat: joinCommas(
+            "사내 업무 시스템으로 제품 다국어 통합 관리 UI",
+            "Java/Web 제품에 맞게 다국어 리소스 Export 기능",
+        ),
+        result: joinCommas("약 8,000개 다국어 문자열 번역 처리 자동화909090"),
+        imgLabel: "화면",
+        imgUrls: "/img/20250100.png",
     },
 
     "20250110": {
-        header: "[AI] AI 챗봇 컴포넌트 프로토타입",
+        header: "[AI] 챗봇 기능 프로토타입",
         role: "웹 제품 AI 기능 풀스택 개발/적용",
         year: "2025",
         tech: joinCommas(
@@ -517,8 +559,9 @@ const ko = {
             "AI 서비스 호출 API 서버 개발",
         ),
         story: [
-            "AI를 이용한 제품 적용에 대한 요구가 증가하고 있어, 프로토타입으로 구축한 프로젝트입니다.\n",
-            "직접 VectorDB 구축, RAG 파이프라인과 AI를 위한 API 서버를 개발하여 데모 버전에 적용하였습니다.",
+            "회사 제품에 AI 기능에 대한 요구가 증가하여, 프로토타입으로 구축한 프로젝트입니다.\n",
+            "직접 VectorDB 구축, RAG 파이프라인과 AI를 위한 API 서버를 개발하여 데모 버전에 적용하였습니다.\n",
+            "임베딩과 VectorDB는 사내 서버에 구축하였고, AI 서비스는 구글 클라우드 플랫폼을 통해 빠르게 구축하였습니다.",
         ].join(""),
         imgLabel: "시연 영상",
         imgUrls: "/video/20250110.mp4",

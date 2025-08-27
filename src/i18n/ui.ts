@@ -100,7 +100,7 @@ I work with 4 junior developers and am very interested in a culture of growth to
         "career.2.content.keywords": joinCommas("인사 업무", "훈련 지도"),
         experience: "경험",
         "experience.print-desc": "※ pdf에서는 중요 경험 위주로 요약하였습니다.",
-        "experience.print-link": `(${DEFAULT_BASE_URL}에서 전체 내용을 확인할 수 있습니다.)`,
+        "experience.print-link": `(${DEFAULT_BASE_URL}에서 전체 경험과 동작 화면을 확인할 수 있습니다.)`,
 
         skills: "기술",
         "skills.10.label": "B/E",
