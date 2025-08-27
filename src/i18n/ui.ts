@@ -68,7 +68,7 @@ I work with 4 junior developers and am very interested in a culture of growth to
         name: "이규철",
         birthdate: "1994.2.19",
         jobDesc: `
-현재 회사에서 웹 애플리케이션 개발을 위한 웹 F/E 코어 패키지 개발 업무를 맡고 있습니다.
+현재 회사에서 웹 F/E 코어 패키지 개발 업무를 맡고 있습니다.
 4명의 개발자와 1명의 디자이너와 한 팀에서 일하고 있습니다.
 함께 성장하고, 시너지를 내는 업무 문화에 관심이 많습니다.
 `.trim(),

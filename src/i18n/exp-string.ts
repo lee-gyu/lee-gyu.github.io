@@ -266,7 +266,7 @@ const ko = {
         tasks: joinCommas(
             "사내 npm 레지스트리 서버 구축",
             "사내 스토리북 사이트 구축",
-            "스토리북 라이브에디터 컴포넌트 개발",
+            "CodeMirror 기반 라이브에디터 기능 개발",
             "Jenkins 기반 자동화 배포 파이프라인 구축",
             "jsp 페이지 모두 vite 기반으로 마이그레이션",
         ),
@@ -286,7 +286,6 @@ const ko = {
             "당시 Node.js, npm를 활용하지 못해 버전 관리나 패키지 배포/업그레이드에 번거로움이 있었습니다.",
             "개발자 경험을 향상시키고자 사내 npm 패키지 서버와 개발자들이 찾아볼 수 있는 문서화 사이트도 함께 구축했습니다.",
             "라이브러리 소스를 특정 브랜치에 커밋하면 문서 사이트가 배포되도록 자동화 흐름을 만들었습니다.",
-            "\n\n추가로, 디버깅을 위해 스토리북 예제를 실시간으로 수정하고 결과를 확인할 수 있도록 라이브 에디터를 개발했습니다.",
         ].join("\n"),
     },
     "20210090": {
@@ -375,8 +374,8 @@ const ko = {
             "다크모드 CSS 테마 기능 개발",
         ),
         tech: joinCommas(
-            "(F/E) React / Next.js Page Router",
-            "(F/E) Jotai / SWR",
+            "(F/E) Next.js Page Router",
+            "(F/E) React / Jotai / SWR",
             "(B/E) Nest.js / TypeORM",
             "(DB) MySQL",
         ),
@@ -433,7 +432,11 @@ const ko = {
         "co-op": joinCommas("주니어 F/E 개발자 (3명)"),
         tech: joinCommas("Vitest / Playwright"),
         result: "반복적 테스팅 작업 단축",
-        imgLabel: joinCommas("단위/컴포넌트 테스트", "E2E 테스트"),
+        tasks: joinCommas(
+            "테스팅 할 수 있는 기술 환경 구축",
+            "테스팅 업무 프로세스 수립",
+        ),
+        imgLabel: joinCommas("Vitest", "Playwright"),
         imgUrls: joinCommas("/img/vitest.png", "/img/playwright.png"),
     },
 
@@ -451,9 +454,9 @@ const ko = {
         imgLabel: joinCommas("동작 화면"),
         story: [
             "기존에는 브라우저 탭마다 각 업무 화면을 사용하는 구조였습니다. 이러한 구조는 사용자들이 사용하는 탭이 많아지면, 분류가 어렵고 불편하다는 지적이 많았습니다.\n",
-            "이러한 사용성을 대폭 개선하기 위해 페이지 내에서 iframe 기반 페이지를 관리하는 컴포넌트를 개발하였습니다.\n",
-            "이미 만들어진 MPA 구조에서 큰 변경 작업 없이 진행될 수 있도록 설계하였고, 제품 개발 팀은 큰 작업 공수 없이 적용을 완료하였습니다.\n",
-            "이 기능으로 제품 사용성이 대폭 개선되어 웹 기술에 대한 기대와 공식 웹 제품 출시에 큰 영향을 주는 기능이 되었습니다.",
+            "페이지 내 iframe으로 페이지를 관리하는 컴포넌트를 개발하였습니다.\n",
+            "iframe이라 무거운 이슈가 있었지만, 이미 만들어진 MPA 구조에서 큰 변경 작업 없이 진행될 수 있어서 큰 작업 공수 없이 적용을 완료하였습니다.\n",
+            "이 기능으로 제품 사용성이 대폭 개선되어 공식 웹 제품 출시에 큰 영향을 주었습니다.",
         ].join(""),
     },
     "20250020": {
@@ -470,18 +473,21 @@ const ko = {
             "플러그인을 활용한 기능 확장 (키보드/마우스/체크박스/툴팁)",
             "Windowing을 통한 수십만개 노드 고성능 렌더링 처리",
         ),
-        imgLabel: "UI",
+        imgLabel: "컴포넌트 이미지",
         imgUrls: "/img/20250020.png",
     },
     "20250040": {
         header: "[채용] 신입/경력 웹 개발자 채용",
         year: "2024",
         role: "채용 전형 담당",
-        summary: "신입 F/E 개발자 2명, 경력 F/E 개발자 2명 채용",
+        summary: joinCommas(
+            "신입 F/E 개발자 2명 채용",
+            "경력(3년차↑) F/E 개발자 2명 채용",
+        ),
         tasks: joinCommas(
             "지원자 서류 검토",
-            "과제 테스트 진행",
-            "기술/문화 면접 진행",
+            "과제 테스트 진행/평가",
+            "면접 진행(기술, 문화 적합성)",
         ),
         urlText: joinCommas("채용 회고록"),
         urls: joinCommas(
@@ -493,14 +499,26 @@ const ko = {
         year: "2025",
         "co-op": joinCommas("제품 디자이너", "주니어 F/E 개발자 (2명)"),
         tech: joinCommas(
-            "(F/E) React / Next.js App Router",
-            "(F/E) zustand / react-query",
+            "(F/E) Next.js App Router / Server Actions",
+            "(F/E) React / zustand / react-query / CodeMirror",
             "(DB) PostgreSQL",
             "(ORM) Drizzle",
         ),
+        result: joinCommas(
+            "800명 응시하여 6명 신입 개발자 채용",
+            "채용 프로세스 간소화\n(기존) 오프라인 필기 시험 + 1~2회 면접\n(개선) 온라인 코딩 테스트 + 1회 면접",
+        ),
         urls: "https://innorules.com/online",
         urlText: "이노룰스 온라인 코딩 테스트",
-        feat: joinCommas(""),
+        feat: joinCommas(
+            "지원자 관리 / 입장 안내 메일 발송 시스템",
+            "제출용 에디터 컴포넌트",
+            "시간 제한 타이머",
+            "답안 임시 저장 / 최종 제출",
+            "Markdown 기반 문제 작성 및 문제 Viewer UI 작업",
+        ),
+        imgLabel: "동작 영상",
+        imgUrls: "/video/20250050.mp4",
     },
     "20250070": {
         header: "[BackOffice] 전자결재 업무 시스템 설계",
@@ -515,13 +533,23 @@ const ko = {
     },
     "20250090": {
         year: "2025",
-        header: "[Lib] WebApp 커스터마이징 구조",
-        result: joinCommas("제품 유지보수/확장성 향상"),
+        header: "[Lib] WebApp 커스터마이징 Add-on 구조",
+        result: joinCommas("고객사 요구에 따른 제품 확장성 향상"),
         summary: joinCommas(
-            "(기존) 고객사에서 추가 기능을 요구할 때마다 별도의 브랜치와 제품 소스를 재빌드하는 번거로움 발생",
-            "(개선) 제품 재빌드 없이 메인 프로그램과 커스터마이징 프로그램 분리 구조 적용",
+            "(기존) 고객사에서 추가 기능 구현마다 별도의 브랜치와 제품 소스를 재빌드하는 번거로움 발생",
+            "(개선) 제품 재빌드 없이 메인 프로그램에서 커스터마이징 모듈만 분리하는 Add-on 구조 적용",
         ),
-        tasks: joinCommas(""),
+        tech: "Vite Plugin API",
+        tasks: joinCommas(
+            "웹 제품 공유 모듈 개발",
+            "ESM 기반 동적 JS 모듈 로더 개발",
+            "Add-on 라이프사이클 흐름 설계",
+            "커스터마이징 로더 설정을 위한 Vite Plugin 개발",
+        ),
+        feat: joinCommas(
+            "고객사 내부 디자인 규정에 제품 css 재정의",
+            "고객사 사이트에서 원하는 업무 기능 커스터마이징",
+        ),
     },
 
     "20250100": {
@@ -554,7 +582,7 @@ const ko = {
         ),
         tasks: joinCommas(
             "챗봇 UI 컴포넌트 개발",
-            "웹 솔루션 제품 자료 임베딩",
+            "제품 지식 자료 임베딩",
             "프롬프트 엔지니어링",
             "AI 서비스 호출 API 서버 개발",
         ),

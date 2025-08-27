@@ -10,21 +10,25 @@ type ExpTabList = {
     id: string;
     tabCaption: string;
     expKeyList: ExpKey[];
-    printHidden?: boolean;
 };
 
 const lang = Astro.currentLocale as Lang;
 const t = useTranslations(lang);
 
-const printHiddenSet = new Set([
-    // 2025
+const printVisibleSet = new Set([
+    "20250110",
+    "20250080",
+    "20240010",
     "20250040",
-    // 2023
-
-    // 2018
-    "20180070",
-    // 2015
-    "20150060",
+    "20230020",
+    "20230015",
+    "20230010",
+    "20210090",
+    "20210080",
+    "20210070", // Flowchart
+    "20210060", // RPA
+    "20150070", // 지도위원
+    "20150030", // 훈련
 ]);
 
 const projectTabs: ExpTabList[] = [
@@ -40,6 +44,7 @@ const projectTabs: ExpTabList[] = [
             // "20250070", // 전자결재
             "20250050", // 온라인 코딩 테스트
             // 2024
+            "20240010", // 테스팅
             "20250040", // 채용
             "20250020", // IRTreeView
             "20250010", // PageContainer
@@ -71,7 +76,6 @@ const projectTabs: ExpTabList[] = [
     {
         id: "exp_2018",
         tabCaption: t("exp.tab.2018"),
-        printHidden: true,
         expKeyList: [
             "20200010", // 어학연수
             "20180055", // SW 써티
@@ -84,7 +88,6 @@ const projectTabs: ExpTabList[] = [
     {
         id: "exp_2015",
         tabCaption: t("exp.tab.2015"),
-        printHidden: true,
         expKeyList: [
             "20150070", // 지도위원
             "20150060", // 조직문화 개선
@@ -125,16 +128,12 @@ const projectTabs: ExpTabList[] = [
     <div id="tabContents" class="tab-contents">
         {
             projectTabs.map((tab) => (
-                <div
-                    id={tab.id}
-                    class:list={["tab-content"]}
-                    data-print-hidden={tab.printHidden ? true : null}
-                >
+                <div id={tab.id} class:list={["tab-content"]}>
                     <ol class="tab-card-list">
                         {tab.expKeyList.map((expId) => (
                             <ExpCard
                                 expId={expId}
-                                printHidden={printHiddenSet.has(expId)}
+                                printHidden={!printVisibleSet.has(expId)}
                             />
                         ))}
                     </ol>
