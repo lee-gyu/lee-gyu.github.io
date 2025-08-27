@@ -553,17 +553,23 @@ const ko = {
     },
 
     "20250100": {
-        header: "[AI] 다국어 번역 자동화",
+        header: "[Cloud] 다국어 번역 자동화",
         year: "2025",
         role: "전체 시스템 설계/개발",
+        "co-op": joinCommas("미들 F/E 개발자", "주니어 F/E 개발자"),
         tasks: joinCommas(
-            "기존 시스템 다국어 문자열 전수 조사",
-            "다국어 번역 Dataset 자료 생성",
-            "Google 적응형 번역(LLM)을 활용한 번역 자동화 (일본어, 영어, 중국어, 스페인어)",
+            "기존 시스템 번역 필요 문자열 전수 조사 및 파서 작성",
+            "다국어 번역용 Dataset tsv 생성 프로그램 작성",
+            "Google 적응형 번역 서비스 활용한 번역 자동화 (일본어, 영어, 중국어, 스페인어)",
         ),
         feat: joinCommas(
             "사내 업무 시스템으로 제품 다국어 통합 관리 UI",
             "Java/Web 제품에 맞게 다국어 리소스 Export 기능",
+        ),
+        tech: joinCommas(
+            "(F/E) React",
+            "(B/E) Nest.js",
+            "(Cloud) Google Cloud Platform",
         ),
         result: joinCommas("약 8,000개 다국어 문자열 번역 처리 자동화"),
         imgLabel: "화면",
