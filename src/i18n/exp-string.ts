@@ -565,7 +565,7 @@ const ko = {
             "사내 업무 시스템으로 제품 다국어 통합 관리 UI",
             "Java/Web 제품에 맞게 다국어 리소스 Export 기능",
         ),
-        result: joinCommas("약 8,000개 다국어 문자열 번역 처리 자동화909090"),
+        result: joinCommas("약 8,000개 다국어 문자열 번역 처리 자동화"),
         imgLabel: "화면",
         imgUrls: "/img/20250100.png",
     },
