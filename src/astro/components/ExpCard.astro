@@ -17,14 +17,14 @@ const t = useTranslations(lang);
 const { expId, printHidden } = Astro.props;
 
 const expData = experiencesKo[expId];
+
+const date = expData.year ?? expData.date ?? expData.period ?? "";
 ---
 
 <article class="exp-card" data-print-hidden={printHidden ? true : null}>
+    {date && <span class="exp-card-date">{date}</span>}
     <Title size="h4">{expData.header}</Title>
     <ul class={listItemsCss}>
-        <ListItems label={t(`exp.label.year`)} contents={expData.year} />
-        <ListItems label={t(`exp.label.date`)} contents={expData.date} />
-        <ListItems label={t(`exp.label.period`)} contents={expData.period} />
         <ListItems label={t(`exp.label.summary`)} contents={expData.summary} />
         <ListItems label={t(`exp.label.role`)} contents={expData.role} />
         <ListItems label={t(`exp.label.co-op`)} contents={expData["co-op"]} />
@@ -78,6 +78,11 @@ const expData = experiencesKo[expId];
         color: var(--colors-text-light);
         line-height: 1.33;
         max-width: 72ch;
+    }
+
+    .exp-card-date {
+        font-weight: 500;
+        font-size: 0.875rem;
     }
 
     @media print {
