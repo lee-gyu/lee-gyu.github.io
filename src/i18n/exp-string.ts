@@ -34,8 +34,8 @@ const ko = {
         result: joinCommas("금메달 (1위)", "동탑산업훈장 대통령 표창"),
         urlText: joinCommas("대회 점수", "수상자 사진"),
         urls: joinCommas(
-            "https://results.worldskills.org/results?event=9&offset=0&skill=345&base_skill=221",
-            "https://www.flickr.com/photos/worldskills/9235939100/in/album-72157634532467264/",
+            "https://m.site.naver.com/1PzvO",
+            "https://m.site.naver.com/1PzvV",
         ),
         story: [
             "전국 대회 수상 후, 국가대표 선발전을 거쳐 국가대표로 선발되었습니다.",
@@ -84,7 +84,7 @@ const ko = {
             "베트남 국가 총리 표창",
         ),
         urlText: "기능올림픽 입상 보도",
-        urls: "https://www.yna.co.kr/view/AKR20150818116700003",
+        urls: "https://m.site.naver.com/1PzvF",
         tasks: "국가대표 선수 훈련 프로그램 개발",
         story: [
             "기능올림픽 수상 이후, 한국/베트남 국가대표 선수 지도를 담당했습니다. ",
@@ -427,7 +427,7 @@ const ko = {
     },
 
     "20240010": {
-        header: "[Testing] 공통 UI 컴포넌트 테스트 자동화",
+        header: "[Testing] UI 컴포넌트 테스트 자동화",
         year: "2024",
         "co-op": joinCommas("주니어 F/E 개발자 (3명)"),
         tech: joinCommas("Vitest / Playwright"),
@@ -435,6 +435,7 @@ const ko = {
         tasks: joinCommas(
             "테스팅 할 수 있는 기술 환경 구축",
             "테스팅 업무 프로세스 수립",
+            "단위/컴포넌트/End 테스트 작성",
         ),
         imgLabel: joinCommas("Vitest", "Playwright"),
         imgUrls: joinCommas("/img/vitest.png", "/img/playwright.png"),
@@ -482,7 +483,7 @@ const ko = {
         role: "채용 전형 담당",
         summary: joinCommas(
             "신입 F/E 개발자 2명 채용",
-            "경력(3년차↑) F/E 개발자 2명 채용",
+            "경력(3년↑) F/E 개발자 2명 채용",
         ),
         tasks: joinCommas(
             "지원자 서류 검토",
@@ -490,9 +491,7 @@ const ko = {
             "면접 진행(기술, 문화 적합성)",
         ),
         urlText: joinCommas("채용 회고록"),
-        urls: joinCommas(
-            "https://medium.com/@gyuc219/%EC%9B%B9-f-e-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%B1%84%EC%9A%A9-%EA%B3%BC%EC%A0%95-%ED%9A%8C%EA%B3%A0-efa5ea562ab9",
-        ),
+        urls: joinCommas("https://m.site.naver.com/1Pzvj"),
     },
     "20250050": {
         header: "[App] 온라인 코딩 테스트 사이트 개발",
@@ -508,7 +507,7 @@ const ko = {
             "800명 응시하여 6명 신입 개발자 채용",
             "채용 프로세스 간소화\n(기존) 오프라인 필기 시험 + 1~2회 면접\n(개선) 온라인 코딩 테스트 + 1회 면접",
         ),
-        urls: "https://innorules.com/online",
+        urls: "https://m.site.naver.com/1Pzvv",
         urlText: "이노룰스 온라인 코딩 테스트",
         feat: joinCommas(
             "지원자 관리 / 입장 안내 메일 발송 시스템",
@@ -577,14 +576,14 @@ const ko = {
     },
 
     "20250110": {
-        header: "[AI] 챗봇 기능 프로토타입",
+        header: "[AI] LLM 기반 챗봇 기능 프로토타입 개발",
         role: "웹 제품 AI 기능 풀스택 개발/적용",
         year: "2025",
         tech: joinCommas(
             "(F/E) React",
             "(B/E) Hono",
-            "(VectorDB) ChromaDB",
-            "(AI) Google GenAI / LangChainJS",
+            "(VectorDB) Chroma",
+            "(AI) LangChainJS",
         ),
         tasks: joinCommas(
             "챗봇 UI 컴포넌트 개발",
@@ -595,7 +594,7 @@ const ko = {
         story: [
             "회사 제품에 AI 기능에 대한 요구가 증가하여, 프로토타입으로 구축한 프로젝트입니다.\n",
             "직접 VectorDB 구축, RAG 파이프라인과 AI를 위한 API 서버를 개발하여 데모 버전에 적용하였습니다.\n",
-            "임베딩과 VectorDB는 사내 서버에 구축하였고, AI 서비스는 구글 클라우드 플랫폼을 통해 빠르게 구축하였습니다.",
+            "Gemini 2.5 Lite와 GPT-5 nano를 실험하면서 프롬프트 엔지니어링 중에 있습니다.",
         ].join(""),
         imgLabel: "시연 영상",
         imgUrls: "/video/20250110.mp4",
