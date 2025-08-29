@@ -68,7 +68,7 @@ I work with 4 junior developers and am very interested in a culture of growth to
         name: "이규철",
         birthdate: "1994.2.19",
         jobDesc: `
-현재 회사에서 웹 F/E 코어 패키지 개발 업무를 맡고 있습니다.
+현재 B2B IT 솔루션 회사에서 웹 F/E 코어 패키지 개발 업무를 맡고 있습니다.
 4명의 개발자와 1명의 디자이너와 한 팀에서 일하고 있습니다.
 최근에는 LLM 기반의 웹 애플리케이션 기능 개발 연구에 참여하고 있습니다.
 공개된 오픈소스 기술이 없더라도 스스로 기술을 만들어 해결한 경험이 많습니다.

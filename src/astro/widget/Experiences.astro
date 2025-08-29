@@ -16,15 +16,17 @@ const lang = Astro.currentLocale as Lang;
 const t = useTranslations(lang);
 
 const printVisibleSet = new Set([
-    "20250110",
-    "20250080",
-    "20240010",
-    "20250040",
-    "20230020",
+    "20250110", // AI
+    "20250100", // 다국어
+    "20250090", // add-on
+    "20250080", // dark
+    "20250050", // 코딩 테스트
+    "20240010", // 테스팅
+    // "20230020", // 업무 캘린더
     "20230015",
     "20230010",
-    "20210090",
-    "20210080",
+    "20210090", // UI 스타일 리뉴얼
+    "20210080", // Core SDK 개발 환경
     "20210070", // Flowchart
     "20210060", // RPA
     "20180050", // IoT
@@ -342,11 +344,10 @@ const projectTabs: ExpTabList[] = [
 
     #tabNav {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 0.25rem;
         margin-left: calc(var(--spacing-doc-pad-left) * -1);
         margin-right: calc(var(--spacing-doc-pad-right) * -1);
-        padding: 0 1.25rem;
-        margin-bottom: -0.5rem;
     }
 
     @media print {

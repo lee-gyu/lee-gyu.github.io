@@ -338,28 +338,23 @@ const ko = {
     "20230015": {
         header: "[UI] Grid 컴포넌트 라이브러리 개발",
         year: "2022",
-        summary: "모든 업무 화면에 핵심이 되는 Grid 컴포넌트 개발",
+        summary:
+            "전체 제품 화면 80%이상이 사용하는 핵심 Grid 컴포넌트로 웹 제품 전환 프로젝트에 기여",
         result: joinCommas(""),
-        tasks: joinCommas("Row/Column/Cell/Plugin 구성 요소 설계/개발"),
+        tasks: joinCommas("Row/Column/Cell/Plugin 구성 요소 개발"),
         feat: joinCommas(
             "Viewport에 보이는 DOM만 출력하도록 Windowing 적용",
             "셀 렌더러를 이용하여 다양한 셀 UI 커스텀 기능 제공",
             "플러그인 기반 컴포넌트 확장 기능 제공",
-            "MS-Office 기반 데이터 클립보드 복사/붙여넣기 호환",
+            "MS-Office 테이블 데이터 클립보드 복사/붙여넣기 호환",
         ),
         issue: joinCommas(""),
         urls: joinCommas(
-            "https://lee-gyu.github.io/storybook/?path=/story/js-components-irgrid--bulk-columns",
-            "https://lee-gyu.github.io/storybook/?path=/story/js-components-irgrid--cell-renderer",
             "https://lee-gyu.github.io/storybook/?path=/story/js-components-irgrid--row-filter-plugin",
         ),
-        urlText: joinCommas(
-            "50만개 셀 처리",
-            "셀 렌더러 UI 기능 확장",
-            "플러그인 기반 기능 확장",
-        ),
-        // TypeScript 기반, Undo, 타 Format 클립보드 지원
-        // 플러그인 기반 코어 아키텍처
+        urlText: joinCommas("스토리북 예제"),
+        imgUrls: "/img/20230015.png",
+        imgLabel: "동작 화면",
     },
 
     "20230020": {
@@ -387,8 +382,8 @@ const ko = {
         header: "[Lib] 제품 호출 프로토콜 설계 / 개발",
         year: "2023",
         result: joinCommas(
-            "내부 제품간 연동을 통한 재생산성 향상",
-            "고객사 계정 시스템과 SSO 연동을 위한 기반 마련",
+            "제품간 연동을 통한 제품 확장성 향상",
+            "삼성전자, 삼성화재 고객사 시스템과 SSO 연동하여 프로젝트 완수에 기여",
         ),
         tasks: joinCommas(
             "웹 애플리케이션 manifest.json 메타 정보 설계",
@@ -435,6 +430,7 @@ const ko = {
         tasks: joinCommas(
             "테스팅 할 수 있는 기술 환경 구축",
             "테스팅 업무 프로세스 수립",
+            "테스팅을 위한 내부 구조 리팩토링",
             "단위/컴포넌트/End 테스트 작성",
         ),
         imgLabel: joinCommas("Vitest", "Playwright"),
@@ -446,16 +442,18 @@ const ko = {
         header: "[UI] iframe 기반 탭 관리 컴포넌트",
         year: "2024",
         tasks: joinCommas(
+            "기존 여러 브라우저 탭 방식 → Top/Child 페이지 컨테이너 방식 설계",
             "iframe 페이지 호출을 위한 인터페이스 설계",
             "UI 컴포넌트 개발",
         ),
-        result: joinCommas("웹 애플리케이션 제품 사용성에 대한 만족도 향상"),
+        result: joinCommas("전체 사용자의 제품 사용 만족도 크게 향상"),
         "co-op": "제품 디자이너",
         imgUrls: joinCommas("/video/20250010.mp4"),
         imgLabel: joinCommas("동작 화면"),
         feat: joinCommas(
             "Top Window에서 Sub Iframe 페이지 관리",
-            "Sub 페이지 끼리 postMessage 기반 통신",
+            "부모, 자식 페이지 간 postMessage 기반 통신 체계 설계",
+            "탭 목록 관리 기능 개발 (수정 사항 발생, 닫기 전 Confirm 확인 등)",
         ),
         story: [
             "기존에는 브라우저 탭마다 각 업무 화면을 사용하는 구조였습니다. 이러한 구조는 사용자들이 사용하는 탭이 많아지면, 분류가 어렵고 불편하다는 지적이 많았습니다.\n",
@@ -468,7 +466,7 @@ const ko = {
         header: "[UI] 고성능 트리 컴포넌트 개발",
         year: "2024",
         "co-op": "제품 디자이너",
-        urlText: joinCommas("스토리북 예제", "체크박스 플러그인"),
+        urlText: joinCommas("스토리북 예제"),
         urls: joinCommas(
             "https://lee-gyu.github.io/storybook/?path=/story/js-components-irtreeview--bulk-data",
             "https://lee-gyu.github.io/storybook/?path=/story/js-components-irtreeview--cascade-checking",
@@ -485,11 +483,11 @@ const ko = {
         header: "[채용] 신입/경력 웹 프론트엔드 개발자 채용",
         year: "2024",
         role: "채용 전형 담당",
-        summary: "신입 2명 채용, 경력(3년↑) 2명 채용",
+        result: "신입 2명 채용, 경력(3년↑) 2명 채용",
         tasks: joinCommas(
             "약 300명 지원자 서류 검토",
             "과제 테스트 진행/평가",
-            "면접 진행(기술, 문화 적합성)",
+            "기술/문화 면접 진행",
         ),
         urlText: joinCommas("채용 회고록"),
         urls: joinCommas("https://m.site.naver.com/1Pzvj"),
@@ -506,7 +504,7 @@ const ko = {
         ),
         result: joinCommas(
             "채용 프로세스 개선 (오프라인 시험 → 온라인 코딩 테스트)",
-            "800명 응시하여 6명 신입 개발자 채용",
+            "800명 응시 → 6명 신입 개발자 채용",
         ),
         urls: "https://m.site.naver.com/1Pzvv",
         urlText: "이노룰스 온라인 코딩 테스트",
@@ -529,6 +527,7 @@ const ko = {
         year: "2025",
         header: "[디자인 시스템] 다크모드 테마 시스템 설계",
         role: "CSS 테마 토큰 체계 설계 / 프로젝트 리드",
+        tasks: joinCommas(""),
         tech: joinCommas("vanilla-extract", "Figma"),
         "co-op": "제품 디자이너, 주니어 F/E 개발자",
         imgLabel: "테마 전환",
@@ -536,8 +535,11 @@ const ko = {
     },
     "20250090": {
         year: "2025",
-        header: "[Lib] WebApp 커스터마이징 Add-on 구조",
-        result: joinCommas("고객사 요구에 따른 제품 확장성 향상"),
+        header: "[App] WebApp 커스터마이징 Add-on 구조",
+        result: joinCommas(
+            "제품 유지보수/확장성 향상",
+            "삼성생명, 삼성화재 고객사 요구사항을 만족시켜 프로젝트 완수에 기여",
+        ),
         summary: joinCommas(
             "(기존) 고객사 요청마다 별도의 브랜치와 제품 소스를 재빌드 필요",
             "(개선) 메인 프로그램과 커스터마이징 모듈 분리 Add-on 구조 적용 (JS/CSS)",
@@ -550,8 +552,8 @@ const ko = {
             "커스터마이징 로더 설정을 위한 Vite Plugin 개발",
         ),
         feat: joinCommas(
-            "고객사 내부 디자인 규정에 제품 css 재정의",
-            "고객사 사이트에서 원하는 업무 기능 커스터마이징",
+            "고객사 요청에 따른 제품 UI 스타일 CSS 재정의",
+            "고객사 업무에 따라 기능 커스터마이징 필요 시, 제품 기능에 hook을 추가하여 커스텀 가능한 Add-on",
         ),
     },
 
@@ -570,7 +572,7 @@ const ko = {
             "Java/Web 환경에 맞게 다국어 문자열 리소스 Exporting",
         ),
         tech: joinCommas("React", "Nest.js", "Google Cloud Platform"),
-        result: joinCommas("약 8,000개 다국어 문자열 번역 처리 자동화"),
+        result: joinCommas("전 제품 총 13,326개 다국어 문자열 번역 시스템화"),
         imgLabel: "다국어 관리 화면",
         imgUrls: "/img/20250100.png",
     },
@@ -579,12 +581,19 @@ const ko = {
         header: "[AI] LLM 기반 챗봇 기능 프로토타입 개발",
         role: "웹 제품 AI 기능 풀스택 개발",
         year: "2025",
-        tech: joinCommas("React", "Hono", "Chroma", "LangChainJS"),
+        tech: joinCommas(
+            "React",
+            "Hono",
+            "Chroma",
+            "LangChainJS",
+            "Google GenAI / OpenAI API",
+        ),
         tasks: joinCommas(
             "챗봇 UI 컴포넌트 개발",
-            "제품 지식 자료 임베딩 / 프롬프트 엔지니어링 (Gemini 2.5 lite / GPT-5 nano)",
+            "제품 지식 자료 임베딩",
             "RAG 파이프라인 개발",
             "AI 서비스 호출 API 서버 개발",
+            "프롬프트 엔지니어링 (Gemini 2.5 lite / GPT-5 nano)",
             "Agent 모드를 위한 웹 애플리케이션 구조 설계",
         ),
         story: [
