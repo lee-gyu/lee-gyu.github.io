@@ -556,18 +556,18 @@ const ko = {
     },
 
     "20250100": {
-        header: "[Cloud] 다국어 번역 자동화",
+        header: "[App] 다국어 번역 자동화",
         year: "2025",
         role: "업무 프로세스 설계 및 시스템 개발",
         "co-op": "미들 F/E 개발자, 주니어 F/E 개발자",
         tasks: joinCommas(
-            "기존 시스템 문자열 전수 조사 / 리소스 파서 작성",
+            "Google Cloud 적응형 번역 API를 활용한 다국어 리소스 번역 자동화 (일본어, 영어, 중국어, 스페인어)",
+            "기존 시스템 문자열 전수 조사/리소스 파서 작성",
             "기존 번역된 문자열 리소스 훈련 데이터셋 생성",
-            "Google 적응형 번역 서비스를 활용한 번역 자동화 (일본어, 영어, 중국어, 스페인어)",
         ),
         feat: joinCommas(
-            "사내 업무 시스템에 제품 다국어 통합 관리 화면",
-            "Java/Web 환경에 맞게 다국어 문자열 리소스 Exporting",
+            "Java/Web 소스 코드에 맞게 다국어 리소스 Exporting",
+            "제품 다국어 통합 관리 업무 시스템화",
         ),
         tech: joinCommas("React", "Google Cloud Platform"),
         result: joinCommas("전 제품 총 13,326개 다국어 문자열 번역 시스템화"),
