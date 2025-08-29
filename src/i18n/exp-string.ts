@@ -482,15 +482,12 @@ const ko = {
         imgUrls: "/img/20250020.png",
     },
     "20250040": {
-        header: "[채용] 신입/경력 웹 개발자 채용",
+        header: "[채용] 신입/경력 웹 프론트엔드 개발자 채용",
         year: "2024",
         role: "채용 전형 담당",
-        summary: joinCommas(
-            "신입 F/E 개발자 2명 채용",
-            "경력(3년↑) F/E 개발자 2명 채용",
-        ),
+        summary: "신입 2명 채용, 경력(3년↑) 2명 채용",
         tasks: joinCommas(
-            "지원자 서류 검토",
+            "약 300명 지원자 서류 검토",
             "과제 테스트 진행/평가",
             "면접 진행(기술, 문화 적합성)",
         ),
@@ -585,7 +582,7 @@ const ko = {
         tech: joinCommas("React", "Hono", "Chroma", "LangChainJS"),
         tasks: joinCommas(
             "챗봇 UI 컴포넌트 개발",
-            "제품 지식 자료 임베딩 / 프롬프트 엔지니어링",
+            "제품 지식 자료 임베딩 / 프롬프트 엔지니어링 (Gemini 2.5 lite / GPT-5 nano)",
             "RAG 파이프라인 개발",
             "AI 서비스 호출 API 서버 개발",
             "Agent 모드를 위한 웹 애플리케이션 구조 설계",
