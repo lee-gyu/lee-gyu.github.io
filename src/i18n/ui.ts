@@ -143,7 +143,11 @@ I work with 4 junior developers and am very interested in a culture of growth to
         "exp.label.issue": "주요 이슈",
 
         "exp.tab.primary": "주요 경험",
+        "exp.tab.primary.desc": "이노룰스 기술연구소 기반기술팀 소속 주요 경험",
         "exp.tab.secondary": "보조 경험",
+        "exp.tab.secondary.desc":
+            "이노룰스 기술연구소 기반기술팀 소속 보조 경험",
         "exp.tab.etc": "기타",
+        "exp.tab.etc.desc": "삼성전자 소속 경험 및 퇴직 후 활동",
     },
 } as const;
