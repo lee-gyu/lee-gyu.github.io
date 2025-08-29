@@ -62,3 +62,7 @@
 .text-link {
     text-decoration: underline;
 }
+
+.page-no-break {
+    page-break-inside: avoid;
+}
