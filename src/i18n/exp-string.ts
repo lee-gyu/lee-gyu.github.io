@@ -228,7 +228,7 @@ const ko = {
             "연결선 처리 알고리즘",
         ),
         urlText: "스토리북 예제",
-        urls: "https://lee-gyu.github.io/storybook/?path=/story/js-components-irflowchart--basic",
+        urls: "https://m.site.naver.com/1PF90",
         story: [
             "당시 사내 클라이언트 프로그램은 C++ Builder 기반의 네이티브 데스크탑 애플리케이션이었습니다. ",
             "영업본부에서는 타사와의 제품 경쟁력을 위해 웹으로의 기술 전환을 지속적으로 요구하였고, 웹 전환의 가능성을 보기 위한 첫 시작 과제였습니다.\n\n",
@@ -312,7 +312,7 @@ const ko = {
         result: joinCommas(
             "공용 패키지를 통하여 모든 솔루션에 동일한 아이콘 CSS 체계 적용",
         ),
-        urls: "https://lee-gyu.github.io/storybook/?path=/story/html-components-icon--list",
+        urls: "https://m.site.naver.com/1PF98",
         urlText: "아이콘 목록",
         story: [
             "기존 비트맵 아이콘 처리 방식을 벡터 이미지(svg)로 처리하도록 아이콘 CSS 처리 체계를 새로 구축했습니다.",
@@ -337,10 +337,7 @@ const ko = {
             "플러그인 기반 컴포넌트 확장 기능 제공",
             "MS-Office 테이블 데이터 클립보드 복사/붙여넣기 호환",
         ),
-        issue: joinCommas(""),
-        urls: joinCommas(
-            "https://lee-gyu.github.io/storybook/?path=/story/js-components-irgrid--row-filter-plugin",
-        ),
+        urls: joinCommas("https://m.site.naver.com/1PF9n"),
         urlText: joinCommas("스토리북 예제"),
         imgUrls: "/img/20230015.png",
         imgLabel: "동작 화면",
@@ -462,10 +459,7 @@ const ko = {
         year: "2024",
         "co-op": "제품 디자이너",
         urlText: joinCommas("스토리북 예제"),
-        urls: joinCommas(
-            "https://lee-gyu.github.io/storybook/?path=/story/js-components-irtreeview--bulk-data",
-            "https://lee-gyu.github.io/storybook/?path=/story/js-components-irtreeview--cascade-checking",
-        ),
+        urls: joinCommas("https://m.site.naver.com/1PF9h"),
         feat: joinCommas(
             "부모/자식 노드 계층 처리",
             "플러그인을 활용한 기능 확장 (키보드/마우스/체크박스/툴팁)",
