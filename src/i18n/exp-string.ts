@@ -26,11 +26,7 @@ const ko = {
         header: "[훈련] 2013 국제기능올림픽 정보기술 직종 국가대표",
         period: "2012 ~ 2013",
         role: "기능올림픽 정보기술 직종 국가대표",
-        tech: joinCommas(
-            "(Docs) MS Office",
-            "(DB) MS Access",
-            "VBA 프로그래밍",
-        ),
+        tech: joinCommas("MS Office", "MS Access", "VBA Programming"),
         result: joinCommas("금메달 (1위)", "동탑산업훈장 대통령 표창"),
         urlText: joinCommas("대회 점수", "수상자 사진"),
         urls: joinCommas(
@@ -76,7 +72,7 @@ const ko = {
         header: "[교육] 삼성전자 기능올림픽 훈련센터 지도위원",
         period: "2013 ~ 2015",
         role: "국가대표 지도위원",
-        tech: joinCommas("(Client) C# Windows", "(DB) SQL Server"),
+        tech: joinCommas("C# Windows", "SQL Server"),
         result: joinCommas(
             "한국 은메달(2위) 수상",
             "고용노동부 장관 표창",
@@ -100,10 +96,11 @@ const ko = {
         year: "2016",
         "co-op": "프로젝트 리더",
         tech: joinCommas(
-            "(F/E) JQuery / Bootstrap",
-            "(B/E) C# ASP.NET MVC",
-            // "(DB) MariaDB",
-            // "(ORM) Entity Framework",
+            "JQuery",
+            "Bootstrap",
+            "C# ASP.NET MVC",
+            // "MariaDB",
+            // "Entity Framework",
         ),
         role: joinCommas("웹 풀스택 개발"),
         feat: joinCommas(
@@ -128,10 +125,11 @@ const ko = {
         role: "웹 풀스택 개발",
         "co-op": joinCommas("프로젝트 리더"),
         tech: joinCommas(
-            "(F/E) JQuery / Tzelerik Kendo UI",
-            "(B/E) C# ASP.Net MVC",
-            // "(DB) MariaDB",
-            // "(ORM) Entity Framework",
+            "JQuery",
+            "Telerik Kendo UI",
+            "C# ASP.Net MVC",
+            // "MariaDB",
+            // "Entity Framework",
             // "(Windows) WPF / Service",
         ),
         result: "기존 수십분이 소요되는 현황 파악 작업 자동화",
@@ -156,8 +154,8 @@ const ko = {
         role: "웹 풀스택 개발",
         result: "먼지/조도/소음 등 환경 데이터 수집/모니터링 시스템 개발",
         tech: joinCommas(
+            "C# ASP.NET MVC",
             "(IoT) Raspberry Pi (Linux Raspbian)",
-            "(B/E) C# ASP.NET MVC",
             "(Message Broker) Mosquitto",
         ),
         story: [
@@ -184,10 +182,10 @@ const ko = {
         "co-op": "PLC 신호 처리 클라이언트 개발자",
         result: "공정 병목 현상 파악 및 개선에 기여",
         tech: joinCommas(
-            "(F/E) TypeScript",
-            "(B/E) C# ASP.NET MVC",
-            "(ORM) Entity Framework",
-            "(DB) MariaDB",
+            "TypeScript",
+            "C# ASP.NET MVC",
+            "Entity Framework",
+            "MariaDB",
         ),
         story: [
             "공정 프로세스는 조립-검사-포장 등의 단계를 거칩니다. ",
@@ -225,7 +223,7 @@ const ko = {
             "Win/Linux/Mac 크로스 플랫폼 Electron App",
             "Windows Sandbox 활용 가상 테스팅 환경 구축",
         ),
-        tech: joinCommas("(B/E) Koa.js", "(F/E) Vue.js / Electron"),
+        tech: joinCommas("Koa.js", "Vue.js / Electron"),
         issue: joinCommas(
             "Linux / Mac 크로스 플랫폼 실행 환경 이슈",
             "Jython 기반의 매우 무겁고 느린 초기화 성능",
@@ -274,12 +272,7 @@ const ko = {
             "웹 프로젝트 개발 표준 기술 수립",
             "자바 서버 사이드와 완전히 분리되어 제품 보안성 향상",
         ),
-        tech: joinCommas(
-            "(F/E) Vite",
-            "(CI/CD) Jenkins",
-            "(Container) Docker",
-            "(Docs) Storybook / TypeDoc",
-        ),
+        tech: joinCommas("Vite", "Jenkins", "Docker", "Storybook", "TypeDoc"),
         urls: "https://lee-gyu.github.io/storybook/?path=/story/html-components-button--intent",
         urlText: "라이브 에디터 예제",
         story: [
@@ -298,7 +291,7 @@ const ko = {
             "CSS 토큰/공용 스타일 적용 체계 구축",
             "신규 UI 스타일을 적용하는 CSS 가이드",
         ),
-        tech: joinCommas("Figma"),
+        tech: joinCommas("vanilla-extract", "Figma"),
         result: joinCommas("UI 개발 생산성 향상", "일관된 UX/UI 제공"),
         imgUrls: joinCommas(
             "/img/20210090_1.png",
@@ -374,10 +367,10 @@ const ko = {
             "다크모드 CSS 테마 기능 개발",
         ),
         tech: joinCommas(
-            "(F/E) Next.js Page Router",
-            "(F/E) React / Jotai / SWR",
-            "(B/E) Nest.js / TypeORM",
-            "(DB) MySQL",
+            "Next.js Page Router",
+            "React / Jotai / SWR",
+            "Nest.js / TypeORM",
+            "MySQL",
         ),
         imgLabel: joinCommas("(PC) 동작 화면", "(모바일) 동작 화면"),
         imgUrls: joinCommas("/video/20230020_1.mp4", "/video/20230020_2.mp4"),
@@ -413,7 +406,7 @@ const ko = {
             "프로젝트 관리(개발 일정/리스크)",
         ),
         "co-op": joinCommas("제품 디자이너", "주니어 개발자"),
-        tech: joinCommas("(F/E) React", "(B/E) Nest.js"),
+        tech: joinCommas("React", "Nest.js"),
         imgUrls: joinCommas(
             "/img/20230080_1.png",
             "/img/20230080_2.png",
@@ -430,7 +423,7 @@ const ko = {
         header: "[Testing] UI 컴포넌트 테스트 자동화",
         year: "2024",
         "co-op": joinCommas("주니어 F/E 개발자 (3명)"),
-        tech: joinCommas("Vitest / Playwright"),
+        tech: joinCommas("Vitest", "Playwright"),
         result: "반복적 테스팅 작업 단축",
         tasks: joinCommas(
             "테스팅 할 수 있는 기술 환경 구축",
@@ -502,10 +495,10 @@ const ko = {
         year: "2025",
         "co-op": joinCommas("제품 디자이너", "주니어 F/E 개발자 (2명)"),
         tech: joinCommas(
-            "(F/E) Next.js App Router / Server Actions",
-            "(F/E) React / zustand / react-query / CodeMirror",
-            "(DB) PostgreSQL",
-            "(ORM) Drizzle",
+            "React / Zustand",
+            "Next.js App Router / Server Actions",
+            "CodeMirror",
+            "DrizzleORM / PostgreSQL",
         ),
         result: joinCommas(
             "채용 프로세스 개선 (오프라인 시험 → 온라인 코딩 테스트)",
@@ -532,6 +525,7 @@ const ko = {
         year: "2025",
         header: "[디자인 시스템] 다크모드 테마 시스템 설계",
         role: "CSS 테마 토큰 체계 설계 / 프로젝트 리드",
+        tech: joinCommas("vanilla-extract", "Figma"),
         "co-op": joinCommas("제품 디자이너", "주니어 F/E 개발자"),
         imgLabel: "테마 전환",
         imgUrls: "/video/20250080.mp4",
@@ -560,7 +554,7 @@ const ko = {
     "20250100": {
         header: "[Cloud] 다국어 번역 자동화",
         year: "2025",
-        role: "전체 시스템 설계/개발",
+        role: "업무 프로세스 설계 및 시스템 개발",
         "co-op": joinCommas("미들 F/E 개발자", "주니어 F/E 개발자"),
         tasks: joinCommas(
             "기존 시스템 번역 필요 문자열 전수 조사",
@@ -572,35 +566,27 @@ const ko = {
             "사내 업무 시스템으로 제품 다국어 통합 관리 UI",
             "Java/Web 제품에 맞게 다국어 리소스 Export 기능",
         ),
-        tech: joinCommas(
-            "(F/E) React",
-            "(B/E) Nest.js",
-            "(Cloud) Google Cloud Platform",
-        ),
+        tech: joinCommas("React", "Nest.js", "Google Cloud Platform"),
         result: joinCommas("약 8,000개 다국어 문자열 번역 처리 자동화"),
-        imgLabel: "화면",
+        imgLabel: "다국어 관리 화면",
         imgUrls: "/img/20250100.png",
     },
 
     "20250110": {
         header: "[AI] LLM 기반 챗봇 기능 프로토타입 개발",
-        role: "웹 제품 AI 기능 풀스택 개발/적용",
+        role: "웹 제품 AI 기능 풀스택 개발",
         year: "2025",
-        tech: joinCommas(
-            "(F/E) React",
-            "(B/E) Hono",
-            "(VectorDB) Chroma",
-            "(AI) LangChainJS",
-        ),
+        tech: joinCommas("React", "Hono", "Chroma", "LangChainJS"),
         tasks: joinCommas(
             "챗봇 UI 컴포넌트 개발",
             "제품 지식 자료 임베딩",
             "프롬프트 엔지니어링",
             "AI 서비스 호출 API 서버 개발",
+            "Agent 모드 호출을 위한 웹 애플리케이션 구조 설계",
         ),
         story: [
             "회사 제품에 AI 기능에 대한 요구가 증가하여, 프로토타입으로 구축한 프로젝트입니다.\n",
-            "직접 VectorDB 구축, RAG 파이프라인과 AI를 위한 API 서버를 개발하여 데모 버전에 적용하였습니다.\n",
+            "직접 vectorDB 구축, RAG 파이프라인과 AI를 위한 API 서버를 개발하여 데모 버전에 적용하였습니다.\n",
             "Gemini 2.5 Lite와 GPT-5 nano를 실험하면서 프롬프트 엔지니어링 중에 있습니다.",
         ].join(""),
         imgLabel: "시연 영상",

@@ -6,6 +6,8 @@ import { listItemsCss } from "src/styles/component-css";
 import ListItems from "./ListItems.astro";
 import UrlListItems from "./UrlListItems.astro";
 import ImgList from "./ImgList.astro";
+import Keywords from "./Keywords.astro";
+import { splitCommas } from "src/utils/string";
 
 type Props = {
     expId: ExpKey;
@@ -19,18 +21,19 @@ const { expId, printHidden } = Astro.props;
 const expData = experiencesKo[expId];
 
 const date = expData.year ?? expData.date ?? expData.period ?? "";
+const techKeywords = expData.tech ? splitCommas(expData.tech) : [];
 ---
 
 <article class="exp-card" data-print-hidden={printHidden ? true : null}>
     {date && <span class="exp-card-date">{date}</span>}
     <Title size="h4">{expData.header}</Title>
+    {techKeywords.length > 0 && <Keywords keywords={techKeywords} />}
     <ul class={listItemsCss}>
         <ListItems label={t(`exp.label.summary`)} contents={expData.summary} />
         <ListItems label={t(`exp.label.role`)} contents={expData.role} />
         <ListItems label={t(`exp.label.co-op`)} contents={expData["co-op"]} />
         <ListItems label={t(`exp.label.result`)} contents={expData.result} />
         <ListItems label={t(`exp.label.tasks`)} contents={expData.tasks} />
-        <ListItems label={t(`exp.label.tech`)} contents={expData.tech} />
         <ListItems label={t(`exp.label.feat`)} contents={expData.feat} />
         <ListItems label={t(`exp.label.issue`)} contents={expData.issue} />
         <UrlListItems
@@ -83,6 +86,10 @@ const date = expData.year ?? expData.date ?? expData.period ?? "";
     .exp-card-date {
         font-weight: 500;
         font-size: 0.875rem;
+    }
+
+    .exp-details {
+        display: none;
     }
 
     @media print {

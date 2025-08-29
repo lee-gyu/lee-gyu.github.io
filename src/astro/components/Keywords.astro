@@ -11,7 +11,7 @@ const { keywords, class: className } = Astro.props;
     {keywords.map((keyword) => <span class={"keyword"}>{keyword}</span>)}
 </div>
 
-<style>
+<style is:global>
     .keywords {
         display: inline-flex;
         flex-wrap: wrap;
