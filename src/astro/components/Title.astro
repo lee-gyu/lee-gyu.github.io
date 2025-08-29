@@ -5,6 +5,7 @@ type Props = {
     class?: string;
     size?: `h${1 | 2 | 3 | 4}`;
     id?: string;
+    printHidden?: boolean;
 };
 
 const title = cva({
@@ -39,6 +40,7 @@ const Element = restProps.size ?? "h1";
 
 <Element
     id={restProps.id}
+    data-print-hidden={restProps.printHidden}
     class:list={[title(restProps), className, restProps.id && "has-title"]}
 >
     {

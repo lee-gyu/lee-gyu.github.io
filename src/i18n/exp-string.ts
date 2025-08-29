@@ -124,28 +124,8 @@ const ko = {
         year: "2016",
         role: "웹 풀스택 개발",
         "co-op": "프로젝트 리더",
-        tech: joinCommas(
-            "JQuery",
-            "Telerik Kendo UI",
-            "C# ASP.Net MVC",
-            // "MariaDB",
-            // "Entity Framework",
-            // "(Windows) WPF / Service",
-        ),
-        result: "기존 수십분이 소요되는 현황 파악 작업 자동화",
-        issue: joinCommas(
-            "해외 타임존/썸머 타임 문제",
-            "내부 인트라 네트워킹 보안망 문제",
-        ),
-        feat: joinCommas(
-            "세계 지도 형태의 실시간 모니터링 화면",
-            // "해외 법인 DB 동기화 시스템",
-            // "모니터링 대시보드 화면",
-        ),
-        // story: [
-        //     "부서에 소프트웨어 개발 인력이 보충되면서, 전체 해외 법인을 모니터링하는 과제가 주어졌습니다.",
-        //     "사내 제조 실행 시스템(MES)과 연계하여 API로 주기적으로 데이터를 수집하고, 이를 보여주는 화면을 개발했습니다.",
-        // ].join(" "),
+        tech: joinCommas("JQuery", "Telerik Kendo UI", "C# ASP.Net MVC"),
+        feat: joinCommas("세계 지도 형태의 실시간 모니터링 화면"),
     },
     "20180050": {
         header: "[App] IoT 환경 데이터 수집",
@@ -161,10 +141,6 @@ const ko = {
             "먼지/조도/소음 등 환경 데이터 수집/모니터링 시스템 개발",
             "각 해외 법인별 환경 데이터 대쉬보드 화면 개발",
         ),
-        story: [
-            "IoT 기기에 연결된 센서들로 환경 데이터를 수집하고, 이를 공정 환경 개선에 활용될 수 있도록 하는 과제입니다.",
-            "IoT 기기와 센서 연동 등의 하드웨어를 담당하는 엔지니어와 협업한 과제입니다.",
-        ].join("\n"),
     },
 
     "20180055": {
@@ -395,11 +371,12 @@ const ko = {
     },
 
     "20230070": {
-        header: "[Lib] 제품 호출 프로토콜 설계 / 개발",
+        header: "[Lib] 웹 솔루션 3rd-party 호출 모듈 개발",
+        tech: joinCommas("VanillaJS", "TypeScript"),
         year: "2023",
         result: joinCommas(
             "제품간 연동을 통한 제품 확장성 향상",
-            "삼성전자, 삼성화재 고객사 시스템과 SSO 연동하여 프로젝트 완수에 기여",
+            "삼성전자, 삼성화재 프로젝트 수행 기여",
         ),
         tasks: joinCommas(
             "웹 애플리케이션 manifest.json 메타 정보 설계",
@@ -442,8 +419,9 @@ const ko = {
         year: "2024",
         "co-op": "주니어 F/E 개발자 (3명)",
         tech: joinCommas("Vitest", "Playwright"),
-        result: "반복적 테스팅 작업 단축 (Vitest: 119개, Playwright: 19개)",
+        result: "반복적 컴포넌트 테스팅 작업 단축",
         tasks: joinCommas(
+            "Vitest: 119개, Playwright: 19개 테스트 작성",
             "테스팅 할 수 있는 기술 환경 구축",
             "테스팅 업무 프로세스 수립",
             "테스팅을 위한 내부 구조 리팩토링",
@@ -455,7 +433,8 @@ const ko = {
 
     // 2025 ~
     "20250010": {
-        header: "[UI] iframe 기반 탭 관리 컴포넌트",
+        header: "[UI] iframe 기반 화면 탭 관리 컴포넌트",
+        tech: joinCommas("VanillaJS", "TypeScript"),
         year: "2024",
         tasks: joinCommas(
             "기존 여러 브라우저 탭 방식 → Top/Child 페이지 컨테이너 방식 설계",
@@ -563,7 +542,7 @@ const ko = {
         header: "[App] WebApp 커스터마이징 Add-on 구조",
         result: joinCommas(
             "제품 유지보수/확장성 향상",
-            "삼성생명, 삼성화재 고객사 요구사항을 만족시켜 프로젝트 완수에 기여",
+            "삼성생명, 삼성화재 고객사 프로젝트 수행 기여",
         ),
         summary: joinCommas(
             "(기존) 고객사 요청마다 별도의 브랜치와 제품 소스를 재빌드 필요",
@@ -596,7 +575,7 @@ const ko = {
             "사내 업무 시스템에 제품 다국어 통합 관리 화면",
             "Java/Web 환경에 맞게 다국어 문자열 리소스 Exporting",
         ),
-        tech: joinCommas("React", "Nest.js", "Google Cloud Platform"),
+        tech: joinCommas("React", "Google Cloud Platform"),
         result: joinCommas("전 제품 총 13,326개 다국어 문자열 번역 시스템화"),
         imgLabel: "다국어 관리 화면",
         imgUrls: "/img/20250100.png",
@@ -608,11 +587,10 @@ const ko = {
         year: "2025",
         tech: joinCommas(
             "React",
-            "Hono",
             "Chroma",
             "LangChainJS",
             "Google GenAI",
-            "OpenAI API",
+            "OpenAI",
         ),
         tasks: joinCommas(
             "챗봇 UI 컴포넌트 개발",

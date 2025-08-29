@@ -77,43 +77,15 @@ const lastUpdated = format(dayjs(LAST_UPDATED), lang);
         {
             lang !== "en" && (
                 <section class={css({ marginTop: "1rem" })} role="article">
-                    <Title id="experiences" size="h3">
+                    <Title id="experiences" size="h3" printHidden>
                         {t("experience")}
                     </Title>
-                    <p class="hidden-info" data-only-print="block">
-                        {t("experience.print-desc")}
-                        <a
-                            class="text-link"
-                            href={import.meta.env.PUBLIC_BASE_URL}
-                        >
-                            {t("experience.print-link")}
-                        </a>
-                    </p>
                     <Experiences />
                 </section>
             )
         }
     </main>
 </DefaultLayout>
-
-<script>
-    window.addEventListener("load", () => {
-        document.querySelectorAll(".img-button").forEach((wrapper) => {
-            const video = wrapper.querySelector("video");
-
-            if (!video) return;
-
-            wrapper.addEventListener("mouseenter", () => {
-                video.play();
-            });
-
-            wrapper.addEventListener("mouseleave", () => {
-                video.pause();
-                video.currentTime = 0;
-            });
-        });
-    });
-</script>
 
 <style is:global>
     #experiences {
@@ -124,11 +96,6 @@ const lastUpdated = format(dayjs(LAST_UPDATED), lang);
         white-space: nowrap;
         margin-left: 0.25rem;
         word-break: keep-all;
-    }
-
-    .hidden-info {
-        font-size: 0.875rem;
-        opacity: 0.75;
     }
 
     .updated-info {

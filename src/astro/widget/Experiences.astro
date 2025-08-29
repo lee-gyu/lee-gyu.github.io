@@ -16,22 +16,26 @@ const lang = Astro.currentLocale as Lang;
 const t = useTranslations(lang);
 
 const printVisibleSet = new Set([
-    "20250110", // AI
-    "20250100", // 다국어
-    "20250090", // add-on
-    "20250080", // dark
-    "20250050", // 코딩 테스트
+    "20250110", // 솔루션 AI 기능 개발
+    "20250100", // 다국어 통합 관리 시스템
+    "20250090", // 커스터마이징 모듈
+    "20250080", // Dark Mode Theme
     "20240010", // 테스팅
-    // "20230020", // 업무 캘린더
-    "20230015",
-    "20230010",
-    "20210090", // UI 스타일 리뉴얼
-    "20210080", // Core SDK 개발 환경
+    "20250010", // PageContainer
+    "20230070", // 제품간 호출 프로토콜
+    "20230015", // Grid
+    "20210080", // 웹 개발 환경
     "20210070", // Flowchart
+
+    "20250040", // 채용
+    "20230020", // CM Calendar
+    "20230010", // Icon CSS
+    "20210090", // UI 스타일 리뉴얼
     "20210060", // RPA
+
     "20180050", // IoT
-    "20180030", // 해외 관제
-    "20180020", // PLO
+    "20180030", // 관제
+    "20180020", // 업무 시스템
     "20150070", // 지도위원
     "20150030", // 훈련
 ]);
@@ -41,21 +45,14 @@ const projectTabs: ExpTabList[] = [
         id: "exp_primary",
         tabCaption: t("exp.tab.primary"),
         expKeyList: [
-            // 최근
             "20250110", // 솔루션 AI 기능 개발
             "20250100", // 다국어 통합 관리 시스템
             "20250090", // 커스터마이징 모듈
             "20250080", // Dark Mode Theme
-            // 2024
             "20240010", // 테스팅
             "20250010", // PageContainer
-            // 2023
             "20230070", // 제품간 호출 프로토콜
-
-            // 2022
             "20230015", // Grid
-
-            // 2021
             "20210080", // 웹 개발 환경
             "20210070", // Flowchart
         ],
@@ -113,8 +110,22 @@ const projectTabs: ExpTabList[] = [
     </div>
     <div id="tabContents" class="tab-contents">
         {
-            projectTabs.map((tab) => (
+            projectTabs.map((tab, id) => (
                 <div id={tab.id} class:list={["tab-content"]}>
+                    <h4 class="tab-caption" data-only-print="block">
+                        {tab.tabCaption}
+                    </h4>
+                    {id === 0 && (
+                        <p class="hidden-info" data-only-print="block">
+                            {t("experience.print-desc")}
+                            <a
+                                class="text-link"
+                                href={import.meta.env.PUBLIC_BASE_URL}
+                            >
+                                {t("experience.print-link")}
+                            </a>
+                        </p>
+                    )}
                     <ol class="tab-card-list">
                         {tab.expKeyList.map((expId) => (
                             <ExpCard
@@ -280,7 +291,6 @@ const projectTabs: ExpTabList[] = [
         scrollbar-width: none;
         align-items: flex-start;
         overflow: hidden;
-        z-index: 0;
         width: calc(
             100% + var(--spacing-doc-pad-right) + var(--spacing-doc-pad-left)
         );
@@ -329,6 +339,18 @@ const projectTabs: ExpTabList[] = [
         gap: 0.25rem;
         margin-left: calc(var(--spacing-doc-pad-left) * -1);
         margin-right: calc(var(--spacing-doc-pad-right) * -1);
+    }
+
+    .tab-caption {
+        margin-top: 0.75rem;
+        font-weight: 700;
+        padding-left: var(--spacing-doc-pad-left);
+    }
+
+    .hidden-info {
+        padding-left: var(--spacing-doc-pad-left);
+        font-size: 0.875rem;
+        opacity: 0.75;
     }
 
     @media print {
