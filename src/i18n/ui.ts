@@ -113,6 +113,7 @@ I work with 4 junior developers and am very interested in a culture of growth to
         "skills.17.keywords": joinCommas("Linux"),
         "skills.20.label": "F/E",
         "skills.20.keywords": joinCommas(
+            "Vite",
             "Next.js",
             "Astro",
             "React",
