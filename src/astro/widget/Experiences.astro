@@ -38,49 +38,45 @@ const printVisibleSet = new Set([
 
 const projectTabs: ExpTabList[] = [
     {
-        id: "exp_2025",
-        tabCaption: t("exp.tab.2025"),
+        id: "exp_primary",
+        tabCaption: t("exp.tab.primary"),
         expKeyList: [
             // 최근
             "20250110", // 솔루션 AI 기능 개발
             "20250100", // 다국어 통합 관리 시스템
             "20250090", // 커스터마이징 모듈
             "20250080", // Dark Mode Theme
-            // "20250070", // 전자결재
-            "20250050", // 온라인 코딩 테스트
             // 2024
             "20240010", // 테스팅
-            "20250040", // 채용
-            "20250020", // IRTreeView
             "20250010", // PageContainer
+            // 2023
+            "20230070", // 제품간 호출 프로토콜
+
+            // 2022
+            "20230015", // Grid
+
+            // 2021
+            "20210080", // 웹 개발 환경
+            "20210070", // Flowchart
         ],
     },
     {
-        id: "exp_2023",
-        tabCaption: t("exp.tab.2023"),
+        id: "exp_secondary",
+        tabCaption: t("exp.tab.secondary"),
         expKeyList: [
-            // 2023
+            "20250050", // 온라인 코딩 테스트
+            "20250040", // 채용
+            "20250020", // IRTreeView
             "20230080", // 휴가계 리뉴얼
-            "20230070", // 제품간 호출 프로토콜
-            // "20230060", // jsp
-            // "20230050", // InnoPortal
-            // "20240010", // 개발 프로세스
-
-            // 2022
             "20230020", // CM Calendar
-            "20230015", // Grid
             "20230010", // Icon CSS
-
-            // 2021
             "20210090", // UI 스타일 리뉴얼
-            "20210080", // 웹 개발 환경
-            "20210070", // Flowchart
             "20210060", // RPA
         ],
     },
     {
-        id: "exp_2018",
-        tabCaption: t("exp.tab.2018"),
+        id: "exp_etc",
+        tabCaption: t("exp.tab.etc"),
         expKeyList: [
             "20200010", // 어학연수
             "20180055", // SW 써티
@@ -88,25 +84,10 @@ const projectTabs: ExpTabList[] = [
             "20180050", // IoT
             "20180030", // 관제
             "20180020", // 업무 시스템
-        ],
-    },
-    {
-        id: "exp_2015",
-        tabCaption: t("exp.tab.2015"),
-        expKeyList: [
             "20150070", // 지도위원
-            "20150060", // 조직문화 개선
-            // "20150050", // 사내 경진 대회
-            // "20150040", // 채용 업무
             "20150030", // 훈련
         ],
     },
-    // {
-    //     id: "expEtc",
-    //     tabCaption: t("exp.tab.etc"),
-    //     expKeyList: [
-    //     ],
-    // },
 ];
 ---
 
@@ -231,7 +212,7 @@ const projectTabs: ExpTabList[] = [
 
 <style>
     :root {
-        --tab-button-width: 64px;
+        --tab-button-width: 84px;
         --tab-button-gap: 4px;
         --tab-button-offset: -12px;
         --tab-ani-duration: 0.5s;

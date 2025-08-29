@@ -11,28 +11,31 @@ const careerData = [
         title: t("career.0.header"),
         content: t("career.0.content"),
         keywords: splitCommas(t("career.0.content.keywords")),
+        desc: t("career.0.content.desc"),
     },
     {
         title: t("career.1.header"),
         content: t("career.1.content"),
         keywords: splitCommas(t("career.1.content.keywords")),
+        desc: t("career.1.content.desc"),
     },
     {
         title: t("career.2.header"),
         content: t("career.2.content"),
         keywords: splitCommas(t("career.2.content.keywords")),
+        desc: t("career.2.content.desc"),
     },
 ];
 ---
 
 <ul class={listItemsCss}>
     {
-        careerData.map(({ title, content, keywords }) => (
+        careerData.map(({ title, content, desc }) => (
             <li>
                 <h6>{title}</h6>
                 <span>{content}</span>
                 <br />
-                <Keywords keywords={keywords} />
+                <Keywords keywords={[desc]} />
             </li>
         ))
     }
