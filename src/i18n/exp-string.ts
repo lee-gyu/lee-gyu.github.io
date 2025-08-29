@@ -288,13 +288,13 @@ const ko = {
         header: "[디자인 시스템] UI 스타일 리뉴얼 프로젝트",
         period: "2021 ~ 2022",
         "co-op": "제품 디자이너",
+        result: joinCommas("UI 스타일 전체 리뉴얼하여 전체 UX/UI 개선"),
         tasks: joinCommas(
             "리뉴얼을 위한 기존 화면 전수 조사",
             "프로젝트 협업 환경 구축",
             "CSS 토큰/공용 스타일 적용 체계 구축",
         ),
         tech: joinCommas("vanilla-extract", "Figma"),
-        result: joinCommas("UI 스타일 전체 리뉴얼"),
         imgUrls: joinCommas(
             "/img/20210090_1.png",
             "/img/20210090_2.png",
@@ -339,7 +339,7 @@ const ko = {
         header: "[UI] Grid 컴포넌트 라이브러리 개발",
         year: "2022",
         result: joinCommas(
-            "전체 제품 화면 80%이상이 사용하는 핵심 Grid 컴포넌트로 웹 제품 전환 프로젝트에 결정적 기여",
+            "핵심 UI 컴포넌트로 웹 제품 전환 프로젝트에 결정적 기여 (모든 개발 화면의 80% 이상 사용)",
         ),
         tasks: joinCommas("Row/Column/Cell/Plugin 구성 요소 개발"),
         feat: joinCommas(
@@ -426,7 +426,7 @@ const ko = {
         year: "2024",
         "co-op": "주니어 F/E 개발자 (3명)",
         tech: joinCommas("Vitest", "Playwright"),
-        result: "반복적 테스팅 작업 단축",
+        result: "반복적 테스팅 작업 단축 (Vitest: 119개, Playwright: 19개)",
         tasks: joinCommas(
             "테스팅 할 수 있는 기술 환경 구축",
             "테스팅 업무 프로세스 수립",
