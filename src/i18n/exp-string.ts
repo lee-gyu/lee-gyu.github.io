@@ -338,9 +338,9 @@ const ko = {
     "20230015": {
         header: "[UI] Grid 컴포넌트 라이브러리 개발",
         year: "2022",
-        summary:
-            "전체 제품 화면 80%이상이 사용하는 핵심 Grid 컴포넌트로 웹 제품 전환 프로젝트에 기여",
-        result: joinCommas(""),
+        result: joinCommas(
+            "전체 제품 화면 80%이상이 사용하는 핵심 Grid 컴포넌트로 웹 제품 전환 프로젝트에 결정적 기여",
+        ),
         tasks: joinCommas("Row/Column/Cell/Plugin 구성 요소 개발"),
         feat: joinCommas(
             "Viewport에 보이는 DOM만 출력하도록 Windowing 적용",
