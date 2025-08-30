@@ -74,7 +74,7 @@ I work with 4 junior developers and am very interested in a culture of growth to
         jobDesc: `
 현재 B2B IT 솔루션 회사에서 웹 F/E 코어 패키지 개발 업무를 맡고 있습니다.
 4명의 개발자와 1명의 디자이너와 한 팀에서 일하고 있습니다.
-최근에는 LLM 기반의 웹 애플리케이션 기능 개발 연구에 참여하고 있습니다.
+최근에는 LLM AI 기반의 애플리케이션 기능 개발 프로젝트에 참여하고 있습니다.
 공개된 오픈소스 기술이 없더라도 스스로 기술을 만들어 해결한 경험이 많습니다.
 함께 성장하고, 시너지를 내는 업무 문화에 관심이 많습니다.
 `.trim(),
@@ -109,7 +109,7 @@ I work with 4 junior developers and am very interested in a culture of growth to
         "career.2.content.desc":
             "기술 인재 채용과 기능올림픽 국가대표 훈련 지도",
         experience: "경험",
-        "experience.print-desc": "※ pdf에서는 주요 경험 위주로 요약하였습니다.",
+        "experience.print-desc": "※ pdf에서는 불필요한 경험은 생략되었습니다.",
         "experience.print-link": `(${DEFAULT_BASE_URL} 웹 사이트에서 전체 내용을 확인할 수 있습니다.)`,
 
         skills: "기술",

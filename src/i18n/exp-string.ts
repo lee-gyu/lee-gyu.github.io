@@ -27,7 +27,7 @@ const ko = {
         period: "2012 ~ 2013",
         role: "기능올림픽 정보기술 직종 국가대표",
         tech: joinCommas("MS Office", "MS Access", "VBA Programming"),
-        result: joinCommas("금메달 (1위)", "동탑산업훈장 대통령 표창"),
+        result: joinCommas("금메달 (1위), 동탑산업훈장 대통령 표창"),
         urlText: joinCommas("대회 점수", "수상자 사진"),
         urls: joinCommas(
             "https://m.site.naver.com/1PzvO",
@@ -73,12 +73,7 @@ const ko = {
         period: "2013 ~ 2015",
         role: "국가대표 지도위원",
         tech: joinCommas("C# Windows", "SQL Server"),
-        result: joinCommas(
-            "한국 은메달(2위) 수상",
-            "고용노동부 장관 표창",
-            "베트남 동메달(3위) 수상",
-            "베트남 국가 총리 표창",
-        ),
+        result: joinCommas("한국 은메달(2위), 베트남 동메달(3위) 수상"),
         urlText: "기능올림픽 입상 보도",
         urls: "https://m.site.naver.com/1PzvF",
         tasks: "국가대표 선수 훈련 프로그램 개발",
@@ -433,7 +428,9 @@ const ko = {
             "iframe 페이지 호출을 위한 인터페이스 설계",
             "UI 컴포넌트 개발",
         ),
-        result: joinCommas("전체 사용자의 제품 사용 만족도 크게 향상"),
+        result: joinCommas(
+            "전체 웹 제품 표준 기능으로 전체 사용자 만족도 향상",
+        ),
         "co-op": "제품 디자이너",
         imgUrls: joinCommas("/video/20250010.mp4"),
         imgLabel: joinCommas("동작 화면"),
@@ -497,10 +494,9 @@ const ko = {
         urlText: "이노룰스 온라인 코딩 테스트",
         feat: joinCommas(
             "지원자 관리 / 입장 안내 메일 발송 시스템",
-            "제출용 에디터 컴포넌트",
-            "시간 제한 타이머",
-            "답안 임시 저장 / 최종 제출",
-            "Markdown 기반 문제 작성 및 문제 Viewer UI 작업",
+            "코드 작성용 에디터 컴포넌트",
+            "타이머 / 답안 임시 저장 / 최종 제출",
+            "Markdown 형식 기반 문제 뷰어",
         ),
         imgLabel: "동작 영상",
         imgUrls: "/video/20250050.mp4",
@@ -528,7 +524,7 @@ const ko = {
     },
     "20250090": {
         year: "2025",
-        header: "[App] WebApp 커스터마이징 Add-on 구조",
+        header: "[App] 웹 애플리케이션 커스터마이징 Add-on",
         result: joinCommas(
             "제품 유지보수/확장성 향상",
             "삼성생명, 삼성화재 고객사 프로젝트 수행 기여",
