@@ -6,7 +6,8 @@ export type ExpProps =
     | "date"
     | "period"
     | "role"
-    | "summary"
+    // 업무 배경
+    | "background"
     | "tech"
     | "tasks"
     | "result"
@@ -14,7 +15,6 @@ export type ExpProps =
     | "urls"
     | "feat"
     | "urlText"
-    | "story"
     | "imgUrls"
     | "imgLabel"
     | "co-op";
@@ -33,40 +33,23 @@ const ko = {
             "https://m.site.naver.com/1PzvO",
             "https://m.site.naver.com/1PzvV",
         ),
-        story: [
-            "전국 대회 수상 후, 국가대표 선발전을 거쳐 국가대표로 선발되었습니다.",
-            "이후 삼성전자 기능올림픽 훈련센터에서 국가대표 훈련을 받고, 금메달을 수상했습니다.",
-            "훈련 과정에서 문제 해결 능력과 업무용 소프트웨어를 이해하는 능력을 키웠습니다.",
-        ].join(" "),
     },
     "20150040": {
         header: "기능올림픽 입상자 채용 업무",
         year: "2013, 2014",
-        summary: "삼성그룹 내 계열사 수백명 규모 채용 전형 진행",
+        background: "삼성그룹 내 계열사 수백명 규모 채용 전형 진행",
         tasks: joinCommas("지원자 채용 프로세스 안내", "지원 데이터 리포팅"),
-        story: ["대기업의 채용 과정을 인사 담당자 관점에서 진행했습니다."].join(
-            " ",
-        ),
     },
     "20150050": {
         header: "글로벌 사내 경진대회",
         year: "2014, 2015",
         tasks: joinCommas("해외 법인 참가자 인솔", "한국 문화 체험 행사 지원"),
-        story: [
-            "국내외 여러 계열사 법인에서 참가하는 사내 기술 대회에서 해외 법인 참가자를 담당했습니다. ",
-            "해외 참가자들의 비자, 한국 문화 체험 행사 준비, 숙소/교통편 등의 업무를 지원했습니다.\n",
-            "다양한 문화를 가진 사람들과 소통하고, 행사를 처음부터 끝까지 준비하는 경험을 했습니다.",
-        ].join(""),
     },
     "20150060": {
         header: "[조직문화] 팀 문화 개선 활동 업무",
         period: "2014 ~ 2015",
         tasks: "근무 문화 개선 활동 기획/진행",
         result: "조직문화 평가 지표 향상",
-        story: [
-            "Change Agent라는 직책으로 조직 문화를 개선하는 업무를 담당했습니다.",
-            "여러 문화 활동을 기획하여 임원부터 일반 직원까지 모두 참여하는 행사를 진행했습니다.",
-        ].join(" "),
     },
     "20150070": {
         header: "[교육] 삼성전자 기능올림픽 훈련센터 지도위원",
@@ -77,19 +60,12 @@ const ko = {
         urlText: "기능올림픽 입상 보도",
         urls: "https://m.site.naver.com/1PzvF",
         tasks: "국가대표 선수 훈련 프로그램 개발",
-        story: [
-            "기능올림픽 수상 이후, 한국/베트남 국가대표 선수 지도를 담당했습니다. ",
-            "지도 선수 모두 수상을 하여 고과 평가 A를 받았으며, ",
-            "베트남은 국가 최초 메달 수상으로 베트남에 초청되어 국가 총리의 표창을 받았습니다.",
-            "\n\n",
-            "이후 S/W 전문성을 키우기 위해 부서 이동을 신청하여 다른 사업부로 전배했습니다.",
-        ].join(""),
     },
 
     "20180020": {
         header: "[App] 웹 사내 업무 시스템 개발",
         year: "2016",
-        "co-op": "프로젝트 리더",
+        "co-op": "프로젝트 리드",
         tech: joinCommas(
             "JQuery",
             "Bootstrap",
@@ -107,18 +83,12 @@ const ko = {
             "기존 보고용 문서 출력을 웹 기반 시스템으로 효율화",
             "관리자가 수기로 취합하던 업무 취합 작업 시스템화",
         ),
-        story: [
-            "사내 IT 시스템은 SI 업체에 의존하고 있어, 개발 요청 시 큰 비용이 발생했었습니다. ",
-            "사업부에 필요한 업무 시스템을 직접 만들기로 기획하고 요구사항 전체를 개발하는 역할을 맡았습니다.",
-            "\n\n",
-            "사용에 불편함이 보이면 스스로 개선하며 얻는 성취가 있었습니다.",
-        ].join(""),
     },
     "20180030": {
         header: "[App] 해외 법인 종합 관제실 시스템 구축",
         year: "2016",
         role: "웹 풀스택 개발",
-        "co-op": "프로젝트 리더",
+        "co-op": "프로젝트 리드",
         tech: joinCommas("JQuery", "Telerik Kendo UI", "C# ASP.Net MVC"),
         feat: joinCommas("세계 지도 형태의 실시간 모니터링 화면"),
     },
@@ -142,11 +112,7 @@ const ko = {
         header: "[자격시험] 삼성전자 S/W 개발 직군 시험",
         year: "2017",
         result: "Pro 등급 취득 (당시 기준, 상위 20% 취득)",
-        summary: "알고리즘 코딩테스트 시험",
-        story: [
-            "사내 S/W 자격 시험을 응시하여 Pro 등급을 취득하고 인센티브로 약 100만원을 받았습니다.",
-            "당시 Pro 등급은 상위 개발자 20% 정도가 취득했었습니다.",
-        ].join("\n"),
+        background: "알고리즘 코딩테스트 시험",
     },
 
     "20180070": {
@@ -161,14 +127,6 @@ const ko = {
             "Entity Framework",
             "MariaDB",
         ),
-        story: [
-            "공정 프로세스는 조립-검사-포장 등의 단계를 거칩니다. ",
-            "평균보다 지연되는 작업이 있는 경우, 전체 생산성에 지연이 발생합니다. ",
-            "공정 기계의 PLC 신호를 수신하여 작업 시간을 계산하고, 전체 공정을 보여주는 웹 화면을 개발했습니다.\n",
-            "실제 공정에 있는 PLC 메모리를 읽어 작업을 계산하는 부분은 다른 엔지니어가 담당하고, 데이터 수집 서버와 웹 화면 개발을 담당했습니다.",
-            "\n\n",
-            "개발 환경에 Node.js와 타입스크립트를 처음으로 도입해보았던 과제입니다.",
-        ].join(""),
     },
 
     "20200010": {
@@ -202,14 +160,6 @@ const ko = {
             "Linux / Mac 크로스 플랫폼 실행 환경 이슈",
             "Jython 기반의 매우 무겁고 느린 초기화 성능",
         ),
-        story: [
-            "당시 프로젝트 막바지였던 정부 연구개발 과제에 투입되었습니다.\n",
-            "화면 내 UI를 식별하고 마우스/키보드를 제어하여 단순 사용자의 반복 작업을 자동화하는 업무 자동화(RPA) 연구개발 과제였습니다.",
-            "\n\n",
-            "프로젝트 완수 조건이 Windows/Linux/Mac 3개 플랫폼에서의 실행 보장이었는데,\n",
-            "팀에 합류한 당시 몇 개월이 남지 않은 상황에서 Windows 실행 환경만 구현되어 있었습니다.\n",
-            "Linux/Mac 실행 환경에 대한 작업을 전담하고 TTA 인증 시험까지 마무리 지어 프로젝트를 마무리했습니다.",
-        ].join(""),
     },
     "20210070": {
         header: "[UI] 플로우차트 컴포넌트 개발",
@@ -224,11 +174,6 @@ const ko = {
         ),
         urlText: "스토리북 예제",
         urls: "https://m.site.naver.com/1PF90",
-        story: [
-            "당시 사내 클라이언트 프로그램은 C++ Builder 기반의 네이티브 데스크탑 애플리케이션이었습니다. ",
-            "영업본부에서는 타사와의 제품 경쟁력을 위해 웹으로의 기술 전환을 지속적으로 요구하였고, 웹 전환의 가능성을 보기 위한 첫 시작 과제였습니다.\n\n",
-            "별도의 요구사항 정의서, 사양서 없이 직접 레거시 애플리케이션을 분석하여 모든 기능이 호환되도록 구현하여 프로젝트를 완료했습니다.",
-        ].join(" "),
         imgLabel: joinCommas("적용 화면 #1", "적용 화면 #2", "적용 화면 #3"),
         imgUrls: joinCommas(
             "/img/20210070_1.png",
@@ -237,41 +182,49 @@ const ko = {
         ),
     },
     "20210080": {
+        period: "2021 ~ 2023",
         header: "[Core] 사내 웹 제품 개발 기반 기술 구축",
-        period: "2021 ~",
+        background: "각 웹 프로젝트마다 다른 기술 사용으로 혼란",
+        "co-op": joinCommas("# 프로젝트 리드", "주니어 F/E 개발자 (3명)"),
+        result: "일관된 기술 표준을 통한 개발자 온보딩 및 순환 근무 용이",
         tasks: joinCommas(
-            "사내 npm 레지스트리 서버 구축",
-            "사내 개발 환경 문서화 (Storybook, TypeDoc, VitePress)",
-            "GitLab WebHook -> Jenkins 자동화 배포 파이프라인 구축",
-            "jsp 페이지 모두 vite 기반 CSR 방식으로 마이그레이션",
+            "# 사내 웹 제품 기술 표준 체계 구성",
+            "jsp 페이지 → vite 기반 CSR 방식으로 웹 소스 전체 마이그레이션",
+            "웹 제품 배포 디렉터리 구조 설계 (app/, site/, help/)",
+            "제품 개발 기술 문서화 (Storybook, TypeDoc, VitePress)",
+            "웹 프로젝트 빌드 Vite Plugin 개발",
+            "사내 npm 레지스트리 서버 구축 (내부 패키지: @innorules/*)",
+            "사내 표준 JS/TS eslint 코딩 규칙 구성 및 공통 패키지화",
         ),
-        result: joinCommas("웹 프로젝트 개발 표준 기술 수립"),
         tech: joinCommas(
             "Vite",
             "TypeScript",
-            "Jenkins",
+            "PNPM",
+            "ESLint",
+            "Tailwind CSS",
             "Storybook",
-            "VitePress",
-            "TypeDoc",
         ),
-        story: [
-            "당시 Node.js, npm를 활용하지 못해 버전 관리나 패키지 배포/업그레이드에 번거로움이 있었습니다.",
-            "개발자 경험을 향상시키고자 사내 npm 패키지 서버와 개발자들이 찾아볼 수 있는 문서화 사이트도 함께 구축했습니다.",
-            "라이브러리 소스를 특정 브랜치에 커밋하면 문서 사이트가 배포되도록 자동화 흐름을 만들었습니다.",
-        ].join("\n"),
         urlText: joinCommas(""),
         urls: joinCommas(""),
     },
     "20210090": {
-        header: "[디자인 시스템] UI 스타일 리뉴얼 프로젝트",
         period: "2021 ~ 2022",
-        "co-op": "제품 디자이너",
-        result: joinCommas("UI 스타일 전체 리뉴얼하여 전체 UX/UI 개선"),
+        header: "[디자인 시스템] UI 스타일 리뉴얼 프로젝트",
+        background: "AS-IS 스타일이 오래되어 보인다는 사용자들의 많은 피드백",
+        "co-op": joinCommas(
+            "# (역할) 프로젝트 리드",
+            "제품 디자이너",
+            "미들 F/E 개발자",
+        ),
+        result: joinCommas(
+            "웹 제품 전체 일관된 UX/UI 적용 및 표준 스타일 가이드 체계 수립",
+        ),
         tasks: joinCommas(
-            "리뉴얼을 위한 기존 화면 전수 조사",
+            "# 디자인 리뉴얼 프로젝트 총 책임",
             "프로젝트 협업 환경 구축",
+            "기존 레거시 화면 전수 조사",
             "CSS 토큰/공용 스타일 적용 체계 구축",
-            "공용 패키지 코드 커밋 -> 문서화 패키지 컨테이너 배포 파이프라인 구축",
+            "제품 개발팀 리뉴얼 스타일 적용 기술 지원",
         ),
         tech: joinCommas("vanilla-extract", "Figma"),
         imgUrls: joinCommas(
@@ -281,11 +234,6 @@ const ko = {
             "/video/20210090_4.mp4",
         ),
         imgLabel: joinCommas("#1 기존", "#2 기존", "#1 리뉴얼", "#2 리뉴얼"),
-        story: [
-            "기존 화면은 개발자들이 직접 만든 화면이라 UI의 스타일이 오래되어 보인다는 지적이 있었습니다.",
-            "누구도 쉽게 리뉴얼 작업을 시도하지 못 했었는데, 직접 주도하여 모든 화면을 조사하고,",
-            "UI 리뉴얼을 위한 기초 작업을 모두 완료했습니다. 현재는 제품의 모든 화면이 리뉴얼되어 적용되었습니다.",
-        ].join(" "),
     },
 
     "20230010": {
@@ -306,33 +254,39 @@ const ko = {
         ),
         urls: "https://m.site.naver.com/1PF98",
         urlText: "아이콘 목록",
-        story: [
-            "기존 비트맵 아이콘 처리 방식을 벡터 이미지(svg)로 처리하도록 아이콘 CSS 처리 체계를 새로 구축했습니다.",
-            "mask-image CSS를 활용하여 아이콘 색상을 유연하게 처리하도록 하여 아이콘을 유연하게 활용할 수 있도록 했습니다.",
-            "svg를 소스 코드에 넣으면 이를 css로 번들링하는 프로그램을 작성하여 독립적인 패키지로 배포하여 모든 제품에 활용될 수 있도록 하였습니다.",
-        ].join(" "),
         imgLabel: "아이콘 사용 예제",
         imgUrls: "/img/20230010.png",
     },
 
     "20230015": {
-        header: "[UI] Grid 컴포넌트 라이브러리 개발",
         year: "2022",
-        result: joinCommas(
-            "핵심 UI 컴포넌트로 웹 제품 전환 프로젝트에 결정적 기여 (제품 화면 80% 이상 사용)",
-        ),
+        header: "[UI] Grid 컴포넌트 라이브러리 개발",
         tech: joinCommas("VanillaJS", "TypeScript"),
-        tasks: joinCommas("Row/Column/Cell/Plugin 구성 요소 개발"),
+        background:
+            "레거시 윈도우 클라이언트의 핵심 Grid를 웹으로 전환하는 작업 요구",
+        "co-op": joinCommas(
+            "# (역할) 프로젝트 리드 개발",
+            "주니어 F/E 개발자 (2명)",
+        ),
+        result: joinCommas(
+            "레거시 윈도우 클라이언트 -> 웹 제품 전환에 결정적 기여",
+        ),
+        tasks: joinCommas(
+            "# Grid UI 아키텍처 설계/초기 구조 개발",
+            "Row/Column/Cell 구성 요소 구조 개발",
+            "다량의 셀 데이터 성능 최적화 기술 검토",
+            "Plugin 기반 컴포넌트 확장 기능 제공",
+        ),
         feat: joinCommas(
             "Viewport에 보이는 DOM만 출력하도록 Windowing 적용",
-            "셀 렌더러를 이용하여 다양한 셀 UI 커스텀 기능 제공",
-            "플러그인 기반 컴포넌트 확장 기능 제공",
+            "셀 렌더러를 이용하여 셀 UI 커스텀 기능",
+            "필터, 키보드, 마우스 기본 플러그인 확장 기능",
             "MS-Office 테이블 데이터 클립보드 복사/붙여넣기 호환",
         ),
         urls: joinCommas("https://m.site.naver.com/1PF9n"),
         urlText: joinCommas("스토리북 예제"),
-        imgUrls: "/img/20230015.png",
-        imgLabel: "동작 화면",
+        imgLabel: joinCommas("동작 화면 #1", "동작 화면 #2"),
+        imgUrls: joinCommas("/img/20230015.png", "/img/20230015_2.png"),
     },
 
     "20230020": {
@@ -350,7 +304,7 @@ const ko = {
             "Next.js",
             "React",
             "Jotai",
-            "tailwindcss",
+            "Tailwind CSS",
             "Nest.js",
             "TypeORM",
             "MySQL",
@@ -360,22 +314,25 @@ const ko = {
     },
 
     "20230070": {
-        header: "[Lib] 웹 솔루션 3rd-party 호출 모듈 개발",
-        tech: joinCommas("VanillaJS", "TypeScript"),
         year: "2023",
+        header: "[Lib] 3rd-party 호출 모듈 개발",
+        tech: joinCommas("VanillaJS", "TypeScript"),
+        background: "고객사 업무 시스템에서 자사 솔루션 화면 임베딩 요건 요청",
+        role: "웹 임베딩 모듈 개발",
         result: joinCommas(
-            "제품간 연동을 통한 제품 확장성 향상",
+            "# 웹 애플리케이션 간 연동 가능한 제품 경쟁력 향상",
             "삼성전자, 삼성화재 프로젝트 수행 기여",
         ),
         tasks: joinCommas(
-            "웹 애플리케이션 manifest.json 메타 정보 설계",
-            "제품 호출을 위한 app-entry 스크립트 설계",
-            "타 웹 애플리케이션에서 본 제품 호출을 위한 모듈 개발",
+            "# 자사 솔루션 호출 시스템 아키텍처 설계/개발",
+            "솔루션 호출을 위한 manifest.json 메타 정보 설계",
+            "제품 초기화 app-entry 스크립트 모듈 설계",
+            "umd/esm 기반 JS 모듈 제공",
         ),
         feat: joinCommas(
-            "MPA 기반 웹 애플리케이션의 페이지를 UI 컴포넌트처럼 제공하는 iframe Wrapper",
-            "Window Message 기반 페이지 간 통신 체계 제공",
-            "타사 계정 시스템과 SSO 연동을 위한 클라이언트 라이브러리 개발",
+            "타사 계정 시스템과 SSO 연동을 위한 라이브러리 개발",
+            "자사 솔루션 웹 페이지를 sdWrapping하여 컴포넌트로 제공",
+            "Window Message 기반 페이지 간 통신 체계 (이벤트, 기능 호출)",
         ),
     },
     "20230080": {
@@ -390,7 +347,7 @@ const ko = {
             "프로젝트 관리(개발 일정/리스크/방향성)",
         ),
         "co-op": "제품 디자이너, 주니어 개발자",
-        tech: joinCommas("React", "Nest.js", "tailwindcss"),
+        tech: joinCommas("React", "Nest.js", "Tailwind CSS"),
         imgUrls: joinCommas(
             "/img/20230080_1.png",
             "/img/20230080_2.png",
@@ -404,15 +361,20 @@ const ko = {
     },
 
     "20240010": {
-        header: "[Testing] UI 컴포넌트 테스트 자동화",
         year: "2024",
-        "co-op": "주니어 F/E 개발자 (3명)",
+        header: "[Testing] UI 컴포넌트 테스트 자동화",
+        background: "팀 규모가 커짐에 따라 개발 리스크 증가",
+        "co-op": joinCommas(
+            "# (역할) 프로젝트 리드",
+            "주니어 F/E 개발자 (3명)",
+        ),
         tech: joinCommas("Vitest", "Playwright"),
-        result: "제품 안정성 향상 및 QA 업무 효율화",
+        result: "제품 안정성 향상 및 수동 테스팅 작업 감소",
         tasks: joinCommas(
-            "테스팅 기술 환경 구축",
+            "# 테스팅 업무, 기술 환경 구축",
             "테스팅 업무 프로세스 수립",
-            "테스팅을 위한 내부 구조 리팩토링",
+            "테스팅을 위한 기존 코드 구조 리팩토링",
+            "Vitest 119건, Playwright 19건 테스팅 작성",
         ),
         imgLabel: joinCommas("Vitest", "Playwright"),
         imgUrls: joinCommas("/img/vitest.png", "/img/playwright.png"),
@@ -420,31 +382,22 @@ const ko = {
 
     // 2025 ~
     "20250010": {
+        year: "2024",
         header: "[UI] iframe 기반 화면 탭 관리 컴포넌트",
         tech: joinCommas("VanillaJS", "TypeScript"),
-        year: "2024",
-        tasks: joinCommas(
-            "기존 여러 브라우저 탭 방식 → Top/Child 페이지 컨테이너 방식 설계",
-            "iframe 페이지 호출을 위한 인터페이스 설계",
-            "UI 컴포넌트 개발",
-        ),
+        background: "여러 브라우저 탭 사용으로 혼잡·불편함 발생 문제",
+        "co-op": joinCommas("# (역할) UI 컴포넌트 개발", "제품 디자이너"),
+        tasks: joinCommas("iframe 호출 흐름 및 UI 컴포넌트 설계"),
         result: joinCommas(
-            "전체 웹 제품 표준 기능으로 전체 사용자 만족도 향상",
+            "멀티 탭 기반 시스템을 단일 Top 페이지·iframe 구조로 사용성 개선",
         ),
-        "co-op": "제품 디자이너",
-        imgUrls: joinCommas("/video/20250010.mp4"),
-        imgLabel: joinCommas("동작 화면"),
         feat: joinCommas(
             "Top Window에서 Sub Iframe 페이지 관리",
             "부모, 자식 페이지 간 postMessage 기반 통신 체계 설계",
             "탭 목록 관리 기능 개발 (수정 사항 발생, 닫기 전 Confirm 확인 등)",
         ),
-        story: [
-            "기존에는 브라우저 탭마다 각 업무 화면을 사용하는 구조였습니다. 이러한 구조는 사용자들이 사용하는 탭이 많아지면, 분류가 어렵고 불편하다는 지적이 많았습니다.\n",
-            "페이지 내 iframe으로 페이지를 관리하는 컴포넌트를 개발하였습니다.\n",
-            "iframe이라 실행 환경이 무거운 이슈가 있었지만, 이미 만들어진 MPA 구조에서 큰 변경 작업 없이 진행될 수 있어서 빠르게 적용이 완료되었습니다.\n",
-            "이 기능으로 제품 사용성이 대폭 개선되어 공식 웹 제품 출시에 큰 영향을 주었습니다.",
-        ].join(""),
+        imgUrls: joinCommas("/video/20250010.mp4"),
+        imgLabel: joinCommas("동작 화면"),
     },
     "20250020": {
         header: "[UI] 고성능 트리 컴포넌트 개발",
@@ -509,66 +462,82 @@ const ko = {
     "20250080": {
         year: "2025",
         header: "[디자인 시스템] 다크모드 테마 시스템 설계",
-        role: "CSS 테마 토큰 체계 설계 / 프로젝트 리드",
+        background: "기존 라이트 모드에서 다크 모드로의 전환 필요성 대두",
+        result: "디자인 시스템 색상 토큰 체계 정리 및 다크모드 테마 기능 구현",
+        "co-op": joinCommas(
+            "# (역할) 프로젝트 리드",
+            "제품 디자이너",
+            "주니어 F/E 개발자",
+        ),
         tasks: joinCommas(
-            "색상 토큰을 4개 계층으로 나누어 설계",
+            "# 색상 토큰 계층 설계 및 기존 시스템 충돌 리스크 분석",
             "L1: 시스템 컬러 계층 (색상 팔레트: Black, Red, Gray, Green 등)",
             "L2: 의미 기반 컬러 계층 (Primary, Secondary, Neutral, Warning, Success 등)",
             "L3: 공통 컴포넌트 계층 (Button, Input, Grid 등)",
             "L4: 제품 도메인에 사용되는 UI 요소",
         ),
         tech: joinCommas("vanilla-extract", "Figma"),
-        "co-op": "제품 디자이너, 주니어 F/E 개발자",
         imgLabel: "테마 전환",
         imgUrls: "/video/20250080.mp4",
     },
     "20250090": {
         year: "2025",
         header: "[App] 웹 애플리케이션 커스터마이징 Add-on",
+        role: "프로젝트 리드 개발",
         result: joinCommas(
-            "제품 유지보수/확장성 향상",
+            "# 커스터마이징에 유연한 제품 확장성 향상",
             "삼성생명, 삼성화재 고객사 프로젝트 수행 기여",
         ),
-        summary: joinCommas(
-            "(기존) 고객사 요청마다 별도의 브랜치와 제품 소스를 재빌드 필요",
-            "(개선) 메인 프로그램과 커스터마이징 모듈 분리 Add-on 구조 적용 (JS/CSS)",
-        ),
+        background:
+            "고객사 커스텀 요건에 따라 제품 소스 분기와 재배포 과정 발생",
         tech: "Vite Plugin API",
         tasks: joinCommas(
-            "웹 제품 공유 모듈 개발",
+            "# 웹 애플리케이션 Add-on 구조 설계",
             "ESM 기반 동적 JS 모듈 로더 개발",
-            "Add-on 라이프사이클 흐름 설계",
-            "커스터마이징 로더 설정을 위한 Vite Plugin 개발",
+            "Add-on 모듈과 웹 제품 간 모듈 공유 시스템 개발",
+            "커스터마이징 JS 로더 설정 Vite Plugin 개발",
         ),
         feat: joinCommas(
-            "고객사 요청에 따른 제품 UI 스타일 CSS 재정의",
-            "고객사 업무에 따라 기능 커스터마이징 필요 시, 제품 기능에 hook을 추가하여 커스텀 가능한 Add-on",
+            "제품 UI 스타일 CSS 재정의 구조",
+            "제품 비즈니스 로직 커스터마이징 hook 구조",
         ),
     },
 
     "20250100": {
         header: "[App] 다국어 번역 자동화",
+        background: joinCommas(
+            "# 글로벌 서비스를 위한 다국어 처리 작업의 어려움",
+            "각 다국어 리소스들이 프로젝트마다 다른 형식으로 사용",
+            "중복된 다국어 문자열들이 제대로 관리되지 않음",
+        ),
         year: "2025",
-        role: "업무 프로세스 설계 및 시스템 개발",
-        "co-op": "미들 F/E 개발자, 주니어 F/E 개발자",
+        "co-op": joinCommas(
+            "# (역할) 프로젝트 리드",
+            "미들 F/E 개발자",
+            "주니어 F/E 개발자",
+        ),
         tasks: joinCommas(
-            "Google Cloud 적응형 번역 API를 활용한 다국어 리소스 번역 자동화 (일본어, 영어, 중국어, 스페인어)",
-            "기존 시스템 문자열 전수 조사/리소스 파서 작성",
-            "기존 번역된 문자열 리소스 훈련 데이터셋 생성",
+            "# 다국어 통합 관리 업무 시스템 설계",
+            "Google Cloud 적응형 번역 API를 활용한 다국어 리소스 번역 자동화",
+            "기존 제품 한글 리소스 전수 조사/파서 작성",
         ),
         feat: joinCommas(
+            "하나의 화면에서 모든 제품 다국어 리소스 관리",
             "Java/Web 소스 코드에 맞게 다국어 리소스 Exporting",
-            "제품 다국어 통합 관리 업무 시스템화",
         ),
         tech: joinCommas("React", "Google Cloud Platform"),
-        result: joinCommas("전 제품 총 13,326개 다국어 문자열 번역 시스템화"),
+        result: joinCommas(
+            "# 제품 다국어 통합 관리 업무 시스템화",
+            "총 13,326개 다국어 문자열 번역 (한국어 -> 일본어, 영어, 중국어, 스페인어)",
+        ),
         imgLabel: "다국어 관리 화면",
         imgUrls: "/img/20250100.png",
     },
 
     "20250110": {
-        header: "[AI] LLM 기반 챗봇 기능 프로토타입 개발",
+        header: "[AI] LLM 기반 AI ChatBot 기능 개발",
         role: "웹 제품 AI 기능 풀스택 개발",
+        background: "회사 제품에 AI 기능 도입 요구 증가",
         year: "2025",
         tech: joinCommas(
             "React",
@@ -578,18 +547,12 @@ const ko = {
             "OpenAI",
         ),
         tasks: joinCommas(
+            "# AI 기능을 개발하기 위한 웹 애플리케이션 아키텍처 설계",
+            "제품 도메인 지식 자료 임베딩",
+            "RAG 파이프라인 개발 / 프롬프트 엔지니어링",
+            "AI 서비스 API 서버 개발 (Streaming)",
             "챗봇 UI 컴포넌트 개발",
-            "제품 지식 자료 임베딩",
-            "RAG 파이프라인 개발",
-            "AI 서비스 호출 API 서버 개발",
-            "프롬프트 엔지니어링 (Gemini 2.5 lite / GPT-5 nano)",
-            "Agent 모드를 위한 웹 애플리케이션 구조 설계",
         ),
-        story: [
-            "회사 제품에 AI 기능에 대한 요구가 증가하여, 프로토타입으로 구축한 프로젝트입니다.\n",
-            "직접 vectorDB 구축, RAG 파이프라인과 AI를 위한 API 서버를 개발하여 데모 버전에 적용하였습니다.\n",
-            "Gemini 2.5 Lite와 GPT-5 nano를 실험하면서 프롬프트 엔지니어링 중에 있습니다.",
-        ].join(""),
         imgLabel: "시연 영상",
         imgUrls: "/video/20250110.mp4",
     },
