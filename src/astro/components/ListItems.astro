@@ -1,5 +1,6 @@
 ---
 import { splitCommas } from "src/utils/string";
+import SubList from "./SubList.astro";
 
 type Props = {
     label: string;
@@ -17,22 +18,8 @@ const items = splitCommas(contents);
             {items.length === 1 ? (
                 <span class="list-items-desc">{items[0]}</span>
             ) : (
-                <ul class="sub-list">
-                    {items.map((item) => (
-                        <li>{item}</li>
-                    ))}
-                </ul>
+                <SubList items={items} />
             )}
         </li>
     )
 }
-
-<style>
-    .sub-list {
-        list-style: circle;
-        padding-left: 1.25rem;
-        word-break: keep-all;
-        white-space: pre-wrap;
-        line-height: 1.4;
-    }
-</style>

@@ -31,8 +31,11 @@ const techKeywords = expData.tech ? splitCommas(expData.tech) : [];
     </div>
     {techKeywords.length > 0 && <Keywords keywords={techKeywords} />}
     <ul class={listItemsCss}>
+        <ListItems
+            label={t(`exp.label.background`)}
+            contents={expData.background}
+        />
         <ListItems label={t(`exp.label.co-op`)} contents={expData["co-op"]} />
-        <ListItems label={t(`exp.label.summary`)} contents={expData.summary} />
         <ListItems label={t(`exp.label.role`)} contents={expData.role} />
         <ListItems label={t(`exp.label.result`)} contents={expData.result} />
         <ListItems label={t(`exp.label.tasks`)} contents={expData.tasks} />

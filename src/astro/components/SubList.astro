@@ -1,0 +1,29 @@
+---
+type Props = {
+    items: string[];
+};
+
+const { items } = Astro.props;
+
+let [header] = items;
+const hasHeader = header.startsWith("# ");
+
+if (hasHeader) {
+    header = header.slice(1).trim();
+    items.shift();
+}
+---
+
+{hasHeader && <span>{header}</span>}
+<ul class="sub-list">
+    {items.map((item) => <li>{item}</li>)}
+</ul>
+
+<style>
+    .sub-list {
+        list-style: circle;
+        padding-left: 1.25rem;
+        word-break: keep-all;
+        line-height: 1.5;
+    }
+</style>
