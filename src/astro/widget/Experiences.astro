@@ -48,6 +48,7 @@ const projectTabs: ExpTabList[] = [
         desc: t("exp.tab.primary.desc"),
         expKeyList: [
             "20250110", // 솔루션 AI 기능 개발
+            "20210080", // 웹 개발 환경
             "20250100", // 다국어 통합 관리 시스템
             "20250090", // 커스터마이징 모듈
             "20250080", // Dark Mode Theme
@@ -55,7 +56,6 @@ const projectTabs: ExpTabList[] = [
             "20250010", // PageContainer
             "20230070", // 제품간 호출 프로토콜
             "20230015", // Grid
-            "20210080", // 웹 개발 환경
             "20210070", // Flowchart
         ],
     },
@@ -275,6 +275,7 @@ const projectTabs: ExpTabList[] = [
     }
 
     .tab-content {
+        page-break-before: always;
         transition: margin-left var(--tab-ani-duration) ease-in-out;
         min-width: 100%;
 
@@ -371,6 +372,10 @@ const projectTabs: ExpTabList[] = [
 
         #tabNav {
             display: none;
+        }
+
+        .tab-card-list {
+            row-gap: 0.25rem;
         }
     }
 </style>

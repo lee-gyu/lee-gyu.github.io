@@ -44,8 +44,8 @@ function isVideoFile(url: string) {
                         <img src={getUrl(url)} alt={imgLabelList[id]} />
                     )}
                     <figcaption class="img-caption">
-                        {imgLabelList[id]}
                         <Icon icon="io5-open" />
+                        {imgLabelList[id]}
                     </figcaption>
                 </figure>
             </a>
@@ -62,7 +62,7 @@ function isVideoFile(url: string) {
 
         img,
         video {
-            height: 72px;
+            height: 128px;
             aspect-ratio: 16/9;
             margin: 0 auto 0.25rem auto;
             object-fit: cover;
@@ -91,8 +91,7 @@ function isVideoFile(url: string) {
     .img-caption {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        column-gap: 0.5rem;
+        column-gap: 0.25rem;
         font-weight: 300;
         font-size: 0.875rem;
     }

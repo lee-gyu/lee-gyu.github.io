@@ -66,3 +66,9 @@
 .page-no-break {
     page-break-inside: avoid;
 }
+
+@media print {
+    .list-items {
+        line-height: 1.5;
+    }
+}
