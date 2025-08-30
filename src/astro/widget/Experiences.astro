@@ -196,7 +196,7 @@ const projectTabs: ExpTabList[] = [
 
         if (moveScroll)
             window.scrollTo({
-                top: tabContentsWrapper.offsetTop,
+                top: tabContentsWrapper.offsetTop - 41,
                 behavior: "smooth",
             });
         expWrapper.style.setProperty("--active-tab-index", `${tabId}`);
