@@ -110,7 +110,7 @@ I work with 4 junior developers and am very interested in a culture of growth to
             "기술 인재 채용과 기능올림픽 국가대표 훈련 지도",
         experience: "경험",
         "experience.print-desc": "※ pdf에서는 주요 경험 위주로 요약하였습니다.",
-        "experience.print-link": `(${DEFAULT_BASE_URL} 웹 사이트에서 자세히 확인하실 수 있습니다.)`,
+        "experience.print-link": `(${DEFAULT_BASE_URL} 웹 사이트에서 전체 내용을 확인할 수 있습니다.)`,
 
         skills: "기술",
         "skills.10.label": "B/E",
@@ -143,11 +143,10 @@ I work with 4 junior developers and am very interested in a culture of growth to
         "exp.label.issue": "주요 이슈",
 
         "exp.tab.primary": "주요 경험",
-        "exp.tab.primary.desc": "이노룰스 기술연구소 기반기술팀 소속 주요 경험",
+        "exp.tab.primary.desc": "이노룰스 기술연구소 소속 주요 경험",
         "exp.tab.secondary": "보조 경험",
-        "exp.tab.secondary.desc":
-            "이노룰스 기술연구소 기반기술팀 소속 보조 경험",
+        "exp.tab.secondary.desc": "이노룰스 기술연구소 소속 보조 경험",
         "exp.tab.etc": "기타",
-        "exp.tab.etc.desc": "삼성전자 소속 경험 및 퇴직 후 활동",
+        "exp.tab.etc.desc": "삼성전자 소속 경험 / 퇴직 후 활동",
     },
 } as const;
