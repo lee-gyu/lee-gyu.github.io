@@ -166,8 +166,9 @@ const ko = {
         header: "[UI] 플로우차트 컴포넌트 개발",
         tech: joinCommas("D3.js", "TypeScript"),
         role: "UI 컴포넌트 개발자",
-        background: "",
-        tasks: "컴포넌트 내부 구조 전체 설계 / 개발",
+        background:
+            "레거시 윈도우 클라이언트의 웹 전환을 위한 UI 컴포넌트 작업 요구",
+        tasks: "svg 기반 객체 렌더링 구조 설계/개발",
         result: joinCommas("제품 웹 전환 프로젝트에 기여"),
         feat: joinCommas(
             "객체 추가 / 선택 / 드래그 앤 드롭 모드",
@@ -200,6 +201,7 @@ const ko = {
             "웹 프로젝트 빌드 Vite Plugin 개발",
             "사내 npm 레지스트리 서버 구축 (내부 패키지: @innorules/*)",
             "사내 표준 JS/TS eslint 코딩 규칙 구성 및 공통 패키지화",
+            "Tailwind CSS Config 공통 설정 패키지화",
         ),
         tech: joinCommas(
             "Vite",
@@ -297,13 +299,17 @@ const ko = {
     "20230020": {
         year: "2022",
         header: "[App] 임직원 일정 관리/공유 캘린더 개발",
-        role: "웹 풀스택 개발자",
-        "co-op": "제품 디자이너, 주니어 F/E 개발자",
+        "co-op": joinCommas(
+            "# (역할) 프로젝트 리드",
+            "제품 디자이너",
+            "주니어 F/E 개발자",
+        ),
+        background: "기존 구글 캘린더 기반의 사내 일정 관리 시스템 교체 요구",
         result: joinCommas(""),
         tasks: joinCommas(
+            "# 기존 사내 시스템 연동 및 전체 시스템 설계",
             "기존 구글 캘린더 기반 데이터 마이그레이션",
-            "모바일/데스크탑 대응 반응형 레이아웃 처리",
-            "다크모드 CSS 테마 기능 개발",
+            "사내 업무 시스템 계정 시스템 SSO  연동",
         ),
         tech: joinCommas(
             "Next.js",
@@ -313,6 +319,10 @@ const ko = {
             "Nest.js",
             "TypeORM",
             "MySQL",
+        ),
+        feat: joinCommas(
+            "모바일/데스크탑 대응 반응형 레이아웃 처리",
+            "다크모드 CSS 테마 기능 개발",
         ),
         imgLabel: joinCommas("(PC) 동작 화면", "(모바일) 동작 화면"),
         imgUrls: joinCommas("/video/20230020_1.mp4", "/video/20230020_2.mp4"),
@@ -336,7 +346,7 @@ const ko = {
         ),
         feat: joinCommas(
             "타사 계정 시스템과 SSO 연동을 위한 라이브러리 개발",
-            "자사 솔루션 웹 페이지를 sdWrapping하여 컴포넌트로 제공",
+            "자사 솔루션 웹 페이지를 iframe 캡슐화하여 컴포넌트로 제공",
             "Window Message 기반 페이지 간 통신 체계 (이벤트, 기능 호출)",
         ),
     },
@@ -405,18 +415,19 @@ const ko = {
         imgLabel: joinCommas("동작 화면"),
     },
     "20250020": {
-        header: "[UI] 트리 컴포넌트 개발",
         year: "2024",
-        "co-op": "제품 디자이너",
+        header: "[UI] 트리 컴포넌트 리뉴얼 개발",
+        background: "AS-IS 트리 컴포넌트의 성능 문제 이슈",
+        "co-op": joinCommas("# (역할) UI 컴포넌트 개발자", "제품 디자이너"),
         urlText: joinCommas("스토리북 예제", "5만개 처리"),
         urls: joinCommas(
             "https://m.site.naver.com/1PF9h",
             "https://lee-gyu.github.io/storybook/?path=/story/js-components-irtreeview--bulk-data",
         ),
+        tasks: "AS-IS 컴포넌트 성능 병목점 분석 및 리뉴얼 개발 리드",
         feat: joinCommas(
-            "부모/자식 노드 계층 처리",
-            "플러그인을 활용한 기능 확장 (키보드/마우스/체크박스/툴팁)",
             "Windowing을 통한 수십만개 노드 고성능 렌더링 처리",
+            "플러그인을 활용한 기능 확장 구조 적용",
         ),
         imgLabel: "컴포넌트 이미지",
         imgUrls: "/img/20250020.png",
@@ -435,9 +446,13 @@ const ko = {
         urls: joinCommas("https://m.site.naver.com/1Pzvj"),
     },
     "20250050": {
-        header: "[App] 온라인 코딩 테스트 사이트 개발",
         year: "2025",
-        "co-op": "제품 디자이너, 주니어 F/E 개발자 (2명)",
+        header: "[App] 온라인 코딩 테스트 사이트 개발",
+        "co-op": joinCommas(
+            "# (역할) 프로젝트 리드 개발",
+            "제품 디자이너",
+            "주니어 F/E 개발자 (2명)",
+        ),
         tech: joinCommas(
             "React",
             "Zustand",
@@ -447,16 +462,18 @@ const ko = {
             "DrizzleORM",
             "PostgreSQL",
         ),
+        background: "오프라인 시험으로 인한 채용 프로세스 불편함 문제",
         result: joinCommas(
-            "채용 프로세스 개선 (오프라인 시험 → 온라인 코딩 테스트)",
-            "800명 응시 → 6명 신입 개발자 채용",
+            "# 기존 오프라인 시험 -> 온라인 시험으로 개선",
+            "2025년 신입 공채 800명 응시하여 6명 채용",
         ),
+        tasks: "온라인 코딩 테스트 시스템 풀스택 개발",
         urls: "https://m.site.naver.com/1Pzvv",
         urlText: "이노룰스 온라인 코딩 테스트",
         feat: joinCommas(
-            "지원자 관리 / 입장 안내 메일 발송 시스템",
+            "응시자 입장 시스템 안내 메일 발송 시스템",
             "코드 작성용 에디터 컴포넌트",
-            "타이머 / 답안 임시 저장 / 최종 제출",
+            "온라인 테스트 타이머 / 답안 제출 기능",
             "Markdown 형식 기반 문제 뷰어",
         ),
         imgLabel: "동작 영상",
