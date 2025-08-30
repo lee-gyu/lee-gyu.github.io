@@ -66,11 +66,11 @@ const projectTabs: ExpTabList[] = [
         expKeyList: [
             "20210070", // Flowchart
             "20250020", // IRTreeView
-            "20230010", // Icon CSS
             "20250050", // 온라인 코딩 테스트
-            "20250040", // 채용
-            "20230080", // 휴가계 리뉴얼
             "20230020", // CM Calendar
+            "20230010", // Icon CSS
+            "20230080", // 휴가계 리뉴얼
+            "20250040", // 채용
             "20210060", // RPA
         ],
     },
@@ -150,7 +150,6 @@ const projectTabs: ExpTabList[] = [
     import { addFilteredClickEv } from "src/utils/dom";
 
     const tabNav = document.getElementById("tabNav")!;
-    const expHeader = document.getElementById("experiences")!;
     const expWrapper = document.getElementById("expWrapper")!;
     const tabButtonWrapper = document.getElementById("tabButtonWrapper")!;
     const tabContentsWrapper = document.getElementById("tabContents")!;
@@ -196,9 +195,9 @@ const projectTabs: ExpTabList[] = [
         tabContents[tabId].classList.add("is-active");
 
         if (moveScroll)
-            expHeader.scrollIntoView({
+            window.scrollTo({
+                top: tabContentsWrapper.offsetTop,
                 behavior: "smooth",
-                block: "nearest",
             });
         expWrapper.style.setProperty("--active-tab-index", `${tabId}`);
         tabNav.setAttribute("data-invisible-first", `${tabId === 0}`);
