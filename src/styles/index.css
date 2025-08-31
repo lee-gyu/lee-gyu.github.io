@@ -3,6 +3,10 @@
 @import "./_components.css";
 
 @layer utilities {
+    * {
+        font-feature-settings: "case";
+    }
+
     [aria-hidden="true"] {
         display: none;
     }
