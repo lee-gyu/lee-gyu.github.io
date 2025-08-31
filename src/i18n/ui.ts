@@ -21,7 +21,7 @@ I work with 4 junior developers and am very interested in a culture of growth to
         "mainJob.0": "Web Frontend Architecture Design",
         "mainJob.1": "Web Frontend Core SDK Development",
         "mainJob.2": "Web Full Stack Development (F/E 80%, B/E 20%)",
-        career: "Career (10 Years+)",
+        career: "Career",
         awards: "Awards",
         "awards.0.header":
             "National Skill Development/International Contribution",
@@ -82,7 +82,7 @@ I work with 4 junior developers and am very interested in a culture of growth to
         "mainJob.0": "웹 애플리케이션 구조 설계",
         "mainJob.1": "웹 프론트엔드 코어 SDK 개발",
         "mainJob.2": "웹 풀스택 개발 (F/E 80%, B/E 20%)",
-        career: "경력 (10년+)",
+        career: "경력",
         awards: "수상",
         "awards.0.header": "기능발전/국위선양 장관 표창",
         "awards.0.tags": "고용노동부, 2015",
