@@ -66,13 +66,7 @@ const ko = {
         header: "[App] 웹 사내 업무 시스템 개발",
         year: "2016",
         "co-op": "프로젝트 리드",
-        tech: joinCommas(
-            "JQuery",
-            "Bootstrap",
-            "C# ASP.NET MVC",
-            // "MariaDB",
-            // "Entity Framework",
-        ),
+        tech: joinCommas("JQuery", "Bootstrap", "ASP.NET"),
         role: joinCommas("웹 풀스택 개발"),
         feat: joinCommas(
             "사내 표준 업무 시스템과 SSO 계정 연동",
@@ -89,18 +83,16 @@ const ko = {
         year: "2016",
         role: "웹 풀스택 개발",
         "co-op": "프로젝트 리드",
-        tech: joinCommas("JQuery", "Telerik Kendo UI", "C# ASP.Net MVC"),
+        tech: joinCommas("JQuery", "Telerik Kendo UI", "ASP.Net"),
         feat: joinCommas("세계 지도 형태의 실시간 모니터링 화면"),
     },
     "20180050": {
-        header: "[App] IoT 환경 데이터 수집",
         year: "2017",
-        "co-op": "IoT/센서 연동 담당 엔지니어",
-        role: "웹 풀스택 개발",
-        tech: joinCommas(
-            "C# ASP.NET MVC",
-            "(IoT) Raspberry Pi (Linux Raspbian)",
-            "(Message Broker) Mosquitto",
+        header: "[App] IoT 환경 데이터 수집",
+        tech: joinCommas("ASP.NET", "(IoT) Raspberry Pi"),
+        "co-op": joinCommas(
+            "# (역할) 웹 풀스택 개발",
+            "IoT/센서 연동 담당 엔지니어",
         ),
         feat: joinCommas(
             "먼지/조도/소음 등 환경 데이터 수집/모니터링 시스템 개발",
@@ -109,29 +101,31 @@ const ko = {
     },
 
     "20180055": {
-        header: "[자격시험] 삼성전자 S/W 개발 직군 시험",
         year: "2017",
-        result: "Pro 등급 취득 (당시 기준, 상위 20% 취득)",
-        background: "알고리즘 코딩테스트 시험",
+        header: "[자격시험] 삼성전자 S/W 개발 직군 시험",
+        tech: joinCommas("Java", "C++", "Algorithm", "Data Structure"),
+        background: joinCommas(
+            "# 사내 코딩 테스트 Pro 등급 이상 취득 인원 수를 팀 평가에 반영",
+            "총 4단계 등급: IM -> AD -> Pro -> Ex",
+        ),
+        result: "Pro 등급 취득 (당시 기준 상위 20% 개발자 취득)",
     },
 
     "20180070": {
-        header: "[App] 공정 프로세스 현황 모니터링",
         year: "2017",
-        role: "웹 풀스택 개발",
-        "co-op": "PLC 신호 처리 클라이언트 개발자",
-        result: "공정 병목 현상 파악 및 개선에 기여",
-        tech: joinCommas(
-            "TypeScript",
-            "C# ASP.NET MVC",
-            "Entity Framework",
-            "MariaDB",
+        header: "[App] 공정 프로세스 현황 모니터링",
+        "co-op": joinCommas(
+            "# (역할) 웹 풀스택 개발",
+            "PLC 신호 처리 클라이언트 개발자",
         ),
+        result: "공정 병목 현상 파악 및 개선에 기여",
+        tech: joinCommas("TypeScript", "ASP.NET"),
     },
 
     "20200010": {
-        header: "[어학연수] 캐나다 밴쿠버 VGC 어학원(6개월)",
         year: "2020",
+        header: "[어학연수] 캐나다 밴쿠버 VGC 어학원(6개월)",
+        background: "퇴사 후 해외 체험 및 영어 능력 향상 목적",
         result: "Lv6 Upper Intermediate 등급 수료",
         urls: "https://vgc.ca/",
         urlText: "vgc.ca",
@@ -140,26 +134,28 @@ const ko = {
     } satisfies ExpStoryObj,
 
     "20210060": {
-        header: "[정부 연구개발 과제] 로봇 자동화(RPA) S/W 개발",
         period: "2020 ~ 2021",
-        role: "풀스택 개발 / 시스템 엔지니어링",
-        "co-op": "프로젝트 리더, Vision 머신러닝 개발자",
+        header: "[정부 연구개발 과제] 로봇 자동화(RPA) S/W 개발",
+        background: "사내 신제품 발굴",
+        "co-op": joinCommas(
+            "# (역할) 풀스택 개발",
+            "프로젝트 리더",
+            "Vision 머신러닝 개발자",
+            "정부 연구개발 보고서 담당자",
+        ),
         tasks: joinCommas(
-            "풀스택 개발 / 시스템 성능 최적화",
+            "# 풀스택 개발 / 시스템 성능 최적화",
+            "Electron Windows / Linux / Mac 크로스 플랫폼 환경 개발",
+            "RPA 실행 성능 최적화 (10초 → 2초)",
+            "Windows Sandbox 활용 가상 테스팅 환경 구축",
             "TTA 인증 시험 업무",
-            "프로젝트 최종 보고서 작성",
         ),
         result: "정부 연구개발 과제 최종 수행 완료",
         feat: joinCommas(
-            "RPA 실행 성능 최적화 (10초 → 2초)",
-            "Win/Linux/Mac 크로스 플랫폼 Electron App",
-            "Windows Sandbox 활용 가상 테스팅 환경 구축",
+            "(B/E) RPA 스크립트 관리, 실행 예약, 실행 에이전트 관리",
+            "(F/E) RPA 스크립트 편집기, Electron 기반 RPA 실행 에이전트",
         ),
-        tech: joinCommas("Koa.js", "Vue.js / Electron"),
-        issue: joinCommas(
-            "Linux / Mac 크로스 플랫폼 실행 환경 이슈",
-            "Jython 기반의 매우 무겁고 느린 초기화 성능",
-        ),
+        tech: joinCommas("Koa.js", "Vue.js", "Electron"),
     },
     "20210070": {
         year: "2021",
@@ -244,21 +240,22 @@ const ko = {
     },
 
     "20230010": {
-        header: "[디자인 시스템] svg 아이콘 CSS 번들러 개발",
         year: "2022",
-        "co-op": "제품 디자이너",
-        tech: joinCommas("Node.js", "TypeScript"),
+        header: "[디자인 시스템] svg 아이콘 CSS 번들러 개발",
+        background:
+            "레거시 윈도우 앱의 비트맵 아이콘 -> 웹 전환 마이그레이션 필요",
+        "co-op": joinCommas("# (역할) UI 컴포넌트 개발자", "제품 디자이너"),
+        tech: joinCommas("Node.js", "TypeScript", "PostCSS"),
         tasks: joinCommas(
-            "svg → 아이콘 CSS 번들러 프로그램 개발",
-            "아이콘 스토리북 페이지 작성",
+            "# 아이콘 CSS 번들러 프로그램 개발",
+            "icon을 사용하는 개발자 경험 고려",
+            "CSS 용량 최적화 (svgo, cssnano)",
         ),
         feat: joinCommas(
-            "사내 제품 통합 아이콘 icon.css 제공",
+            "사내 제품 표준 아이콘 CSS 통합",
             "CSS 속성을 활용한 아이콘 스타일링 (badge, rounded)",
         ),
-        result: joinCommas(
-            "공용 패키지를 통하여 모든 솔루션에 동일한 아이콘 CSS 체계 적용",
-        ),
+        result: "아이콘 CSS 구축으로 UI 작업 단축·확장성 있는 스타일 체계 완성",
         urls: "https://m.site.naver.com/1PF98",
         urlText: "아이콘 목록",
         imgLabel: "아이콘 사용 예제",
@@ -268,16 +265,13 @@ const ko = {
     "20230015": {
         year: "2022",
         header: "[UI] Grid 컴포넌트 라이브러리 개발",
-        tech: joinCommas("VanillaJS", "TypeScript"),
-        background:
-            "레거시 윈도우 클라이언트의 핵심 Grid를 웹으로 전환하는 작업 요구",
+        tech: joinCommas("VanillaJS", "TypeScript", "SolidJS"),
+        background: "레거시 윈도우 앱의 핵심 Grid를 웹으로 전환하는 작업 요구",
         "co-op": joinCommas(
             "# (역할) 프로젝트 리드 개발",
             "주니어 F/E 개발자 (2명)",
         ),
-        result: joinCommas(
-            "레거시 클라이언트 기능 웹 전환 핵심 컴포넌트로 기여",
-        ),
+        result: joinCommas("레거시 윈도우 앱 -> 웹 전환 핵심 컴포넌트로 기여"),
         tasks: joinCommas(
             "# Grid UI 아키텍처 설계/초기 구조 개발",
             "Row/Column/Cell 구성 요소 구조 개발",
@@ -287,6 +281,7 @@ const ko = {
         feat: joinCommas(
             "Viewport에 보이는 DOM만 출력하도록 Windowing 적용",
             "셀 렌더러를 이용하여 셀 UI 커스텀 기능",
+            "사용자 행/열/셀 조작 행동 Undo / Redo",
             "필터, 키보드, 마우스 기본 플러그인 확장 기능",
             "MS-Office 테이블 데이터 클립보드 복사/붙여넣기 호환",
         ),
@@ -317,8 +312,6 @@ const ko = {
             "Jotai",
             "Tailwind CSS",
             "Nest.js",
-            "TypeORM",
-            "MySQL",
         ),
         feat: joinCommas(
             "모바일/데스크탑 대응 반응형 레이아웃 처리",
@@ -351,18 +344,22 @@ const ko = {
         ),
     },
     "20230080": {
-        header: "[App] 사내 휴가계 시스템 리뉴얼",
         year: "2023",
-        role: "웹 풀스택 개발자",
+        header: "[App] 사내 휴가계 시스템 리뉴얼",
         result: joinCommas("전체 임직원의 연차 시스템 사용 만족도 개선"),
+        tech: joinCommas("React", "Nest.js", "Tailwind CSS"),
+        background: "휴가계 UX/UI 개선 요구 및 휴가 제도의 개선으로 반영 필요",
         tasks: joinCommas(
+            "# 휴가계 리뉴얼 프로젝트 관리 (일정/리스크/방향)",
             "php 기반 레거시 시스템 리뉴얼",
             "30분 단위 사용 가능한 연차 시스템 설계",
             "PC/Mobile 반응형 UI 레이아웃 설계",
-            "프로젝트 관리(개발 일정/리스크/방향성)",
         ),
-        "co-op": "제품 디자이너, 주니어 개발자",
-        tech: joinCommas("React", "Nest.js", "Tailwind CSS"),
+        "co-op": joinCommas(
+            "# (역할) 프로젝트 리드",
+            "제품 디자이너",
+            "주니어 F/E 개발자",
+        ),
         imgUrls: joinCommas(
             "/img/20230080_1.png",
             "/img/20230080_2.png",
@@ -433,11 +430,18 @@ const ko = {
         imgUrls: "/img/20250020.png",
     },
     "20250040": {
-        header: "[채용] 신입/경력 웹 프론트엔드 개발자 채용",
         year: "2024",
-        role: "채용 전형 담당",
+        header: "[채용] 신입/경력 웹 프론트엔드 개발자 채용",
+        tech: joinCommas("개발자 채용"),
+        background: "웹 제품 출시로 웹 개발자 수요 증가",
+        "co-op": joinCommas(
+            "# (역할) F/E 개발자 채용 전형 담당",
+            "기술연구소장",
+            "제품 개발 팀장",
+        ),
         result: "신입 2명 채용, 경력(3년↑) 2명 채용",
         tasks: joinCommas(
+            "# 개발자 채용 프로세스 진행",
             "약 300명 지원자 서류 검토",
             "과제 테스트 진행/평가",
             "기술/문화 면접 진행",
@@ -459,8 +463,6 @@ const ko = {
             "Next.js (Server Actions)",
             "Tailwind CSS",
             "CodeMirror",
-            "DrizzleORM",
-            "PostgreSQL",
         ),
         background: "오프라인 시험으로 인한 채용 프로세스 불편함 문제",
         result: joinCommas(
@@ -557,10 +559,10 @@ const ko = {
     },
 
     "20250110": {
-        header: "[AI] LLM 기반 AI ChatBot 기능 개발",
+        year: "2025",
+        header: "[AI] LLM 기반 AI ChatBot 기능 개발 (진행 중)",
         role: "웹 제품 AI 기능 풀스택 개발자",
         background: "회사 제품에 AI 기능 도입 요구 증가",
-        year: "2025",
         tech: joinCommas(
             "React",
             "Chroma",
@@ -572,8 +574,8 @@ const ko = {
             "# AI 기능을 개발하기 위한 웹 애플리케이션 아키텍처 설계",
             "제품 도메인 지식 자료 임베딩",
             "RAG 파이프라인 개발 / 프롬프트 엔지니어링",
-            "AI 서비스 API 서버 개발 (Streaming)",
-            "챗봇 UI 컴포넌트 개발",
+            "AI 서비스 API 서버 개발",
+            "챗봇 UI 컴포넌트 제품 통합",
         ),
         imgLabel: "시연 영상",
         imgUrls: "/video/20250110.mp4",

@@ -130,7 +130,7 @@ I work with 4 junior developers and am very interested in a culture of growth to
 
         "exp.label.role": "역할",
         "exp.label.date": "일자",
-        "exp.label.co-op": "팀 구성",
+        "exp.label.co-op": "팀",
         "exp.label.period": "기간",
         "exp.label.year": "연도",
         "exp.label.mainTask": "주 작업",
