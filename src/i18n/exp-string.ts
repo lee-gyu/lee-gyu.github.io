@@ -558,7 +558,7 @@ const ko = {
             "하나의 화면에서 모든 제품 다국어 리소스 관리",
             "Java/Web 소스 코드에 맞게 다국어 리소스 Exporting",
         ),
-        tech: joinCommas("React", "Google Cloud Platform"),
+        tech: joinCommas("React", "Google Cloud Platform", "i18next"),
         result: joinCommas(
             "# 제품 다국어 통합 관리 업무 시스템화",
             "총 13,326개 다국어 문자열 번역 (한국어 -> 일본어, 영어, 중국어, 스페인어)",
