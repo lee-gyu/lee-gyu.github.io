@@ -2,41 +2,54 @@
 import { useTranslations } from "src/i18n/utils";
 import { listItemsCss } from "src/styles/component-css";
 import Keywords from "../components/Keywords.astro";
-import { splitCommas } from "src/utils/string";
 
 const t = useTranslations(Astro.currentLocale as Lang);
 
 const careerData = [
     {
-        title: t("career.0.header"),
+        period: t("career.0.header"),
         content: t("career.0.content"),
-        keywords: splitCommas(t("career.0.content.keywords")),
         desc: t("career.0.content.desc"),
     },
     {
-        title: t("career.1.header"),
+        period: t("career.1.header"),
         content: t("career.1.content"),
-        keywords: splitCommas(t("career.1.content.keywords")),
         desc: t("career.1.content.desc"),
     },
     {
-        title: t("career.2.header"),
+        period: t("career.2.header"),
         content: t("career.2.content"),
-        keywords: splitCommas(t("career.2.content.keywords")),
         desc: t("career.2.content.desc"),
     },
 ];
 ---
 
-<ul class={listItemsCss}>
+<ul>
     {
-        careerData.map(({ title, content, desc }) => (
-            <li>
-                <h6>{title}</h6>
-                <span>{content}</span>
+        careerData.map(({ period, content, desc }) => (
+            <li class="career-item">
+                <span class="keyword">{period}</span>
                 <br />
-                <Keywords keywords={[desc]} />
+                <p class="career-company">{content}</p>
+                <p class="career-desc">{desc}</p>
             </li>
         ))
     }
 </ul>
+
+<style>
+    .career-item {
+        margin: 0.25rem 0;
+        line-height: 1.75;
+    }
+    .career-company {
+        font-weight: 500;
+    }
+    .career-desc {
+        font-size: 0.875rem;
+    }
+
+    .keyword {
+        margin-left: -0.5rem;
+    }
+</style>

@@ -50,13 +50,12 @@ const projectTabs: ExpTabList[] = [
             "20250110", // 솔루션 AI 기능 개발
             "20210080", // 웹 개발 환경
             "20250100", // 다국어 통합 관리 시스템
-            "20210090", // UI 스타일 리뉴얼
-            "20250090", // 커스터마이징 모듈
             "20250080", // Dark Mode Theme
             "20240010", // 테스팅
+            "20250090", // 커스터마이징 모듈
             "20230070", // 제품간 호출 프로토콜
             "20230015", // Grid
-            "20250010", // PageContainer
+            "20210090", // UI 스타일 리뉴얼
         ],
     },
     {
@@ -65,12 +64,13 @@ const projectTabs: ExpTabList[] = [
         desc: t("exp.tab.secondary.desc"),
         expKeyList: [
             "20210070", // Flowchart
+            "20250010", // PageContainer
             "20250020", // IRTreeView
+            "20250040", // 채용
             "20250050", // 온라인 코딩 테스트
             "20230020", // CM Calendar
-            "20230010", // Icon CSS
             "20230080", // 휴가계 리뉴얼
-            "20250040", // 채용
+            "20230010", // Icon CSS
             "20210060", // RPA
         ],
     },
@@ -343,9 +343,10 @@ const projectTabs: ExpTabList[] = [
     }
 
     .tab-caption {
-        margin: 0.25rem 0;
+        padding: 0.25rem var(--spacing-doc-pad-left);
         font-weight: 500;
-        padding-left: var(--spacing-doc-pad-left);
+        background-color: var(--colors-background-light);
+        border-bottom: 1px solid var(--colors-background);
     }
 
     .hidden-info {
