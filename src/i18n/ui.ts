@@ -18,9 +18,10 @@ I'm in charge of developing core web F/E packages for WebApp development.
 I work with 4 junior developers and am very interested in a culture of growth together.
 `.trim(),
         mainJob: "Main Job",
-        "mainJob.0": "Web Frontend Architecture Design",
-        "mainJob.1": "Web Frontend Core SDK Development",
-        "mainJob.2": "Web Full Stack Development (F/E 80%, B/E 20%)",
+        "mainJob.0": "Web Frontend Core Package Development",
+        "mainJob.1":
+            "Web Development Environment/Quality Improvement and Team Leadership",
+        "mainJob.2": "Web Application Service Development",
         career: "Career",
         awards: "Awards",
         "awards.0.header":
@@ -78,9 +79,9 @@ I work with 4 junior developers and am very interested in a culture of growth to
 함께 성장하며 시너지를 내는 업무 문화에 관심이 많습니다.
 `.trim(),
         mainJob: "주 업무",
-        "mainJob.0": "웹 애플리케이션 구조 설계",
-        "mainJob.1": "웹 프론트엔드 코어 SDK 개발",
-        "mainJob.2": "웹 풀스택 개발 (F/E 80%, B/E 20%)",
+        "mainJob.0": "웹 프론트엔드 코어 패키지 개발",
+        "mainJob.1": "웹 개발 환경/품질 개선 및 팀 리딩",
+        "mainJob.2": "웹 애플리케이션 서비스 개발",
         career: "경력",
         awards: "수상",
         "awards.0.header": "기능발전/국위선양 장관 표창",
