@@ -16,8 +16,8 @@ export type ExpProps =
     | "urlText"
     | "imgUrls"
     | "imgLabel"
-    | "role"
-    | "team";
+    | "team"
+    | "members";
 
 type ExpStoryObj = Partial<Record<ExpProps, string>>;
 
@@ -67,7 +67,7 @@ const ko = {
         header: "[App] 웹 사내 업무 시스템 개발",
         tech: joinCommas("JQuery", "Bootstrap", "ASP.NET"),
         background: "사업부 맞춤형 사내 업무 시스템 요구",
-        team: joinCommas("# (역할) 웹 풀스택 개발", "프로젝트 리더"),
+        team: joinCommas("(역할) 웹 풀스택 개발", "프로젝트 리더"),
         feat: joinCommas(
             "사내 표준 업무 시스템과 SSO 계정 연동",
             "TinyMCE 에디터 기반 컨텐츠 작성",
@@ -84,7 +84,7 @@ const ko = {
         tech: joinCommas("JQuery", "Telerik Kendo UI", "ASP.Net"),
         background: "전체 해외법인의 현황을 모니터링하는 관제실 프로젝트",
         team: joinCommas(
-            "# (역할) 웹 풀스택 개발자",
+            "(역할) 웹 풀스택 개발자",
             "프로젝트 리더",
             "시니어 엔지니어 (3명)",
         ),
@@ -99,7 +99,7 @@ const ko = {
         header: "[App] IoT 환경 데이터 수집",
         tech: joinCommas("ASP.NET", "(IoT) Raspberry Pi"),
         background: "환경 데이터를 수집하여 공정 환경 개선에 활용",
-        team: joinCommas("# (역할) 웹 풀스택 개발", "IoT/센서 연동 엔지니어"),
+        team: joinCommas("(역할) 웹 풀스택 개발", "IoT/센서 연동 엔지니어"),
         result: "이집트, 베트남, 슬로바키아 해외 법인 구축 완료",
         feat: joinCommas(
             "환경 데이터 수집/모니터링 시스템 개발 (먼지/조도/온습도/소음 등)",
@@ -123,7 +123,7 @@ const ko = {
         tech: joinCommas("TypeScript", "ASP.NET"),
         background: "공정 병목 현상 파악을 위한 시스템 요구",
         team: joinCommas(
-            "# (역할) 웹 풀스택 개발",
+            "(역할) 웹 풀스택 개발",
             "PLC 신호 처리 클라이언트 개발자",
         ),
         result: "공정 병목 현상 파악 및 개선에 기여",
@@ -149,7 +149,7 @@ const ko = {
         header: "[정부 연구개발 과제] 로봇 자동화(RPA) S/W 개발",
         background: "사내 신제품 발굴",
         team: joinCommas(
-            "# (역할) 풀스택 개발",
+            "(역할) 풀스택 개발",
             "프로젝트 리더",
             "Vision 머신러닝 개발자",
             "정부 연구개발 보고서 담당자",
@@ -174,7 +174,7 @@ const ko = {
         year: "2021",
         header: "[UI] 플로우차트 컴포넌트 개발",
         tech: joinCommas("D3.js", "TypeScript"),
-        role: "UI 컴포넌트 개발자",
+        team: "UI 컴포넌트 개발자",
         background:
             "레거시 윈도우 클라이언트의 웹 전환을 위한 UI 컴포넌트 작업 요구",
         tasks: "svg 기반 객체 렌더링 구조 설계/개발",
@@ -197,7 +197,8 @@ const ko = {
         period: "2021 ~ 2023",
         header: "[Core] 사내 웹 제품 개발 기반 기술 구축",
         background: "웹 프로젝트별 상이한 기술 적용으로 인한 혼란",
-        team: joinCommas("# (역할) 프로젝트 리드", "주니어 F/E 개발자 (3명)"),
+        team: joinCommas("(역할) 프로젝트 리드", "주니어 F/E 개발자 (3명)"),
+        members: "4",
         result: "일관된 기술 표준을 통한 개발자 온보딩 및 순환 근무 용이",
         tasks: joinCommas(
             "# 사내 웹 제품 기술 표준 체계 구성",
@@ -225,9 +226,9 @@ const ko = {
         header: "[디자인 시스템] UI 스타일 리뉴얼 프로젝트",
         background: "UI가 오래되고 낡아 보인다는 많은 내부 피드백",
         team: joinCommas(
-            "# (역할) 프로젝트 리드",
+            "(역할) 프로젝트 리드",
             "제품 디자이너",
-            "미들 F/E 개발자",
+            "주니어 F/E 개발자",
         ),
         result: joinCommas(
             "웹 제품 전체 일관된 UX/UI 적용 및 표준 스타일 가이드 체계 수립",
@@ -254,7 +255,7 @@ const ko = {
         header: "[디자인 시스템] svg 아이콘 CSS 번들러 개발",
         background:
             "레거시 윈도우 앱의 비트맵 아이콘 -> 웹 전환 마이그레이션 필요",
-        team: joinCommas("# (역할) UI 컴포넌트 개발자", "제품 디자이너"),
+        team: joinCommas("(역할) UI 컴포넌트 개발자", "제품 디자이너"),
         tech: joinCommas("Node.js", "TypeScript", "PostCSS"),
         tasks: joinCommas(
             "# 아이콘 CSS 번들러 프로그램 개발",
@@ -278,7 +279,7 @@ const ko = {
         tech: joinCommas("VanillaJS", "TypeScript", "SolidJS"),
         background: "레거시 윈도우 앱의 Grid를 웹으로 전환하는 작업 요구",
         team: joinCommas(
-            "# (역할) 프로젝트 리드 개발",
+            "(역할) 프로젝트 리드 개발",
             "주니어 F/E 개발자 (2명)",
         ),
         result: joinCommas("레거시 윈도우 앱 -> 웹 전환에 핵심 성과 기여"),
@@ -305,7 +306,7 @@ const ko = {
         year: "2022",
         header: "[App] 임직원 일정 관리/공유 캘린더 개발",
         team: joinCommas(
-            "# (역할) 프로젝트 리드",
+            "(역할) 프로젝트 리드",
             "제품 디자이너",
             "주니어 F/E 개발자",
         ),
@@ -336,7 +337,7 @@ const ko = {
         header: "[Lib] 3rd-party 호출 모듈 개발",
         tech: joinCommas("VanillaJS", "TypeScript"),
         background: "고객사 업무 시스템에 자사 솔루션 화면 임베딩 요청",
-        role: "3rd-party 호출 라이브러리 설계/개발",
+        team: "3rd-party 호출 라이브러리 설계/개발",
         result: joinCommas(
             "# 웹 애플리케이션 간 연동 가능한 제품 경쟁력 향상",
             "삼성전자, 삼성화재 프로젝트 수행 기여",
@@ -366,7 +367,7 @@ const ko = {
             "PC/Mobile 반응형 UI 레이아웃 설계",
         ),
         team: joinCommas(
-            "# (역할) 프로젝트 리드",
+            "(역할) 프로젝트 리드",
             "제품 디자이너",
             "주니어 F/E 개발자",
         ),
@@ -387,7 +388,8 @@ const ko = {
         header: "[Testing] UI 컴포넌트 테스트 자동화",
         tech: joinCommas("Vitest", "Playwright"),
         background: "팀 규모 확장으로 기능 추가·패치 시 개발 리스크 증가",
-        team: joinCommas("# (역할) 프로젝트 리드", "주니어 F/E 개발자 (3명)"),
+        team: joinCommas("(역할) 프로젝트 리드", "주니어 F/E 개발자 (3명)"),
+        members: "4",
         result: joinCommas(
             "# 자동화 테스트로 안정성 향상·수동 테스트 작업량 감소",
             "Vitest 119건, Playwright 19건 테스팅 작성",
@@ -407,7 +409,7 @@ const ko = {
         header: "[UI] iframe 기반 화면 탭 관리 컴포넌트",
         tech: joinCommas("VanillaJS", "TypeScript"),
         background: "여러 브라우저 탭 사용으로 혼잡·불편함 발생 문제",
-        team: joinCommas("# (역할) UI 컴포넌트 개발자", "제품 디자이너"),
+        team: joinCommas("(역할) UI 컴포넌트 개발자", "제품 디자이너"),
         tasks: joinCommas("iframe 호출 흐름 및 UI 컴포넌트 설계"),
         result: joinCommas(
             "멀티 탭 기반 시스템을 단일 Top 페이지·iframe 구조로 사용성 개선",
@@ -424,7 +426,7 @@ const ko = {
         year: "2024",
         header: "[UI] 트리 컴포넌트 리뉴얼 개발",
         background: "AS-IS 트리 컴포넌트의 성능 문제 이슈",
-        team: joinCommas("# (역할) UI 컴포넌트 개발자", "제품 디자이너"),
+        team: joinCommas("(역할) UI 컴포넌트 개발자", "제품 디자이너"),
         urlText: joinCommas("스토리북 예제", "5만개 처리"),
         urls: joinCommas(
             "https://m.site.naver.com/1PF9h",
@@ -444,7 +446,7 @@ const ko = {
         tech: joinCommas("개발자 채용"),
         background: "웹 제품 출시로 웹 개발자 수요 증가",
         team: joinCommas(
-            "# (역할) F/E 개발자 채용 전형 담당",
+            "(역할) F/E 개발자 채용 전형 담당",
             "기술연구소장",
             "제품 개발 팀장",
         ),
@@ -462,7 +464,7 @@ const ko = {
         year: "2025",
         header: "[App] 온라인 코딩 테스트 사이트 개발",
         team: joinCommas(
-            "# (역할) 프로젝트 리드 개발",
+            "(역할) 프로젝트 리드 개발",
             "제품 디자이너",
             "주니어 F/E 개발자 (2명)",
         ),
@@ -501,7 +503,7 @@ const ko = {
         background: "다크모드·테마 커스터마이징 요구 증가로 경쟁력 확보 필요",
         result: "디자인 시스템 기반 색상 토큰 정리, 다크모드 구현 완료",
         team: joinCommas(
-            "# (역할) 프로젝트 리드",
+            "(역할) 프로젝트 리드",
             "제품 디자이너",
             "주니어 F/E 개발자",
         ),
@@ -520,7 +522,7 @@ const ko = {
         year: "2025",
         header: "[App] 웹 애플리케이션 커스터마이징 Add-on",
         background: "고객사 커스텀마다 새 브랜치·재빌드·재배포로 번거로움",
-        role: "Add-on 구조 설계/개발자",
+        team: "Add-on 구조 설계/개발자",
         result: joinCommas(
             "# 커스터마이징에 유연한 제품 확장성 향상",
             "삼성생명, 삼성화재 고객사 프로젝트 수행 기여",
@@ -545,7 +547,7 @@ const ko = {
         ),
         year: "2025",
         team: joinCommas(
-            "# (역할) 프로젝트 리드",
+            "(역할) 프로젝트 리드",
             "미들 F/E 개발자",
             "주니어 F/E 개발자",
         ),
@@ -570,7 +572,7 @@ const ko = {
     "20250110": {
         year: "2025",
         header: "[AI] LLM 기반 AI ChatBot 기능 개발 (진행 중)",
-        role: "웹 제품 AI 기능 풀스택 개발자",
+        team: "웹 제품 AI 기능 풀스택 개발자",
         background: "회사 제품에 AI 기능 도입 요구 증가",
         tech: joinCommas(
             "React",

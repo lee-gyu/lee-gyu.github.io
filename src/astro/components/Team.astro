@@ -1,0 +1,16 @@
+---
+type Props = {
+    team: string[];
+    members?: string;
+};
+
+const { team, members } = Astro.props;
+
+const teamContents = (() => {
+    if (team.length > 1) return `팀: ${team.join(", ")}`;
+
+    return `역할: ${team.join(", ")}`;
+})();
+---
+
+<li>{teamContents}</li>
