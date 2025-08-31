@@ -28,8 +28,7 @@ const careerData = [
     {
         careerData.map(({ period, content, desc }) => (
             <li class="career-item">
-                <span class="keyword">{period}</span>
-                <br />
+                <p class="career-period">({period})</p>
                 <p class="career-company">{content}</p>
                 <p class="career-desc">{desc}</p>
             </li>
@@ -38,9 +37,13 @@ const careerData = [
 </ul>
 
 <style>
+    .career-period {
+        font-size: 0.875rem;
+        line-height: 1.5;
+    }
     .career-item {
-        margin: 0.25rem 0;
-        line-height: 1.75;
+        margin: 0.25rem 0 0.75rem 0;
+        line-height: 1.5;
     }
     .career-company {
         font-weight: 500;
