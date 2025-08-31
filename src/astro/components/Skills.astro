@@ -22,15 +22,9 @@ const skillList: Array<[string, string[]]> = [
     {
         skillList.map(([label, keywords]) => (
             <li>
-                <span class="skills-label">{label}:</span>
+                <span>{label}:</span>
                 <Keywords keywords={keywords} />
             </li>
         ))
     }
 </ul>
-
-<style>
-    .skills-label {
-        margin-right: 0.5rem;
-    }
-</style>

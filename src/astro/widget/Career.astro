@@ -1,7 +1,6 @@
 ---
 import { useTranslations } from "src/i18n/utils";
 import { listItemsCss } from "src/styles/component-css";
-import Keywords from "../components/Keywords.astro";
 
 const t = useTranslations(Astro.currentLocale as Lang);
 
@@ -24,11 +23,11 @@ const careerData = [
 ];
 ---
 
-<ul>
+<ul class={listItemsCss}>
     {
         careerData.map(({ period, content, desc }) => (
             <li class="career-item">
-                <p class="career-period">({period})</p>
+                <p class="career-period">{period}</p>
                 <p class="career-company">{content}</p>
                 <p class="career-desc">{desc}</p>
             </li>

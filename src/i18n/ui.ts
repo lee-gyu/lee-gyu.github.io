@@ -128,9 +128,9 @@ I work with 4 junior developers and am very interested in a culture of growth to
         "skills.50.label": "ETC",
         "skills.50.keywords": joinCommas("J2EE", "GitLab", "Jenkins", "Docker"),
 
-        "exp.label.role": "역할",
         "exp.label.date": "일자",
-        "exp.label.co-op": "팀",
+        "exp.label.team": "팀",
+        "exp.label.role": "역할",
         "exp.label.period": "기간",
         "exp.label.year": "연도",
         "exp.label.mainTask": "주 작업",
