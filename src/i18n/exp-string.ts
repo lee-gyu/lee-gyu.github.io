@@ -163,7 +163,7 @@ const ko = {
             "(역할) 풀스택 개발",
             "프로젝트 리더",
             "Vision 머신러닝 개발자",
-            "정부 연구개발 보고서 담당",
+            "보고서 담당",
         ),
         tasks: joinCommas(
             "# 풀스택 개발 / 시스템 성능 최적화",
@@ -186,8 +186,7 @@ const ko = {
         header: "플로우차트 컴포넌트 개발",
         tech: joinCommas("D3.js", "TypeScript"),
         team: "UI 컴포넌트 개발자",
-        background:
-            "레거시 윈도우 클라이언트의 웹 전환을 위한 플로우차트 컴포넌트 작업 필요",
+        background: "레거시 윈도우 앱의 플로우차트를 웹으로 전환하는 작업 요구",
         tasks: "svg 기반 객체 렌더링 구조 설계/개발",
         result: joinCommas("제품 웹 전환 프로젝트에 기여"),
         feat: joinCommas(
@@ -209,7 +208,7 @@ const ko = {
         header: "사내 웹 제품 개발 기반 기술 구축",
         background: "웹 프로젝트별 상이한 기술 적용으로 인한 혼란",
         team: joinCommas("(역할) 프로젝트 리드", "주니어 F/E 개발자 3명"),
-        result: "일관된 기술 표준을 통한 개발자 온보딩 및 순환 근무 용이",
+        result: "일관된 기술 표준을 통한 개발자 온보딩 효율화",
         tasks: joinCommas(
             "# 사내 웹 제품 기술 표준 체계 구성",
             "jsp 페이지 → vite 기반 CSR 방식 전체 마이그레이션",
@@ -256,7 +255,7 @@ const ko = {
             "/video/20210090_3.mp4",
             "/video/20210090_4.mp4",
         ),
-        imgLabel: joinCommas("#1 기존", "#2 기존", "#1 리뉴얼", "#2 리뉴얼"),
+        imgLabel: joinCommas("#1 AS-IS", "#2 AS-IS", "#1 TO-BE", "#2 TO-BE"),
     },
 
     "20230010": {
@@ -288,7 +287,9 @@ const ko = {
         tech: joinCommas("VanillaJS", "TypeScript", "SolidJS"),
         background: "레거시 윈도우 앱의 Grid를 웹으로 전환하는 작업 요구",
         team: joinCommas("(역할) 프로젝트 리드 개발", "주니어 F/E 개발자 2명"),
-        result: joinCommas("레거시 윈도우 앱 -> 웹 전환에 핵심 기여"),
+        result: joinCommas(
+            "레거시 윈도우 앱 -> 웹 전환에 핵심 기여 (전체 화면의 80%이상이 Grid 컴포넌트를 사용)",
+        ),
         tasks: joinCommas(
             "# Grid UI 아키텍처 설계/초기 구조 개발",
             "Row/Column/Cell 구성 요소 구조 개발",
@@ -318,7 +319,7 @@ const ko = {
         ),
         background:
             "기존 구글 캘린더 기반의 임직원 일정 관리 방식을 사내 업무 시스템으로 마이그레이션 필요",
-        result: joinCommas(""),
+        result: joinCommas("임직원들의 외근, 업무 일정 공유 효율화"),
         tasks: joinCommas(
             "# 기존 사내 시스템 연동 및 전체 시스템 설계",
             "기존 구글 캘린더 기반 데이터 마이그레이션",
@@ -364,7 +365,9 @@ const ko = {
     "20230080": {
         year: "2023 / 이노룰스 기술연구소 기반기술팀",
         header: "사내 휴가계 시스템 리뉴얼",
-        result: joinCommas("전체 임직원의 연차 시스템 사용 만족도 개선"),
+        result: joinCommas(
+            "사내 임직원들의 연차 시스템 사용에 대해서 만족도 개선",
+        ),
         tech: joinCommas("React", "Nest.js", "Tailwind CSS"),
         background: "휴가계 UX/UI 개선 요구 및 휴가 제도의 개선으로 반영 필요",
         tasks: joinCommas(
@@ -435,6 +438,11 @@ const ko = {
         tech: joinCommas("VanillaJS", "TypeScript", "DOM Windowing"),
         team: joinCommas("(역할) UI 컴포넌트 개발자", "제품 디자이너"),
         urlText: joinCommas("스토리북 예제", "5만개 처리"),
+        result: joinCommas(
+            "# 성능 개선 및 사용자 경험 향상",
+            "(기존) 5만개 기준 로딩 7초 -> 0.25초",
+            "사용 메모리 36% 절감",
+        ),
         urls: joinCommas(
             "https://m.site.naver.com/1PF9h",
             "https://lee-gyu.github.io/storybook/?path=/story/js-components-irtreeview--bulk-data",
@@ -499,10 +507,13 @@ const ko = {
         imgUrls: "/video/20250050.mp4",
     },
     "20250080": {
-        year: "2025 / 이노룰스 기술연구소 기반기술팀",
+        year: "2025 (진행 중) / 이노룰스 기술연구소 기반기술팀",
         header: "다크모드 테마 디자인 시스템 설계",
         background: "고객사에서 다크모드·테마 커스터마이징 요구 증가",
-        result: joinCommas("사용자 경험 강화 및 제품 경쟁력 향상 기여"),
+        result: joinCommas(
+            "# 사용자 경험 강화 및 제품 경쟁력 향상 기여",
+            "기존 하드코딩 CSS 스타일 → CSS 토큰 기반 스타일 체계 전환",
+        ),
         team: joinCommas(
             "(역할) 프로젝트 리드",
             "제품 디자이너",
@@ -538,14 +549,21 @@ const ko = {
         feat: joinCommas(
             "제품 UI 스타일 CSS 재정의 구조",
             "제품 비즈니스 로직 커스터마이징 hook 구조",
+            "웹 페이지 내부 단축키 관리 시스템",
         ),
     },
 
     "20250100": {
         year: "2025 / 이노룰스 기술연구소 기반기술팀",
         header: "다국어 번역 자동화",
+        tech: joinCommas("React", "Google Cloud Platform", "i18next"),
+        result: joinCommas(
+            "# 제품 다국어 리소스 관리 시스템 효율화",
+            "총 13,326개 다국어 문자열 관리 (한국어 -> 일본어, 영어, 중국어, 스페인어)",
+            "기존 번역이 누락된 다국어 리소스 기존 40% 수준 -> 2% 아래로 감소",
+        ),
         background: joinCommas(
-            "웹 프로젝트별 개별 다국어 리소스 형식과 중복된 문자열로 관리의 어려움",
+            "글로벌 서비스 준비 중에 미번역 리소스 관리 부재",
         ),
         team: joinCommas(
             "(역할) 프로젝트 리드",
@@ -553,19 +571,14 @@ const ko = {
             "주니어 F/E 개발자",
         ),
         tasks: joinCommas(
-            "# 다국어 통합 관리 업무 시스템 설계",
+            "# 다국어 관리 업무 시스템 설계",
             "Google Cloud 적응형 번역 API를 활용한 다국어 리소스 번역 자동화",
-            "기존 제품 한글 리소스 전수 조사 데이터 파서 작성",
-            "i18next 기반으로 다국어 처리 모듈 표준화",
+            "기존 제품 한글 리소스 전수 조사 및 데이터 파서 작성",
+            "웹 제품 다국어 처리 모듈 i18next 표준화",
         ),
         feat: joinCommas(
-            "하나의 화면에서 모든 제품 다국어 리소스 관리",
+            "업무 시스템에서 모든 제품 다국어 리소스 관리",
             "Java/Web 소스 코드에 맞게 다국어 리소스 Exporting",
-        ),
-        tech: joinCommas("React", "Google Cloud Platform", "i18next"),
-        result: joinCommas(
-            "# 제품 다국어 리소스 관리 시스템화",
-            "총 13,326개 다국어 문자열 관리 (한국어 -> 일본어, 영어, 중국어, 스페인어)",
         ),
         imgLabel: "다국어 관리 화면",
         imgUrls: "/img/20250100.png",
@@ -585,7 +598,7 @@ const ko = {
         ),
         tasks: joinCommas(
             "# AI 기능을 탑재한 웹 애플리케이션 아키텍처 설계",
-            "제품 문서 자료 파싱 및 자료 임베딩",
+            "제품 문서 Chunking 및 자료 임베딩",
             "간단한 RAG 파이프라인 구성 / 프롬프트 엔지니어링",
             "임시 AI API 처리용 서버 개발 및 챗봇 UI 연동",
         ),
