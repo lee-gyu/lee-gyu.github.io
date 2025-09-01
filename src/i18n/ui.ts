@@ -41,7 +41,8 @@ I work with 4 junior developers and am very interested in a culture of growth to
         "career.0.header": "2020.10 - Present",
         "career.0.content": "InnoRules R&D Center Base Technology Team",
         "career.0.content.keywords": joinCommas("Web F/E Core"),
-        "career.0.content.desc": "Research/Development of common technologies",
+        "career.0.content.desc":
+            "Research/Development of core web F/E technologies",
         "career.1.header": "2015.9 - 2018.7",
         "career.1.content":
             "Samsung Electronics VD Division Global Operations Team",
@@ -49,12 +50,12 @@ I work with 4 junior developers and am very interested in a culture of growth to
             "Manufacturing S/W",
             "Back Office System",
         ),
-        "career.1.content.desc": "Development of back office systems",
+        "career.1.content.desc": "Global Manufacturing S/W Development",
         "career.2.header": "2015.9 - 2018.7",
         "career.2.content": "Samsung Electronics WorldSkills Training Center",
         "career.2.content.keywords": joinCommas("HR", "Training Center"),
         "career.2.content.desc":
-            "Training and guidance for national representatives of WorldSkills",
+            "Training for national representatives of WorldSkills / Recruitment of technical talent",
         experience: "Job Experiences",
         "exp.label.role": "Role",
         "exp.label.period": "Period",
@@ -98,7 +99,7 @@ I work with 4 junior developers and am very interested in a culture of growth to
         "career.0.header": "2020.10 - 현재",
         "career.0.content": "이노룰스 기술연구소 기반기술팀",
         "career.0.content.keywords": joinCommas("웹 F/E 코어 개발"),
-        "career.0.content.desc": "제품 개발에 핵심이 되는 공통 기술 연구/개발",
+        "career.0.content.desc": "웹 제품 개발에 핵심 기술 연구/개발",
         "career.1.header": "2015.9 - 2018.7",
         "career.1.content": "삼성전자 VD사업부 글로벌운영팀",
         "career.1.content.keywords": joinCommas("웹 개발", "공정 S/W 개발"),
@@ -107,7 +108,7 @@ I work with 4 junior developers and am very interested in a culture of growth to
         "career.2.content": "삼성전자 기능올림픽 훈련센터",
         "career.2.content.keywords": joinCommas("인사 업무", "훈련 지도"),
         "career.2.content.desc":
-            "기술 인재 채용과 기능올림픽 국가대표 훈련 지도",
+            "기능올림픽 국가대표 훈련 지도 및 기술 인재 채용",
         experience: "경험",
 
         skills: "기술",
