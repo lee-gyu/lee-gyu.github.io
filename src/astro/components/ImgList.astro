@@ -16,6 +16,14 @@ function getUrl(url: string) {
     return `${import.meta.env.PUBLIC_BASE_URL ?? DEFAULT_BASE_URL}${url}`;
 }
 
+function getPosterUrl(url: string) {
+    return `${import.meta.env.PUBLIC_BASE_URL ?? DEFAULT_BASE_URL}/poster${url}.png`;
+}
+
+function getImgThumbnailUrl(url: string) {
+    return `${import.meta.env.PUBLIC_BASE_URL ?? DEFAULT_BASE_URL}/thumb${url}`;
+}
+
 function isVideoFile(url: string) {
     return url.endsWith(".mp4");
 }
@@ -23,33 +31,41 @@ function isVideoFile(url: string) {
 
 <div class="image-viewer">
     {
-        imgUrlList.map((url, id) => (
-            <a
-                class="img-button"
-                href={getUrl(url)}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="클릭하면 새 창에서 전체 화면을 확인하실 수 있습니다."
-            >
-                <figure>
-                    {isVideoFile(url) ? (
-                        <video
-                            src={getUrl(url)}
-                            muted
-                            playsinline
-                            loop
-                            autoplay
-                        />
-                    ) : (
-                        <img src={getUrl(url)} alt={imgLabelList[id]} />
-                    )}
-                    <figcaption class="img-caption">
-                        {imgLabelList[id]}
-                        <Icon icon="io5-open" />
-                    </figcaption>
-                </figure>
-            </a>
-        ))
+        imgUrlList.map((url, id) => {
+            const videoUrl = getUrl(url);
+
+            return (
+                <a
+                    class="img-button"
+                    href={videoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="클릭하면 새 창에서 전체 화면을 확인하실 수 있습니다."
+                >
+                    <figure>
+                        {isVideoFile(url) ? (
+                            <video
+                                muted
+                                playsinline
+                                loop
+                                poster={getPosterUrl(url)}
+                            >
+                                <source src={videoUrl} type="video/mp4" />
+                            </video>
+                        ) : (
+                            <img
+                                src={getImgThumbnailUrl(url)}
+                                alt={imgLabelList[id]}
+                            />
+                        )}
+                        <figcaption class="img-caption">
+                            {imgLabelList[id]}
+                            <Icon icon="io5-open" />
+                        </figcaption>
+                    </figure>
+                </a>
+            );
+        })
     }
 </div>
 
