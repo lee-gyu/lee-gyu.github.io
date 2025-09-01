@@ -87,6 +87,24 @@ const lastUpdated = format(dayjs(LAST_UPDATED), lang);
     </main>
 </DefaultLayout>
 
+<script>
+    window.addEventListener("load", () => {
+        document.querySelectorAll(".img-button").forEach((wrapper) => {
+            const video = wrapper.querySelector("video");
+
+            if (!video) return;
+
+            wrapper.addEventListener("mouseenter", () => {
+                video.play();
+            });
+
+            wrapper.addEventListener("mouseleave", () => {
+                video.pause();
+            });
+        });
+    });
+</script>
+
 <style is:global>
     #experiences {
         page-break-before: always;
