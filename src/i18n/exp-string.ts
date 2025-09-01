@@ -23,8 +23,13 @@ type ExpStoryObj = Partial<Record<ExpProps, string>>;
 const ko = {
     "20150030": {
         period: "2012 ~ 2013 / 삼성전자 기능올림픽 훈련센터",
-        header: "[훈련] 2013 국제기능올림픽 정보기술 직종 국가대표",
-        team: "기능올림픽 정보기술 직종 국가대표",
+        header: "2013년 독일 국제기능올림픽 정보기술 직종 국가대표",
+        background: "사내 우수 기술 인재 양성 목적",
+        team: joinCommas(
+            "(역할) 국가대표 선수",
+            "국가대표 지도위원",
+            "국가대표 심사위원",
+        ),
         tech: joinCommas("MS Office", "MS Access", "VBA Programming"),
         result: joinCommas("금메달 (1위), 동탑산업훈장 대통령 표창"),
         urlText: joinCommas("대회 점수", "수상자 사진"),
@@ -52,33 +57,37 @@ const ko = {
     },
     "20150070": {
         period: "2013 ~ 2015 / 삼성전자 기능올림픽 훈련센터",
-        header: "[교육] 삼성전자 기능올림픽 훈련센터 지도위원",
-        team: "국가대표 지도위원",
+        header: "삼성전자 기능올림픽 훈련센터 국가대표 지도",
+        team: joinCommas(
+            "(역할) 국가대표 지도위원",
+            "국가대표 심사위원",
+            "국가대표 선수 (한국/베트남)",
+        ),
+        background: "사내 우수 기술 인재 양성 목적",
         tech: joinCommas("C# Windows", "SQL Server"),
         result: joinCommas("한국 은메달(2위), 베트남 동메달(3위) 수상"),
-        urlText: "기능올림픽 입상 보도",
+        urlText: "제 43회 브라질 기능올림픽 입상 보도",
         urls: "https://m.site.naver.com/1PzvF",
         tasks: "국가대표 선수 훈련 프로그램 개발",
     },
     "20180020": {
         year: "2016 / 삼성전자 VD 사업부 글로벌운영팀",
-        header: "[App] 웹 사내 업무 시스템 개발",
+        header: "웹 사내 업무 시스템 개발",
         tech: joinCommas("JQuery", "Bootstrap", "ASP.NET"),
         background: "사업부 맞춤형 사내 업무 시스템 요구",
         team: joinCommas("(역할) 웹 풀스택 개발", "프로젝트 리더"),
         feat: joinCommas(
-            "사내 표준 업무 시스템과 SSO 계정 연동",
-            "TinyMCE 에디터 기반 컨텐츠 작성",
+            "사내 업무 시스템과 계정 시스템 SSO 연동",
+            "TinyMCE 에디터 기반 사용자 컨텐츠 작성",
             "임직원 업무 현황 보고서 메일링",
         ),
         result: joinCommas(
-            "기존 보고용 문서 출력을 웹 기반 시스템으로 효율화",
-            "관리자가 수기로 취합하던 업무 취합 작업 시스템화",
+            "기존 보고용 문서 출력을 웹 기반 업무 관리 시스템으로 효율화",
         ),
     },
     "20180030": {
         year: "2016 / 삼성전자 VD 사업부 글로벌운영팀",
-        header: "[App] 해외 법인 종합 관제실 모니터링 시스템",
+        header: "해외 법인 종합 관제실 모니터링 시스템",
         tech: joinCommas("JQuery", "Telerik Kendo UI", "ASP.Net"),
         background: "전체 해외법인의 현황을 모니터링하는 관제실 프로젝트",
         team: joinCommas(
@@ -94,7 +103,7 @@ const ko = {
     },
     "20180050": {
         year: "2017 / 삼성전자 VD 사업부 글로벌운영팀",
-        header: "[App] IoT 환경 데이터 수집",
+        header: "IoT 환경 데이터 수집",
         tech: joinCommas("ASP.NET", "(IoT) Raspberry Pi"),
         background: "환경 데이터를 수집하여 공정 환경 개선에 활용",
         team: joinCommas("(역할) 웹 풀스택 개발", "IoT/센서 연동 엔지니어"),
@@ -106,7 +115,7 @@ const ko = {
 
     "20180055": {
         year: "2017  / 삼성전자 VD 사업부 글로벌운영팀",
-        header: "[자격시험] 삼성전자 S/W 개발 직군 시험",
+        header: "삼성전자 S/W 개발 직군 코딩테스트 시험",
         tech: joinCommas("Java", "C++", "Algorithm", "Data Structure"),
         background: joinCommas(
             "# 사내 코딩 테스트 Pro 등급 취득 인원을 팀 평가에 반영",
@@ -116,48 +125,45 @@ const ko = {
     },
 
     "20180070": {
-        year: "2017 / 삼성전자 VD 사업부 글로벌운영팀",
-        header: "[App] 공정 프로세스 현황 모니터링",
+        year: "2017 ~ 2018 / 삼성전자 VD 사업부 글로벌운영팀",
+        header: "공정 현황 모니터링",
         tech: joinCommas("TypeScript", "ASP.NET"),
-        background: "공정 병목 현상 파악을 위한 시스템 요구",
+        background: "공정 병목 현상 파악을 위한 시스템 개발 과제",
         team: joinCommas(
             "(역할) 웹 풀스택 개발",
             "PLC 신호 처리 클라이언트 개발자",
         ),
         result: "공정 병목 현상 파악 및 개선에 기여",
-        feat: joinCommas(
-            "실시간 공정 작업 현황 출력",
-            "공정별 작업 통계 리포팅",
-        ),
+        feat: joinCommas("실시간 공정 작업 현황 출력 / 리포팅"),
     },
 
     "20190010": {
         period: "2018 ~ 2019 / 프리랜서",
-        header: "[강사] IT 기술 교육 고등학교 멘토링 활동",
-        team: joinCommas("IT 기술 전국 준비 대회 학생 멘토"),
+        header: "기능경기대회 고등학교 선수 교육 활동",
+        team: joinCommas("전국 준비 대회 학생 기술 교육 멘토"),
         result: joinCommas("멘토링 학생 3명 전국대회 은메달 입상"),
     },
 
     "20200010": {
-        period: "2020.2 ~ 2020.6",
-        header: "[어학연수] 캐나다 밴쿠버 VGC 어학원",
+        period: "2020.1 ~ 2020.6",
+        header: "캐나다 밴쿠버 VGC 어학원 어학연수",
         background: "해외 문화 체험과 영어 능력 학습 목적으로 계획",
         result: "Lv6 Upper Intermediate 등급 수료",
         urls: "https://vgc.ca/",
         urlText: "vgc.ca",
-        imgLabel: joinCommas("수료증", "등급표"),
-        imgUrls: joinCommas("/img/20200010.png", "/img/20200010_2.png"),
+        // imgLabel: joinCommas("수료증", "등급표"),
+        // imgUrls: joinCommas("/img/20200010.png", "/img/20200010_2.png"),
     } satisfies ExpStoryObj,
 
     "20210060": {
-        period: "2020 ~ 2021 / 이노룰스 기술연구소 AI팀",
+        period: "2020 ~ 2021 / 이노룰스 기술연구소",
         header: "[정부 연구개발 과제] 로봇 자동화(RPA) S/W 개발",
         background: "사내 신제품 발굴",
         team: joinCommas(
             "(역할) 풀스택 개발",
             "프로젝트 리더",
             "Vision 머신러닝 개발자",
-            "정부 연구개발 보고서 담당자",
+            "정부 연구개발 보고서 담당",
         ),
         tasks: joinCommas(
             "# 풀스택 개발 / 시스템 성능 최적화",
@@ -176,12 +182,12 @@ const ko = {
         imgUrls: "/img/20210060.png",
     },
     "20210070": {
-        year: "2021 / 이노룰스 기술연구소 AI팀",
-        header: "[UI] 플로우차트 컴포넌트 개발",
+        year: "2021 / 이노룰스 기술연구소",
+        header: "플로우차트 컴포넌트 개발",
         tech: joinCommas("D3.js", "TypeScript"),
         team: "UI 컴포넌트 개발자",
         background:
-            "레거시 윈도우 클라이언트의 웹 전환을 위한 UI 컴포넌트 작업 요구",
+            "레거시 윈도우 클라이언트의 웹 전환을 위한 플로우차트 컴포넌트 작업 필요",
         tasks: "svg 기반 객체 렌더링 구조 설계/개발",
         result: joinCommas("제품 웹 전환 프로젝트에 기여"),
         feat: joinCommas(
@@ -199,20 +205,19 @@ const ko = {
         ),
     },
     "20210080": {
-        period: "2021 ~ 2023 / 이노룰스 기술연구소 기반기술팀",
-        header: "[Core] 사내 웹 제품 개발 기반 기술 구축",
+        period: "2023 / 이노룰스 기술연구소",
+        header: "사내 웹 제품 개발 기반 기술 구축",
         background: "웹 프로젝트별 상이한 기술 적용으로 인한 혼란",
         team: joinCommas("(역할) 프로젝트 리드", "주니어 F/E 개발자 3명"),
         result: "일관된 기술 표준을 통한 개발자 온보딩 및 순환 근무 용이",
         tasks: joinCommas(
             "# 사내 웹 제품 기술 표준 체계 구성",
-            "jsp 페이지 → vite 기반 CSR 방식으로 웹 소스 전체 마이그레이션",
+            "jsp 페이지 → vite 기반 CSR 방식 전체 마이그레이션",
             "웹 제품 배포 디렉터리 구조 설계 (app/, site/, help/)",
             "제품 개발 기술 문서화 (Storybook, TypeDoc, VitePress)",
-            "웹 프로젝트 빌드 Vite Plugin 개발",
-            "사내 npm 레지스트리 서버 구축 (내부 패키지: @innorules/*)",
-            "사내 표준 JS/TS eslint 코딩 규칙 구성 및 공통 패키지화",
-            "Tailwind CSS Config 공통 설정 패키지화",
+            "사내 npm 레지스트리 서버 구축",
+            "사내 표준 JS/TS eslint Config 공통 패키지화",
+            "Tailwind CSS Config 공통 패키지화",
         ),
         tech: joinCommas(
             "Vite",
@@ -226,8 +231,8 @@ const ko = {
         urls: joinCommas(""),
     },
     "20210090": {
-        period: "2021 ~ 2022 / 이노룰스 기술연구소 기반기술팀",
-        header: "[디자인 시스템] UI 스타일 리뉴얼 프로젝트",
+        period: "2021 ~ 2022 / 이노룰스 기술연구소",
+        header: "UI 스타일 리뉴얼 프로젝트",
         background: "UI가 오래되고 낡아 보인다는 많은 내부 피드백",
         team: joinCommas(
             "(역할) 프로젝트 리드",
@@ -255,8 +260,8 @@ const ko = {
     },
 
     "20230010": {
-        year: "2022 / 이노룰스 기술연구소 기반기술팀",
-        header: "[디자인 시스템] svg 아이콘 CSS 번들러 개발",
+        year: "2022 / 이노룰스 기술연구소",
+        header: "svg 아이콘 CSS 번들러 개발",
         background:
             "레거시 윈도우 앱의 비트맵 아이콘 -> 웹 전환 마이그레이션 필요",
         team: joinCommas("(역할) UI 컴포넌트 개발자", "제품 디자이너"),
@@ -278,12 +283,12 @@ const ko = {
     },
 
     "20230015": {
-        period: "2022 ~ 2023 / 이노룰스 기술연구소 기반기술팀",
-        header: "[UI] Grid 컴포넌트 라이브러리 개발",
+        period: "2022 ~ 2023 / 이노룰스 기술연구소",
+        header: "Grid 컴포넌트 라이브러리 개발",
         tech: joinCommas("VanillaJS", "TypeScript", "SolidJS"),
         background: "레거시 윈도우 앱의 Grid를 웹으로 전환하는 작업 요구",
         team: joinCommas("(역할) 프로젝트 리드 개발", "주니어 F/E 개발자 2명"),
-        result: joinCommas("레거시 윈도우 앱 -> 웹 전환에 핵심 성과 기여"),
+        result: joinCommas("레거시 윈도우 앱 -> 웹 전환에 핵심 기여"),
         tasks: joinCommas(
             "# Grid UI 아키텍처 설계/초기 구조 개발",
             "Row/Column/Cell 구성 요소 구조 개발",
@@ -304,14 +309,15 @@ const ko = {
     },
 
     "20230020": {
-        year: "2022 / 이노룰스 기술연구소 기반기술팀",
-        header: "[App] 임직원 일정 관리/공유 캘린더 개발",
+        year: "2022 / 이노룰스 기술연구소",
+        header: "임직원 일정 관리/공유 캘린더 개발",
         team: joinCommas(
             "(역할) 프로젝트 리드",
             "제품 디자이너",
             "주니어 F/E 개발자",
         ),
-        background: "기존 구글 캘린더 기반의 사내 일정 관리 시스템 교체 요구",
+        background:
+            "기존 구글 캘린더 기반의 임직원 일정 관리 방식을 사내 업무 시스템으로 마이그레이션 필요",
         result: joinCommas(""),
         tasks: joinCommas(
             "# 기존 사내 시스템 연동 및 전체 시스템 설계",
@@ -334,8 +340,8 @@ const ko = {
     },
 
     "20230070": {
-        year: "2023 / 이노룰스 기술연구소 기반기술팀",
-        header: "[Lib] 3rd-party 호출 모듈 개발",
+        year: "2023 / 이노룰스 기술연구소",
+        header: "3rd-party 호출 모듈 개발",
         tech: joinCommas("VanillaJS", "TypeScript"),
         background: "고객사 업무 시스템에 자사 솔루션 화면 임베딩 요청",
         team: "3rd-party 호출 라이브러리 설계/개발",
@@ -356,8 +362,8 @@ const ko = {
         ),
     },
     "20230080": {
-        year: "2023 / 이노룰스 기술연구소 기반기술팀",
-        header: "[App] 사내 휴가계 시스템 리뉴얼",
+        year: "2023 / 이노룰스 기술연구소",
+        header: "사내 휴가계 시스템 리뉴얼",
         result: joinCommas("전체 임직원의 연차 시스템 사용 만족도 개선"),
         tech: joinCommas("React", "Nest.js", "Tailwind CSS"),
         background: "휴가계 UX/UI 개선 요구 및 휴가 제도의 개선으로 반영 필요",
@@ -385,8 +391,8 @@ const ko = {
     },
 
     "20240010": {
-        year: "2024 / 이노룰스 기술연구소 기반기술팀",
-        header: "[Testing] UI 컴포넌트 테스트 자동화",
+        year: "2024 / 이노룰스 기술연구소",
+        header: "UI 컴포넌트 테스트 자동화",
         tech: joinCommas("Vitest", "Playwright"),
         background: "팀 규모 확장으로 기능 추가·패치 시 개발 리스크 증가",
         team: joinCommas("(역할) 프로젝트 리드", "주니어 F/E 개발자 3명"),
@@ -405,8 +411,8 @@ const ko = {
 
     // 2025 ~
     "20250010": {
-        year: "2024 / 이노룰스 기술연구소 기반기술팀",
-        header: "[UI] iframe 기반 화면 탭 관리 컴포넌트",
+        year: "2024 / 이노룰스 기술연구소",
+        header: "iframe 기반 화면 탭 관리 컴포넌트",
         tech: joinCommas("VanillaJS", "TypeScript"),
         background: "여러 브라우저 탭 사용으로 혼잡·불편함 발생 문제",
         team: joinCommas("(역할) UI 컴포넌트 개발자", "제품 디자이너"),
@@ -423,8 +429,8 @@ const ko = {
         imgLabel: joinCommas("동작 화면"),
     },
     "20250020": {
-        year: "2024 / 이노룰스 기술연구소 기반기술팀",
-        header: "[UI] 트리 컴포넌트 리뉴얼 개발",
+        year: "2024 / 이노룰스 기술연구소",
+        header: "트리 컴포넌트 리뉴얼 개발",
         background: "AS-IS 트리 컴포넌트의 성능 문제 이슈",
         tech: joinCommas("VanillaJS", "TypeScript", "DOM Windowing"),
         team: joinCommas("(역할) UI 컴포넌트 개발자", "제품 디자이너"),
@@ -433,24 +439,24 @@ const ko = {
             "https://m.site.naver.com/1PF9h",
             "https://lee-gyu.github.io/storybook/?path=/story/js-components-irtreeview--bulk-data",
         ),
-        tasks: "AS-IS 컴포넌트 성능 병목점 분석 및 리뉴얼 개발 리드",
+        tasks: "AS-IS 컴포넌트 성능 병목점 분석 및 리뉴얼 개발",
         feat: joinCommas(
-            "Windowing을 통한 수십만개 노드 고성능 렌더링 처리",
+            "Windowing을 통한 수만개 이상의 노드 항목 고성능 처리",
             "플러그인을 활용한 기능 확장 구조 적용",
         ),
         imgLabel: "컴포넌트 이미지",
         imgUrls: "/img/20250020.png",
     },
     "20250040": {
-        year: "2024 / 이노룰스 기술연구소 기반기술팀",
-        header: "[채용] 신입/경력 웹 프론트엔드 개발자 채용",
+        year: "2024 / 이노룰스 기술연구소",
+        header: "신입/경력 웹 프론트엔드 개발자 채용",
         background: "웹 제품 출시로 웹 개발자 수요 증가",
         team: joinCommas(
             "(역할) F/E 개발자 채용 전형 담당",
             "기술연구소장",
             "제품 개발 팀장",
         ),
-        result: "신입 2명 채용, 경력(3년↑) 2명 채용",
+        result: "신입 2명 채용, 경력(3년+) 2명 채용",
         tasks: joinCommas(
             "# 개발자 채용 프로세스 진행",
             "약 300명 지원자 서류 검토",
@@ -461,8 +467,8 @@ const ko = {
         urls: joinCommas("https://m.site.naver.com/1Pzvj"),
     },
     "20250050": {
-        year: "2025 / 이노룰스 기술연구소 기반기술팀",
-        header: "[App] 온라인 코딩 테스트 사이트 개발",
+        year: "2025 / 이노룰스 기술연구소",
+        header: "온라인 코딩 테스트 사이트 개발",
         team: joinCommas(
             "(역할) 프로젝트 리드 개발",
             "제품 디자이너",
@@ -493,11 +499,10 @@ const ko = {
         imgUrls: "/video/20250050.mp4",
     },
     "20250080": {
-        year: "2025 / 이노룰스 기술연구소 기반기술팀",
-        header: "[디자인 시스템] 다크모드 테마 시스템 설계",
-        background:
-            "다크모드·테마 커스터마이징 요구 증가로 제품 경쟁력 확보 필요",
-        result: "디자인 시스템 기반 색상 토큰 정리, 다크모드 구현 완료",
+        year: "2025 / 이노룰스 기술연구소",
+        header: "다크모드 테마 디자인 시스템 설계",
+        background: "고객사에서 다크모드·테마 커스터마이징 요구 증가",
+        result: joinCommas("사용자 경험 강화 및 제품 경쟁력 향상 기여"),
         team: joinCommas(
             "(역할) 프로젝트 리드",
             "제품 디자이너",
@@ -515,8 +520,8 @@ const ko = {
         imgUrls: "/video/20250080.mp4",
     },
     "20250090": {
-        year: "2025 / 이노룰스 기술연구소 기반기술팀",
-        header: "[App] 웹 애플리케이션 커스터마이징 Add-on",
+        year: "2025 / 이노룰스 기술연구소",
+        header: "웹 애플리케이션 커스터마이징 Add-on",
         background: "고객사 커스텀마다 새 브랜치·재빌드·재배포로 번거로움",
         team: "Add-on 구조 설계/개발",
         result: joinCommas(
@@ -537,10 +542,10 @@ const ko = {
     },
 
     "20250100": {
-        year: "2025 / 이노룰스 기술연구소 기반기술팀",
-        header: "[App] 다국어 번역 자동화",
+        year: "2025 / 이노룰스 기술연구소",
+        header: "다국어 번역 자동화",
         background: joinCommas(
-            "프로젝트별 다른 다국어 형식과 중복 관리로 인한 어려움",
+            "웹 프로젝트별 개별 다국어 리소스 형식과 중복된 문자열로 관리의 어려움",
         ),
         team: joinCommas(
             "(역할) 프로젝트 리드",
@@ -550,7 +555,8 @@ const ko = {
         tasks: joinCommas(
             "# 다국어 통합 관리 업무 시스템 설계",
             "Google Cloud 적응형 번역 API를 활용한 다국어 리소스 번역 자동화",
-            "기존 제품 한글 리소스 전수 조사/파서 작성",
+            "기존 제품 한글 리소스 전수 조사 데이터 파서 작성",
+            "i18next 기반으로 다국어 처리 모듈 표준화",
         ),
         feat: joinCommas(
             "하나의 화면에서 모든 제품 다국어 리소스 관리",
@@ -558,16 +564,16 @@ const ko = {
         ),
         tech: joinCommas("React", "Google Cloud Platform", "i18next"),
         result: joinCommas(
-            "# 제품 다국어 통합 관리 업무 시스템화",
-            "총 13,326개 다국어 문자열 번역 (한국어 -> 일본어, 영어, 중국어, 스페인어)",
+            "# 제품 다국어 리소스 관리 시스템화",
+            "총 13,326개 다국어 문자열 관리 (한국어 -> 일본어, 영어, 중국어, 스페인어)",
         ),
         imgLabel: "다국어 관리 화면",
         imgUrls: "/img/20250100.png",
     },
 
     "20250110": {
-        year: "2025 (진행 중) / 이노룰스 기술연구소 기반기술팀",
-        header: "[AI] LLM 기반 AI ChatBot 기능 개발",
+        year: "2025 (진행 중) / 이노룰스 기술연구소",
+        header: "LLM 기반 AI ChatBot 기능 개발",
         team: "웹 애플리케이션 AI 기능 개발",
         background: "회사 제품에 AI 기능 도입 요구 증가",
         tech: joinCommas(
@@ -578,12 +584,10 @@ const ko = {
             "OpenAI",
         ),
         tasks: joinCommas(
-            "# AI 기능을 개발하기 위한 웹 애플리케이션 아키텍처 설계",
-            "제품 도메인 지식 자료 임베딩",
-            "RAG 파이프라인 개발",
-            "프롬프트 엔지니어링",
-            "AI 서비스 API 서버 개발",
-            "챗봇 UI 컴포넌트 AI API 연동",
+            "# AI 기능을 탑재한 웹 애플리케이션 아키텍처 설계",
+            "제품 문서 자료 파싱 및 자료 임베딩",
+            "간단한 RAG 파이프라인 구성 / 프롬프트 엔지니어링",
+            "임시 AI API 처리용 서버 개발 및 챗봇 UI 연동",
         ),
         imgLabel: "시연 영상",
         imgUrls: "/video/20250110.mp4",

@@ -5,11 +5,11 @@ type Props = {
 
 const { team } = Astro.props;
 
-const teamContents = (() => {
+function getTeamContents() {
     if (team.length > 1) return `팀: ${team.join(", ")}`;
 
     return `역할: ${team.join(", ")}`;
-})();
+}
 ---
 
-<li>{teamContents}</li>
+{team.length > 0 && <li>{getTeamContents()}</li>}
