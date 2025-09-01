@@ -156,7 +156,7 @@ const ko = {
     } satisfies ExpStoryObj,
 
     "20210060": {
-        period: "2020 ~ 2021 / 이노룰스 기술연구소",
+        period: "2020 ~ 2021 / 이노룰스 기술연구소 기반기술팀",
         header: "[정부 연구개발 과제] 로봇 자동화(RPA) S/W 개발",
         background: "사내 신제품 발굴",
         team: joinCommas(
@@ -182,7 +182,7 @@ const ko = {
         imgUrls: "/img/20210060.png",
     },
     "20210070": {
-        year: "2021 / 이노룰스 기술연구소",
+        year: "2021 / 이노룰스 기술연구소 기반기술팀",
         header: "플로우차트 컴포넌트 개발",
         tech: joinCommas("D3.js", "TypeScript"),
         team: "UI 컴포넌트 개발자",
@@ -205,7 +205,7 @@ const ko = {
         ),
     },
     "20210080": {
-        period: "2023 / 이노룰스 기술연구소",
+        period: "2023 / 이노룰스 기술연구소 기반기술팀",
         header: "사내 웹 제품 개발 기반 기술 구축",
         background: "웹 프로젝트별 상이한 기술 적용으로 인한 혼란",
         team: joinCommas("(역할) 프로젝트 리드", "주니어 F/E 개발자 3명"),
@@ -231,7 +231,7 @@ const ko = {
         urls: joinCommas(""),
     },
     "20210090": {
-        period: "2021 ~ 2022 / 이노룰스 기술연구소",
+        period: "2021 ~ 2022 / 이노룰스 기술연구소 기반기술팀",
         header: "UI 스타일 리뉴얼 프로젝트",
         background: "UI가 오래되고 낡아 보인다는 많은 내부 피드백",
         team: joinCommas(
@@ -260,7 +260,7 @@ const ko = {
     },
 
     "20230010": {
-        year: "2022 / 이노룰스 기술연구소",
+        year: "2022 / 이노룰스 기술연구소 기반기술팀",
         header: "svg 아이콘 CSS 번들러 개발",
         background:
             "레거시 윈도우 앱의 비트맵 아이콘 -> 웹 전환 마이그레이션 필요",
@@ -283,7 +283,7 @@ const ko = {
     },
 
     "20230015": {
-        period: "2022 ~ 2023 / 이노룰스 기술연구소",
+        period: "2022 ~ 2023 / 이노룰스 기술연구소 기반기술팀",
         header: "Grid 컴포넌트 라이브러리 개발",
         tech: joinCommas("VanillaJS", "TypeScript", "SolidJS"),
         background: "레거시 윈도우 앱의 Grid를 웹으로 전환하는 작업 요구",
@@ -309,7 +309,7 @@ const ko = {
     },
 
     "20230020": {
-        year: "2022 / 이노룰스 기술연구소",
+        year: "2022 / 이노룰스 기술연구소 기반기술팀",
         header: "임직원 일정 관리/공유 캘린더 개발",
         team: joinCommas(
             "(역할) 프로젝트 리드",
@@ -340,7 +340,7 @@ const ko = {
     },
 
     "20230070": {
-        year: "2023 / 이노룰스 기술연구소",
+        year: "2023 / 이노룰스 기술연구소 기반기술팀",
         header: "3rd-party 호출 모듈 개발",
         tech: joinCommas("VanillaJS", "TypeScript"),
         background: "고객사 업무 시스템에 자사 솔루션 화면 임베딩 요청",
@@ -362,7 +362,7 @@ const ko = {
         ),
     },
     "20230080": {
-        year: "2023 / 이노룰스 기술연구소",
+        year: "2023 / 이노룰스 기술연구소 기반기술팀",
         header: "사내 휴가계 시스템 리뉴얼",
         result: joinCommas("전체 임직원의 연차 시스템 사용 만족도 개선"),
         tech: joinCommas("React", "Nest.js", "Tailwind CSS"),
@@ -391,7 +391,7 @@ const ko = {
     },
 
     "20240010": {
-        year: "2024 / 이노룰스 기술연구소",
+        year: "2024 / 이노룰스 기술연구소 기반기술팀",
         header: "UI 컴포넌트 테스트 자동화",
         tech: joinCommas("Vitest", "Playwright"),
         background: "팀 규모 확장으로 기능 추가·패치 시 개발 리스크 증가",
@@ -411,7 +411,7 @@ const ko = {
 
     // 2025 ~
     "20250010": {
-        year: "2024 / 이노룰스 기술연구소",
+        year: "2024 / 이노룰스 기술연구소 기반기술팀",
         header: "iframe 기반 화면 탭 관리 컴포넌트",
         tech: joinCommas("VanillaJS", "TypeScript"),
         background: "여러 브라우저 탭 사용으로 혼잡·불편함 발생 문제",
@@ -429,7 +429,7 @@ const ko = {
         imgLabel: joinCommas("동작 화면"),
     },
     "20250020": {
-        year: "2024 / 이노룰스 기술연구소",
+        year: "2024 / 이노룰스 기술연구소 기반기술팀",
         header: "트리 컴포넌트 리뉴얼 개발",
         background: "AS-IS 트리 컴포넌트의 성능 문제 이슈",
         tech: joinCommas("VanillaJS", "TypeScript", "DOM Windowing"),
@@ -448,7 +448,7 @@ const ko = {
         imgUrls: "/img/20250020.png",
     },
     "20250040": {
-        year: "2024 / 이노룰스 기술연구소",
+        year: "2024 / 이노룰스 기술연구소 기반기술팀",
         header: "신입/경력 웹 프론트엔드 개발자 채용",
         background: "웹 제품 출시로 웹 개발자 수요 증가",
         team: joinCommas(
@@ -467,7 +467,7 @@ const ko = {
         urls: joinCommas("https://m.site.naver.com/1Pzvj"),
     },
     "20250050": {
-        year: "2025 / 이노룰스 기술연구소",
+        year: "2025 / 이노룰스 기술연구소 기반기술팀",
         header: "온라인 코딩 테스트 사이트 개발",
         team: joinCommas(
             "(역할) 프로젝트 리드 개발",
@@ -499,7 +499,7 @@ const ko = {
         imgUrls: "/video/20250050.mp4",
     },
     "20250080": {
-        year: "2025 / 이노룰스 기술연구소",
+        year: "2025 / 이노룰스 기술연구소 기반기술팀",
         header: "다크모드 테마 디자인 시스템 설계",
         background: "고객사에서 다크모드·테마 커스터마이징 요구 증가",
         result: joinCommas("사용자 경험 강화 및 제품 경쟁력 향상 기여"),
@@ -520,7 +520,7 @@ const ko = {
         imgUrls: "/video/20250080.mp4",
     },
     "20250090": {
-        year: "2025 / 이노룰스 기술연구소",
+        year: "2025 / 이노룰스 기술연구소 기반기술팀",
         header: "웹 애플리케이션 커스터마이징 Add-on",
         background: "고객사 커스텀마다 새 브랜치·재빌드·재배포로 번거로움",
         team: "Add-on 구조 설계/개발",
@@ -542,7 +542,7 @@ const ko = {
     },
 
     "20250100": {
-        year: "2025 / 이노룰스 기술연구소",
+        year: "2025 / 이노룰스 기술연구소 기반기술팀",
         header: "다국어 번역 자동화",
         background: joinCommas(
             "웹 프로젝트별 개별 다국어 리소스 형식과 중복된 문자열로 관리의 어려움",
@@ -572,7 +572,7 @@ const ko = {
     },
 
     "20250110": {
-        year: "2025 (진행 중) / 이노룰스 기술연구소",
+        year: "2025 (진행 중) / 이노룰스 기술연구소 기반기술팀",
         header: "LLM 기반 AI ChatBot 기능 개발",
         team: "웹 애플리케이션 AI 기능 개발",
         background: "회사 제품에 AI 기능 도입 요구 증가",
