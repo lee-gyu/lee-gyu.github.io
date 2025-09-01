@@ -62,15 +62,15 @@ const projectTabs: ExpTabList[] = [
         tabCaption: t("exp.tab.secondary"),
         desc: t("exp.tab.secondary.desc"),
         expKeyList: [
-            "20210070", // Flowchart
             "20250010", // PageContainer
             "20250020", // IRTreeView
             "20230070", // 제품간 호출 프로토콜
             "20250040", // 채용
             "20250050", // 온라인 코딩 테스트
-            "20230020", // CM Calendar
             "20230080", // 휴가계 리뉴얼
+            "20230020", // CM Calendar
             "20230010", // Icon CSS
+            "20210070", // Flowchart
             "20210060", // RPA
         ],
     },
@@ -80,6 +80,7 @@ const projectTabs: ExpTabList[] = [
         desc: t("exp.tab.etc.desc"),
         expKeyList: [
             "20200010", // 어학연수
+            "20190010", // 학교 강사 활동
             "20180055", // SW 써티
             "20180070", // 공정 프로세스
             "20180050", // IoT
@@ -116,18 +117,9 @@ const projectTabs: ExpTabList[] = [
         {
             projectTabs.map((tab, id) => (
                 <div id={tab.id} class:list={["tab-content"]}>
-                    <h4 class="tab-caption">{tab.desc}</h4>
-                    {id === 0 && (
-                        <p class="hidden-info" data-only-print="block">
-                            {t("experience.print-desc")}
-                            <a
-                                class="text-link"
-                                href={import.meta.env.PUBLIC_BASE_URL}
-                            >
-                                {t("experience.print-link")}
-                            </a>
-                        </p>
-                    )}
+                    <h4 class="tab-caption" data-only-print="block">
+                        {tab.desc}
+                    </h4>
                     <ol class="tab-card-list">
                         {tab.expKeyList.map((expId) => (
                             <ExpCard
@@ -345,8 +337,6 @@ const projectTabs: ExpTabList[] = [
     .tab-caption {
         padding: 0.25rem var(--spacing-doc-pad-left);
         font-weight: 500;
-        background-color: var(--colors-background-light);
-        border-bottom: 1px solid var(--colors-background);
     }
 
     .hidden-info {

@@ -33,11 +33,7 @@ const teamMembers = expData.team ? splitCommas(expData.team) : [];
     </div>
     {techKeywords.length > 0 && <Keywords keywords={techKeywords} />}
     <ul class={listItemsCss}>
-        {
-            teamMembers.length > 0 && (
-                <Team team={teamMembers} members={expData.members} />
-            )
-        }
+        {teamMembers.length > 0 && <Team team={teamMembers} />}
         <ListItems
             label={t(`exp.label.background`)}
             contents={expData.background}
@@ -104,6 +100,10 @@ const teamMembers = expData.team ? splitCommas(expData.team) : [];
             padding-top: 0.1rem;
             padding-bottom: 0.1rem;
             border-bottom: none;
+        }
+
+        .exp-card:not(:first-child) {
+            margin-top: 0.75rem;
         }
 
         .exp-details {

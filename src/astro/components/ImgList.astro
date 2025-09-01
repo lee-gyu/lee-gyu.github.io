@@ -42,7 +42,7 @@ function isVideoFile(url: string) {
                     rel="noopener noreferrer"
                     title="클릭하면 새 창에서 전체 화면을 확인하실 수 있습니다."
                 >
-                    <figure>
+                    <figure class="img-figure">
                         {isVideoFile(url) ? (
                             <video
                                 muted
@@ -111,5 +111,12 @@ function isVideoFile(url: string) {
         column-gap: 0.25rem;
         font-weight: 300;
         font-size: 0.875rem;
+    }
+
+    .img-figure {
+        video,
+        img {
+            border: 1px solid var(--colors-accent-o80);
+        }
     }
 </style>
