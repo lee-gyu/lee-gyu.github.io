@@ -67,7 +67,7 @@ const ko = {
         tech: joinCommas("C# Windows", "SQL Server"),
         result: joinCommas("한국 은메달(2위), 베트남 동메달(3위) 수상"),
         urlText: "제 43회 브라질 기능올림픽 입상 보도",
-        urls: "https://m.site.naver.com/1PzvF",
+        urls: "https://m.site.naver.com/1PX8r",
         tasks: "국가대표 선수 훈련 프로그램 개발",
     },
     "20180020": {
