@@ -15,7 +15,9 @@ export const ui = {
         name: "Lee Gyu Cheol",
         jobDesc: `
 I'm in charge of developing core web F/E packages for WebApp development.
-I work with 4 junior developers and am very interested in a culture of growth together.
+I'm leading a team of 5 developers as a senior developer,
+and recently participated in a project to develop LLM-based AI features.
+I'm interested in a work culture that grows together and creates synergy.
 `.trim(),
         mainJob: "Main Job",
         "mainJob.0": "Web Frontend Core Package Development",
@@ -75,7 +77,7 @@ I work with 4 junior developers and am very interested in a culture of growth to
         birthdate: "1994.2.19",
         jobDesc: `
 현재 B2B IT 솔루션 회사에서 웹 프론트엔드 코어 패키지를 개발하고 있습니다.
-4명의 개발자와 1명의 디자이너로 구성된 팀에서 협업하며,
+5명의 개발자 팀에서 시니어 개발자로 팀을 리드하고 있으며,
 최근에는 LLM 기반 AI 기능 개발 프로젝트에 참여하고 있습니다.
 함께 성장하며 시너지를 내는 업무 문화에 관심이 많습니다.
 `.trim(),
