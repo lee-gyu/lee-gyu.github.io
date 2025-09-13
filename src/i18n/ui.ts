@@ -11,7 +11,7 @@ export const ui = {
     en: {
         toTop: "To Top",
         lastUpdated: "Last Updated:",
-        jobTitle: "Web Frontend Developer",
+        jobTitle: "Web Full-stack Developer",
         name: "Lee Gyu Cheol",
         jobDesc: `
 I'm in charge of developing core web F/E packages for WebApp development.
@@ -72,7 +72,7 @@ I'm interested in a work culture that grows together and creates synergy.
     ko: {
         toTop: "맨 위로",
         lastUpdated: "최근 업데이트:",
-        jobTitle: "웹 프론트엔드 개발자",
+        jobTitle: "웹 풀스택 개발자",
         name: "이규철",
         birthdate: "1994.2.19",
         jobDesc: `
