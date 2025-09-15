@@ -74,16 +74,6 @@ const lastUpdated = format(dayjs(LAST_UPDATED), lang);
             <Title id="awards" size="h3">{`${t("awards")}`}</Title>
             <Awards />
         </section>
-        {
-            lang !== "en" && (
-                <section class={css({ marginTop: "1rem" })} role="article">
-                    <Title id="experiences" size="h3" printHidden>
-                        {t("experience")}
-                    </Title>
-                    <Experiences />
-                </section>
-            )
-        }
     </main>
 </DefaultLayout>
 
