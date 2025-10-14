@@ -14,16 +14,16 @@ export const ui = {
         jobTitle: "Web Full-stack Developer",
         name: "Lee Gyu Cheol",
         jobDesc: `
-I'm in charge of developing core web F/E packages for WebApp development.
-I'm leading a team of 5 developers as a senior developer,
-and recently participated in a project to develop LLM-based AI features.
-I'm interested in a work culture that grows together and creates synergy.
+Currently, I am developing a web frontend platform at a B2B IT solutions company.
+As a senior developer in a team of five web full-stack developers, I lead the team,
+and recently participated in a project to develop LLM-based AI agent features.
+I am very interested in a work culture that grows together and creates synergy.
 `.trim(),
         mainJob: "Main Job",
-        "mainJob.0": "Web Frontend Core Package Development",
+        "mainJob.0": "Web Frontend Common Infrastructure Development",
         "mainJob.1":
-            "Web Development Environment/Quality Improvement and Team Leadership",
-        "mainJob.2": "Web Application Service Development",
+            "Research and Adoption of Web Performance/Security Technologies",
+        "mainJob.2": "Leading the Web Full-stack Development Team",
         career: "Career",
         awards: "Awards",
         "awards.0.header":
@@ -41,23 +41,15 @@ I'm interested in a work culture that grows together and creates synergy.
         "awards.4.tags": "HRDKorea, 2011",
         years: "Years",
         "career.0.header": "2020.10 - Present",
-        "career.0.content": "InnoRules R&D Center Base Technology Team",
-        "career.0.content.keywords": joinCommas("Web F/E Core"),
+        "career.0.content": "InnoRules",
         "career.0.content.desc":
-            "Research/Development of core web F/E technologies",
-        "career.1.header": "2015.9 - 2018.7",
-        "career.1.content":
-            "Samsung Electronics VD Division Global Operations Team",
-        "career.1.content.keywords": joinCommas(
-            "Manufacturing S/W",
-            "Back Office System",
-        ),
-        "career.1.content.desc": "Global Manufacturing S/W Development",
-        "career.2.header": "2015.9 - 2018.7",
-        "career.2.content": "Samsung Electronics WorldSkills Training Center",
-        "career.2.content.keywords": joinCommas("HR", "Training Center"),
-        "career.2.content.desc":
-            "Training for national representatives of WorldSkills / Recruitment of technical talent",
+            "(R&D Center) Web F/E Core Infra/SDK Development",
+        "career.1.header": "2012.10 - 2018.7",
+        "career.1.content": "Samsung Electronics",
+        "career.1.content.desc": [
+            "(VD Division Global Operation Team) S/W Development for Overseas Factory Operation",
+            "(GTC HR Group) Training and Coaching for WorldSkills",
+        ].join("\n"),
         experience: "Job Experiences",
         "exp.label.role": "Role",
         "exp.label.period": "Period",
@@ -76,15 +68,15 @@ I'm interested in a work culture that grows together and creates synergy.
         name: "이규철",
         birthdate: "1994.2.19",
         jobDesc: `
-현재 B2B IT 솔루션 회사에서 웹 프론트엔드 코어 패키지를 개발하고 있습니다.
-5명의 개발자 팀에서 시니어 개발자로 팀을 리드하고 있으며,
-최근에는 LLM 기반 AI 기능 개발 프로젝트에 참여하고 있습니다.
+현재 B2B IT 솔루션 회사에서 웹 프론트엔드 플랫폼을 개발하고 있습니다.
+5명의 웹 풀스택 개발팀에서 시니어 개발자로 팀을 리드하고 있으며,
+최근에는 LLM 기반 AI 에이전트 기능 개발 프로젝트에 참여하고 있습니다.
 함께 성장하며 시너지를 내는 업무 문화에 관심이 많습니다.
 `.trim(),
         mainJob: "주 업무",
-        "mainJob.0": "웹 프론트엔드 코어 패키지 개발",
-        "mainJob.1": "웹 개발 환경/품질 개선 및 팀 리딩",
-        "mainJob.2": "웹 애플리케이션 서비스 개발",
+        "mainJob.0": "웹 프런트엔드 공통 인프라 개발",
+        "mainJob.1": "웹 성능/보안 기술 연구 및 도입",
+        "mainJob.2": "웹 풀스택 개발팀 리딩",
         career: "경력",
         awards: "수상",
         "awards.0.header": "기능발전/국위선양 장관 표창",
@@ -99,23 +91,21 @@ I'm interested in a work culture that grows together and creates synergy.
         "awards.4.tags": "한국산업인력공단, 2011",
         years: "년",
         "career.0.header": "2020.10 - 현재",
-        "career.0.content": "이노룰스 기술연구소 기반기술팀",
-        "career.0.content.keywords": joinCommas("웹 F/E 코어 개발"),
-        "career.0.content.desc": "웹 제품 개발에 핵심 기술 연구/개발",
-        "career.1.header": "2015.9 - 2018.7",
-        "career.1.content": "삼성전자 VD사업부 글로벌운영팀",
-        "career.1.content.keywords": joinCommas("웹 개발", "공정 S/W 개발"),
-        "career.1.content.desc": "글로벌 해외법인 공정 운영에 필요한 S/W 개발",
-        "career.2.header": "2012.10 - 2015.9",
-        "career.2.content": "삼성전자 기능올림픽 훈련센터",
-        "career.2.content.keywords": joinCommas("인사 업무", "훈련 지도"),
-        "career.2.content.desc":
-            "기능올림픽 국가대표 훈련 지도 및 기술 인재 채용",
+        "career.0.content": "이노룰스",
+        "career.0.content.desc":
+            "(기술연구소) 웹 프런트엔드 공통 인프라/SDK 개발",
+        "career.1.header": "2012.10 - 2018.7",
+        "career.1.content": "삼성전자",
+        "career.1.content.desc": [
+            "(VD사업부 글로벌운영팀) 해외법인 공정 운영 S/W 개발",
+            "(GTC 인사그룹) 기능올림픽 국가대표 훈련 지도",
+        ].join("\n"),
+
         experience: "경험",
 
         skills: "기술",
         "skills.10.label": "B/E",
-        "skills.10.keywords": joinCommas("Nest.js"),
+        "skills.10.keywords": joinCommas("Nest.js", "RDBMS"),
         "skills.20.label": "F/E",
         "skills.20.keywords": joinCommas(
             "Vite",
@@ -127,7 +117,13 @@ I'm interested in a work culture that grows together and creates synergy.
         "skills.40.label": "Lang",
         "skills.40.keywords": joinCommas("JavaScript", "TypeScript", "Java"),
         "skills.50.label": "ETC",
-        "skills.50.keywords": joinCommas("J2EE", "GitLab", "Jenkins", "Docker"),
+        "skills.50.keywords": joinCommas(
+            "J2EE",
+            "GitLab",
+            "Jenkins",
+            "Docker",
+            "Linux",
+        ),
 
         "exp.label.date": "일자",
         "exp.label.team": "팀",

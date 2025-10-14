@@ -6,15 +6,14 @@ import { splitCommas } from "src/utils/string";
 
 const t = useTranslations(Astro.currentLocale as Lang);
 const skillList: Array<[string, string[]]> = [
+    // Lang
     [t("skills.40.label"), splitCommas(t("skills.40.keywords"))],
+    // F/E
     [t("skills.20.label"), splitCommas(t("skills.20.keywords"))],
-    [
-        t("skills.50.label"),
-        [
-            ...splitCommas(t("skills.10.keywords")), // B/E
-            ...splitCommas(t("skills.50.keywords")), // ETC
-        ],
-    ],
+    // B/E
+    [t("skills.10.label"), splitCommas(t("skills.10.keywords"))],
+    // ETC
+    [t("skills.50.label"), splitCommas(t("skills.50.keywords"))],
 ];
 ---
 
