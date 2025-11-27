@@ -14,16 +14,13 @@ export const ui = {
         jobTitle: "Web Full-stack Developer",
         name: "Lee Gyu Cheol",
         jobDesc: `
-Currently, I am developing a web frontend platform at a B2B IT solutions company.
-As a senior developer in a team of five web full-stack developers, I lead the team,
-and recently participated in a project to develop LLM-based AI agent features.
-I am very interested in a work culture that grows together and creates synergy.
+Currently, I am working as a senior developer in a web frontend development team of 5 members at a B2B IT solution company, overseeing core web frontend development.
+I am interested in solving problems using AI services and fostering a collaborative culture that promotes growth and synergy among team members.
 `.trim(),
         mainJob: "Main Job",
-        "mainJob.0": "Web Frontend Common Infrastructure Development",
-        "mainJob.1":
-            "Research and Adoption of Web Performance/Security Technologies",
-        "mainJob.2": "Leading the Web Full-stack Development Team",
+        "mainJob.0": "Designing Web Frontend Architecture",
+        "mainJob.1": "Developing Common Infrastructure for Web Frontend",
+        "mainJob.2": "Web Performance/Security Technology Engineering",
         career: "Career",
         awards: "Awards",
         "awards.0.header":
