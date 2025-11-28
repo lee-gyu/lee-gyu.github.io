@@ -11,7 +11,7 @@ export const ui = {
     en: {
         toTop: "To Top",
         lastUpdated: "Last Updated:",
-        jobTitle: "Web Full-stack Developer",
+        jobTitle: "Web Software Developer",
         name: "Lee Gyu Cheol",
         jobDesc: `
 Currently, I am working as a senior developer in a web frontend development team of 5 members at a B2B IT solution company, overseeing core web frontend development.
@@ -61,7 +61,7 @@ I am interested in solving problems using AI services and fostering a collaborat
     ko: {
         toTop: "맨 위로",
         lastUpdated: "최근 업데이트:",
-        jobTitle: "웹 풀스택 개발자",
+        jobTitle: "웹 소프트웨어 개발자",
         name: "이규철",
         birthdate: "1994.2.19",
         jobDesc: `
@@ -99,7 +99,7 @@ I am interested in solving problems using AI services and fostering a collaborat
 
         skills: "기술",
         "skills.10.label": "B/E",
-        "skills.10.keywords": joinCommas("Nest.js", "RDBMS"),
+        "skills.10.keywords": joinCommas("Nest.js", "RDBMS", "J2EE"),
         "skills.20.label": "F/E",
         "skills.20.keywords": joinCommas(
             "Vite",
@@ -112,7 +112,6 @@ I am interested in solving problems using AI services and fostering a collaborat
         "skills.40.keywords": joinCommas("JavaScript", "TypeScript", "Java"),
         "skills.50.label": "ETC",
         "skills.50.keywords": joinCommas(
-            "J2EE",
             "GitLab",
             "Jenkins",
             "Docker",
