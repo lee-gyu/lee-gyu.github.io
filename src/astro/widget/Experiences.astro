@@ -16,79 +16,18 @@ type ExpTabList = {
 const lang = Astro.currentLocale as Lang;
 const t = useTranslations(lang);
 
-const printVisibleSet = new Set([
-    "20250110", // 솔루션 AI 기능 개발
-    "20250100", // 다국어 통합 관리 시스템
-    "20250080", // Dark Mode Theme
-    "20250090", // 커스터마이징 모듈
-    "20240010", // 테스팅
-    "20250010", // PageContainer
-    "20230070", // 제품간 호출 프로토콜
-    "20230015", // Grid
-    "20210080", // 웹 개발 환경
-    "20210070", // Flowchart
-
-    "20250040", // 채용
-    "20230020", // CM Calendar
-    "20230010", // Icon CSS
-    "20210090", // UI 스타일 리뉴얼
-    "20210060", // RPA
-
-    "20180050", // IoT
-    "20180030", // 관제
-    "20180020", // 업무 시스템
-    "20150070", // 지도위원
-    "20150030", // 훈련
-]);
-
 const projectTabs: ExpTabList[] = [
     {
         id: "exp_primary",
         tabCaption: t("exp.tab.primary"),
         desc: t("exp.tab.primary.desc"),
-        expKeyList: [
-            "20250110", // 솔루션 AI 기능 개발
-            "20250080", // Dark Mode Theme
-            "20250100", // 다국어 통합 관리 시스템
-            "20250090", // 커스터마이징 모듈
-            "20240010", // 테스팅
-            "20230015", // Grid
-            "20210090", // UI 스타일 리뉴얼
-            "20210080", // 웹 개발 환경
-            "20210070", // Flowchart
-        ],
+        expKeyList: ["core_pkg"],
     },
     {
         id: "exp_secondary",
         tabCaption: t("exp.tab.secondary"),
         desc: t("exp.tab.secondary.desc"),
-        expKeyList: [
-            "20250050", // 온라인 코딩 테스트
-            "20250020", // IRTreeView
-            "20250010", // PageContainer
-            "20250040", // 채용
-            "20230080", // 휴가계 리뉴얼
-            "20230070", // 제품간 호출 프로토콜
-            "20230020", // CM Calendar
-            // "20230010", // Icon CSS
-            "20210060", // RPA
-        ],
-    },
-    {
-        id: "exp_etc",
-        tabCaption: t("exp.tab.etc"),
-        desc: t("exp.tab.etc.desc"),
-        expKeyList: [
-            "20200010", // 어학연수
-            // "20190010", // 학교 강사 활동
-            "20180055", // SW 써티
-            "20180070", // 공정 프로세스
-            "20180050", // IoT
-            "20180030", // 관제
-            "20180020", // 업무 시스템
-            "20150070", // 지도위원
-            "20150030", // 훈련
-        ],
+        expKeyList: [],
     },
 ];
 ---
@@ -122,10 +61,7 @@ const projectTabs: ExpTabList[] = [
                     </h4>
                     <ol class="tab-card-list">
                         {tab.expKeyList.map((expId) => (
-                            <ExpCard
-                                expId={expId}
-                                printHidden={!printVisibleSet.has(expId)}
-                            />
+                            <ExpCard expId={expId} printHidden={false} />
                         ))}
                     </ol>
                 </div>

@@ -85,14 +85,13 @@ I am interested in solving problems using AI services and fostering a collaborat
         "awards.4.tags": "한국산업인력공단, 2011",
         years: "년",
         "career.0.header": "2020.10 - 현재",
-        "career.0.content": "이노룰스",
-        "career.0.content.desc":
-            "(기술연구소) 웹 프런트엔드 공통 인프라/SDK 개발",
+        "career.0.content": "이노룰스 기술연구소",
+        "career.0.content.desc": "웹 프런트엔드 공통 인프라/SDK 개발",
         "career.1.header": "2012.10 - 2018.7",
         "career.1.content": "삼성전자",
         "career.1.content.desc": [
-            "(VD사업부 글로벌운영팀) 해외법인 공정 운영 S/W 개발",
-            "(GTC 인사그룹) 기능올림픽 국가대표 훈련 지도",
+            "해외법인 공정 운영 S/W 개발",
+            "기능올림픽 국가대표 훈련 지도",
         ].join("\n"),
 
         experience: "경험",

@@ -5,9 +5,9 @@ import Career from "src/astro/widget/Career.astro";
 import MainJob from "src/astro/widget/MainJob.astro";
 
 import Title from "src/astro/components/Title.astro";
+import Experiences from "src/astro/widget/Experiences.astro";
 import { css } from "src/styled-system/css";
 import { useTranslations } from "src/i18n/utils";
-import Experiences from "../widget/Experiences.astro";
 import Awards from "../widget/Awards.astro";
 import Skills from "../components/Skills.astro";
 import { format } from "src/utils/date";
@@ -37,7 +37,7 @@ const emailLinkCss = css({
 });
 
 const sectionCss = css({
-    margin: "1rem 0",
+    marginTop: "1rem",
 });
 
 const lastUpdated = format(dayjs(LAST_UPDATED), lang);
@@ -58,22 +58,35 @@ const lastUpdated = format(dayjs(LAST_UPDATED), lang);
         <section class={sectionCss}>
             <Links />
         </section>
-        <section class={sectionCss}>
-            <Title id="mainJob" size="h3">{t("mainJob")}</Title>
-            <MainJob />
+        <section>
+            <section class={sectionCss}>
+                <Title id="mainJob" size="h3">{t("mainJob")}</Title>
+                <MainJob />
+            </section>
+            <section class={sectionCss} role="article">
+                <Title id="skills" size="h3">{`${t("skills")}`}</Title>
+                <Skills />
+            </section>
+            <section class={sectionCss} role="article">
+                <Title id="career" size="h3">{`${t("career")}`}</Title>
+                <Career />
+            </section>
+            <section class={sectionCss} role="article">
+                <Title id="awards" size="h3">{`${t("awards")}`}</Title>
+                <Awards />
+            </section>
         </section>
-        <section class={sectionCss} role="article">
-            <Title id="skills" size="h3">{`${t("skills")}`}</Title>
-            <Skills />
-        </section>
-        <section class={sectionCss} role="article">
-            <Title id="career" size="h3">{`${t("career")}`}</Title>
-            <Career />
-        </section>
-        <section class={sectionCss} role="article">
-            <Title id="awards" size="h3">{`${t("awards")}`}</Title>
-            <Awards />
-        </section>
+        {
+            import.meta.env.DEV && lang === "ko" && (
+                <section class={sectionCss}>
+                    <Title
+                        id="experience"
+                        size="h3"
+                    >{`${t("experience")}`}</Title>
+                    <Experiences />
+                </section>
+            )
+        }
     </main>
 </DefaultLayout>
 
