@@ -48,18 +48,20 @@
     margin-top: -0.5rem;
 }
 
-.links-item {
-    display: flex;
+.text-link {
+    text-decoration: underline;
+    display: inline-flex;
     align-items: center;
     column-gap: 6px;
+    cursor: pointer;
 
     i {
         font-size: 1.125rem;
     }
-}
 
-.text-link {
-    text-decoration: underline;
+    &:hover {
+        color: var(--colors-primary-blue)
+    }
 }
 
 .page-no-break {

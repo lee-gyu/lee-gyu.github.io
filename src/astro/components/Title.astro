@@ -57,15 +57,23 @@ const Element = restProps.size ?? "h1";
 <style>
     .has-title {
         position: relative;
+        display: inline-flex;
+        transition: all 0.15s ease-in-out;
+
+        &::before {
+            content: "#";
+            position: absolute;
+            left: -0.875rem;
+            transition: all 0.15s ease-in-out;
+            opacity: 0;
+        }
 
         &:hover {
             text-decoration: underline;
+            color: var(--colors-primary-blue);
 
             &::before {
-                content: "#";
-                position: absolute;
-                left: -1rem;
-                opacity: 0.5;
+                opacity: 0.75;
             }
         }
     }

@@ -163,6 +163,12 @@ export default defineConfig({
                             _dark: "{colors.zinc.50}",
                         },
                     },
+                    primaryBlue: {
+                        value: {
+                            base: "{colors.blue.600}",
+                            _dark: "{colors.blue.300}",
+                        },
+                    },
                 },
             },
             tokens: {
