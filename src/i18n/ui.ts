@@ -18,8 +18,8 @@ Currently, I am working as a senior developer in a web frontend development team
 `.trim(),
         mainJob: "Main Job",
         "mainJob.0": "Designing Web Frontend Architecture",
-        "mainJob.1": "Developing Common Infrastructure for Web Frontend",
-        "mainJob.2": "Web Performance/Security Technology Engineering",
+        "mainJob.1": "Managing Common Development Environment for Web Frontend",
+        "mainJob.2": "Web Performance/Security Engineering",
         career: "Career",
         awards: "Awards",
         "awards.0.header":
@@ -64,12 +64,12 @@ Currently, I am working as a senior developer in a web frontend development team
         name: "이규철",
         birthdate: "1994.2.19",
         jobDesc: `
-현재 B2B IT 회사에서 5명의 웹 프런트엔드팀 시니어 개발자로 웹 F/E 코어 개발을 총괄하고 있습니다. 팀원들과 함께 시너지를 내는 협업 문화와 다양한 현업 문제를 AI를 이용하여 해결하는 방법에 관심이 많습니다.
+현재 B2B IT 회사에서 5명의 웹 프런트엔드팀 시니어 개발자로 웹 F/E 공통 개발을 담당하고 있습니다. 여러 개발자들과 함께 시너지를 내는 협업 문화와 다양한 문제를 AI를 함께 활용하여 해결하는 방법에 관심이 많습니다.
 `.trim(),
         mainJob: "주 업무",
         "mainJob.0": "웹 프런트엔드 아키텍처 설계",
-        "mainJob.1": "웹 프런트엔드 공통 인프라 개발",
-        "mainJob.2": "웹 성능/보안 기술 엔지니어링",
+        "mainJob.1": "웹 프런트엔드 공통 개발 환경 관리",
+        "mainJob.2": "웹 성능/보안 엔지니어링",
         career: "경력",
         awards: "수상",
         "awards.0.header": "기능발전/국위선양 장관 표창",
