@@ -14,7 +14,7 @@ export const ui = {
         jobTitle: "Web Software Developer",
         name: "Lee Gyu Cheol",
         jobDesc: `
-Currently, I am working as a senior developer in a web frontend development team of 5 members at a B2B IT solution company, overseeing core web frontend development. I am interested in fostering a collaborative culture that leverages team synergy and exploring ways to solve various real-world problems using AI.
+Currently, I am working as a senior developer in a web frontend development team at a B2B IT solution company, overseeing core web frontend development. I am interested in fostering a collaborative culture that leverages team synergy and exploring ways to solve various real-world problems using AI.
 `.trim(),
         mainJob: "Main Job",
         "mainJob.0": "Designing Web Frontend Architecture",
@@ -64,7 +64,7 @@ Currently, I am working as a senior developer in a web frontend development team
         name: "이규철",
         birthdate: "1994.2.19",
         jobDesc: `
-현재 B2B IT 회사에서 5명의 웹 프런트엔드팀 시니어 개발자로 웹 F/E 공통 개발을 담당하고 있습니다. 여러 개발자들과 함께 시너지를 내는 협업 문화와 다양한 문제를 AI를 함께 활용하여 해결하는 방법에 관심이 많습니다.
+현재 B2B 기반 IT 회사에서 웹 프런트엔드팀 시니어 개발자로 웹 공통 모듈 개발을 담당하고 있습니다. 여러 개발자들과 함께 시너지를 내는 협업 문화와 다양한 문제를 AI를 함께 활용하여 해결하는 방법에 관심이 많습니다.
 `.trim(),
         mainJob: "주 업무",
         "mainJob.0": "웹 프런트엔드 아키텍처 설계",
