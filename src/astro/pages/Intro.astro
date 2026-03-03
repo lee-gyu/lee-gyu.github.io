@@ -12,6 +12,7 @@ import Awards from "../widget/Awards.astro";
 import Skills from "../components/Skills.astro";
 import { format } from "src/utils/date";
 import dayjs from "dayjs";
+import PageTopActions from "../widget/PageTopActions.astro";
 
 type Props = {};
 
@@ -25,7 +26,7 @@ const mainCss = css({
     paddingRight: "docPadRight",
     paddingBottom: "docPadBottom",
     paddingTop: "2rem",
-    marginTop: "docPadTop",
+    marginTop: "2.5rem",
 });
 
 const lang = Astro.currentLocale as Lang;
@@ -44,6 +45,7 @@ const lastUpdated = format(dayjs(LAST_UPDATED), lang);
 ---
 
 <DefaultLayout lang={lang}>
+    <PageTopActions />
     <main class={mainCss}>
         <div class="updated-info hidden-info" data-only-print="block">
             <span>{t("lastUpdated")} {lastUpdated}</span>
@@ -77,8 +79,8 @@ const lastUpdated = format(dayjs(LAST_UPDATED), lang);
             </section>
         </section>
         {
-            import.meta.env.DEV && lang === "ko" && (
-                <section class={sectionCss}>
+            lang === "ko" && (
+                <section class={sectionCss} id="experiences" role="article">
                     <Title
                         id="experience"
                         size="h3"
@@ -108,7 +110,7 @@ const lastUpdated = format(dayjs(LAST_UPDATED), lang);
     });
 </script>
 
-<style is:global>
+<style>
     #experiences {
         page-break-before: always;
     }

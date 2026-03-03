@@ -1,7 +1,6 @@
 ---
 import pageLoaderJS from "./page-loader.js?raw";
 import googleAnalyticsJS from "./google-head.js?raw";
-import PageTop from "src/astro/components/PageTop.astro";
 import BottomBanner from "../widget/BottomBanner.astro";
 
 import "src/styles/index.css";
@@ -37,7 +36,6 @@ const lang = Astro.currentLocale;
     </head>
     <body>
         <div id="root">
-            <PageTop />
             <slot />
         </div>
         {
@@ -101,14 +99,14 @@ const lang = Astro.currentLocale;
         scrolled = nextScrolled;
 
         window.dispatchEvent(
-            new CustomEvent("change:scrolled", { detail: scrolled }),
+            new CustomEvent("change:scrolled", { detail: scrolled })
         );
     });
 
     if (scrolled)
         window.addEventListener("load", () => {
             window.dispatchEvent(
-                new CustomEvent("change:scrolled", { detail: scrolled }),
+                new CustomEvent("change:scrolled", { detail: scrolled })
             );
         });
 </script>

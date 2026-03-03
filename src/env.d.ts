@@ -1,4 +1,4 @@
-/// <reference path="../.astro/types.d.ts" />
+/// <reference types="astro/client" />
 
 namespace globalThis {
     var LAST_UPDATED: string;
@@ -7,6 +7,9 @@ namespace globalThis {
 
 interface ImportMetaEnv {
     readonly PUBLIC_BASE_URL: string;
+    readonly DEV: boolean;
+    readonly PROD: boolean;
+    readonly MODE: "development" | "production";
 }
 
 interface ImportMeta {

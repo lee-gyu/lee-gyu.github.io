@@ -1,25 +1,38 @@
+import { LastUpdated } from "src/solid/components/LastUpdated";
 import { css } from "src/styled-system/css";
-import { LangToggle } from "./Buttons";
 import { PageTopActionsContext } from "./context";
+import { LangToggle } from "./LangToggle";
 import ThemeSwitch from "./ThemeSwitch";
 
-const pageTopActionsWrapperCls = css({
+const buttonWrapperCls = css({
+    display: "inline-flex",
+    alignItems: "center",
     position: "sticky",
-    display: "inline-block",
-    top: 0,
-    paddingTop: "0.25rem",
-    marginTop: "-2.5rem",
-    marginRight: "0.5rem",
-    borderRadius: "full",
-    backdropFilter: "blur(2px)",
     float: "right",
+    marginRight: "docPadRight",
+    marginTop: "-2.5rem",
+    height: "2.5rem",
+    top: 0,
+});
+
+const headerCls = css({
+    display: "inline-flex",
+    alignItems: "center",
+    height: "2.5rem",
+    top: 0,
+    position: "absolute",
+    paddingLeft: "docPadLeft",
+    width: "300px",
     zIndex: 3000,
 });
 
 export default function PageTopActions() {
     return (
         <PageTopActionsContext.Provider value={{}}>
-            <div class={pageTopActionsWrapperCls} data-print-hidden>
+            <header id="pageHeader" class={headerCls} data-print-hidden>
+                <LastUpdated />
+            </header>
+            <div class={buttonWrapperCls} data-print-hidden>
                 <LangToggle />
                 <ThemeSwitch />
             </div>
