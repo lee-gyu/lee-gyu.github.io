@@ -28,7 +28,7 @@ const teamMembers = expData.team ? splitCommas(expData.team) : [];
 
 <article class="exp-card" data-print-hidden={printHidden ? true : null}>
     <div class="page-no-break">
-        <Title size="h4">{expData.header}</Title>
+        <Title size="h4" style="accent">{expData.header}</Title>
     </div>
     {techKeywords.length > 0 && <Keywords keywords={techKeywords} />}
     <ul class={listItemsCss}>
@@ -58,7 +58,7 @@ const teamMembers = expData.team ? splitCommas(expData.team) : [];
 
 <style>
     .exp-card {
-        background-color: var(--colors-background-light);
+        position: relative;
     }
 
     .exp-story {

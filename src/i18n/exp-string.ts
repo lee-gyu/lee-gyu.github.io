@@ -22,15 +22,14 @@ const ko = {
         role: joinCommas("웹 애플리케이션 개발 플랫폼 구축/리딩"),
         period: "2022 ~ 2025",
         result: joinCommas(
-            "C++ 기반 레거시 클라이언트 -> 웹 기반 기술 전환 완료",
+            "C++ 기반 클라이언트 -> 웹 기반 기술 전환 완료",
             "웹 기반 신제품 출시 (15개 프로젝트 계약)",
             "SI 사업 기반 웹 기술 구축 (2개 프로젝트 계약)",
         ),
         tasks: joinCommas(
             "웹 애플리케이션 아키텍처 설계/개발",
-            "웹 개발 기술 공통화",
-            "내부 npm 레지스트리 배포 프로세스 정립",
-            "웹 F/E 공통 개발 환경 구축 (Vite, ESLint, Storybook, ...)",
+            "웹 F/E 공통 개발 환경 구축 (Vite, ESLint, Storybook, npm)",
+            "CSS 체계, 공통 UI 컴포넌트, 제품 인터페이스 설계/개발",
         ),
         tech: joinCommas("TypeScript", "Vite / Vitest", "SolidJS", "PNPM"),
         imgLabel: joinCommas("AS-IS(1)", "AS-IS(2)", "TO-BE(1)", "TO-BE(2)"),

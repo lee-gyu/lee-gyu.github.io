@@ -6,6 +6,7 @@ type Props = {
     size?: `h${1 | 2 | 3 | 4}`;
     id?: string;
     printHidden?: boolean;
+    style?: "accent";
 };
 
 const title = cva({
@@ -41,7 +42,12 @@ const Element = restProps.size ?? "h1";
 <Element
     id={restProps.id}
     data-print-hidden={restProps.printHidden}
-    class:list={[title(restProps), className, restProps.id && "has-title"]}
+    class:list={[
+        title(restProps),
+        className,
+        restProps.id && "has-title",
+        restProps.style === "accent" && "add-accent",
+    ]}
 >
     {
         restProps.id ? (
@@ -55,6 +61,11 @@ const Element = restProps.size ?? "h1";
 </Element>
 
 <style>
+    .add-accent {
+        margin-top: 0.5rem;
+        position: relative;
+    }
+
     .has-title {
         position: relative;
         display: inline-flex;
@@ -64,7 +75,6 @@ const Element = restProps.size ?? "h1";
             content: "#";
             position: absolute;
             left: -0.875rem;
-            transition: all 0.15s ease-in-out;
             opacity: 0;
         }
 
@@ -73,7 +83,7 @@ const Element = restProps.size ?? "h1";
             color: var(--colors-primary-blue);
 
             &::before {
-                opacity: 0.75;
+                opacity: 0.8;
             }
         }
     }
