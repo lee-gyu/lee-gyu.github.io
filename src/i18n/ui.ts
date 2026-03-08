@@ -64,7 +64,7 @@ Currently, I am working as a senior developer in a web frontend development team
         name: "이규철",
         birthdate: "1994.2.19",
         jobDesc: `
-현재 B2B 솔루션 IT 회사에서 웹 F/E팀 시니어 개발자로 공통 웹 모듈을 개발하고 있습니다. 여러 개발자들과 함께 시너지를 내는 협업 문화와 LLM 기술을 활용하여 문제를 해결하는 방법에 관심이 많습니다.
+현재 B2B 솔루션 IT 회사에서 웹 F/E팀 시니어 개발자로 웹 플랫폼 기술 개발 업무를 맡고 있습니다. 여러 개발자들과 함께 시너지를 내는 협업 문화와 LLM 기술을 활용하여 문제를 해결하는 방법에 관심이 많습니다.
 `.trim(),
         mainJob: "주 업무",
         "mainJob.0": "사내 웹 F/E 플랫폼 개발",
@@ -85,7 +85,7 @@ Currently, I am working as a senior developer in a web frontend development team
         years: "년",
         "career.0.header": "2020.10 - 현재",
         "career.0.content": "이노룰스 기술연구소",
-        "career.0.content.desc": "웹 애플리케이션 개발 리딩",
+        "career.0.content.desc": "웹 프론트엔드 개발 리딩",
         "career.1.header": "2012.10 - 2018.7",
         "career.1.content": "삼성전자",
         "career.1.content.desc": [
@@ -115,7 +115,6 @@ Currently, I am working as a senior developer in a web frontend development team
             "Jenkins",
             "Docker",
             "Linux",
-            "Google Workspace",
         ),
 
         "exp.label.date": "일자",
