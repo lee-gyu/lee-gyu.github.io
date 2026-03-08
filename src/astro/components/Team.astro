@@ -1,12 +1,13 @@
 ---
 type Props = {
     team: string[];
+    label: string;
 };
 
-const { team } = Astro.props;
+const { team, label } = Astro.props;
 
 function getTeamContents() {
-    return `팀: ${team.join(", ")}`;
+    return `${label}: ${team.join(", ")}`;
 }
 ---
 

@@ -119,7 +119,7 @@ Currently, I am working as a senior developer in a web frontend development team
         ),
 
         "exp.label.date": "일자",
-        "exp.label.team": "팀",
+        "exp.label.team": "소속/직책",
         "exp.label.role": "역할",
         "exp.label.period": "기간",
         "exp.label.mainTask": "주 작업",

@@ -33,7 +33,7 @@ const teamMembers = expData.team ? splitCommas(expData.team) : [];
     {techKeywords.length > 0 && <Keywords keywords={techKeywords} />}
     <ul class={listItemsCss}>
         <ListItems label={t(`exp.label.period`)} contents={date} />
-        <Team team={teamMembers} />
+        <Team label={t(`exp.label.team`)} team={teamMembers} />
         <ListItems label={t(`exp.label.role`)} contents={expData.role} />
         <ListItems label={t(`exp.label.tasks`)} contents={expData.tasks} />
         <ListItems label={t(`exp.label.result`)} contents={expData.result} />
