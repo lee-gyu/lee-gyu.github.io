@@ -67,7 +67,7 @@ Currently, I am working as a senior developer in a web frontend development team
 현재 B2B 솔루션 IT 회사에서 웹 F/E팀 시니어 개발자로 웹 플랫폼 기술 개발 업무를 맡고 있습니다. 여러 개발자들과 함께 시너지를 내는 협업 문화와 LLM 기술을 활용하여 문제를 해결하는 방법에 관심이 많습니다.
 `.trim(),
         mainJob: "주 업무",
-        "mainJob.0": "사내 웹 F/E 플랫폼 개발",
+        "mainJob.0": "사내 웹 F/E 플랫폼 기술 개발",
         "mainJob.1": "풀스택 웹 애플리케이션 설계/개발",
         "mainJob.2": "F/E 기술 의사결정 및 개발 프로세스 리딩",
         career: "경력",

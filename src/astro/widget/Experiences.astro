@@ -5,11 +5,7 @@ import type { ExpKey } from "src/i18n/exp-string";
 
 type Props = {};
 
-const expList: ExpKey[] = ["pjt1", "pjt2"];
-
-if (import.meta.env.DEV) {
-    expList.push("pjt3", "pjt4", "pjt5");
-}
+const expList: ExpKey[] = ["pjt1", "pjt2", "pjt3", "pjt4", "pjt5", "pjt6"];
 ---
 
 {expList.map((expId) => <ExpCard expId={expId} />)}

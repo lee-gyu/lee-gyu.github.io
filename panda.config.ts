@@ -50,7 +50,7 @@ export default defineConfig({
                             sm: "2.5rem",
                         },
                     },
-                    docPadRight: { value: "1rem" },
+                    docPadRight: { value: "2.5rem" },
                     docPadTop: { value: "2.5rem" },
                     docPadBottom: { value: "1.5rem" },
                 },
