@@ -85,7 +85,7 @@ Currently, I am working as a senior developer in a web frontend development team
         years: "년",
         "career.0.header": "2020.10 - 현재",
         "career.0.content": "이노룰스 기술연구소",
-        "career.0.content.desc": "웹 프론트엔드 개발 리딩",
+        "career.0.content.desc": "웹 프론트엔드 플랫폼 기술 개발",
         "career.1.header": "2012.10 - 2018.7",
         "career.1.content": "삼성전자",
         "career.1.content.desc": [
