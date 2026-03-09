@@ -64,7 +64,7 @@ Currently, I am working as a senior developer in a web frontend development team
         name: "이규철",
         birthdate: "1994.2.19",
         jobDesc: `
-현재 B2B 솔루션 IT 회사에서 웹 F/E팀 시니어 개발자로 웹 플랫폼 기술 개발 업무를 맡고 있습니다. 여러 개발자들과 함께 시너지를 내는 협업 문화와 LLM 기술을 활용하여 문제를 해결하는 방법에 관심이 많습니다.
+현재 B2B 솔루션 IT 회사에서 웹 플랫폼 기술팀 시니어 개발자로 소속되어 있습니다. 주요 경험은 여러 개발자들이 빠르게 웹 애플리케이션 개발할 수 있도록 하는 기반 기술을 구축하고, 웹에서 할 수 없을 것이라고 생각하는 다양한 기술적 난제들을 해결하여 프로젝트 완료에 기여한 경험이 있습니다.
 `.trim(),
         mainJob: "주 업무",
         "mainJob.0": "사내 웹 F/E 플랫폼 기술 개발",
