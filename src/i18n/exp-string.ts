@@ -18,7 +18,7 @@ type ExpStoryObj = Partial<Record<ExpProps, string>>;
 const ko = {
     pjt1: {
         header: "#1 데스크탑 애플리케이션 -> 웹 클라이언트 리뉴얼",
-        team: joinCommas("웹 플랫폼 기술팀 (부팀장)"),
+        team: joinCommas("기반기술팀 부팀장"),
         tasks: joinCommas(
             "웹 F/E 공통 개발 환경 구축 (Vite, ESLint, Storybook, npm 서버)",
             "CSS 체계, 공통 UI 컴포넌트, 제품 인터페이스 설계/개발",
@@ -49,7 +49,7 @@ const ko = {
             "vanilla-extract",
             "TurboRepo",
         ),
-        team: joinCommas("웹 플랫폼 기술팀 (부팀장)"),
+        team: joinCommas("기반기술팀 부팀장"),
         tasks: joinCommas(
             "컴포넌트 내부 모듈 구조 설계",
             "전체 제품 화면에 핵심적인 UI 컴포넌트 개발",
@@ -82,7 +82,7 @@ const ko = {
     pjt3: {
         header: "#3 웹 제품 통합 인터페이스 모듈 개발",
         tech: joinCommas("Authentication", "Security", "iframe"),
-        team: joinCommas("웹 플랫폼 기술팀 (부팀장)"),
+        team: joinCommas("기반기술팀 부팀장"),
         tasks: joinCommas(
             "타 시스템 SSO 연동 모듈 개발",
             "웹 통신 보안 모듈 개발",
@@ -98,7 +98,7 @@ const ko = {
     },
     pjt4: {
         header: "#4 사내 업무 시스템 개발",
-        team: joinCommas("웹 플랫폼 기술팀 (부팀장)"),
+        team: joinCommas("기반기술팀 부팀장"),
         tech: joinCommas(
             "Nest.js",
             "Next.js",
@@ -123,7 +123,7 @@ const ko = {
     },
     pjt5: {
         header: "#5 LLM 기술 활용 프로젝트",
-        team: joinCommas("웹 플랫폼 기술팀 (부팀장)"),
+        team: joinCommas("기반기술팀 부팀장"),
         tech: joinCommas(
             "LangChainJS",
             "Prompt Engineering",
@@ -142,7 +142,7 @@ const ko = {
     },
     pjt6: {
         header: "#6 개발 환경/프로세스 개선",
-        team: joinCommas("웹 플랫폼 기술팀 (부팀장)"),
+        team: joinCommas("기반기술팀 부팀장"),
         tech: joinCommas("Jenkins", "GitLab", "Docker"),
         tasks: joinCommas(
             "사내 CI/CD 파이프라인 구축",
