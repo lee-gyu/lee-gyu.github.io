@@ -9,7 +9,7 @@ const buttonWrapperCls = css({
     alignItems: "center",
     position: "sticky",
     float: "right",
-    marginRight: "docPadRight",
+    marginRight: "0.5rem",
     marginTop: "-2.5rem",
     height: "2.5rem",
     top: 0,
