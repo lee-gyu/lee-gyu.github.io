@@ -66,10 +66,10 @@ Currently, I am working as a senior developer in a web frontend development team
         jobDesc: `
 현재 B2B 솔루션 IT 회사에서 웹 플랫폼 기술팀 시니어 개발자로 소속되어 있습니다. 주요 경험은 여러 개발자들이 빠르게 웹 애플리케이션 개발할 수 있도록 하는 기반 기술을 구축하고, 웹에서 할 수 없을 것이라고 생각하는 다양한 기술적 난제들을 해결하여 프로젝트 완료에 기여한 경험이 있습니다.
 `.trim(),
-        mainJob: "주 업무",
-        "mainJob.0": "사내 웹 F/E 플랫폼 기술 개발",
+        mainJob: "담당 업무",
+        "mainJob.0": "사내 웹 F/E 플랫폼 기술 개발 (공통 컴포넌트)",
         "mainJob.1": "풀스택 웹 애플리케이션 설계/개발",
-        "mainJob.2": "F/E 기술 의사결정 및 개발 프로세스 리딩",
+        "mainJob.2": "팀 업무/개발 프로세스 관리 및 운영",
         career: "경력",
         awards: "수상",
         "awards.0.header": "우수 인재육성/국위선양 장관 표창",
