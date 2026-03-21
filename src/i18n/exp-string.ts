@@ -19,7 +19,7 @@ const ko = {
     pjt1: {
         header: "#1 데스크탑 애플리케이션 -> 웹 클라이언트 리뉴얼",
         tasks: joinCommas(
-            "웹 F/E 공통 개발 환경 구축 (Vite, ESLint, Storybook, npm 서버)",
+            "웹 F/E 공통 개발 환경 구축 (Vite, ESLint, 내부 npm 서버 등)",
             "CSS 체계, 공통 UI 컴포넌트, 제품 인터페이스 설계/개발",
             "웹 애플리케이션 개발 가이드 및 문서화",
             "웹 기술적 난제 해결 (레거시 시스템 연동, MS 오피스 연계, 대량 데이터 처리, 보안)",
@@ -29,7 +29,7 @@ const ko = {
             "SI 사업 기반 웹 기술 구축 (2개 프로젝트 계약)",
             "C++ 기반 클라이언트 -> Web Application 기술 전환 완료 (약 100개 화면)",
         ),
-        tech: joinCommas("TypeScript", "Vite", "PNPM", "Storybook", "Typedoc"),
+        tech: joinCommas("TypeScript", "Vite / Vite Plugin", "PNPM"),
         imgLabel: joinCommas("레거시-1", "레거시-2", "웹-1", "웹-2"),
         imgUrls: joinCommas(
             "/img/as-is.png",
@@ -47,6 +47,8 @@ const ko = {
             "SolidJS",
             "vanilla-extract",
             "TurboRepo",
+            "Storybook",
+            "Typedoc",
         ),
         tasks: joinCommas(
             "컴포넌트 내부 모듈 구조 설계",
@@ -58,7 +60,7 @@ const ko = {
             "고객사 톤앤 매너에 맞는 CSS 시스템 커스터마이징 기능 제공",
             "각 개발팀 관심사 분리 및 개발 생산성 향상",
             "다크모드 테마 CSS 시스템 적용",
-            "수십만 데이터도 원활히 처리 가능한 렌더링 최적화",
+            "대량 데이터 적재 가능한 UI 렌더링 최적화",
             "MS Office 클립보드 호환 기능 개발",
         ),
         urls: joinCommas(
@@ -136,13 +138,12 @@ const ko = {
         ),
     },
     pjt6: {
-        header: "#6 개발 환경/프로세스 개선",
+        header: "#6 업무/개발 프로세스 개선",
         tech: joinCommas("Jenkins", "GitLab", "Docker"),
         tasks: joinCommas(
             "사내 CI/CD 파이프라인 구축",
             "런타임 환경 컨테이너화",
-            "자동 배포 스크립트 개발",
-            "Branch 전략 및 Git workflow 개선 (MR 템플릿, 커밋 메시지 규칙 등)",
+            "Branch 전략 및 Git Workflow 개선 (MR, 커밋 규칙)",
         ),
         result: joinCommas(
             "개발 → 배포 자동화 및 시스템 안정성 향상",
