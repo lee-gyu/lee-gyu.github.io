@@ -27,9 +27,7 @@ const teamMembers = expData.team ? splitCommas(expData.team) : [];
 ---
 
 <article class="exp-card" data-print-hidden={printHidden ? true : null}>
-    <div class="page-no-break">
-        <Title size="h4" style="accent">{expData.header}</Title>
-    </div>
+    <Title size="h4" style="accent">{expData.header}</Title>
     {techKeywords.length > 0 && <Keywords keywords={techKeywords} />}
     <ul class={listItemsCss}>
         <ListItems label={t(`exp.label.period`)} contents={date} />
@@ -62,6 +60,7 @@ const teamMembers = expData.team ? splitCommas(expData.team) : [];
         margin: 0.5rem 0;
         padding: 0.5rem 0;
         border-top: 1px solid var(--colors-background);
+        page-break-inside: avoid;
     }
 
     .exp-story {
@@ -75,10 +74,6 @@ const teamMembers = expData.team ? splitCommas(expData.team) : [];
     .exp-card-date {
         font-weight: 500;
         font-size: 0.875rem;
-    }
-
-    .img-area {
-        page-break-inside: avoid;
     }
 
     @media print {
