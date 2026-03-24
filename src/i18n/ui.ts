@@ -11,7 +11,7 @@ export const ui = {
     en: {
         toTop: "To Top",
         lastUpdated: "Last Updated:",
-        jobTitle: "Web Software Developer",
+        jobTitle: "Web Frontend Platform Engineer",
         name: "Lee Gyu Cheol",
         jobDesc: `
 Currently, I am working as a senior developer in a web frontend development team at a B2B IT solution company, overseeing core web frontend development. I am interested in fostering a collaborative culture that leverages team synergy and exploring ways to solve various real-world problems using AI.
@@ -60,7 +60,7 @@ Currently, I am working as a senior developer in a web frontend development team
     ko: {
         toTop: "맨 위로",
         lastUpdated: "최근 업데이트:",
-        jobTitle: "웹 소프트웨어 개발자",
+        jobTitle: "웹 프론트엔드 플랫폼 엔지니어",
         name: "이규철",
         birthdate: "1994.2.19",
         jobDesc: `
