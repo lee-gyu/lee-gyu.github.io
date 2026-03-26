@@ -11,15 +11,15 @@ export const ui = {
     en: {
         toTop: "To Top",
         lastUpdated: "Last Updated:",
-        jobTitle: "Web Frontend Platform Engineer",
+        jobTitle: "Web F/E Platform Engineer",
         name: "Lee Gyu Cheol",
         jobDesc: `
 Currently, I am working as a senior developer in a web frontend development team at a B2B IT solution company, overseeing core web frontend development. I am interested in fostering a collaborative culture that leverages team synergy and exploring ways to solve various real-world problems using AI.
 `.trim(),
         mainJob: "Main Job",
-        "mainJob.0": "Designing Web Frontend Architecture",
-        "mainJob.1": "Managing Common Development Environment for Web Frontend",
-        "mainJob.2": "Web Performance/Security Engineering",
+        "mainJob.0": "Developing Web F/E platform technology",
+        "mainJob.1": "Developing full-stack web applications",
+        "mainJob.2": "Managing and operating team tasks",
         career: "Career",
         awards: "Awards",
         "awards.0.header":
@@ -60,7 +60,7 @@ Currently, I am working as a senior developer in a web frontend development team
     ko: {
         toTop: "맨 위로",
         lastUpdated: "최근 업데이트:",
-        jobTitle: "웹 프론트엔드 플랫폼 엔지니어",
+        jobTitle: "Web F/E Platform Engineer",
         name: "이규철",
         birthdate: "1994.2.19",
         jobDesc: `
@@ -113,6 +113,7 @@ Currently, I am working as a senior developer in a web frontend development team
             "GitLab",
             "Jenkins",
             "Docker",
+            "Node.js",
             "Linux",
         ),
 
