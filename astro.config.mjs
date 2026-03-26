@@ -1,4 +1,3 @@
-import mdx from "@astrojs/mdx";
 import solidJs from "@astrojs/solid-js";
 import { defineConfig } from "astro/config";
 
@@ -13,7 +12,7 @@ export default defineConfig({
         locales: ["en", "ko"],
         defaultLocale: "ko",
     },
-    integrations: [mdx(), solidJs()],
+    integrations: [solidJs()],
     devToolbar: {
         enabled: false,
     },

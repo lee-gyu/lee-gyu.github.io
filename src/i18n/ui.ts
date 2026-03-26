@@ -87,7 +87,7 @@ Currently, I am working as a senior developer in a web frontend development team
         "career.0.content": "이노룰스 기술연구소",
         "career.0.content.desc": "웹 프론트엔드 플랫폼 기술 개발",
         "career.1.header": "2012.10 - 2018.7",
-        "career.1.content": "삼성전자",
+        "career.1.content": "삼성전자 GTC/VD 사업부",
         "career.1.content.desc": [
             "해외법인 공정 운영 S/W 개발",
             "2015 국제기능올림픽 IT 국가대표 코치",
@@ -98,10 +98,9 @@ Currently, I am working as a senior developer in a web frontend development team
 
         skills: "기술",
         "skills.10.label": "B/E",
-        "skills.10.keywords": joinCommas("Nest.js", "RDBMS", "J2EE"),
+        "skills.10.keywords": joinCommas("Nest.js", "J2EE"),
         "skills.20.label": "F/E",
         "skills.20.keywords": joinCommas(
-            "Vite",
             "Next.js",
             "Astro",
             "React",
