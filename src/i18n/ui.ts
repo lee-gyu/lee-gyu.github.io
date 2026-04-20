@@ -37,7 +37,7 @@ Currently, I am working as a senior developer in a web frontend development team
         "awards.4.tags": "HRDKorea, 2011",
         years: "Years",
         "career.0.header": "2020.10 - Present",
-        "career.0.content": "InnoRules",
+        "career.0.content": "INNOAX",
         "career.0.content.desc":
             "(R&D Center) Web F/E Core Infra/SDK Development",
         "career.1.header": "2012.10 - 2018.7",
@@ -84,7 +84,7 @@ Currently, I am working as a senior developer in a web frontend development team
         "awards.4.tags": "한국산업인력공단, 2011",
         years: "년",
         "career.0.header": "2020.10 - 현재",
-        "career.0.content": "이노룰스 기술연구소",
+        "career.0.content": "INNOAX 기술연구소",
         "career.0.content.desc": "웹 프론트엔드 플랫폼 기술 개발",
         "career.1.header": "2012.10 - 2018.7",
         "career.1.content": "삼성전자 GTC/VD 사업부",
