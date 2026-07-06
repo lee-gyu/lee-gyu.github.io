@@ -24,6 +24,10 @@ const lang = Astro.currentLocale;
         <meta property="og:description" content="Profile Website" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/thumbnail.png" />
+        <meta
+            name="google-site-verification"
+            content="google-site-verification=3rcZpfDM_xxuOC2H09M6hZldb8TtLKGQQ58JyXf_DSs"
+        />
         <link
             rel="stylesheet"
             as="style"
@@ -99,14 +103,14 @@ const lang = Astro.currentLocale;
         scrolled = nextScrolled;
 
         window.dispatchEvent(
-            new CustomEvent("change:scrolled", { detail: scrolled })
+            new CustomEvent("change:scrolled", { detail: scrolled }),
         );
     });
 
     if (scrolled)
         window.addEventListener("load", () => {
             window.dispatchEvent(
-                new CustomEvent("change:scrolled", { detail: scrolled })
+                new CustomEvent("change:scrolled", { detail: scrolled }),
             );
         });
 </script>
