@@ -102,7 +102,6 @@ Currently, I am working as a senior developer in a web frontend development team
         "skills.20.label": "F/E",
         "skills.20.keywords": joinCommas(
             "Next.js",
-            "Astro",
             "React",
             "SolidJS",
         ),
