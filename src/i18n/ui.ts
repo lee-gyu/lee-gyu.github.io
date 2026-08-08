@@ -66,12 +66,12 @@ Currently, I am working as a senior developer in a web frontend development team
         jobDesc: `
 현재 B2B 솔루션 IT 회사에서 웹 플랫폼 기술팀 시니어 개발자로 소속되어 있습니다. 주요 경험은 여러 개발자들이 빠르게 웹 애플리케이션 개발할 수 있도록 하는 기반 기술을 구축하고, 웹에서 할 수 없을 것이라고 생각하는 다양한 기술적 난제들을 해결하여 프로젝트 완료에 기여한 경험이 있습니다.
 `.trim(),
-        mainJob: "담당 업무",
+        mainJob: "Role",
         "mainJob.0": "사내 웹 F/E 플랫폼 기술 개발",
         "mainJob.1": "웹 애플리케이션 LLM Agent/Tool 개발",
         "mainJob.2": "AI 에이전틱 개발 환경 도입",
-        career: "경력",
-        awards: "수상",
+        career: "Career",
+        awards: "Awards",
         "awards.0.header": "우수 인재육성/국위선양 장관 표창",
         "awards.0.tags": "고용노동부, 2015",
         "awards.1.header": "베트남 국가 총리 표창",
@@ -96,9 +96,13 @@ Currently, I am working as a senior developer in a web frontend development team
 
         experience: "주요 프로젝트",
 
-        skills: "기술",
+        skills: "Skills",
         "skills.10.label": "B/E",
-        "skills.10.keywords": joinCommas("Nest.js", "J2EE"),
+        "skills.10.keywords": joinCommas(
+            "Node.js",
+            "Nest.js",
+            "J2EE",
+        ),
         "skills.20.label": "F/E",
         "skills.20.keywords": joinCommas(
             "Next.js",
@@ -106,14 +110,17 @@ Currently, I am working as a senior developer in a web frontend development team
             "SolidJS",
         ),
         "skills.40.label": "Lang",
-        "skills.40.keywords": joinCommas("JavaScript", "TypeScript", "Java"),
+        "skills.40.keywords": joinCommas(
+            "TypeScript",
+            "JavaScript",
+            "Java"
+        ),
         "skills.50.label": "ETC",
         "skills.50.keywords": joinCommas(
             "GitLab",
             "Jenkins",
-            "Docker",
-            "Node.js",
             "Linux",
+            "Docker",
         ),
 
         "exp.label.date": "일자",
