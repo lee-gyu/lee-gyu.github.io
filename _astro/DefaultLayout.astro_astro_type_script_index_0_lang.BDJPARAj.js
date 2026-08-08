@@ -1,0 +1,1 @@
+import{n as e}from"./theme.DlHnki9H.js";Object.assign(globalThis,{__setTheme:e});var t=window.scrollY>0;window.addEventListener(`scroll`,()=>{let e=window.scrollY>0;e!==t&&(t=e,window.dispatchEvent(new CustomEvent(`change:scrolled`,{detail:t})))}),t&&window.addEventListener(`load`,()=>{window.dispatchEvent(new CustomEvent(`change:scrolled`,{detail:t}))});
