@@ -11,35 +11,28 @@ export const ui = {
     en: {
         toTop: "To Top",
         lastUpdated: "Last Updated:",
-        jobTitle: "Web F/E Platform Engineer",
+        jobTitle: "Web Product Engineer",
         name: "Lee Gyu Cheol",
-        jobDesc: `
-Currently, I am working as a senior developer in a web frontend development team at a B2B IT solution company, overseeing core web frontend development. I am interested in fostering a collaborative culture that leverages team synergy and exploring ways to solve various real-world problems using AI.
-`.trim(),
         mainJob: "Main Job",
         "mainJob.0": "Developing Web F/E platform technology",
         "mainJob.1": "Developing web application LLM Agent/Tool",
         "mainJob.2": "Introducing AI agentic development environment",
         career: "Career",
         awards: "Awards",
-        "awards.0.header":
-            "National Skill Development/International Contribution",
+        "awards.0.header": "National Skill Development/International Contribution",
         "awards.0.tags": "Ministry of Employment and Labor, 2015",
         "awards.1.header": "Prime Minister's Commendation of Vietnam",
         "awards.1.tags": "Government of Vietnam, 2015",
-        "awards.2.header":
-            "Awarded the Order of Industrial Service Merit (Dongtap Medal)",
+        "awards.2.header": "Awarded the Order of Industrial Service Merit (Dongtap Medal)",
         "awards.2.tags": "Government of South Korea, 2013",
         "awards.3.header": "Gold Medal(1st) in IT at WorldSkills",
         "awards.3.tags": "WorldSkills, 2013",
-        "awards.4.header":
-            "Silver Medal(2nd) in IT at National Skills Competition",
+        "awards.4.header": "Silver Medal(2nd) in IT at National Skills Competition",
         "awards.4.tags": "HRDKorea, 2011",
         years: "Years",
         "career.0.header": "2020.10 - Present",
         "career.0.content": "INNOAX",
-        "career.0.content.desc":
-            "(R&D Center) Web F/E Core Infra/SDK Development",
+        "career.0.content.desc": "(R&D Center) Web F/E Core Infra/SDK Development",
         "career.1.header": "2012.10 - 2018.7",
         "career.1.content": "Samsung Electronics",
         "career.1.content.desc": [
@@ -60,12 +53,9 @@ Currently, I am working as a senior developer in a web frontend development team
     ko: {
         toTop: "맨 위로",
         lastUpdated: "최근 업데이트:",
-        jobTitle: "Web F/E Platform Engineer",
+        jobTitle: "Web Product Engineer",
         name: "이규철",
         birthdate: "1994.2.19",
-        jobDesc: `
-현재 B2B 솔루션 IT 회사에서 웹 플랫폼 기술팀 시니어 개발자로 소속되어 있습니다. 주요 경험은 여러 개발자들이 빠르게 웹 애플리케이션 개발할 수 있도록 하는 기반 기술을 구축하고, 웹에서 할 수 없을 것이라고 생각하는 다양한 기술적 난제들을 해결하여 프로젝트 완료에 기여한 경험이 있습니다.
-`.trim(),
         mainJob: "Role",
         "mainJob.0": "사내 웹 F/E 플랫폼 기술 개발",
         "mainJob.1": "웹 애플리케이션 LLM Agent/Tool 개발",
@@ -98,30 +88,13 @@ Currently, I am working as a senior developer in a web frontend development team
 
         skills: "Skills",
         "skills.10.label": "B/E",
-        "skills.10.keywords": joinCommas(
-            "Node.js",
-            "Nest.js",
-            "J2EE",
-        ),
+        "skills.10.keywords": joinCommas("Node.js", "Nest.js", "J2EE"),
         "skills.20.label": "F/E",
-        "skills.20.keywords": joinCommas(
-            "Next.js",
-            "React",
-            "SolidJS",
-        ),
+        "skills.20.keywords": joinCommas("Next.js", "React", "SolidJS"),
         "skills.40.label": "Lang",
-        "skills.40.keywords": joinCommas(
-            "TypeScript",
-            "JavaScript",
-            "Java"
-        ),
+        "skills.40.keywords": joinCommas("TypeScript", "JavaScript", "Java"),
         "skills.50.label": "ETC",
-        "skills.50.keywords": joinCommas(
-            "GitLab",
-            "Jenkins",
-            "Linux",
-            "Docker",
-        ),
+        "skills.50.keywords": joinCommas("GitLab", "Jenkins", "Linux", "Docker"),
 
         "exp.label.date": "일자",
         "exp.label.team": "소속/직책",

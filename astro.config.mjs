@@ -23,9 +23,6 @@ export default defineConfig({
                 generateScopedName: "__[local]",
             },
         },
-        server: {
-            allowedHosts: [process.env.ALLOWED_HOST_LIST],
-        },
         define: {
             LAST_UPDATED: `"${LAST_UPDATED}"`,
             DEFAULT_BASE_URL: `"https://lee-gyu.github.io"`,
