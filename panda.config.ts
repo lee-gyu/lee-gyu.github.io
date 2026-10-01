@@ -21,6 +21,9 @@ const globalCss = defineGlobalStyles({
 });
 
 export default defineConfig({
+    // v2부터 기본 프리셋이 자동으로 포함되지 않으므로 명시
+    presets: ["@pandacss/preset-base", "@pandacss/preset-panda"],
+
     globalCss,
 
     conditions: {

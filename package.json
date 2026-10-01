@@ -20,25 +20,28 @@
     "author": "Lee Gyu <leegyu4dev@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "typescript": "^7.0.2",
-        "@types/node": "^24.13.6",
+        "@types/node": "^24.19.0",
         "jsdom": "^30.1.1",
-        "oxfmt": "^0.70.0",
-        "oxlint": "^1.85.0",
-        "vitest": "^5.0.2"
+        "oxfmt": "^0.71.0",
+        "oxlint": "^1.86.0",
+        "typescript": "^7.0.2",
+        "vitest": "^5.0.3"
     },
     "dependencies": {
-        "clsx": "^2.1.1",
-        "dayjs": "^1.11.23",
-        "es-toolkit": "^1.52.0",
-        "p5": "^2.3.3",
-        "solid-js": "^1.9.15",
         "@astrojs/mdx": "^8.0.2",
         "@astrojs/solid-js": "^7.0.2",
-        "@pandacss/dev": "^1.12.1",
+        "@astrojs/starlight": "^0.42.5",
+        "@pandacss/dev": "^2.0.1",
+        "@pandacss/preset-base": "2.0.1",
+        "@pandacss/preset-panda": "2.0.1",
         "astro": "^7.3.5",
-        "cssnano": "^9.0.5",
         "autoprefixer": "^10.6.1",
-        "postcss": "^8.5.28"
+        "clsx": "^2.1.1",
+        "cssnano": "^9.1.2",
+        "dayjs": "^1.11.23",
+        "es-toolkit": "^1.52.0",
+        "p5": "^2.3.4",
+        "postcss": "^8.5.28",
+        "solid-js": "^1.9.15"
     }
 }
