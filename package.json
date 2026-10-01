@@ -8,7 +8,7 @@
     "scripts": {
         "prepare": "panda codegen",
         "dev": "astro dev --host",
-        "build": "astro build",
+        "build": "pnpm prepare && astro build",
         "test": "vitest",
         "start": "astro preview --host",
         "lint": "oxlint"
