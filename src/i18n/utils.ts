@@ -1,3 +1,4 @@
+import type { UIDict, UIKey } from "./types";
 import { defaultLang, ui } from "./ui";
 
 export function getLangFromUrl(url: URL) {
@@ -10,12 +11,10 @@ export function getDocLang() {
     return document.documentElement.lang as keyof typeof ui;
 }
 
-type KeyDict = keyof (typeof ui)["ko"];
-
 export function useTranslations(lang: keyof typeof ui) {
-    const dict = ui[lang] as Record<string, string>;
+    const dict: UIDict = ui[lang];
 
-    return function t(key: KeyDict): string {
+    return function t(key: UIKey): string {
         return dict[key] || ui[defaultLang][key];
     };
 }

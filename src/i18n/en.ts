@@ -1,0 +1,61 @@
+import { joinCommas } from "src/utils/string";
+import type { UIDict } from "./types";
+
+export const en: UIDict = {
+    toTop: "Back to Top",
+    lastUpdated: "Last Updated:",
+    jobTitle: "Web Product Engineer",
+    name: "Lee Gyu Cheol",
+    birthdate: "Feb 19, 1994",
+    mainJob: "Role",
+    "mainJob.0": "Developing in-house web front-end platform technology",
+    "mainJob.1": "Developing LLM agent applications (MCP, Skills, Tools)",
+    "mainJob.2": "Building a coding agent development environment for the dev team",
+    career: "Career",
+    awards: "Awards",
+    "awards.0.header":
+        "Minister's Commendation for Talent Development and National Prestige",
+    "awards.0.tags": "Ministry of Employment and Labor, 2015",
+    "awards.1.header": "Prime Minister's Commendation of Vietnam",
+    "awards.1.tags": "Government of Vietnam, 2015",
+    "awards.2.header":
+        "Order of Industrial Service Merit, Bronze Tower Medal (Presidential Award)",
+    "awards.2.tags": "Government of the Republic of Korea, 2013",
+    "awards.3.header": "Gold Medal (1st Place) in IT, WorldSkills Competition",
+    "awards.3.tags": "WorldSkills, 2013",
+    "awards.4.header": "Silver Medal (2nd Place) in IT, National Skills Competition",
+    "awards.4.tags": "HRD Korea, 2011",
+    years: "Years",
+    "career.0.header": "2020.10 - Present",
+    "career.0.content": "INNOAX R&D Center",
+    "career.0.content.desc": "Web front-end platform technology development",
+    "career.1.header": "2012.10 - 2018.7",
+    "career.1.content": "Samsung Electronics GTC / VD Division",
+    "career.1.content.desc": [
+        "Developed manufacturing operation software for overseas subsidiaries",
+        "2015 WorldSkills IT National Team Coach",
+        "2013 WorldSkills IT National Team Competitor",
+    ].join("\n"),
+
+    experience: "Key Projects",
+
+    skills: "Skills",
+    "skills.10.label": "B/E",
+    "skills.10.keywords": joinCommas("Node.js", "Nest.js", "J2EE"),
+    "skills.20.label": "F/E",
+    "skills.20.keywords": joinCommas("Next.js", "React", "SolidJS"),
+    "skills.40.label": "Lang",
+    "skills.40.keywords": joinCommas("TypeScript", "JavaScript", "Java"),
+    "skills.50.label": "ETC",
+    "skills.50.keywords": joinCommas("GitLab", "Jenkins", "Linux", "Docker"),
+
+    "exp.label.date": "Date",
+    "exp.label.team": "Team / Position",
+    "exp.label.role": "Role",
+    "exp.label.period": "Period",
+    "exp.label.mainTask": "Main Tasks",
+    "exp.label.result": "Results",
+    "exp.label.tech": "Tech Stack",
+    "exp.label.tasks": "Responsibilities",
+    "exp.label.urls": "Links",
+};
