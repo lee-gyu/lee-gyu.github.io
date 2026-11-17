@@ -24,3 +24,5 @@ minimumReleaseAgeExclude:
   - '@astrojs/starlight@0.42.5'
   - '@pandacss/preset-base@2.0.1'
   - '@pandacss/preset-panda@2.0.1'
+  - oxfmt@0.79.0
+  - oxlint@1.94.0
